@@ -35,6 +35,9 @@ torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 
 ### 13B
 
+
+
+
 ```
 torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 --base_model '/data/nfs/guodong.li/pretrain/hf-llama-model/llama-13b' \
@@ -55,6 +58,23 @@ torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 
 
 ### 30B
+
+```
+torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
+--base_model '/data/nfs/guodong.li/pretrain/hf-llama-model/llama-30b' \
+--data_path '/home/guodong.li/llama-mp/GPT-4-LLM/data/alpaca_gpt4_data_zh.json' \
+--output_dir '/home/guodong.li/output/alpaca-lora-30b-dp-zh-1' \
+--batch_size 16 \
+--micro_batch_size 2 \
+--num_epochs 10 \
+--cutoff_len=512 \
+--group_by_length \
+--lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' \
+--lora_r=16
+```
+| 模型 | 显存 | 耗时 | 数据量  |
+| --- | --- | --- | --- |
+| 30B | 8 * 75G |  15小时30分钟 | 46818 |
 
 ```
 torchrun --nproc_per_node=8 --master_port=29005 finetune.py \
