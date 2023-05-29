@@ -72,9 +72,15 @@ torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 --lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' \
 --lora_r=16
 ```
+
+`trainable params: 51118080 || all params: 32580061696 || trainable%: 0.15689988704433913`
+
 | 模型 | 显存 | 耗时 | 数据量  |
 | --- | --- | --- | --- |
 | 30B | 8 * 75G |  15小时30分钟 | 46818 |
+
+
+
 
 ```
 torchrun --nproc_per_node=8 --master_port=29005 finetune.py \
