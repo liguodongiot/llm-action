@@ -132,6 +132,16 @@ What are the five characteristics of a good argument?
 ```
 
 
+## tensorboard
+
+```
+source /home/guodong.li/virtual-venv/alpara-lora-venv-py310-cu117/bin/activate
+
+tensorboard --logdir /home/guodong.li/output/alpaca-lora-7b-dp-zh --port=16007 --host=0.0.0.0
+tensorboard --logdir /home/guodong.li/output/alpaca-lora-13b-dp-zh --port=16008 --host=0.0.0.0
+tensorboard --logdir /home/guodong.li/output/alpaca-lora-30b-dp-zh-1 --port=16009 --host=0.0.0.0
+```
+
 
 
 
