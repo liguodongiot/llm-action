@@ -73,13 +73,23 @@ torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 --lora_r=16
 ```
 
-`trainable params: 51118080 || all params: 32580061696 || trainable%: 0.15689988704433913`
+训练过程：
+```
+trainable params: 51118080 || all params: 32580061696 || trainable%: 0.15689988704433913
+
+{'train_runtime': 55949.6417, 'train_samples_per_second': 8.368, 'train_steps_per_second': 0.523, 'train_loss': 0.4879480355503537, 'epoch': 10.0}
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████| 29270/29270 [15:32:27<00:00,  1.91s/it]
+```
+
+
 
 | 模型 | 显存 | 耗时 | 数据量  |
 | --- | --- | --- | --- |
 | 30B | 8 * 75G |  15小时30分钟 | 46818 |
 
 
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/eea31899-fbcd-4606-beaa-42be6b25ffa3)
 
 
 ```
