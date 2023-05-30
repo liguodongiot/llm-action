@@ -33,6 +33,9 @@ torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 | --- | --- | --- |  --- |
 | 7B | 8 * 74G |  2小时5分钟 | 46818 |
 
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/238d86da-bbda-4944-94e4-49a87284e026)
+
+
 ### 13B
 
 
@@ -55,6 +58,8 @@ torchrun --nproc_per_node=8 --master_port=29005 finetune_metrics_epoch.py \
 | 模型 | 显存 | 耗时 | 数据量  |
 | --- | --- | --- | --- |
 | 13B | 8 * 76G |  2小时10分钟 | 46818 |
+
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/a66ea4a1-79fb-40d9-8a10-7a9132fde882)
 
 
 ### 30B
@@ -88,8 +93,8 @@ trainable params: 51118080 || all params: 32580061696 || trainable%: 0.156899887
 | --- | --- | --- | --- |
 | 30B | 8 * 75G |  15小时30分钟 | 46818 |
 
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/303b850c-3332-45aa-968d-bb0f52fa44a6)
 
-![image](https://github.com/liguodongiot/llm-action/assets/13220186/eea31899-fbcd-4606-beaa-42be6b25ffa3)
 
 
 ```
