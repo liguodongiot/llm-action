@@ -35,7 +35,30 @@ LLM 实战
 -    [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://zhuanlan.zhihu.com/p/635848732)
 -    [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://zhuanlan.zhihu.com/p/636038478)
 -    [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://zhuanlan.zhihu.com/p/636215898)
--    大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT
+-    [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://zhuanlan.zhihu.com/p/636362246)
 -    大模型参数高效微调技术原理综述（七）-最佳实践、总结
+
+
+
+## LLM 学习交流群
+
+我创建了一个大模型学习交流群，供大家一起学习交流大模型相关的最新技术，可加我微信进群（加微信请备注来意，如：进大模型学习交流群+GitHub）。
+
+![扫码加微信进大模型学习交流群](./pic/微信.jpeg)
+
+
+## 公众号
+
+建议关注公众号：**吃果冻不吐果冻皮**，该公众号主要分享AI工程化（大模型、MLOps等）相关实践经验。
+
+![公众号：吃果冻不吐果冻皮](./pic/公众号.jpeg)
+
+
+
+
+
+
+
+
 
 
