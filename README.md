@@ -7,7 +7,7 @@ LLM 实战
 
 - [LLM训练](#LLM训练)
 - [LLM推理](#LLM推理)
-- [LLM微调技术](#LLM微调技术)
+- [LLM微调技术原理](#LLM微调技术原理)
 - [LLM学习交流群](#LLM学习交流群)
 - [微信公众号](#微信公众号)
 
@@ -25,6 +25,7 @@ LLM 实战
 | OPT                           | RLHF                          | N/A | 1. [一键式 RLHF 训练 DeepSpeed Chat（一）：理论篇](https://zhuanlan.zhihu.com/p/626159553) <br/>2. [一键式 RLHF 训练 DeepSpeed Chat（二）：实践篇](https://zhuanlan.zhihu.com/p/626214655)                            | N/A                                                                               |
 | MiniGPT-4                     | full fine-turning             | 7B  | [大杀器，多模态大模型MiniGPT-4入坑指南](https://zhuanlan.zhihu.com/p/627671257)                                                                                                                       | N/A                                                                               |
 | Chinese-LLaMA-Alpaca          | lora（预训练+微调）                  | 7B  | [使用 LoRA 技术对 LLaMA 65B 大模型进行微调及推理](https://zhuanlan.zhihu.com/p/631360711)                                                                                                              | [配套代码](https://github.com/liguodongiot/llm-action/tree/main/chinese-llama-alpaca) |
+| QLoRA          | qlora                  | 7B/65B  | [高效微调技术QLoRA实战，基于LLaMA-65B微调仅需48G显存，真香](https://zhuanlan.zhihu.com/p/636644164)                                                                                                              | [配套代码](https://github.com/liguodongiot/llm-action/tree/main/qlora) |
 
 ## LLM推理
 
@@ -34,7 +35,7 @@ LLM 实战
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 
 
-## LLM微调技术
+## LLM微调技术原理
 
 对于普通大众来说，进行大模型的预训练或者全量微调遥不可及。由此，催生了各种参数高效微调技术，让科研人员或者普通开发者有机会尝试微调大模型。
 
