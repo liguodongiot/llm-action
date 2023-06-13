@@ -54,13 +54,13 @@ LLM 实战
 
 我创建了一个大模型学习交流群，供大家一起学习交流大模型相关的最新技术，可加我微信进群（**加微信请备注来意**，如：进大模型学习交流群+GitHub）。
 
-<img src="./pic/微信.jpeg" width="50%" height="50%">
+<img src="./pic/微信.jpeg" width="30%" height="30%" div align=right>
 
 ## 微信公众号
 
 微信公众号：**吃果冻不吐果冻皮**，该公众号主要分享AI工程化（大模型、MLOps等）相关实践经验，免费电子书籍、论文等。
 
-<img src="./pic/公众号.jpeg" width="50%" height="50%">
+<img src="./pic/公众号.jpeg" width="30%" height="30%" div align=right>
 
 
 
