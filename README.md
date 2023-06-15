@@ -8,6 +8,7 @@ LLM 实战
 - [LLM训练](#LLM训练)
 - [LLM推理](#LLM推理)
 - [LLM微调技术原理](#LLM微调技术原理)
+- [LLM生态相关技术](#LLM生态相关技术)
 - [LLM学习交流群](#LLM学习交流群)
 - [微信公众号](#微信公众号)
 
@@ -49,6 +50,10 @@ LLM 实战
 -    [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://zhuanlan.zhihu.com/p/636362246)
 -    [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://zhuanlan.zhihu.com/p/636999010)
 
+
+## LLM生态相关技术
+
+- [大模型词表扩充必备工具SentencePiece](https://zhuanlan.zhihu.com/p/630696264)
 
 
 ## LLM学习交流群
