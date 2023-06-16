@@ -80,8 +80,16 @@ DeepSpeed 然后会确保在启动每个进程时在整个训练工作的每个�
 如果你正在使用模型并行，流水线并行或者在调用 deepspeed.initialize(..) 之前需要使用 torch.distributed 调用，我们为你提供了额外的 DeepSpeed API 调用以支持相同的 MPI。请将您的初始 torch.distributed.init_process_group(..) 调用替换为：deepspeed.init_distributed()
 
 
+## 资源配置（单节点）
 
+如果我们只在单个节点上运行（具有一个或多个GPU），DeepSpeed不需要像上面描述的那样使用 hostfile。如果没有检测到或传递 hostfile，则 DeepSpeed 将查询本地计算机上的 GPU 数量来发现可用的插槽数。--include 和 --exclude 参数与正常工作相同，但用户应将“localhost”指定为主机名。
 
+另外需要注意的是，CUDA_VISIBLE_DEVICES 不能用于 DeepSpeed 来控制应该使用哪些设备。
+
+例如，要仅使用当前节点的 gpu1，请执行以下操作：
+```
+deepspeed --include localhost:1 ...
+```
 
 
 
