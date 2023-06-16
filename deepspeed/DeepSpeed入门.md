@@ -69,7 +69,15 @@ NCCL_SOCKET_IFNAME=eth0
 DeepSpeed 然后会确保在启动每个进程时在整个训练工作的每个节点上设置这些环境变量。
 
 
+## 兼容MPI 
 
+如上所述，DeepSpeed 提供了自己的并行启动器来帮助启动多节点/多GPU训练作业。如果您喜欢使用MPI（例如: mpirun）启动训练作业，则我们提供对此的支持。
+
+需要注意的是，DeepSpeed 仍将使用 torch 分布式 NCCL 后端，而不是 MPI 后端。
+
+要使用 mpirun + DeepSpeed （使用 mpirun 作为启动器后端）启动你的训练作业，您只需要安装 mpi4py Python 包。DeepSpeed 将使用它来发现 MPI 环境，并将必要的状态（例如 world size、rank 等）传递给 torch 分布式后端。
+
+如果你正在使用模型并行，流水线并行或者在调用 deepspeed.initialize(..) 之前需要使用 torch.distributed 调用，我们为你提供了额外的 DeepSpeed API 调用以支持相同的 MPI。请将您的初始 torch.distributed.init_process_group(..) 调用替换为：deepspeed.init_distributed()
 
 
 
