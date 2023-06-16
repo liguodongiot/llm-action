@@ -5,13 +5,35 @@
 - 源码：https://github.com/microsoft/DeepSpeedExamples/tree/master/training/HelloDeepSpeed
 
 
-## 
+## HF
+
+```
+model = create_model(
+        num_layers=num_layers,
+        num_heads=num_heads,
+        ff_dim=ff_dim,
+        h_dim=h_dim,
+        dropout=dropout,
+    )
+model.train()
+
+for step, batch in enumerate(data_iterator, start=start_step):
+    optimizer.zero_grad()
+    # Forward pass
+    loss = model(**batch)
+    # Backward pass
+    loss.backward()
+    # Optimizer Step
+    optimizer.step()
+```
+
+
+运行命令：
 
 ```
 python train_bert.py --checkpoint_dir ./experiments --local_rank 0
 ```
-
-
+模型输出权重文件：
 ```
 tree experiments/
 experiments/
@@ -34,8 +56,33 @@ experiments/
 ```
 
 
-## Deepspeed
+## Deepspeed+HF
 
+
+```
+model = create_model(
+        num_layers=num_layers,
+        num_heads=num_heads,
+        ff_dim=ff_dim,
+        h_dim=h_dim,
+        dropout=dropout,
+    )
+model, _, _, _ = deepspeed.initialize(model=model,
+                                          model_parameters=model.parameters(),
+                                          config=ds_config)
+model.train()
+for step, batch in enumerate(data_iterator, start=start_step):
+    # Forward pass
+    loss = model(**batch)
+    # Backward pass
+    model.backward(loss)
+    # Optimizer Step
+    model.step()
+```
+
+
+
+运行命令及模型输出权重文件：
 
 ```
 # 默认使用当前服务器所有GPU卡
