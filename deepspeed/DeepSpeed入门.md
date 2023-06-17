@@ -93,4 +93,49 @@ deepspeed --include localhost:1 ...
 
 
 
+## ds_report
+
+```
+ds_report
+--------------------------------------------------
+DeepSpeed C++/CUDA extension op report
+--------------------------------------------------
+NOTE: Ops not installed will be just-in-time (JIT) compiled at
+      runtime if needed. Op compatibility means that your system
+      meet the required dependencies to JIT install the op.
+--------------------------------------------------
+JIT compiled ops requires ninja
+ninja .................. [OKAY]
+--------------------------------------------------
+op name ................ installed .. compatible
+--------------------------------------------------
+async_io ............... [NO] ....... [OKAY]
+cpu_adagrad ............ [NO] ....... [OKAY]
+cpu_adam ............... [NO] ....... [OKAY]
+fused_adam ............. [NO] ....... [OKAY]
+fused_lamb ............. [NO] ....... [OKAY]
+quantizer .............. [NO] ....... [OKAY]
+random_ltd ............. [NO] ....... [OKAY]
+ [WARNING]  please install triton==1.0.0 if you want to use sparse attention
+sparse_attn ............ [NO] ....... [NO]
+spatial_inference ...... [NO] ....... [OKAY]
+transformer ............ [NO] ....... [OKAY]
+stochastic_transformer . [NO] ....... [OKAY]
+transformer_inference .. [NO] ....... [OKAY]
+utils .................. [NO] ....... [OKAY]
+--------------------------------------------------
+DeepSpeed general environment info:
+torch install path ............... ['/home/guodong.li/virtual-venv/llama-venv-py310-cu117/lib/python3.10/site-packages/torch']
+torch version .................... 1.13.1+cu117
+deepspeed install path ........... ['/home/guodong.li/virtual-venv/llama-venv-py310-cu117/lib/python3.10/site-packages/deepspeed']
+deepspeed info ................... 0.8.0, unknown, unknown
+torch cuda version ............... 11.7
+torch hip version ................ None
+nvcc version ..................... 11.7
+deepspeed wheel compiled w. ...... torch 1.12, cuda 11.3
+```
+
+
+
+
 
