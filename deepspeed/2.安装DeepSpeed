@@ -1,0 +1,117 @@
+## 安装DeepSpeed
+通过 pip 是最快捷的开始使用 DeepSpeed 的方式，这将安装最新版本的 DeepSpeed，不会与特定的 PyTorch 或 CUDA 版本绑定。DeepSpeed 包含若干个 C++/CUDA 扩展，我们通常称之为“ops”。默认情况下，所有这些 extensions/ops 将使用 torch 的 JIT C++ 扩展加载器即时构建（JIT）(https://pytorch.org/docs/stable/cpp_extension.html) ，该加载器依赖 ninja 在运行时进行动态链接。
+
+```
+pip install deepspeed
+```
+
+安装完DeepSpeed后，你可以使用 ds_report 或 python -m deepspeed.env_report 命令查看 DeepSpeed 环境报告，以验证你的安装并查看你的机器与哪些 ops 兼容。我们发现，在调试 DeepSpeed 安装或兼容性问题时，这个报告很有用
+
+
+```
+ds_report
+--------------------------------------------------
+DeepSpeed C++/CUDA extension op report
+--------------------------------------------------
+NOTE: Ops not installed will be just-in-time (JIT) compiled at
+      runtime if needed. Op compatibility means that your system
+      meet the required dependencies to JIT install the op.
+--------------------------------------------------
+JIT compiled ops requires ninja
+ninja .................. [OKAY]
+--------------------------------------------------
+op name ................ installed .. compatible
+--------------------------------------------------
+async_io ............... [NO] ....... [OKAY]
+cpu_adagrad ............ [NO] ....... [OKAY]
+cpu_adam ............... [NO] ....... [OKAY]
+fused_adam ............. [NO] ....... [OKAY]
+fused_lamb ............. [NO] ....... [OKAY]
+quantizer .............. [NO] ....... [OKAY]
+random_ltd ............. [NO] ....... [OKAY]
+ [WARNING]  please install triton==1.0.0 if you want to use sparse attention
+sparse_attn ............ [NO] ....... [NO]
+spatial_inference ...... [NO] ....... [OKAY]
+transformer ............ [NO] ....... [OKAY]
+stochastic_transformer . [NO] ....... [OKAY]
+transformer_inference .. [NO] ....... [OKAY]
+utils .................. [NO] ....... [OKAY]
+--------------------------------------------------
+DeepSpeed general environment info:
+torch install path ............... ['/home/guodong.li/virtual-venv/llama-venv-py310-cu117/lib/python3.10/site-packages/torch']
+torch version .................... 1.13.1+cu117
+deepspeed install path ........... ['/home/guodong.li/virtual-venv/llama-venv-py310-cu117/lib/python3.10/site-packages/deepspeed']
+deepspeed info ................... 0.8.0, unknown, unknown
+torch cuda version ............... 11.7
+torch hip version ................ None
+nvcc version ..................... 11.7
+deepspeed wheel compiled w. ...... torch 1.12, cuda 11.3
+```
+
+
+## 预安装DeepSpeed的Ops
+
+> 注意：在预编译任何 DeepSpeed 的 c++/cuda ops 之前，必须先安装 PyTorch。但是，如果使用 ops 的默认 JIT 编译模式，则不需要预编译安装。
+
+
+有时我们发现，将一些或全部 DeepSpeed C++/CUDA ops 预先安装而不使用 JIT 编译路径是有用的。为了支持预安装，我们引入了构建环境标志以打开/关闭特定 ops 的构建。
+
+您可以通过设置 DS_BUILD_OPS 环境变量为 1 来指示我们的安装程序（install.sh 或 pip install）尝试安装所有 ops，例如：
+
+DS_BUILD_OPS=1 pip install deepspeed
+
+DeepSpeed 只会安装与你的机器兼容的 ops。有关系统兼容性的更多详细信息，请尝试上面描述的 ds_report 工具。
+
+如果你只想安装特定的 op（例如 FusedLamb），你可以在安装时使用 DS_BUILD 环境变量进行切换。例如，要仅安装带有 FusedLamb op 的 DeepSpeed，请使用：
+```
+DS_BUILD_FUSED_LAMB=1 pip install deepspeed
+```
+
+可用的 DS_BUILD 选项包含：
+```
+DS_BUILD_OPS 切换所有 ops
+DS_BUILD_CPU_ADAM 构建 CPUAdam op
+DS_BUILD_FUSED_ADAM 构建 FusedAdam op (from apex)
+DS_BUILD_FUSED_LAMB 构建 FusedLamb op
+DS_BUILD_SPARSE_ATTN 构建 sparse attention op
+DS_BUILD_TRANSFORMER 构建 transformer op
+DS_BUILD_TRANSFORMER_INFERENCE 构建 transformer-inference op
+DS_BUILD_STOCHASTIC_TRANSFORMER 构建 stochastic transformer op
+DS_BUILD_UTILS 构建各种优化工具
+DS_BUILD_AIO 构建异步 (NVMe) I/O op
+```
+为了加速 build-all 过程，您可以使用以下方式并行编译：
+
+DS_BUILD_OPS=1 pip install deepspeed --global-option="build_ext" --global-option="-j8"
+
+这应该可以使完整的构建过程加快 2-3 倍。您可以调整 -j 来指定在构建过程中使用多少个 CPU 核心。在此示例中，它设置为 8 个核心。
+
+你还可以构建二进制 wheel，并在具有相同类型的 GPU 和相同软件环境（CUDA 工具包、PyTorch、Python 等）的多台机器上安装它。
+
+DS_BUILD_OPS=1 python setup.py build_ext -j8 bdist_wheel
+
+这将在 dist 目录下创建一个 PyPI 二进制轮，例如 dist/deepspeed-0.3.13+8cd046f-cp38-cp38-linux_x86_64.whl，然后你可以直接在多台机器上安装它，在我们的示例中：
+
+```
+pip install dist/deepspeed-0.3.13+8cd046f-cp38-cp38-linux_x86_64.whl
+```
+
+## 源码安装 DeepSpeed
+在从 GitHub 克隆 DeepSpeed 仓库后，您可以通过 pip 在 JIT 模式下安装 DeepSpeed（见下文）。由于不编译任何 C++/CUDA 源文件，此安装过程应该很快完成。
+
+
+```
+pip install .
+```
+
+对于跨多个节点的安装，我们发现使用 github 仓库中的 install.sh (https://github.com/microsoft/DeepSpeed/blob/master/install.sh) 脚本安装 DeepSpeed 很有用。这将在本地构建一个 Python whell，并将其复制到你的主机文件（通过 --hostfile 给出，或默认为 /job/hostfile）中列出的所有节点上。
+
+当使用 DeepSpeed 的代码首次运行时，它将自动构建仅运行所需的 CUDA 扩展，并默认将它们放置在 ~/.cache/torch_extensions/ 目录下。下一次执行相同的程序时，这些已预编译的扩展将从该目录加载。
+
+如果你使用多个虚拟环境，则可能会出现问题，因为默认情况下只有一个 torch_extensions 目录，但不同的虚拟环境可能使用不同的设置（例如，不同的 python 或 cuda 版本），然后加载另一个环境构建的 CUDA 扩展将失败。因此，如果需要，你可以使用 TORCH_EXTENSIONS_DIR 环境变量覆盖默认位置。因此，在每个虚拟环境中，你可以将其指向一个唯一的目录，并且 DeepSpeed 将使用它来保存和加载 CUDA 扩展。
+
+你还可以在特定运行中更改它，使用：
+
+```
+TORCH_EXTENSIONS_DIR=./torch-extensions deepspeed ...
+```
