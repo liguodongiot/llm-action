@@ -115,3 +115,61 @@ pip install .
 ```
 TORCH_EXTENSIONS_DIR=./torch-extensions deepspeed ...
 ```
+
+
+
+## 选择正确的架构进行构建
+如果你在运行 DeepSpeed 时遇到以下错误：
+```
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+```
+这意味着 CUDA 扩展没有为你尝试使用的卡构建。
+
+从源代码构建 DeepSpeed 时，DeepSpeed 将尝试支持各种架构，但在 JIT 模式下，它只支持在构建时可见的架构。
+
+你可以通过设置 TORCH_CUDA_ARCH_LIST 环境变量来专门为所需的一系列架构构建：
+```
+TORCH_CUDA_ARCH_LIST="6.1;7.5;8.6" pip install ...
+```
+
+当你为更少的架构构建时，这也会使构建更快。
+
+这也是为了确保使用你的确切架构而建议的。由于各种技术原因，分布式的 PyTorch 二进制文件没有完全支持所有架构，跳过兼容的二进制文件可能会导致未充分利用你的完整卡的计算能力。要查看 deepspeed 来源构建中包含哪些架构 - 保存日志并搜索 -gencode 参数。
+
+完整的 NVIDIA GPU 列表及其计算能力可以在这里 (https://developer.nvidia.com/cuda-gpus) 找到。
+
+
+
+## CUDA 版本不匹配
+如果在运行时碰到以下错误：
+
+```
+Exception: >- DeepSpeed Op Builder: Installed CUDA version {VERSION} does not match the version torch was compiled with {VERSION}, unable to compile cuda/cpp extensions without a matching cuda version.
+```
+
+你安装的 CUDA 版本与用于编译 torch 的 CUDA 版本不匹配。我们仅需要主版本匹配（例如，11.1 和 11.8 是可以的）。但是，主版本不匹配可能会导致意外的行为和错误。
+
+解决此错误的最简单方法是更改已安装的 CUDA 版本（使用 nvcc --version 检查）或更新 torch 版本以匹配已安装的 CUDA 版本（使用 python3 -c "import torch; print(torch.version)" 检查）。
+
+如果你想跳过此检查并继续使用不匹配的 CUDA 版本，请使用以下环境变量：
+
+```
+DS_SKIP_CUDA_CHECK=1
+```
+
+## 针对特定功能的依赖项
+
+一些 DeepSpeed 功能需要 DeepSpeed 的一般依赖项之外的特定依赖项。
+
+有关每个功能/op 的 Python 包依赖项，请参阅我们的 requirements 目录（https://github.com/microsoft/DeepSpeed/tree/master/requirements）。
+
+我们尽力将系统级依赖项最小化，但某些功能需要特殊的系统级软件包。请查看我们的 ds_report 工具输出，以查看您是否缺少给定功能的系统级软件包。
+
+
+
+
+
+
+
+
+
