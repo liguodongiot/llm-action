@@ -54,6 +54,8 @@ LLM 实战
 ## LLM生态相关技术
 
 - [大模型词表扩充必备工具SentencePiece](https://zhuanlan.zhihu.com/p/630696264)
+- [大模型国产化适配-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
+- [大模型实践总结](https://www.zhihu.com/question/601594836/answer/3032763174)
 
 
 ## LLM学习交流群
