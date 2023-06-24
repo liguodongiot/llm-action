@@ -69,6 +69,11 @@ Finished processing dependencies for lsh==0.3.0
 
 
 ```
+下载地址：https://mega.nz/folder/EZZD0YwJ#9_PlEQzdMVLaNdKv_ICNVQ/folder/cc4RgQQZ
+```
+
+
+```
 > python3 blacklist_urls.py ./urls clean_urls.txt
 
 remove blacklisted urls ..
