@@ -1,5 +1,5 @@
 
-
+## 数据预处理
 
 修改`lsh/cMinhash.cpp`文件：
 - 将exc_type改为curexc_type
@@ -278,6 +278,22 @@ wc -l merged_output.json
 wc -l merged_cleand.json 
 2456 merged_cleand.json
 ```
+
+## 模型训练
+
+example/pretrain_gpt.sh 脚本使用单卡 GPU 运行 345M 参数的 GPT 模型进行预训练。 如上所述，单 GPU 训练主要用于调试目的，因为代码针对分布式训练进行了优化。
+
+它遵循与之前的 BERT 脚本基本相同的格式，但有一些显着的差异：使用的tokenization方案是 BPE（需要merge表和 json 词汇文件）而不是 WordPiece，模型架构允许更长的序列（请注意， 最大位置嵌入必须大于或等于最大序列长度），并且 --lr-decay-style 已设置为余弦衰减。 请注意，--data-path 现在包含在预处理中添加的附加 _text_document 后缀，但不包含文件扩展名。
+
+源文件 `arguments.py` 中描述了更多命令行参数。
+
+`example/pretrain_gpt.sh` 可以按照与 BERT 描述相同的方式启动。 设置环境变量并进行任何其他修改，使用适当的安装启动容器，然后运行脚本。
+
+
+```
+
+```
+
 
 
 
