@@ -270,6 +270,16 @@ and will write the results to /workspace/data/merged_cleand.json
 ```
 
 
+```
+wc -l merged_output.json 
+78802 merged_output.json
+
+
+wc -l merged_cleand.json 
+2456 merged_cleand.json
+```
+
+
 
 
 
