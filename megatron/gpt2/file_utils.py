@@ -247,3 +247,7 @@ def get_file_extension(path, dot=True, lower=True):
     ext = os.path.splitext(path)[1]
     ext = ext if dot else ext[1:]
     return ext.lower() if lower else ext
+
+
+
+
