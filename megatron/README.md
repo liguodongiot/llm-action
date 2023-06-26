@@ -66,7 +66,7 @@ Finished processing dependencies for lsh==0.3.0
 ```
 
 
-
+### 下载URL
 
 ```
 下载地址：https://mega.nz/folder/EZZD0YwJ#9_PlEQzdMVLaNdKv_ICNVQ/folder/cc4RgQQZ
@@ -160,6 +160,115 @@ http://www.nfl.com/videos/nfl-cant-miss-plays/09000d5d81d8d049/Lynch-s-amazing-T
 http://www.reuters.com/article/idUSTRE70B26A20110112?feedType=RSS&feedName=topNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+reuters/topNews+(News+/+US+/+Top+News)
 http://mikeos.berlios.de/write-your-own-os.html
 ```
+
+
+
+### 合并数据
+
+
+
+```python
+import glob
+import sys
+import json
+import argparse
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data_path", type=str, default=".",
+        help="path where all the json files are located")
+
+    parser.add_argument("--output_file", type=str, default="merged_output.json",
+        help="filename where the merged json should go")
+
+    args = parser.parse_args()
+
+    data_path = args.data_path
+    out_file = args.output_file
+
+    text_files = glob.glob(data_path + '/*.txt')
+
+    counter = 0
+
+    with open(out_file, 'w') as outfile:
+        for fname in text_files:
+            counter += 1
+
+            if counter % 1024 == 0:
+                print("Merging at ", counter, flush=True)
+
+            with open(fname, 'r') as infile:
+                for row in infile:
+                    tmp = {}
+                    tmp['text'] = row
+                    outfile.write(json.dumps(tmp))
+                    outfile.write('\n')
+
+
+    print("Merged file", out_file, flush=True)
+```
+
+
+
+```
+> python3 Megatron-LM/tools/openwebtext/merge_data.py --data_path /workspace/code/scraped/data --output_file /workspace/data/merged_output.json
+Merging at  1024
+Merging at  2048
+Merged file /workspace/data/merged_output.json
+```
+
+```
+> head -n10 /workspace/data/merged_output.json
+{"text": "With every new year, it's murder for Neal Smither and his crew.\n"}
+{"text": "\n"}
+{"text": "Suicide, too.\n"}
+{"text": "\n"}
+{"text": "As owner of Crime Scene Cleaners, Smither's job is to clean up the bloody messes left behind when people kill each other or themselves - and those first few weeks after Jan. 1 are his busiest time of year.\n"}
+{"text": "\n"}
+{"text": "All that holiday frivolity and togetherness may sound good in songs and movies, and a lot of people do indeed get mighty joyful - but experts say there is also a dark flip side of sadness, rage and depression that flares between Thanksgiving and post-New Year's.\n"}
+{"text": "\n"}
+{"text": "Most people hold their feelings together during the run-up to the new year, but once the holiday letdown sets it in, calls to suicide hot lines nearly double and homicides hit their highest rate of the year. Police officers, crisis counselors and people like Smither put in some long days and nights.\n"}
+{"text": "\n"}
+```
+
+
+###  清洗数据
+
+执行一下cleanup_dataset.py来把tokens数量少于128的文本都删掉。
+```
+
+cd Megatron-LM/tools/openwebtext/
+python3 cleanup_dataset.py /workspace/data/merged_output.json /workspace/data/merged_cleand.json
+```
+
+
+
+
+
+
+```
+> python3 cleanup_dataset.py /workspace/data/merged_output.json /workspace/data/merged_cleand.json
+building gpt2 dataset ...
+will be reading /workspace/data/merged_output.json
+and will write the results to /workspace/data/merged_cleand.json
+ > filtering /workspace/data/merged_output.json
+100%|████████████████████████████████████████████████████████████████████████████████████████████| 1042301/1042301 [00:02<00:00, 457699.45B/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████| 456318/456318 [00:03<00:00, 131743.88B/s]
+> GPT2 tokenizer with 50257 vocab size and eod token 50256 ...
+[small document, skipping]: {'text': "With every new year, it's murder for Neal Smither and his crew.\n"}
+    skipping  {"text": "\n"}
+ No features in text.
+[non-english text] {'text': 'Suicide, too.\n'}
+    skipping  {"text": "\n"}
+ No features in text.
+[non-english text] {'text': 'Pin\n'}
+    skipping  {"text": "\n"}
+ No features in text.
+[non-english text] {'text': 'Tweet'}
+[FINAL] | elapsed time: 156.46 | documents: 78802 | fixed text: 7891 | non-english: 4536 | non-english chars: 410257 | small docs: 30227 | small docs chars: 5717430
+```
+
 
 
 
