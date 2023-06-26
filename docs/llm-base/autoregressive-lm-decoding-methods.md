@@ -277,9 +277,6 @@ $t=1$ 时刻单词的条件分布变得更加陡峭，几乎没有机会选择�
 
 
 
-
-
-
 参考文档：
 - [如何生成文本: 通过 Transformers 用不同的解码方法生成文本](https://huggingface.co/blog/zh/how-to-generate)
 - [How to generate text: using different decoding methods for language generation with Transformers](https://huggingface.co/blog/how-to-generate)
