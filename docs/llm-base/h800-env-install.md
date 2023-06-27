@@ -154,6 +154,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH"
 ## cuDNN 安装
 
 ```
+tar -xvf cudnn-linux-x86_64-8.8.1.3_cuda11-archive.tar.xz
 
 cd cudnn-linux-x86_64-8.8.1.3_cuda11-archive
 sudo cp include/cudnn*.h /usr/local/cuda-11.7/include 
@@ -187,4 +188,55 @@ pip install deepspeed==0.8.0
 pip install accelerate
 pip install tensorboardX
 ```
+
+### Apex
+
+```
+cd apex
+git checkout 22.04-dev
+pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+```
+
+### 安装mpi4py
+
+```
+yum -y install openmpi-devel
+export CC=/usr/lib64/openmpi/bin/mpicc
+
+pip install mpi4py
+```
+
+
+
+
+
+## pdsh安装
+
+```
+tar xf pdsh-2.31.tar.gz 
+cd /data/nfs/llm/pkg/pdsh-pdsh-2.31
+
+./configure \
+--prefix=/home/local/pdsh \
+--with-ssh \
+--with-machines=/home/local/pdsh/machines \
+--with-dshgroups=/home/local/pdsh/group \
+--with-rcmd-rank-list=ssh \
+--with-exec && \
+make && \
+make install
+
+
+ln -s /home/local/pdsh /usr/local/pdsh
+
+ll /usr/local/pdsh/bin/
+
+# 将pdsh的所有命令追加到环境变量中
+echo "export PATH=/home/local/pdsh/bin:$PATH" >> /etc/profile
+source /etc/profile
+
+pdsh -V
+```
+
+
 
