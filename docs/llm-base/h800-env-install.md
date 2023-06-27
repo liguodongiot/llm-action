@@ -73,21 +73,7 @@ ln -s /usr/local/openssl/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
 
 
 
-## Docker 安装
 
-```
-wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
-wget https://nvidia.github.io/nvidia-docker/centos7/x86_64/nvidia-docker.repo -O /etc/yum.repos.d/nvidia-docker.repo
-yum install -y epel-release
-# 安装docker
-yum install -y docker-ce nvidia-docker2
-systemctl enable docker
-
-# 重启docker
-sudo systemctl restart docker
-
-docker info
-```
 
 
 
@@ -237,6 +223,40 @@ source /etc/profile
 
 pdsh -V
 ```
+
+
+## nvidia-docker 安装
+
+```
+wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
+wget https://nvidia.github.io/nvidia-docker/centos7/x86_64/nvidia-docker.repo -O /etc/yum.repos.d/nvidia-docker.repo
+yum install -y epel-release
+
+# 安装docker
+yum install -y docker-ce nvidia-docker2
+systemctl enable docker
+
+# 重启docker
+sudo systemctl restart docker
+
+docker info
+```
+
+
+### 镜像导入及归档
+
+```
+docker save -o tritonserver.tar runoob/ubuntu:v3
+
+docker load --input tritonserver.tar
+```
+
+常见docker命令参考该[文档](https://juejin.cn/post/7016238524286861325)。
+
+
+
+
+
 
 
 
