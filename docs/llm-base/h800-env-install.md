@@ -23,6 +23,62 @@ sh NVIDIA-Linux-x86_64-525.105.17.run -no-x-check
 nvidia-smi
 ```
 
+GPUDirect 通信矩阵：
+```
+> nvidia-smi topo --matrix
+        GPU0    GPU1    GPU2    GPU3    GPU4    GPU5    GPU6    GPU7    NIC0    NIC1    NIC2    NIC3    CPU Affinity    NUMA Affinity
+GPU0     X      NV8     NV8     NV8     NV8     NV8     NV8     NV8     NODE    NODE    SYS     SYS     0-31,64-95      0
+GPU1    NV8      X      NV8     NV8     NV8     NV8     NV8     NV8     PIX     NODE    SYS     SYS     0-31,64-95      0
+GPU2    NV8     NV8      X      NV8     NV8     NV8     NV8     NV8     NODE    NODE    SYS     SYS     0-31,64-95      0
+GPU3    NV8     NV8     NV8      X      NV8     NV8     NV8     NV8     NODE    PIX     SYS     SYS     0-31,64-95      0
+GPU4    NV8     NV8     NV8     NV8      X      NV8     NV8     NV8     SYS     SYS     NODE    NODE    32-63,96-127    1
+GPU5    NV8     NV8     NV8     NV8     NV8      X      NV8     NV8     SYS     SYS     NODE    NODE    32-63,96-127    1
+GPU6    NV8     NV8     NV8     NV8     NV8     NV8      X      NV8     SYS     SYS     NODE    NODE    32-63,96-127    1
+GPU7    NV8     NV8     NV8     NV8     NV8     NV8     NV8      X      SYS     SYS     PIX     PIX     32-63,96-127    1
+NIC0    NODE    PIX     NODE    NODE    SYS     SYS     SYS     SYS      X      NODE    SYS     SYS
+NIC1    NODE    NODE    NODE    PIX     SYS     SYS     SYS     SYS     NODE     X      SYS     SYS
+NIC2    SYS     SYS     SYS     SYS     NODE    NODE    NODE    PIX     SYS     SYS      X      PIX
+NIC3    SYS     SYS     SYS     SYS     NODE    NODE    NODE    PIX     SYS     SYS     PIX      X
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+
+NIC Legend:
+
+  NIC0: mlx5_0
+  NIC1: mlx5_1
+  NIC2: mlx5_2
+  NIC3: mlx5_3
+```
+
+
+## NVIDIA-Fabric Manager 安装 
+
+```
+wget -c https://developer.download.nvidia.cn/compute/cuda/repos/rhel7/x86_64/nvidia-fabric-manager-525.105.17-1.x86_64.rpm
+rpm -ivh nvidia-fabric-manager-525.105.17-1.x86_64.rpm
+
+```
+
+启动NVIDIA-Fabric Manager
+```
+# 启动Fabric Manager服务。
+sudo systemctl start nvidia-fabricmanager
+
+# 查看Fabric Manager服务是否正常启动，回显active（running）表示启动成功。
+sudo systemctl status nvidia-fabricmanager
+
+# 配置Fabric Manager服务随实例开机自启动。
+sudo systemctl enable nvidia-fabricmanager
+```
+
 
 ## CUDA 安装
 
@@ -157,7 +213,15 @@ sudo chmod a+r /usr/local/cuda-11.7/include/cudnn*.h /usr/local/cuda-11.7/lib64/
 ```
 pip install torch-1.13.1+cu117-cp310-cp310-linux_x86_64.whl
 pip install torchvision-0.14.1+cu117-cp310-cp310-linux_x86_64.whl
+
+# pip install torch-scatter torch-sparse torch-cluster torch-geometric
 ```
+
+```
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+
 
 ### Transformers
 
