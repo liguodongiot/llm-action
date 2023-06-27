@@ -61,15 +61,19 @@ NIC Legend:
 
 ## NVIDIA-Fabric Manager 安装 
 
+NVIDIA-Fabric Manager服务可以使多A100显卡间通过NVSwitch互联。
+
+要通过NVSwitch互联必须安装与GPU驱动版本对应的NVIDIA-Fabric Manager软件包，否则将无法正常使用实例。
+
 ```
 wget -c https://developer.download.nvidia.cn/compute/cuda/repos/rhel7/x86_64/nvidia-fabric-manager-525.105.17-1.x86_64.rpm
 rpm -ivh nvidia-fabric-manager-525.105.17-1.x86_64.rpm
 
 ```
 
-启动NVIDIA-Fabric Manager
+启动NVIDIA-Fabric Manager：
 ```
-# 启动Fabric Manager服务。
+# 启动Fabric Manager服务，实现NVSwitch互联
 sudo systemctl start nvidia-fabricmanager
 
 # 查看Fabric Manager服务是否正常启动，回显active（running）表示启动成功。
