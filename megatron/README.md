@@ -1,5 +1,6 @@
 
-## 数据预处理
+## 数据下载
+
 
 修改`lsh/cMinhash.cpp`文件：
 - 将exc_type改为curexc_type
@@ -233,6 +234,8 @@ Merged file /workspace/data/merged_output.json
 ```
 
 
+## 数据预处理
+
 ###  清洗数据
 
 执行一下cleanup_dataset.py来把tokens数量少于128的文本都删掉。
@@ -245,7 +248,7 @@ python3 cleanup_dataset.py /workspace/data/merged_output.json /workspace/data/me
 
 
 
-
+执行 ftfy、英语检测并删除少于 128 个标记的文档。 此步骤可以分片并在分片上运行。
 
 ```
 > python3 cleanup_dataset.py /workspace/data/merged_output.json /workspace/data/merged_cleand.json
@@ -278,6 +281,122 @@ wc -l merged_output.json
 wc -l merged_cleand.json 
 2456 merged_cleand.json
 ```
+
+
+可以使用 cleanup_fix_dataset.py 完成其他清理（例如，删除少于 512 个字符的文档或特定于数据集的清理，如故事、真实新闻数据集）。 可以通过运行 python cleanup_fix_dataset.py --help 找到更多详细信息。 
+
+
+2. 使用 LSH 查找可能的重复项并将其存储在文件中以供以后处理。 该代码支持保存和加载指纹（fingerprints）以进行重复数据删除，并且还支持多线程以加快处理速度。 更多详细信息可以通过 python find_duplicates.py --help 找到。
+
+```
+python find_duplicates.py --inputs /workspace/data/merged_cleand.json merged_cleand_id  --output /workspace/data/output_possible_duplicate_urls
+```
+
+
+
+
+
+### 数据预处理
+
+```
+python tools/preprocess_data.py \
+       --input /workspace/data/train_data.json \
+       --output-prefix /workspace/data/my-gpt2 \
+       --vocab-file /workspace/model/gpt2-vocab/gpt2-vocab.json\
+       --dataset-impl mmap \
+       --tokenizer-type GPT2BPETokenizer \
+       --merge-file /workspace/model/gpt2-vocab/gpt2-merges.txt \
+       --append-eod \
+       --workers 20 \
+       --chunk-size 25
+
+```
+
+```
+python tools/preprocess_data.py \
+>        --input /workspace/data/train_data.json \
+>        --output-prefix /workspace/data/my-gpt2 \
+>        --vocab-file /workspace/model/gpt2-vocab/gpt2-vocab.json\
+>        --dataset-impl mmap \
+>        --tokenizer-type GPT2BPETokenizer \
+>        --merge-file /workspace/model/gpt2-vocab/gpt2-merges.txt \
+>        --append-eod \
+>        --workers 20 \
+>        --chunk-size 25
+Opening /workspace/data/train_data.json
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Vocab size: 50257
+Output prefix: /workspace/data/my-gpt2
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Time to startup: 0.30323338508605957
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Processed 100 documents (599.5023090743549 docs/s, 0.5155917905295792 MB/s).
+Processed 200 documents (823.8866599553122 docs/s, 0.880650182925332 MB/s).
+Processed 300 documents (1185.4008987366815 docs/s, 1.200331609341586 MB/s).
+Processed 400 documents (1533.1571463558173 docs/s, 1.6700295716317035 MB/s).
+Processed 500 documents (1870.0427840484517 docs/s, 1.9969574995140202 MB/s).
+Processed 600 documents (2187.427117123695 docs/s, 2.3795959237741595 MB/s).
+Processed 700 documents (2152.781409317778 docs/s, 2.606610975177864 MB/s).
+Processed 800 documents (2387.7960244711426 docs/s, 2.818861025855241 MB/s).
+Processed 900 documents (2608.6323398315217 docs/s, 3.0303661882286277 MB/s).
+Processed 1000 documents (2838.3195442776887 docs/s, 3.2176144414924934 MB/s).
+Processed 1100 documents (3016.585243380653 docs/s, 3.4106741220407777 MB/s).
+Processed 1200 documents (3236.0855769694435 docs/s, 3.7339411377043383 MB/s).
+Processed 1300 documents (3475.8398763827417 docs/s, 3.935396723301203 MB/s).
+Processed 1400 documents (3684.5816116836872 docs/s, 4.222750560810705 MB/s).
+Processed 1500 documents (3880.979581765468 docs/s, 4.3926025538214795 MB/s).
+Processed 1600 documents (3418.7934424893274 docs/s, 3.8987457589126513 MB/s).
+Processed 1700 documents (3574.7781279422925 docs/s, 4.042231645357657 MB/s).
+Processed 1800 documents (3738.2444121277663 docs/s, 4.194224887440415 MB/s).
+Processed 1900 documents (3886.3553392670174 docs/s, 4.393378761729153 MB/s).
+Processed 2000 documents (4044.6050768939995 docs/s, 4.54716435296795 MB/s).
+Processed 2100 documents (4221.569306909339 docs/s, 4.692880733997719 MB/s).
+Processed 2200 documents (4398.378779031662 docs/s, 4.835040337476316 MB/s).
+Processed 2300 documents (4568.910999317048 docs/s, 5.0245360709512354 MB/s).
+Processed 2400 documents (4740.355416123744 docs/s, 5.179960433973664 MB/s).
+Done! Now finalizing.
+```
+
+
 
 ## 模型训练
 
