@@ -145,7 +145,7 @@ deepspeed --include localhost:7 train_ddp.py \
 --model_name_or_path /home/h800/h800-work/h800-workspace/llama-13b/merge \
 --data_path /home/h800/h800-work/h800-workspace/data/alpaca_data_cleaned.json \
 --output_dir /home/h800/h800-work/h800-workspace/output/llama-13b-sft \
---max_steps 100 \
+--max_steps 800 \
 --per_device_train_batch_size 2 \
 --per_device_eval_batch_size 1 \
 --gradient_accumulation_steps 4 \
