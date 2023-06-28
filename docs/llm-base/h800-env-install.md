@@ -59,7 +59,9 @@ virtualenv -p /usr/bin/python3.10 llama-venv-py310-cu118
 source /home/guodong.li/virtual-venv/llama-venv-py310-cu118/bin/activate
 ```
 
-## Pytorch
+## Python 库安装
+
+### Pytorch
 
 下载地址: https://download.pytorch.org/whl/torch_stable.html
 
@@ -72,6 +74,20 @@ pip install torchvision-0.15.0+cu118-cp310-cp310-linux_x86_64.whl
 ```
 
 
+### Deepspeed...
+```
+pip install deepspeed==0.9.5
+pip install accelerate
+pip install tensorboardX
+```
+
+### 安装Apex
+```
+git clone https://github.com/NVIDIA/apex.git
+cd apex
+git checkout 30a7ad3
+pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --config-settings "--build-option=--cpp_ext" --config-settings "--build-option=--cuda_ext" ./
+```
 
 
 
