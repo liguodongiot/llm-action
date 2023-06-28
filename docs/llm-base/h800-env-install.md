@@ -13,6 +13,7 @@
 
 **‡** Maxwell is deprecated from CUDA 11.6 onwards
 
+参考：https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
