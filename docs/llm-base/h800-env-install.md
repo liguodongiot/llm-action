@@ -3,7 +3,7 @@
 
 ## Pytorch
 
-| Fermi**†** | Kepler**†** | Maxwell**‡** | Pascal | Volta | Turing | Ampere | Ada (Lovelace) | [Hopper](https://www.nvidia.com/en-us/data-center/hopper-architecture/) |
+| Fermi **†** | Kepler **†** | Maxwell **‡** | Pascal | Volta | Turing | Ampere | Ada (Lovelace) | [Hopper](https://www.nvidia.com/en-us/data-center/hopper-architecture/) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | sm_20 | sm_30 | sm_50 | sm_60 | sm_70 | sm_75 | sm_80 | sm_89 | sm_90 |
 |     | sm_35 | sm_52 | sm_61 | sm_72<br>(Xavier) |     | sm_86 |     | sm_90a (Thor) |
