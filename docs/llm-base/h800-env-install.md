@@ -71,10 +71,16 @@ rpm -ivh nvidia-fabric-manager-525.105.17-1.x86_64.rpm
 
 ```
 
+```
+wget -c https://developer.download.nvidia.com/compute/cuda/repos/fedora37/x86_64/nvidia-fabric-manager-devel-525.105.17-1.x86_64.rpm
+rpm -ivh nvidia-fabric-manager-devel-525.105.17-1.x86_64.rpm
+```
+
+
 启动NVIDIA-Fabric Manager：
 ```
 # 启动Fabric Manager服务，实现NVSwitch互联
-sudo systemctl start nvidia-fabricmanager
+sudo systemctl restart nvidia-fabricmanager
 
 # 查看Fabric Manager服务是否正常启动，回显active（running）表示启动成功。
 sudo systemctl status nvidia-fabricmanager
@@ -140,7 +146,7 @@ ln -s /usr/local/openssl/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
 ## Python3.10 安装
 
 ```
-yum install libffi-devel
+yum install -y libffi-devel bzip2-devel
 ```
 
 
