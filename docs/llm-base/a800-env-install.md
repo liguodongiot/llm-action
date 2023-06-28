@@ -65,6 +65,8 @@ NVIDIA-Fabric Manager服务可以使多A100显卡间通过NVSwitch互联。
 
 要通过NVSwitch互联必须安装与GPU驱动版本对应的NVIDIA-Fabric Manager软件包，否则将无法正常使用实例。
 
+参考：https://www.volcengine.com/docs/6419/73634
+
 ```
 wget -c https://developer.download.nvidia.cn/compute/cuda/repos/rhel7/x86_64/nvidia-fabric-manager-525.105.17-1.x86_64.rpm
 rpm -ivh nvidia-fabric-manager-525.105.17-1.x86_64.rpm
