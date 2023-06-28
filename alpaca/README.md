@@ -135,7 +135,63 @@ deepspeed --hostfile=/home/guodong.li/code/hostfile train_ddp.py \
 
 
 
-## H800（单机多卡）
+## H800
+
+### 单机单卡
+运行命令：
+```
+deepspeed --include localhost:7 train_ddp.py \
+--deepspeed ds_config_zero2.json \
+--model_name_or_path /home/h800/h800-work/h800-workspace/llama-13b/merge \
+--data_path /home/h800/h800-work/h800-workspace/data/alpaca_data_cleaned.json \
+--output_dir /home/h800/h800-work/h800-workspace/output/llama-13b-sft \
+--max_steps 100 \
+--per_device_train_batch_size 2 \
+--per_device_eval_batch_size 1 \
+--gradient_accumulation_steps 4 \
+--evaluation_strategy "no" \
+--save_strategy "steps" \
+--save_steps 50 \
+--save_total_limit 1 \
+--learning_rate 2e-5 \
+--weight_decay 0. \
+--warmup_ratio 0.03 \
+--lr_scheduler_type "cosine" \
+--logging_steps 1 \
+--report_to "tensorboard" \
+--gradient_checkpointing True \
+--fp16 True
+```
+
+训练时长：
+
+```
+```
+
+显存占用：
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   7  NVIDIA H800         On   | 00000000:E2:00.0 Off |                  Off |
+| N/A   44C    P0   153W / 700W |  60787MiB / 81559MiB |     23%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    7   N/A  N/A     82977      C   ...nv-py310-cu118/bin/python    60570MiB |
++-----------------------------------------------------------------------------+
+```
+
+### 单机多卡
 
 
 运行命令：
