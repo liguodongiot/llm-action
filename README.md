@@ -57,6 +57,7 @@ LLM 实战
 - [大模型国产化适配-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
 - [大模型实践总结](https://www.zhihu.com/question/601594836/answer/3032763174)
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
+- [A800/H800服务器常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
 
 
 ## LLM学习交流群
