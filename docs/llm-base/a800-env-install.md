@@ -331,6 +331,24 @@ sudo systemctl restart docker
 docker info
 ```
 
+关闭 selinux 安全系统：
+
+```
+1. 临时关闭（setenforce 0），系统重启后，恢复启动。
+setenforce 0
+
+查看：
+getenforce
+
+
+2. 永久关闭，修改文件 /etc/selinux/config
+
+SELINUX=disabled
+
+保存后，重启 reboot
+```
+
+
 
 ### 镜像导入及归档
 
