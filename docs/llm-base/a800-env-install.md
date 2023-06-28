@@ -331,6 +331,30 @@ sudo systemctl restart docker
 docker info
 ```
 
+---
+
+修改Docker配置（`/etc/docker/daemon.json`）：
+
+```
+{
+    "data-root": "/home/docker",
+    "runtimes": {
+        "nvidia": {
+            "path": "nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+}
+```
+重启docker服务:
+
+```
+systemctl daemon-reload
+systemctl restart docker
+```
+
+---
+
 关闭 selinux 安全系统：
 
 ```
