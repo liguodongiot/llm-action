@@ -12,6 +12,12 @@
 参考：https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/
 
 
+如果使用H800，CUDA版本要在11.8及以上，同时，PyTorch版本要在2.0.0以上。下面是我使用CUDA为11.7，同时PyTorch为1.13.1的报错信息。
+
+```
+NVIDIA H800 with CUDA capability sm_90 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70 sm_75 sm_80 sm_86.
+```
 
 ## CUDA
 
@@ -61,9 +67,12 @@ source /home/guodong.li/virtual-venv/llama-venv-py310-cu118/bin/activate
 
 ## Python 库安装
 
+
 ### Pytorch
 
 下载地址: https://download.pytorch.org/whl/torch_stable.html
+
+
 
 ```
 wget -c https://download.pytorch.org/whl/cu118/torch-2.0.0%2Bcu118-cp310-cp310-linux_x86_64.whl
