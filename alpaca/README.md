@@ -81,7 +81,7 @@ deepspeed --include localhost:4,5,6,7 train.py \
 
 
 
-## DDP
+## A800-DDP
 
 单机多卡：
 ```
@@ -135,7 +135,7 @@ deepspeed --hostfile=/home/guodong.li/code/hostfile train_ddp.py \
 
 
 
-## H800
+## H800-DDP
 
 ### 单机单卡
 运行命令：
