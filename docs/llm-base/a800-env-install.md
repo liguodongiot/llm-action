@@ -59,6 +59,18 @@ NIC Legend:
 ```
 
 
+开启持久模式：
+
+如果未开启持久模式（Persistence Mode），每次用nvidia-smi查询显卡资源的时候，会等到较长时间才有结果。
+```
+nvidia-smi -pm ENABLED
+
+# 查询 Persistence Mode 是否开启
+nvidia-smi -a
+nvidia-smi
+```
+
+
 ## NVIDIA-Fabric Manager 安装 
 
 NVIDIA-Fabric Manager服务可以使多A100显卡间通过NVSwitch互联。
