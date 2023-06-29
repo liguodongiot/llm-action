@@ -16,3 +16,11 @@ bash
 
 sudo docker exec -it faster_transformer bash
 ```
+
+
+```
+cd code
+git clone https://github.com/NVIDIA/FasterTransformer.git
+cd FasterTransformer/
+git submodule init && git submodule update
+```
