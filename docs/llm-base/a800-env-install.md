@@ -71,6 +71,26 @@ nvidia-smi
 ```
 
 
+### 异常解决方案
+
+- **问题**：Centos服务器重启后出现显卡驱动无法使用的情况：NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. 
+- **解决方案**：
+
+```
+#  安装dkms修护驱动
+> sudo yum install dkms
+
+# 查看显卡驱动版本
+> ls /usr/src
+debug
+kernels
+nvidia-525.105.17
+
+# 重新安装对应nvidia的驱动模块
+> dkms install -m nvidia -v 525.105.17
+```
+
+
 ## NVIDIA-Fabric Manager 安装 
 
 NVIDIA-Fabric Manager服务可以使多A100显卡间通过NVSwitch互联。
