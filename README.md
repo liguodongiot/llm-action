@@ -57,6 +57,8 @@ LLM 实战
 - [大模型国产化适配-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
 - [大模型实践总结](https://www.zhihu.com/question/601594836/answer/3032763174)
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
+- [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
+- [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 
 ## 服务器基础环境软件安装
 
