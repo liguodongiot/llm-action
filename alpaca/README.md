@@ -151,7 +151,7 @@ deepspeed --include localhost:7 train_ddp.py \
 --gradient_accumulation_steps 4 \
 --evaluation_strategy "no" \
 --save_strategy "steps" \
---save_steps 50 \
+--save_steps 1000 \
 --save_total_limit 1 \
 --learning_rate 2e-5 \
 --weight_decay 0. \
@@ -166,6 +166,8 @@ deepspeed --include localhost:7 train_ddp.py \
 训练时长：
 
 ```
+{'train_runtime': 7284.2064, 'train_samples_per_second': 0.879, 'train_steps_per_second': 0.11, 'train_loss': 1.0952609968185425, 'epoch': 0.12}
+100%|█████████████████████████████████████████████████████████████████████████████████████| 800/800 [2:01:24<00:00,  9.11s/it]
 ```
 
 显存占用：
@@ -207,7 +209,7 @@ deepspeed --include localhost:0,1,2,3,4,5,6,7 train_ddp.py \
 --gradient_accumulation_steps 4 \
 --evaluation_strategy "no" \
 --save_strategy "steps" \
---save_steps 50 \
+--save_steps 1000 \
 --save_total_limit 1 \
 --learning_rate 2e-5 \
 --weight_decay 0. \
@@ -220,15 +222,12 @@ deepspeed --include localhost:0,1,2,3,4,5,6,7 train_ddp.py \
 ```
 
 训练时长：
-```
-{'train_runtime': 1356.6135, 'train_samples_per_second': 4.718, 'train_steps_per_second': 0.074, 'train_loss': 1.1297898769378663, 'epoch': 0.12}
-100%|███████████████████████████████████████████████████████████████████████████████████████| 100/100 [22:36<00:00, 13.57s/it]
-```
 
 ```
-{'train_runtime': 1416.9025, 'train_samples_per_second': 4.517, 'train_steps_per_second': 0.071, 'train_loss': 1.1295330429077148, 'epoch': 0.12}
-100%|███████████████████████████████████████████████████████████████████████████████████████| 100/100 [23:36<00:00, 14.17s/it]
+{'train_runtime': 779.6666, 'train_samples_per_second': 8.209, 'train_steps_per_second': 0.128, 'train_loss': 1.129374122619629, 'epoch': 0.12}
+100%|███████████████████████████████████████████████████████████████████████████████████████| 100/100 [12:59<00:00,  7.80s/it]
 ```
+
 
 显存占用：
 ```
