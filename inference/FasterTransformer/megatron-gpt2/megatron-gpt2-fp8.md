@@ -200,6 +200,22 @@ python examples/pytorch/gpt/utils/megatron_ckpt_convert.py \
 --vocab-path /workspace/model/gpt2-vocab/gpt2-vocab.json \
 --merges-path /workspace/model/gpt2-vocab/gpt2-merges.txt
 ```
+运行结果：
+```
+=============== Argument ===============
+saved_dir: /workspace/model/megatron-models/c-model-fp16
+in_file: /workspace/model/megatron-models/345m/release/
+infer_gpu_num: 1
+head_num: 16
+trained_tensor_parallel_size: 1
+processes: 16
+weight_data_type: fp16
+load_checkpoints_to_cpu: 1
+vocab_path: /workspace/model/gpt2-vocab/gpt2-vocab.json
+merges_path: /workspace/model/gpt2-vocab/gpt2-merges.txt
+========================================
+[INFO] Spent 0:00:04.113249 (h:m:s) to convert the model
+```
 
 
 ## H800-FP16
