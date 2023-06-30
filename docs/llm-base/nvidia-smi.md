@@ -220,7 +220,7 @@ GPU 00000000:18:00.0
     [-h | --help]: Display help information
     [-i | --id]: Enumeration index, PCI bus ID or UUID.
 
-    [-l | --link]: Limit a command to a specific link.  Without this flag, all link inf                                                         ormation is displayed.
+    [-l | --link]: Limit a command to a specific link.  Without this flag, all link information is displayed.
     [-s | --status]: Display link state (active/inactive).
     [-c | --capabilities]: Display link capabilities.
     [-p | --pcibusid]: Display remote node PCI bus ID for a link.
@@ -233,12 +233,12 @@ Please use option -gt/--getthroughput instead.
     [-e | --errorcounters]: Display error counters for a link.
     [-ec | --crcerrorcounters]: Display per-lane CRC error counters for a link.
     [-re | --reseterrorcounters]: Reset all error counters to zero.
-    [-gt | --getthroughput]: Display link throughput counters for specified counter typ                                                         e
-       The arguments consist of character string representing the type of traffic count                                                         ed:
+    [-gt | --getthroughput]: Display link throughput counters for specified counter type
+       The arguments consist of character string representing the type of traffic counted:
           d: Display tx and rx data payload in KiB
           r: Display tx and rx data payload and protocol overhead in KiB if supported
 
-    [-sLowPwrThres | --setLowPowerThreshold]: Set NvLink Low Power Threshold (value in                                                          units of 100us/default)
+    [-sLowPwrThres | --setLowPowerThreshold]: Set NvLink Low Power Threshold (value inunits of 100us/default)
     [-gLowPwrInfo | --getLowPowerInfo]: Get NvLink Low Power Info
     [-cBridge | --checkBridge]: Check NvLink Bridge presence
 
