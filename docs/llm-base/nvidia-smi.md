@@ -280,6 +280,8 @@ NIC Legend:
   NIC3: mlx5_3         
 ```
 
+### 状态
+
 ```
 # 查询 NVLink 连接本身以确保状态、功能和运行状况。
 > nvidia-smi nvlink --status
@@ -470,6 +472,7 @@ GPU 7: NVIDIA H800 (UUID: GPU-474d838c-171f-d249-4f45-bbc01a8eb74a)
 
 
 ### 显示指定计数器类型的链路吞吐量计数器
+
 显示指定计数器类型的链路吞吐量计数器 参数由表示计数的流量类型的字符串组成：
 
 - d：以 KiB 显示 tx 和 rx 数据有效负载
