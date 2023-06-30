@@ -181,6 +181,7 @@ ln -s /usr/local/openssl/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
 
 ```
 yum install -y libffi-devel bzip2-devel
+yum install sqlite-devel -y
 ```
 
 
@@ -220,6 +221,31 @@ vim ~/.pip/pip.conf
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 [install]
 trusted-host = https://pypi.tuna.tsinghua.edu.cn
+```
+
+
+
+## miniconda安装
+
+文档：https://docs.conda.io/en/latest/miniconda.html#linux-installers
+
+
+安装：
+```
+wget -c https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+```
+
+配置清华源：
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+```
+
+安装包：
+```
+# 最常见的源是conda-forge，一个开源的代码库，许多软件通过这个源来安装。
+conda install nodejs=16.6.1 -c conda-forge
 ```
 
 
