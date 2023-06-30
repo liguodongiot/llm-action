@@ -219,7 +219,6 @@ GPU 00000000:18:00.0
     Options include:
     [-h | --help]: Display help information
     [-i | --id]: Enumeration index, PCI bus ID or UUID.
-
     [-l | --link]: Limit a command to a specific link.  Without this flag, all link information is displayed.
     [-s | --status]: Display link state (active/inactive).
     [-c | --capabilities]: Display link capabilities.
@@ -227,8 +226,7 @@ GPU 00000000:18:00.0
     [-R | --remotelinkinfo]: Display remote device PCI bus ID and NvLink ID for a link.
     [-sc | --setcontrol]: Setting counter control is deprecated!
     [-gc | --getcontrol]: Getting counter control is deprecated!
-    [-g | --getcounters]: Getting counters using option -g is deprecated.
-Please use option -gt/--getthroughput instead.
+    [-g | --getcounters]: Getting counters using option -g is deprecated. Please use option -gt/--getthroughput instead.
     [-r | --resetcounters]: Resetting counters is deprecated!
     [-e | --errorcounters]: Display error counters for a link.
     [-ec | --crcerrorcounters]: Display per-lane CRC error counters for a link.
@@ -468,6 +466,169 @@ GPU 7: NVIDIA H800 (UUID: GPU-474d838c-171f-d249-4f45-bbc01a8eb74a)
          Link 7, Link is supported: false
 ```
 
+
+
+
+### 显示指定计数器类型的链路吞吐量计数器
+显示指定计数器类型的链路吞吐量计数器 参数由表示计数的流量类型的字符串组成：
+
+- d：以 KiB 显示 tx 和 rx 数据有效负载
+- r：如果支持，以 KiB 显示 tx 和 rx 数据有效负载和协议开销
+
+
+```
+# nvidia-smi nvlink -gt d
+> nvidia-smi nvlink -gt r
+nvidia-smi nvlink -gt r
+GPU 0: NVIDIA H800 (UUID: GPU-34bf77d1-c686-6821-79a8-32d326c5039c)
+         Link 0: Raw Tx: 25305739 KiB
+         Link 0: Raw Rx: 25554089 KiB
+         Link 1: Raw Tx: 8508772 KiB
+         Link 1: Raw Rx: 8727784 KiB
+         Link 2: Raw Tx: 8511892 KiB
+         Link 2: Raw Rx: 8734905 KiB
+         Link 3: Raw Tx: 8506576 KiB
+         Link 3: Raw Rx: 8720965 KiB
+         Link 4: Raw Tx: 8508545 KiB
+         Link 4: Raw Rx: 8724705 KiB
+         Link 5: Raw Tx: 8503240 KiB
+         Link 5: Raw Rx: 8724306 KiB
+         Link 6: Raw Tx: 8514361 KiB
+         Link 6: Raw Rx: 8727629 KiB
+         Link 7: Raw Tx: 8517607 KiB
+         Link 7: Raw Rx: 8730994 KiB
+GPU 1: NVIDIA H800 (UUID: GPU-f5046fa5-3db4-45e8-870a-dc1376becaa5)
+         Link 0: Raw Tx: 25415406 KiB
+         Link 0: Raw Rx: 25651111 KiB
+         Link 1: Raw Tx: 8614105 KiB
+         Link 1: Raw Rx: 8827532 KiB
+         Link 2: Raw Tx: 8618737 KiB
+         Link 2: Raw Rx: 8838429 KiB
+         Link 3: Raw Tx: 8617599 KiB
+         Link 3: Raw Rx: 8828039 KiB
+         Link 4: Raw Tx: 8619360 KiB
+         Link 4: Raw Rx: 8848343 KiB
+         Link 5: Raw Tx: 8616291 KiB
+         Link 5: Raw Rx: 8830590 KiB
+         Link 6: Raw Tx: 8621649 KiB
+         Link 6: Raw Rx: 8828622 KiB
+         Link 7: Raw Tx: 8626449 KiB
+         Link 7: Raw Rx: 8834243 KiB
+GPU 2: NVIDIA H800 (UUID: GPU-9de407ad-ba9c-af12-ce09-65828829a67c)
+         Link 0: Raw Tx: 576438247 KiB
+         Link 0: Raw Rx: 591715253 KiB
+         Link 1: Raw Tx: 591684300 KiB
+         Link 1: Raw Rx: 625042437 KiB
+         Link 2: Raw Tx: 561660326 KiB
+         Link 2: Raw Rx: 576223159 KiB
+         Link 3: Raw Tx: 560468850 KiB
+         Link 3: Raw Rx: 575052692 KiB
+         Link 4: Raw Tx: 542530345 KiB
+         Link 4: Raw Rx: 583254750 KiB
+         Link 5: Raw Tx: 541527825 KiB
+         Link 5: Raw Rx: 582292048 KiB
+         Link 6: Raw Tx: 524762470 KiB
+         Link 6: Raw Rx: 550225067 KiB
+         Link 7: Raw Tx: 544014147 KiB
+         Link 7: Raw Rx: 582742696 KiB
+...
+GPU 6: NVIDIA H800 (UUID: GPU-70c5b9a8-82a3-4199-d7f5-adb9186459eb)
+         Link 0: Raw Tx: 25421053 KiB
+         Link 0: Raw Rx: 25651584 KiB
+         Link 1: Raw Tx: 8624284 KiB
+         Link 1: Raw Rx: 8834680 KiB
+         Link 2: Raw Tx: 8629640 KiB
+         Link 2: Raw Rx: 8841618 KiB
+         Link 3: Raw Tx: 8622803 KiB
+         Link 3: Raw Rx: 8834635 KiB
+         Link 4: Raw Tx: 8625793 KiB
+         Link 4: Raw Rx: 8848148 KiB
+         Link 5: Raw Tx: 8617230 KiB
+         Link 5: Raw Rx: 8832897 KiB
+         Link 6: Raw Tx: 8629904 KiB
+         Link 6: Raw Rx: 8848920 KiB
+         Link 7: Raw Tx: 8637145 KiB
+         Link 7: Raw Rx: 8831474 KiB
+GPU 7: NVIDIA H800 (UUID: GPU-474d838c-171f-d249-4f45-bbc01a8eb74a)
+         Link 0: Raw Tx: 25310096 KiB
+         Link 0: Raw Rx: 25546907 KiB
+         Link 1: Raw Tx: 8512574 KiB
+         Link 1: Raw Rx: 8747250 KiB
+         Link 2: Raw Tx: 8514172 KiB
+         Link 2: Raw Rx: 8734000 KiB
+         Link 3: Raw Tx: 8512622 KiB
+         Link 3: Raw Rx: 8730435 KiB
+         Link 4: Raw Tx: 8510112 KiB
+         Link 4: Raw Rx: 8745800 KiB
+         Link 5: Raw Tx: 8507350 KiB
+         Link 5: Raw Rx: 8737562 KiB
+         Link 6: Raw Tx: 8515623 KiB
+         Link 6: Raw Rx: 8729950 KiB
+         Link 7: Raw Tx: 8520721 KiB
+         Link 7: Raw Rx: 8731188 KiB
+```
+
+显示 0 号 GPU 设备的所有 链路 的 吞吐量计数器的数据有效载荷
+```
+# 未做任何操作时
+> nvidia-smi nvlink -i 0 -gt d
+GPU 0: NVIDIA H800 (UUID: GPU-34bf77d1-c686-6821-79a8-32d326c5039c)
+         Link 0: Data Tx: 5863784 KiB
+         Link 0: Data Rx: 5863677 KiB
+         Link 1: Data Tx: 5864084 KiB
+         Link 1: Data Rx: 5862999 KiB
+         Link 2: Data Tx: 5864630 KiB
+         Link 2: Data Rx: 5863940 KiB
+         Link 3: Data Tx: 5863784 KiB
+         Link 3: Data Rx: 5861984 KiB
+         Link 4: Data Tx: 5861984 KiB
+         Link 4: Data Rx: 5862774 KiB
+         Link 5: Data Tx: 5861984 KiB
+         Link 5: Data Rx: 5862696 KiB
+         Link 6: Data Tx: 5861984 KiB
+         Link 6: Data Rx: 5862999 KiB
+         Link 7: Data Tx: 5861984 KiB
+         Link 7: Data Rx: 5863146 KiB
+
+# 模型训练时（LLaMA-13B）
+> nvidia-smi nvlink -i 0 -gt d
+GPU 0: NVIDIA H800 (UUID: GPU-34bf77d1-c686-6821-79a8-32d326c5039c)
+         Link 0: Data Tx: 1390774681 KiB
+         Link 0: Data Rx: 1387831436 KiB
+         Link 1: Data Tx: 1390715554 KiB
+         Link 1: Data Rx: 1387856699 KiB
+         Link 2: Data Tx: 1390689916 KiB
+         Link 2: Data Rx: 1387846800 KiB
+         Link 3: Data Tx: 1390772616 KiB
+         Link 3: Data Rx: 1387795114 KiB
+         Link 4: Data Tx: 1391305436 KiB
+         Link 4: Data Rx: 1387910526 KiB
+         Link 5: Data Tx: 1391288579 KiB
+         Link 5: Data Rx: 1387888125 KiB
+         Link 6: Data Tx: 1391348992 KiB
+         Link 6: Data Rx: 1387832695 KiB
+         Link 7: Data Tx: 1391348007 KiB
+         Link 7: Data Rx: 1387855953 KiB
+> nvidia-smi nvlink -i 0 -gt r
+GPU 0: NVIDIA H800 (UUID: GPU-34bf77d1-c686-6821-79a8-32d326c5039c)
+         Link 0: Raw Tx: 1933426555 KiB
+         Link 0: Raw Rx: 1975423057 KiB
+         Link 1: Raw Tx: 1915132335 KiB
+         Link 1: Raw Rx: 1958569530 KiB
+         Link 2: Raw Tx: 1916865102 KiB
+         Link 2: Raw Rx: 1958463156 KiB
+         Link 3: Raw Tx: 1916412075 KiB
+         Link 3: Raw Rx: 1958028986 KiB
+         Link 4: Raw Tx: 1913329166 KiB
+         Link 4: Raw Rx: 1957374521 KiB
+         Link 5: Raw Tx: 1913784453 KiB
+         Link 5: Raw Rx: 1957230286 KiB
+         Link 6: Raw Tx: 1916726453 KiB
+         Link 6: Raw Rx: 1957614726 KiB
+         Link 7: Raw Tx: 1919300185 KiB
+         Link 7: Raw Rx: 1957241622 KiB
+
+```
 
 
 ## 参考文档
