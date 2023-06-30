@@ -185,17 +185,54 @@ repetition_penalty: tensor([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 
 [INFO] accuracy: 46.7775% (total : 962)
 ```
 
+
+## H800-FP32
+
+### 模型转换
+
+```
+python examples/pytorch/gpt/utils/megatron_ckpt_convert.py \
+-head_num 16 \
+-i /workspace/model/megatron-models/345m/release/ \
+-o /workspace/model/megatron-models/c-model-fp32 \
+-t_g 1 \
+-i_g 1 \
+--vocab-path /workspace/model/gpt2-vocab/gpt2-vocab.json \
+--merges-path /workspace/model/gpt2-vocab/gpt2-merges.txt
+```
+
+
 ## H800-FP16
 
+### 模型转换
+```
+python examples/pytorch/gpt/utils/megatron_ckpt_convert.py \
+-head_num 16 \
+-i /workspace/model/megatron-models/345m/release/ \
+-o /workspace/model/megatron-models/c-model-fp16 \
+-t_g 1 \
+-i_g 1 \
+--vocab-path /workspace/model/gpt2-vocab/gpt2-vocab.json \
+--merges-path /workspace/model/gpt2-vocab/gpt2-merges.txt \
+-weight_data_type fp16
 
+```
 
 
 
 ## H800-FP8
 
+### 模型转换
 
-
-
+```
+python3 examples/pytorch/gpt/utils/megatron_fp8_ckpt_convert.py \
+      -i /workspace/model/megatron-models/345m/release \
+      -o /workspace/model/megatron-models/c-model-fp8/ \
+      -trained_tensor_parallel_size 1 \
+      -i_g 1 \
+      -head_num 16
+      
+```
 
 
 
