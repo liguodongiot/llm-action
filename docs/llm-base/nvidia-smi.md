@@ -8,6 +8,198 @@
 nvidia-smi
 ```
 
+### 可以列出所有GPU设备的详细信息
+
+使用 nvidia-smi -q 可以列出所有GPU设备的详细信息。
+
+如果只想列出某一GPU的详细信息，可使用 -i 选项指定。
+
+```
+> nvidia-smi -q -i 0
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Fri Jun 30 17:20:02 2023
+Driver Version                            : 525.105.17
+CUDA Version                              : 12.0
+
+Attached GPUs                             : 8
+GPU 00000000:18:00.0
+    Product Name                          : NVIDIA H800
+    Product Brand                         : NVIDIA
+    Product Architecture                  : Hopper
+    Display Mode                          : Disabled
+    Display Active                        : Disabled
+    Persistence Mode                      : Enabled
+    MIG Mode
+        Current                           : Disabled
+        Pending                           : Disabled
+    Accounting Mode                       : Disabled
+    Accounting Mode Buffer Size           : 4000
+    Driver Model
+        Current                           : N/A
+        Pending                           : N/A
+    Serial Number                         : 1651323018291
+    GPU UUID                              : GPU-34bf77d1-c686-6821-79a8-32d326c5039c
+    Minor Number                          : 0
+    VBIOS Version                         : 96.00.51.00.0E
+    MultiGPU Board                        : No
+    Board ID                              : 0x1800
+    Board Part Number                     : 692-2G520-0205-000
+    GPU Part Number                       : 2324-865-A1
+    Module ID                             : 5
+    Inforom Version
+        Image Version                     : G520.0205.00.02
+        OEM Object                        : 2.1
+        ECC Object                        : 7.16
+        Power Management Object           : N/A
+    GPU Operation Mode
+        Current                           : N/A
+        Pending                           : N/A
+    GSP Firmware Version                  : 525.105.17
+    GPU Virtualization Mode
+        Virtualization Mode               : None
+        Host VGPU Mode                    : N/A
+    IBMNPU
+        Relaxed Ordering Mode             : N/A
+    PCI
+        Bus                               : 0x18
+        Device                            : 0x00
+        Domain                            : 0x0000
+        Device Id                         : 0x232410DE
+        Bus Id                            : 00000000:18:00.0
+        Sub System Id                     : 0x17A610DE
+        GPU Link Info
+            PCIe Generation
+                Max                       : 5
+                Current                   : 5
+                Device Current            : 5
+                Device Max                : 5
+                Host Max                  : 5
+            Link Width
+                Max                       : 16x
+                Current                   : 16x
+        Bridge Chip
+            Type                          : N/A
+            Firmware                      : N/A
+        Replays Since Reset               : 0
+        Replay Number Rollovers           : 0
+        Tx Throughput                     : 123000 KB/s
+        Rx Throughput                     : 111000 KB/s
+        Atomic Caps Inbound               : N/A
+        Atomic Caps Outbound              : N/A
+    Fan Speed                             : N/A
+    Performance State                     : P0
+    Clocks Throttle Reasons
+        Idle                              : Active
+        Applications Clocks Setting       : Not Active
+        SW Power Cap                      : Not Active
+        HW Slowdown                       : Not Active
+            HW Thermal Slowdown           : Not Active
+            HW Power Brake Slowdown       : Not Active
+        Sync Boost                        : Not Active
+        SW Thermal Slowdown               : Not Active
+        Display Clock Setting             : Not Active
+    FB Memory Usage
+        Total                             : 81559 MiB
+        Reserved                          : 516 MiB
+        Used                              : 0 MiB
+        Free                              : 81042 MiB
+    BAR1 Memory Usage
+        Total                             : 131072 MiB
+        Used                              : 1 MiB
+        Free                              : 131071 MiB
+    Compute Mode                          : Default
+    Utilization
+        Gpu                               : 0 %
+        Memory                            : 0 %
+        Encoder                           : 0 %
+        Decoder                           : 0 %
+    Encoder Stats
+        Active Sessions                   : 0
+        Average FPS                       : 0
+        Average Latency                   : 0
+    FBC Stats
+        Active Sessions                   : 0
+        Average FPS                       : 0
+        Average Latency                   : 0
+    Ecc Mode
+        Current                           : Disabled
+        Pending                           : Disabled
+    ECC Errors
+        Volatile
+            SRAM Correctable              : N/A
+            SRAM Uncorrectable            : N/A
+            DRAM Correctable              : N/A
+            DRAM Uncorrectable            : N/A
+        Aggregate
+            SRAM Correctable              : N/A
+            SRAM Uncorrectable            : N/A
+            DRAM Correctable              : N/A
+            DRAM Uncorrectable            : N/A
+    Retired Pages
+        Single Bit ECC                    : N/A
+        Double Bit ECC                    : N/A
+        Pending Page Blacklist            : N/A
+    Remapped Rows
+        Correctable Error                 : 0
+        Uncorrectable Error               : 0
+        Pending                           : No
+        Remapping Failure Occurred        : No
+        Bank Remap Availability Histogram
+            Max                           : 2560 bank(s)
+            High                          : 0 bank(s)
+            Partial                       : 0 bank(s)
+            Low                           : 0 bank(s)
+            None                          : 0 bank(s)
+    Temperature
+        GPU Current Temp                  : 35 C
+        GPU T.Limit Temp                  : 51 C
+        GPU Shutdown Temp                 : 92 C
+        GPU Slowdown Temp                 : 89 C
+        GPU Max Operating Temp            : 87 C
+        GPU Target Temperature            : N/A
+        Memory Current Temp               : 44 C
+        Memory Max Operating Temp         : 95 C
+    Power Readings
+        Power Management                  : Supported
+        Power Draw                        : 74.71 W
+        Power Limit                       : 700.00 W
+        Default Power Limit               : 700.00 W
+        Enforced Power Limit              : 700.00 W
+        Min Power Limit                   : 200.00 W
+        Max Power Limit                   : 700.00 W
+    Clocks
+        Graphics                          : 345 MHz
+        SM                                : 345 MHz
+        Memory                            : 2619 MHz
+        Video                             : 765 MHz
+    Applications Clocks
+        Graphics                          : 1980 MHz
+        Memory                            : 2619 MHz
+    Default Applications Clocks
+        Graphics                          : 1980 MHz
+        Memory                            : 2619 MHz
+    Deferred Clocks
+        Memory                            : N/A
+    Max Clocks
+        Graphics                          : 1980 MHz
+        SM                                : 1980 MHz
+        Memory                            : 2619 MHz
+        Video                             : 1545 MHz
+    Max Customer Boost Clocks
+        Graphics                          : 1980 MHz
+    Clock Policy
+        Auto Boost                        : N/A
+        Auto Boost Default                : N/A
+    Voltage
+        Graphics                          : 725.000 mV
+    Fabric
+        State                             : Completed
+        Status                            : Success
+    Processes                             : None
+```
+
 
 
 ## nvlink
