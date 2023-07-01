@@ -1,10 +1,7 @@
 
 
 
-下表列出了不同 GPU 产品上可用的功能。
-
-Features Supported on Different GPU Products
-
+下表列出了不同 GPU 产品上支持的功能。
 
 | Feature Group | Tesla | Titan | Quadro | GeForce |
 | --- | --- | --- | --- | --- |
