@@ -64,6 +64,27 @@
 ```
 
 
+## dcgmi group
+
+```
+dcgmi group -l
++-------------------+----------------------------------------------------------+
+| GROUPS                                                                       |
+| 2 groups found.                                                              |
++===================+==========================================================+
+| Groups            |                                                          |
+| -> 0              |                                                          |
+|    -> Group ID    | 0                                                        |
+|    -> Group Name  | DCGM_ALL_SUPPORTED_GPUS                                  |
+|    -> Entities    | GPU 0, GPU 1, GPU 2, GPU 3, GPU 4, GPU 5, GPU 6, GPU 7   |
+| -> 1              |                                                          |
+|    -> Group ID    | 1                                                        |
+|    -> Group Name  | DCGM_ALL_SUPPORTED_NVSWITCHES                            |
+|    -> Entities    | None                                                     |
++-------------------+----------------------------------------------------------+
+
+```
+
 
 
 ## dcgmi dmon
@@ -86,14 +107,14 @@ Flags:
                                localhost]
   -f  --field-group-idfieldGroupId  The field group to query on the specified
                                host.
-  -e  --field-id   fieldId     Field identifier to view/inject.
+  -e  --field-id   fieldId     Field identifier to view/inject.（要查看的字段ID）
   -l  --list                  List to look up the long names, short names and
                                field ids.
   -h  --help                  Displays usage information and exits.
   -i  --gpu-id     gpuId       The comma separated list of GPU/GPU-I/GPU-CI IDs
                                to run the dmon on. Default is -1 which runs for
                                all supported GPU. Run dcgmi discovery -c to
-                               check list of available GPU entities
+                               check list of available GPU entities （用于运行守护程序的 GPU/GPU-I/GPU-CI ID 的逗号分隔列表。 默认值为 -1，适用于所有支持的 GPU。 运行 dcgmi discovery -c 以检查可用 GPU 实体列表）
   -g  --group-id   groupId     The group to query on the specified host.
   -d  --delay      delay       In milliseconds. Integer representing how often
                                to query results from DCGM and print them for all
@@ -154,6 +175,8 @@ NVIDIA Datacenter GPU Management Interface
 
 默认情况下，DCGM 以 1Hz（每 1000毫秒(ms)）的采样率提供指标。 用户可以以任何可配置的频率（最小为 100 毫秒(ms)）从 DCGM 查询指标（例如：dcgmi dmon -d）。
 
+
+以下是设备水平（level）的GPU指标
 | Metric | Definition | DCGM Field Name (DCGM_FI_*) and ID |
 | --- | --- | --- |
 | Graphics Engine Activity | The fraction of time any portion of the graphics or compute engines were active. The graphics engine is active if a graphics/compute context is bound and the graphics/compute pipe is busy. The value represents an average over a time interval and is not an instantaneous value. | PROF_GR_ENGINE_ACTIVE (ID: 1001) |
@@ -164,7 +187,7 @@ NVIDIA Datacenter GPU Management Interface
 | FP32 Engine Activity | The fraction of cycles the FMA (FP32 (single precision), and integer) pipe was active. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of the FP32 cores. An activity of 1 (100%) is equivalent to a FP32 instruction every other cycle over the entire time interval. An activity of 0.2 (20%) could indicate 20% of the SMs are at 100% utilization over the entire time period, 100% of the SMs are at 20% utilization over the entire time period, 100% of the SMs are at 100% utilization for 20% of the time period, or any combination in between (see `DCGM_FI_PROF_SM_ACTIVE` to help disambiguate these possibilities). | PROF_PIPE_FP32_ACTIVE (ID: 1007) |
 | FP16 Engine Activity | The fraction of cycles the FP16 (half precision) pipe was active. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of the FP16 cores. An activity of 1 (100%) is equivalent to a FP16 instruction every other cycle over the entire time interval. An activity of 0.2 (20%) could indicate 20% of the SMs are at 100% utilization over the entire time period, 100% of the SMs are at 20% utilization over the entire time period, 100% of the SMs are at 100% utilization for 20% of the time period, or any combination in between (see `DCGM_FI_PROF_SM_ACTIVE` to help disambiguate these possibilities). | PROF_PIPE_FP16_ACTIVE (ID: 1008) |
 | Memory BW Utilization | The fraction of cycles where data was sent to or received from device memory. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of device memory. An activity of 1 (100%) is equivalent to a DRAM instruction every cycle over the entire time interval (in practice a peak of ~0.8 (80%) is the maximum achievable). An activity of 0.2 (20%) indicates that 20% of the cycles are reading from or writing to device memory over the time interval. | PROF_DRAM_ACTIVE (ID: 1005) |
-| NVLink Bandwidth | The rate of data transmitted / received over NVLink, not including protocol headers, in bytes per second. The value represents an average over a time interval and is not an instantaneous value. The rate is averaged over the time interval. For example, if 1 GB of data is transferred over 1 second, the rate is 1 GB/s regardless of the data transferred at a constant rate or in bursts. The theoretical maximum NVLink Gen2 bandwidth is 25 GB/s per link per direction. | PROF_NVLINK_TX_BYTES (1011) and PROF_NVLINK_RX_BYTES (1012) |
+| NVLink Bandwidth | 通过 NVLink 传输/接收的数据速率（不包括协议头(protocol headers)），以字节/秒为单位。 该值表示一段时间间隔内的平均值，而不是瞬时值。 该速率是时间间隔内的平均值。 例如，如果 1 秒内传输 1 GB 数据，则无论数据以恒定速率还是突发传输，速率均为 1 GB/s。 NVLink Gen2 的理论最大带宽为每个链路每个方向 25 GB/s。 | PROF_NVLINK_TX_BYTES (1011) and PROF_NVLINK_RX_BYTES (1012) |
 | PCIe Bandwidth | The rate of data transmitted / received over the PCIe bus, including both protocol headers and data payloads, in bytes per second. The value represents an average over a time interval and is not an instantaneous value. The rate is averaged over the time interval. For example, if 1 GB of data is transferred over 1 second, the rate is 1 GB/s regardless of the data transferred at a constant rate or in bursts. The theoretical maximum PCIe Gen3 bandwidth is 985 MB/s per lane. | PROF_PCIE_[T\|R]X_BYTES (ID: 1009 (TX); 1010 (RX)) |
 
 
