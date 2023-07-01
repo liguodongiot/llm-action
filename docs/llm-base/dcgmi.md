@@ -16,6 +16,8 @@
 
 ## dcgmi discovery
 
+验证是否能够找到 GPU 设备
+
 ```
 > dcgmi discovery -l
 8 GPUs found.
@@ -143,5 +145,29 @@ Flags:
 
 NVIDIA Datacenter GPU Management Interface
 ```
+
+
+
+
+## 指标
+支持以下新的设备级分析指标。 列出了定义和相应的 DCGM 字段 ID。 
+
+默认情况下，DCGM 以 1Hz（每 1000毫秒(ms)）的采样率提供指标。 用户可以以任何可配置的频率（最小为 100 毫秒(ms)）从 DCGM 查询指标（例如：dcgmi dmon -d）。
+
+| Metric | Definition | DCGM Field Name (DCGM_FI_*) and ID |
+| --- | --- | --- |
+| Graphics Engine Activity | The fraction of time any portion of the graphics or compute engines were active. The graphics engine is active if a graphics/compute context is bound and the graphics/compute pipe is busy. The value represents an average over a time interval and is not an instantaneous value. | PROF_GR_ENGINE_ACTIVE (ID: 1001) |
+| SM Activity | The fraction of time at least one warp was active on a multiprocessor, averaged over all multiprocessors. Note that “active” does not necessarily mean a warp is actively computing. For instance, warps waiting on memory requests are considered active. The value represents an average over a time interval and is not an instantaneous value. A value of 0.8 or greater is necessary, but not sufficient, for effective use of the GPU. A value less than 0.5 likely indicates ineffective GPU usage.Given a simplified GPU architectural view, if a GPU has N SMs then a kernel using N blocks that runs over the entire time interval will correspond to an activity of 1 (100%). A kernel using N/5 blocks that runs over the entire time interval will correspond to an activity of 0.2 (20%). A kernel using N blocks that runs over one fifth of the time interval, with the SMs otherwise idle, will also have an activity of 0.2 (20%). The value is insensitive to the number of threads per block (see `DCGM_FI_PROF_SM_OCCUPANCY`). | PROF_SM_ACTIVE (ID: 1002) |
+| SM Occupancy | The fraction of resident warps on a multiprocessor, relative to the maximum number of concurrent warps supported on a multiprocessor. The value represents an average over a time interval and is not an instantaneous value. Higher occupancy does not necessarily indicate better GPU usage. For GPU memory bandwidth limited workloads (see `DCGM_FI_PROF_DRAM_ACTIVE`), higher occupancy is indicative of more effective GPU usage. However if the workload is compute limited (i.e. not GPU memory bandwidth or latency limited), then higher occupancy does not necessarily correlate with more effective GPU usage.Calculating occupancy is not simple and depends on factors such as the GPU properties, the number of threads per block, registers per thread, and shared memory per block. Use the [CUDA Occupancy Calculator](https://docs.nvidia.com/cuda/cuda-occupancy-calculator/index.html) to explore various occupancy scenarios. | PROF_SM_OCCUPANCY (ID: 1003) |
+| Tensor Activity | The fraction of cycles the tensor (HMMA / IMMA) pipe was active. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of the Tensor Cores. An activity of 1 (100%) is equivalent to issuing a tensor instruction every other cycle for the entire time interval. An activity of 0.2 (20%) could indicate 20% of the SMs are at 100% utilization over the entire time period, 100% of the SMs are at 20% utilization over the entire time period, 100% of the SMs are at 100% utilization for 20% of the time period, or any combination in between (see `DCGM_FI_PROF_SM_ACTIVE` to help disambiguate these possibilities). | PROF_PIPE_TENSOR_ACTIVE (ID: 1004) |
+| FP64 Engine Activity | The fraction of cycles the FP64 (double precision) pipe was active. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of the FP64 cores. An activity of 1 (100%) is equivalent to a FP64 instruction on [every SM every fourth cycle](https://docs.nvidia.com/cuda/volta-tuning-guide/index.html#sm-scheduling) on Volta over the entire time interval. An activity of 0.2 (20%) could indicate 20% of the SMs are at 100% utilization over the entire time period, 100% of the SMs are at 20% utilization over the entire time period, 100% of the SMs are at 100% utilization for 20% of the time period, or any combination in between (see DCGM_FI_PROF_SM_ACTIVE to help disambiguate these possibilities). | PROF_PIPE_FP64_ACTIVE (ID: 1006) |
+| FP32 Engine Activity | The fraction of cycles the FMA (FP32 (single precision), and integer) pipe was active. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of the FP32 cores. An activity of 1 (100%) is equivalent to a FP32 instruction every other cycle over the entire time interval. An activity of 0.2 (20%) could indicate 20% of the SMs are at 100% utilization over the entire time period, 100% of the SMs are at 20% utilization over the entire time period, 100% of the SMs are at 100% utilization for 20% of the time period, or any combination in between (see `DCGM_FI_PROF_SM_ACTIVE` to help disambiguate these possibilities). | PROF_PIPE_FP32_ACTIVE (ID: 1007) |
+| FP16 Engine Activity | The fraction of cycles the FP16 (half precision) pipe was active. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of the FP16 cores. An activity of 1 (100%) is equivalent to a FP16 instruction every other cycle over the entire time interval. An activity of 0.2 (20%) could indicate 20% of the SMs are at 100% utilization over the entire time period, 100% of the SMs are at 20% utilization over the entire time period, 100% of the SMs are at 100% utilization for 20% of the time period, or any combination in between (see `DCGM_FI_PROF_SM_ACTIVE` to help disambiguate these possibilities). | PROF_PIPE_FP16_ACTIVE (ID: 1008) |
+| Memory BW Utilization | The fraction of cycles where data was sent to or received from device memory. The value represents an average over a time interval and is not an instantaneous value. Higher values indicate higher utilization of device memory. An activity of 1 (100%) is equivalent to a DRAM instruction every cycle over the entire time interval (in practice a peak of ~0.8 (80%) is the maximum achievable). An activity of 0.2 (20%) indicates that 20% of the cycles are reading from or writing to device memory over the time interval. | PROF_DRAM_ACTIVE (ID: 1005) |
+| NVLink Bandwidth | The rate of data transmitted / received over NVLink, not including protocol headers, in bytes per second. The value represents an average over a time interval and is not an instantaneous value. The rate is averaged over the time interval. For example, if 1 GB of data is transferred over 1 second, the rate is 1 GB/s regardless of the data transferred at a constant rate or in bursts. The theoretical maximum NVLink Gen2 bandwidth is 25 GB/s per link per direction. | PROF_NVLINK_TX_BYTES (1011) and PROF_NVLINK_RX_BYTES (1012) |
+| PCIe Bandwidth | The rate of data transmitted / received over the PCIe bus, including both protocol headers and data payloads, in bytes per second. The value represents an average over a time interval and is not an instantaneous value. The rate is averaged over the time interval. For example, if 1 GB of data is transferred over 1 second, the rate is 1 GB/s regardless of the data transferred at a constant rate or in bursts. The theoretical maximum PCIe Gen3 bandwidth is 985 MB/s per lane. | PROF_PCIE_[T\|R]X_BYTES (ID: 1009 (TX); 1010 (RX)) |
+
+
+
 
 
