@@ -22,3 +22,19 @@ apt-get install -y datacenter-gpu-manager
 yum install epel-release
 yum install dnf
 ```
+
+
+### docker(dcgm)
+
+url: https://hub.docker.com/r/nvidia/dcgm
+
+```
+docker pull nvidia/dcgm:3.1.7-1-ubuntu20.04
+```
+
+### docker(dcgm-exporter)
+
+url: https://hub.docker.com/r/nvidia/dcgm-exporter
+```
+docker pull nvidia/dcgm-exporter:3.1.8-3.1.5-ubuntu20.04
+```
