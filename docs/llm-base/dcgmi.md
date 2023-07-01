@@ -191,6 +191,62 @@ NVIDIA Datacenter GPU Management Interface
 | PCIe Bandwidth | The rate of data transmitted / received over the PCIe bus, including both protocol headers and data payloads, in bytes per second. The value represents an average over a time interval and is not an instantaneous value. The rate is averaged over the time interval. For example, if 1 GB of data is transferred over 1 second, the rate is 1 GB/s regardless of the data transferred at a constant rate or in bursts. The theoretical maximum PCIe Gen3 bandwidth is 985 MB/s per lane. | PROF_PCIE_[T\|R]X_BYTES (ID: 1009 (TX); 1010 (RX)) |
 
 
+```
+> dcgmi dmon -i 0,1,2,3  -e 1011,1012
+#Entity   NVLTX                       NVLRX
+ID
+GPU 3     19694075554                 19687914629
+GPU 2     19777203418                 19819177524
+GPU 1     19699841766                 22070216956
+GPU 0     20779220484                 21900091841
+GPU 3     12945588302                 12953884356
+GPU 2     12558214740                 12560935679
+GPU 1     13059621728                 10651057317
+GPU 0     11576689215                 9600734242
+GPU 3     11155319776                 11155326544
+GPU 2     11155466819                 11155466298
+GPU 1     11040517157                 12515409691
+GPU 0     11592513041                 13925722805
+GPU 3     1286216247                  1217881887
+GPU 2     928524939                   860186978
+GPU 1     1506174212                  50051
+GPU 0     31802                       911367981
+GPU 3     0                           0
+GPU 2     0                           0
+GPU 1     0                           0
+GPU 0     0                           0
+GPU 3     23309642310                 23377912493
+GPU 2     23176458503                 23176459024
+GPU 1     23447369511                 23507663607
+GPU 0     23508249062                 23174848479
+...
+
+
+> dcgmi dmon  -e 1011,1012
+#Entity   NVLTX                       NVLRX
+ID
+GPU 7     30570603980                 30638829242
+GPU 6     30567094640                 30635348592
+GPU 5     30628398352                 33089365519
+GPU 4     33098848601                 36119516306
+GPU 3     33750138990                 33825970205
+GPU 2     31743752465                 31812022474
+GPU 1     34030055050                 34098309807
+GPU 0     32873620375                 29632298747
+GPU 7     24371477520                 24370431480
+GPU 6     24443717565                 24443653033
+GPU 5     24450523113                 23160485855
+GPU 4     23167734167                 23167708130
+GPU 3     25744193567                 25744198774
+GPU 2     25027562441                 25027562441
+GPU 1     24099003605                 24099024433
+GPU 0     24669591596                 24669655619
+...
+```
+
+
+
+
 
 
 
