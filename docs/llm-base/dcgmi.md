@@ -1,6 +1,22 @@
 
 
 
+下表列出了不同 GPU 产品上可用的功能。
+
+Features Supported on Different GPU Products
+
+
+| Feature Group | Tesla | Titan | Quadro | GeForce |
+| --- | --- | --- | --- | --- |
+| Field Value Watches (GPU metrics) | X | X | X | X |
+| Configuration Management | X | X | X | X |
+| Active Health Checks (GPU subsystems) | X | X | X | X |
+| Job Statistics | X | X | X | X |
+| Topology | X | X | X | X |
+| Introspection | X | X | X | X |
+| Policy Notification | X | | | |
+| GPU Diagnostics (Diagnostic Levels - 1, 2, 3) | All Levels | Level 1 | Level 1 | Level 1 |
+
 ## dcgmi discovery
 
 ```
@@ -53,8 +69,9 @@
 
 ## dcgmi dmon
 
+用于监控 GPU 及其统计数据
 ```
-dcgmi dmon --help
+> dcgmi dmon --help
 
  dmon -- Used to monitor GPUs and their stats.
 
@@ -89,8 +106,45 @@ Flags:
                                following this flag.
 
 
- NVIDIA Datacenter GPU Management Interface
+NVIDIA Datacenter GPU Management Interface
+```
 
+## dcgmi nvlink
+用于获取系统中 GPU 和 NvSwitch 的 NvLink 链接状态或错误计数
+
+```
+> dcgmi nvlink --help
+
+ nvlink -- Used to get NvLink link status or error counts for GPUs and
+ NvSwitches in the system
+
+ NVLINK Error description
+ =========================
+ CRC FLIT Error => Data link receive flow control digit CRC error.
+ CRC Data Error => Data link receive data CRC error.
+ Replay Error   => Data link transmit replay error.
+ Recovery Error => Data link transmit recovery error.
+
+Usage: dcgmi nvlink
+   dcgmi nvlink --host <IP/FQDN> -g <gpuId> -e -j
+   dcgmi nvlink --host <IP/FQDN> -s
+
+Flags:
+      --host       IP/FQDN    Connects to specified IP or fully-qualified domain
+                               name. To connect to a host engine that was
+                               started with -d (unix socket), prefix the unix
+                               socket filename with 'unix://'. [default =
+                               localhost]
+  -e  --errors                Print NvLink errors for a given gpuId (-g).
+  -s  --link-status           Print NvLink link status for all GPUs and
+                               NvSwitches in the system.
+  -h  --help                  Displays usage information and exits.
+  -g  --gpuid      gpuId      The GPU ID to query. Required for -e
+  -j  --json                  Print the output in a json format
+  --  --ignore_rest           Ignores the rest of the labeled arguments
+                               following this flag.
+
+NVIDIA Datacenter GPU Management Interface
 ```
 
 
