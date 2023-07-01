@@ -489,7 +489,364 @@ merges_path: /workspace/model/gpt2-vocab/gpt2-merges.txt
 ---
 
 ```
+python3 examples/pytorch/gpt/gpt_summarization.py \
+>         --data_type fp8 \
+>         --lib_path /workspace/FasterTransformer/build/lib/libth_transformer.so \
+>         --summarize \
+>          --ft_model_location /workspace/model/megatron-models/c-model-fp8/ \
+>          --hf_model_location /workspace/model/gpt2-tokenizer/gpt2-tokenizer
+Found cached dataset cnn_dailymail (/workspace/data/ccdv-data/ccdv/cnn_dailymail/3.0.0/3.0.0/0107f7388b5c6fae455a5661bcd134fc22da53ea75852027040d8d1e997f101f)
+100%|█████████████████████████████████████████████████| 3/3 [00:00<00:00, 341.66it/s]
+top_k: 1
+top_p: 0.0
+int8_mode: 0
+random_seed: 5
+temperature: 1
+max_seq_len: 1024
+max_batch_size: 1
+repetition_penalty: 1
+vocab_size: 50304
+tensor_para_size: 1
+pipeline_para_size: 1
+lib_path: /workspace/FasterTransformer/build/lib/libth_transformer.so
+ckpt_path: /workspace/model/megatron-models/c-model-fp8/1-gpu
+hf_config: {'activation_function': 'gelu_new', 'architectures': ['GPT2LMHeadModel'], 'attn_pdrop': 0.1, 'bos_token_id': 50256, 'embd_pdrop': 0.1, 'eos_token_id': 50256, 'initializer_range': 0.02, 'layer_norm_epsilon': 1e-05, 'model_type': 'gpt2', 'n_ctx': 1024, 'n_embd': 768, 'n_head': 12, 'n_layer': 12, 'n_positions': 1024, 'resid_pdrop': 0.1, 'summary_activation': None, 'summary_first_dropout': 0.1, 'summary_proj_to_labels': True, 'summary_type': 'cls_index', 'summary_use_proj': True, 'task_specific_params': {'text-generation': {'do_sample': True, 'max_length': 50}}, 'vocab_size': 50257}
+[FT][WARNING] Skip NCCL initialization since requested tensor/pipeline parallel sizes are equals to 1.
+[WARNING] gemm_config.in is not found; using default GEMM algo
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.0.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.1.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.2.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.3.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.4.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.5.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.6.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.7.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.8.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.9.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.10.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.11.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.12.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.13.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.14.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.15.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.16.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.17.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.18.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.19.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.20.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.21.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.22.attention.softmax.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.query_key_value.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.query_key_value.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.query_key_value.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.dense.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.dense.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.dense.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.mlp.dense_h_to_4h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.mlp.dense_h_to_4h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.mlp.dense_h_to_4h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.mlp.dense_4h_to_h.fp_linear.fi.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.mlp.dense_4h_to_h.fp_linear.fo.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.mlp.dense_4h_to_h.fp_linear.fw.bin, use identity scales.
+[FT][WARNING] Cannot find /workspace/model/megatron-models/c-model-fp8/1-gpu/model.layers.23.attention.softmax.fo.bin, use identity scales.
+---------------------------------------------------------
+FT Generated :
+ Article :  (CNN)James Best, best known for his portrayal of bumbling sheriff Rosco P. Coltrane on TV's "The Dukes of Hazzard," died Monday after a brief illness. He was 88. Best died in hospice in Hickory, North Carolina, of complications from pneumonia, said Steve Latshaw, a longtime friend and Hollywood colleague. Although he'd been a busy actor for decades in theater and in Hollywood, Best didn't become famous until 1979, when "The Dukes of Hazzard's" cornpone charms began beaming into millions of American homes almost every Friday night. For seven seasons, Best's Rosco P. Coltrane chased the moonshine-running Duke boys back and forth across the back roads of fictitious Hazzard County, Georgia, although his "hot pursuit" usually ended with him crashing his patrol car. Although Rosco was slow-witted and corrupt, Best gave him a childlike enthusiasm that got laughs and made him endearing. His character became known for his distinctive "kew-kew-kew" chuckle and for goofy catchphrases such as "cuff 'em and stuff 'em!" upon making an arrest. Among the most popular shows on TV in the early '80s, "The Dukes of Hazzard" ran until 1985 and spawned TV movies, an animated series and video games. Several of Best's "Hazzard" co-stars paid tribute to the late actor on social media. "I laughed and learned more from Jimmie in one hour than from anyone else in a whole year," co-star John Schneider, who played Bo Duke, said on Twitter. "Give Uncle Jesse my love when you see him dear friend." "Jimmy Best was the most constantly creative person I have ever known," said Ben Jones, who played mechanic Cooter on the show, in a Facebook post. "Every minute of his long life was spent acting, writing, producing, painting, teaching, fishing, or involved in another of his life's many passions." Born Jewel Guy on July 26, 1926, in Powderly, Kentucky, Best was orphaned at 3 and adopted by Armen and Essa Best, who renamed him James and raised him in rural Indiana. Best served in the Army during World War II before launching his acting career. In the 1950s and 1960s, he accumulated scores of credits, playing a range of colorful supporting characters in such TV shows as "The Twilight Zone," "Bonanza," "The Andy Griffith Show" and "Gunsmoke." He later appeared in a handful of Burt Reynolds' movies, including "Hooper" and "The End." But Best will always be best known for his "Hazzard" role, which lives on in reruns. "Jimmie was my teacher, mentor, close friend and collaborator for 26 years," Latshaw said. "I directed two of his feature films, including the recent 'Return of the Killer Shrews,' a sequel he co-wrote and was quite proud of as he had made the first one more than 50 years earlier." People we've lost in 2015 . CNN's Stella Chan contributed to this story.
 
+ Highlights :  James Best, who played the sheriff on "The Dukes of Hazzard," died Monday at 88 .
+"Hazzard" ran from 1979 to 1985 and was among the most popular shows on TV .
+
+ Summary :   Best was a great actor, a great man and a great friend.
+<|endoftext|>.
+---------------------------------------------------------
+Using the latest cached version of the module from /root/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--rouge/b01e0accf3bd6dd24839b769a5fda24e14995071570870922c71970b3a6ed886 (last modified on Thu Jun 29 16:31:01 2023) since it couldn't be found locally at evaluate-metric--rouge, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /root/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--rouge/b01e0accf3bd6dd24839b769a5fda24e14995071570870922c71970b3a6ed886 (last modified on Thu Jun 29 16:31:01 2023) since it couldn't be found locally at evaluate-metric--rouge, or remotely on the Hugging Face Hub.
+100%|████████████████████████████████████████████████| 21/21 [00:05<00:00,  3.53it/s]
+Faster Transformers (total latency: 5.933964252471924 sec)
+rouge1 : 23.118179986254233
+--------------!!!!
+rouge2 : 6.97354358694703
+--------------!!!!
+rougeL : 17.215690960077605
+--------------!!!!
+rougeLsum : 20.63874458392057
+--------------!!!!
 ```
 
 
