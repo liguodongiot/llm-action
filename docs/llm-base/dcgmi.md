@@ -1,7 +1,7 @@
 
 
 
-
+## dcgmi discovery
 
 ```
 > dcgmi discovery -l
@@ -46,5 +46,51 @@
 | Switch ID |
 +-----------+
 +-----------+
+```
+
+
+
+
+## dcgmi dmon
 
 ```
+dcgmi dmon --help
+
+ dmon -- Used to monitor GPUs and their stats.
+
+Usage: dcgmi dmon
+   dcgmi dmon -i <gpuId> -g <groupId> -f <fieldGroupId> -e <fieldId> -d
+        <delay> -c <count> -l
+
+Flags:
+      --host       IP/FQDN    Connects to specified IP or fully-qualified domain
+                               name. To connect to a host engine that was
+                               started with -d (unix socket), prefix the unix
+                               socket filename with 'unix://'. [default =
+                               localhost]
+  -f  --field-group-idfieldGroupId  The field group to query on the specified
+                               host.
+  -e  --field-id   fieldId     Field identifier to view/inject.
+  -l  --list                  List to look up the long names, short names and
+                               field ids.
+  -h  --help                  Displays usage information and exits.
+  -i  --gpu-id     gpuId       The comma separated list of GPU/GPU-I/GPU-CI IDs
+                               to run the dmon on. Default is -1 which runs for
+                               all supported GPU. Run dcgmi discovery -c to
+                               check list of available GPU entities
+  -g  --group-id   groupId     The group to query on the specified host.
+  -d  --delay      delay       In milliseconds. Integer representing how often
+                               to query results from DCGM and print them for all
+                               of the entities. [default = 1000 msec,  Minimum
+                               value = 1 msec.]
+  -c  --count      count       Integer representing How many times to loop
+                               before exiting. [default- runs forever.]
+  --  --ignore_rest           Ignores the rest of the labeled arguments
+                               following this flag.
+
+
+ NVIDIA Datacenter GPU Management Interface
+
+```
+
+
