@@ -1,13 +1,10 @@
-
+# nvbandwidth
 
 用于测量 NVIDIA GPU 带宽的工具。
 
 使用copy engine或kernel copy方法测量不同链路上各种 memcpy 模式的带宽。 
 
 nvbandwidth 报告系统上当前测量的带宽。 可能需要额外的系统特定调整才能实现最大峰值带宽。
-
-
-
 
 ```
 > sh ./debian_install.sh
@@ -569,5 +566,84 @@ SUM device_to_device_memcpy_read_ce 9642.08
 ./nvbandwidth -v >> nvbandwitch.txt
 ```
 
+
+
+## 测试详情
+
+实现了两种类型的 copies：Copy Engine (CE)  或 Steaming Multiprocessor (SM)
+
+CE copies 使用 memcpy API。 SM copies 使用 kernels。
+
+SM copies将截断copy大小以均匀地适合目标设备，从而正确报告带宽。 copy的实际字节大小为：
+
+```
+(threadsPerBlock * deviceSMCount) * floor(copySize / (threadsPerBlock * deviceSMCount))
+```
+threadsPerBlock 设置为 512。
+
+### 测量详情
+
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/29fff486-6f54-4363-a817-4e38d23742b6)
+
+阻塞 kernel 和 CUDA 事件用于测量通过 SM 或 CE 执行 copies 的时间，并根据一系列 copies 计算带宽。
+
+首先，我们将一个spin kernel排入队列，该kernel在主机内存中的标志上旋转。 spin kernel在设备上旋转，直到所有用于测量的事件已完全排队到测量流中。 这确保了排队操作的开销被排除在互连上的实际传输的测量之外。 
+
+接下来，我们将一个开始事件、一次或多次 memcpy 迭代（具体取决于 LoopCount）以及最后一个停止事件排队。 最后，我们释放标志来开始测量。
+
+该过程重复 3 次，并报告每次试验的中值带宽。
+
+
+
+### 单向带宽测试
+
+```
+Running host_to_device_memcpy_ce.
+memcpy CE CPU(row) -> GPU(column) bandwidth (GB/s)
+          0         1         2         3         4         5         6         7
+0     26.03     25.94     25.97     26.00     26.19     25.95     26.00     25.97
+```
+单向测试分别测量输出矩阵中每对之间的带宽。 流量不是同时发送的。
+
+
+### 双向主机 <-> 设备带宽测试
+
+```
+Running host_to_device_bidirectional_memcpy_ce.
+memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)
+          0         1         2         3         4         5         6         7
+0     18.56     18.37     19.37     19.59     18.71     18.79     18.46     18.61
+```
+
+双向主机到设备带宽传输的设置如下所示：
+
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/edabb22a-6fb9-45bd-99f5-7c309fc7267f)
+
+Stream 0（测量流）对设备执行写入操作，而相反方向的interfering stream则产生读取操作。 
+
+这种模式相反，用于测量双向设备到主机的带宽，如下所示。
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/c0c18882-1379-43bc-a854-4bb726180bd9)
+
+
+
+### 双向设备 <-> 设备带宽测试
+
+双向设备到设备传输的设置如下所示：
+
+![image](https://github.com/liguodongiot/llm-action/assets/13220186/9b1302bd-2b31-4228-9542-3557b579389d)
+
+该测试在两个流上启动流量：在设备 0 上启动的流 0 执行从设备 0 到设备 1 的写入操作，而interference stream 1 启动相反的流量，执行从设备 1 到设备 0 的写入操作。
+
+CE 双向带宽测试计算measured stream上的带宽：
+
+```
+CE bidir. bandwidth = (size of data on measured stream) / (time on measured stream)
+```
+
+然而，SM 双向测试在源 GPU 和对等 GPU 上作为独立流启动 memcpy kernels，并按如下方式计算带宽：
+
+```
+SM bidir. bandwidth = size/(time on stream1) + size/(time on stream2)
+```
 
 官方文档：https://github.com/NVIDIA/nvbandwidth
