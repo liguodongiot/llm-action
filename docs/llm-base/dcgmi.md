@@ -14,6 +14,82 @@
 | Policy Notification | X | | | |
 | GPU Diagnostics (Diagnostic Levels - 1, 2, 3) | All Levels | Level 1 | Level 1 | Level 1 |
 
+
+
+
+## dcgmi
+
+
+
+```
+> dcgmi -h
+
+Usage: dcgmi
+   dcgmi subsystem
+   dcgmi -v
+
+Flags:
+  -v    vv          Get DCGMI version information
+        subsystem   The desired subsystem to be accessed.
+ Subsystems Available:
+        topo        GPU Topology [dcgmi topo -h for more info] (GPU拓扑)
+        stats       Process Statistics [dcgmi stats -h for more info] (流程统计)
+        diag        System Validation/Diagnostic [dcgmi diag –h for more info] (系统验证/诊断)
+        policy      Policy Management [dcgmi policy –h for more info]
+        health      Health Monitoring [dcgmi health –h for more info]
+        config      Configuration Management [dcgmi config –h for more info]
+        group       GPU Group Management [dcgmi group –h for more info]
+        fieldgroup  Field Group Management [dcgmi fieldgroup –h for more info]
+        discovery   Discover GPUs on the system [dcgmi discovery –h for more
+                     info]
+        introspect  Gather info about DCGM itself [dcgmi introspect –h for
+                     more info]
+        nvlink      Displays NvLink link statuses and error counts [dcgmi nvlink
+                     –h for more info] (显示 NvLink 链接状态和错误计数)
+        dmon        Stats Monitoring of GPUs [dcgmi dmon –h for more info] (GPU 统计监控)
+        modules     Control and list DCGM modules (控制和列出 DCGM 模块)
+        profile     Control and list DCGM profiling metrics (控制和列出 DCGM 分析指标)
+        set         Configure hostengine settings(配置hostengine设置)
+  --    ignore_rest Ignores the rest of the labeled arguments following this
+                     flag.
+      --version     Displays version information and exits.
+  -h  --help        Displays usage information and exits.
+
+ Please email dcgm-support@nvidia.com with any questions, bug reports, etc.
+
+ NVIDIA Datacenter GPU Management Interface
+```
+
+```
+> dcgmi -v
+
+Version : 3.1.8
+Build ID : 8
+Build Date : 2023-04-27
+Build Type : Release
+Commit ID : c36ef145e4e71092fc106a80566758b1faf6115e
+Branch Name : rel_dcgm_3_1
+CPU Arch : x86_64
+Build Platform : Linux 4.15.0-180-generic #189-Ubuntu SMP Wed May 18 14:13:57 UTC 2022 x86_64
+CRC : fd25da813d4871545eba7aaaf653fcba
+
+Hostengine build info:
+Version : 3.1.8
+Build ID : 8
+Build Date : 2023-04-27
+Build Type : Release
+Commit ID : c36ef145e4e71092fc106a80566758b1faf6115e
+Branch Name : rel_dcgm_3_1
+CPU Arch : x86_64
+Build Platform : Linux 4.15.0-180-generic #189-Ubuntu SMP Wed May 18 14:13:57 UTC 2022 x86_64
+CRC : fd25da813d4871545eba7aaaf653fcba
+
+```
+
+
+
+
+
 ## dcgmi discovery
 
 验证是否能够找到 GPU 设备
