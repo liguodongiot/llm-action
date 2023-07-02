@@ -80,6 +80,212 @@ CRC : fd25da813d4871545eba7aaaf653fcba
 ```
 
 
+## dcgmi topo 
+
+```
+ > dcgmi topo -h
+
+ topo -- Used to find the topology of GPUs on the system.
+
+Usage: dcgmi topo
+   dcgmi topo --host <IP/FQDN> -g <groupId> -j
+   dcgmi topo --host <IP/FQDN> --gpuid <gpuId> -j
+
+Flags:
+  -g  --group      groupId    The group ID to query.
+      --host       IP/FQDN    Connects to specified IP or fully-qualified domain
+                               name. To connect to a host engine that was
+                               started with -d (unix socket), prefix the unix
+                               socket filename with 'unix://'. [default =
+                               localhost]
+  -h  --help                  Displays usage information and exits.
+      --gpuid      gpuId      The GPU ID to query.
+  -j  --json                  Print the output in a json format
+  --  --ignore_rest           Ignores the rest of the labeled arguments
+                               following this flag.
+
+
+ NVIDIA Datacenter GPU Management Interface
+```
+
+
+```
+> dcgmi topo -g 0 -j
+{
+        "body" :
+        {
+                "CPU Core Affinity" :
+                {
+                        "value" : "0 - 127"
+                },
+                "NUMA Optimal" :
+                {
+                        "value" : "False"
+                },
+                "Worst Path" :
+                {
+                        "value" : "Connected via a CPU-level link"
+                }
+        },
+        "header" :
+        [
+                "Topology Information",
+                "DCGM_ALL_SUPPORTED_GPUS"
+        ]
+}
+```
+
+
+```
+> dcgmi topo --gpuid 1 -j
+{
+        "body" :
+        {
+                "CPU Core Affinity" :
+                {
+                        "value" : "0 - 31, 64 - 95"
+                },
+                "To GPU 0" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 2" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 3" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 4" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 5" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 6" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 7" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                }
+        },
+        "header" :
+        [
+                "Topology Information",
+                "GPU ID: 1"
+        ]
+}
+
+```
+
+
+```
+ dcgmi topo --gpuid 7 -j
+{
+        "body" :
+        {
+                "CPU Core Affinity" :
+                {
+                        "value" : "32 - 63, 96 - 127"
+                },
+                "To GPU 0" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 1" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 2" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 3" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 4" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 5" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                },
+                "To GPU 6" :
+                {
+                        "overflow" :
+                        [
+                                "Connected via eight NVLINKs (Links: 0, 1, 2, 3, 4, 5, 6, 7)"
+                        ],
+                        "value" : "Connected via a CPU-level link"
+                }
+        },
+        "header" :
+        [
+                "Topology Information",
+                "GPU ID: 7"
+        ]
+}
+```
+
 ## dcgmi discovery
 
 验证是否能够找到 GPU 设备
