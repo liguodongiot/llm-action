@@ -121,13 +121,14 @@ Flags:
                                of the entities. [default = 1000 msec,  Minimum
                                value = 1 msec.]
   -c  --count      count       Integer representing How many times to loop
-                               before exiting. [default- runs forever.]
+                               before exiting. [default- runs forever.]（表示退出前循环次数。[默认值-永远运行]）
   --  --ignore_rest           Ignores the rest of the labeled arguments
                                following this flag.
 
-
 NVIDIA Datacenter GPU Management Interface
 ```
+
+
 
 ## dcgmi nvlink
 用于获取系统中 GPU 和 NvSwitch 的 NvLink 链接状态或错误计数
@@ -262,6 +263,11 @@ GPU 3     34918736873                 34918742079                 3910245112    
 GPU 2     16547291813                 19112960872                 2761505306                  3060783203
 GPU 1     18380875930                 18390091637                 148870522                   2103742852
 GPU 0     19407501485                 15881929591                 3711808007                  1055934784
+```
+
+统计6000次，将结果保存到文件。
+```
+dcgmi dmon  -e 1011,1012,1009,1010 -c 6000 >> bandwitch.txt
 ```
 
 
