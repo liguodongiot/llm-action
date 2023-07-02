@@ -1381,8 +1381,19 @@ GPU 0     19407501485                 15881929591                 3711808007    
 dcgmi dmon  -e 1011,1012,1009,1010 -c 6000 >> bandwitch.txt
 ```
 
-
-
+```
+# -g 18 为 上面创建的组
+dcgmi dmon  -e 1011,1012,1009,1010 -g 18
+#Entity   NVLTX                       NVLRX                       PCITX                       PCIRX        
+ID                                                                                                         
+GPU 7     N/A                         N/A                         N/A                         N/A          
+GPU 0     N/A                         N/A                         N/A                         N/A          
+GPU 7     N/A                         N/A                         N/A                         N/A          
+GPU 0     N/A                         N/A                         N/A                         N/A          
+GPU 7     0                           0                           499346                      3629         
+GPU 0     0                           0                           498931                      2074         
+GPU 7     0                           0                           499343                      3111  
+```
 
 
 
