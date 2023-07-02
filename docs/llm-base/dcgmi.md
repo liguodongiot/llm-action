@@ -161,14 +161,284 @@ Flags:
                                NvSwitches in the system.
   -h  --help                  Displays usage information and exits.
   -g  --gpuid      gpuId      The GPU ID to query. Required for -e
-  -j  --json                  Print the output in a json format
+  -j  --json                  Print the output in a json format（json格式输出）
   --  --ignore_rest           Ignores the rest of the labeled arguments
                                following this flag.
 
 NVIDIA Datacenter GPU Management Interface
 ```
 
+json格式输出：
 
+```
+> dcgmi nvlink -g 0 -e -j
+{
+        "body" :
+        {
+                "Link 0" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 1" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 2" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 3" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 4" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 5" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 6" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                },
+                "Link 7" :
+                {
+                        "children" :
+                        {
+                                "CRC Data Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "CRC FLIT Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Recovery Error" :
+                                {
+                                        "value" : "0"
+                                },
+                                "Replay Error" :
+                                {
+                                        "value" : "0"
+                                }
+                        }
+                }
+        },
+        "header" :
+        [
+                "NVLINK Error Counts",
+                "GPU 0"
+        ]
+}
+
+```
+
+
+
+```
+dcgmi nvlink -s
++----------------------+
+|  NvLink Link Status  |
++----------------------+
+GPUs:
+    gpuId 0:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 1:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 2:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 3:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 4:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 5:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 6:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+    gpuId 7:
+        U U U U U U U U _ _ _ _ _ _ _ _ _ _
+NvSwitches:
+    No NvSwitches found.
+
+Key: Up=U, Down=D, Disabled=X, Not Supported=_
+```
+
+```
+> dcgmi nvlink -g 1 -e
++-----------------------------+------------------------------------------------+
+| NVLINK Error Counts                                                          |
+| GPU 1                                                                        |
++=============================+================================================+
+| Link 0                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 1                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 2                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 3                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 4                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 5                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 6                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
+| Link 7                      |                                                |
+| -> CRC FLIT Error           | 0                                              |
+| -> CRC Data Error           | 0                                              |
+| -> Replay Error             | 0                                              |
+| -> Recovery Error           | 0                                              |
++-----------------------------+------------------------------------------------+
+```
 
 
 ## 指标
