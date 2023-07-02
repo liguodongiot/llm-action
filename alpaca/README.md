@@ -133,7 +133,65 @@ deepspeed --hostfile=/home/guodong.li/code/hostfile train_ddp.py \
 --fp16 True
 ```
 
+```
+deepspeed --include localhost:7 train.py \
+--deepspeed ds_config_zero2.json \
+--model_name_or_path /data/nfs/guodong.li/pretrain/hf-llama-model/llama-7b \
+--data_path /data/nfs/guodong.li/data/alpaca_data_cleaned.json \
+--output_dir /data/nfs/guodong.li/output/llama-7b-sft \
+--max_steps 800 \
+--per_device_train_batch_size 2 \
+--per_device_eval_batch_size 1 \
+--gradient_accumulation_steps 4 \
+--evaluation_strategy "no" \
+--save_strategy "steps" \
+--save_steps 1000 \
+--save_total_limit 1 \
+--learning_rate 2e-5 \
+--weight_decay 0. \
+--warmup_ratio 0.03 \
+--lr_scheduler_type "cosine" \
+--logging_steps 1 \
+--report_to "tensorboard" \
+--gradient_checkpointing True \
+--fp16 True
 
+
+{'loss': 1.4187, 'learning_rate': 2e-05, 'epoch': 0.12}
+{'train_runtime': 5606.7798, 'train_samples_per_second': 1.141, 'train_steps_per_second': 0.143, 'train_loss': 1.1899223804473877, 'epoch': 0.12}
+100%|█████████████████████████████████████████████████████████████████████| 800/800 [1:33:26<00:00,  7.01s/it]
+[2023-07-02 22:28:34,667] [INFO] [launch.py:350:main] Process 57893 exits successfully.
+
+
+
+deepspeed --include localhost:0,1,2,3,4,5,6,7 train.py \
+--deepspeed ds_config_zero2.json \
+--model_name_or_path /data/nfs/guodong.li/pretrain/hf-llama-model/llama-7b \
+--data_path /data/nfs/guodong.li/data/alpaca_data_cleaned.json \
+--output_dir /data/nfs/guodong.li/output/llama-7b-sft \
+--max_steps 100 \
+--per_device_train_batch_size 2 \
+--per_device_eval_batch_size 1 \
+--gradient_accumulation_steps 4 \
+--evaluation_strategy "no" \
+--save_strategy "steps" \
+--save_steps 1000 \
+--save_total_limit 1 \
+--learning_rate 2e-5 \
+--weight_decay 0. \
+--warmup_ratio 0.03 \
+--lr_scheduler_type "cosine" \
+--logging_steps 1 \
+--report_to "tensorboard" \
+--gradient_checkpointing True \
+--fp16 True
+
+
+{'train_runtime': 1323.6301, 'train_samples_per_second': 4.835, 'train_steps_per_second': 0.076, 'train_loss': 1.1723517608642577, 'epoch': 0.12}
+100%|███████████████████████████████████████████████████████████████████████| 100/100 [22:03<00:00, 13.24s/it]
+[2023-07-02 20:27:07,744] [INFO] [launch.py:350:main] Process 43249 exits successfully.
+
+```
 
 ## H800-DDP
 
