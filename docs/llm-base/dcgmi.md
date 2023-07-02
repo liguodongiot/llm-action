@@ -287,6 +287,8 @@ Flags:
 ```
 
 
+
+
 ## dcgmi stats
 ```
 > dcgmi stats -h
@@ -424,6 +426,53 @@ Flags:
 
 ## dcgmi group
 
+
+
+```
+> dcgmi group -h
+
+ group -- Used to create and maintain groups of GPUs. Groups of GPUs can then be
+ uniformly controlled through other DCGMI subsystems.
+
+Usage: dcgmi group
+   dcgmi group --host <IP/FQDN> -l -j
+   dcgmi group --host <IP/FQDN> -c <groupName> --default
+        --defaultnvswitches
+   dcgmi group --host <IP/FQDN> -c <groupName> -a <entityId>
+   dcgmi group --host <IP/FQDN> -d <groupId>
+   dcgmi group --host <IP/FQDN> -g <groupId> -i -j
+   dcgmi group --host <IP/FQDN> -g <groupId> -a <entityId>
+   dcgmi group --host <IP/FQDN> -g <groupId> -r <entityId>
+
+Flags:
+      --host       IP/FQDN    Connects to specified IP or fully-qualified domain
+                               name. To connect to a host engine that was
+                               started with -d (unix socket), prefix the unix
+                               socket filename with 'unix://'. [default =
+                               localhost]
+  -l  --list                  List the groups that currently exist for a host.
+  -d  --delete     groupId    Delete a group on the remote host.
+  -c  --create     groupName  Create a group on the remote host.
+  -h  --help                  Displays usage information and exits.
+  -i  --info                  Display the information for the specified group
+                               ID.
+  -r  --remove     entityId   Remove device(s) from group. (csv gpuIds, or
+                               entityIds like gpu:0,nvswitch:994)
+  -a  --add        entityId   Add device(s) to group. (csv gpuIds or entityIds
+                               simlar to gpu:0, instance:1, compute_instance:2,
+                               nvswitch:994)
+      --default               Adds all available GPUs to the group being
+                               created.
+      --defaultnvswitches           Adds all available NvSwitches to the group
+                               being created.
+  -j  --json                  Print the output in a json format
+  --  --ignore_rest           Ignores the rest of the labeled arguments
+                               following this flag.
+
+
+NVIDIA Datacenter GPU Management Interface
+```
+
 ```
 dcgmi group -l
 +-------------------+----------------------------------------------------------+
@@ -441,6 +490,35 @@ dcgmi group -l
 |    -> Entities    | None                                                     |
 +-------------------+----------------------------------------------------------+
 
+```
+
+```
+> dcgmi group -c GPU_Group_Demo
+Successfully created group "GPU_Group_Demo" with a group ID of 18
+
+
+> dcgmi group -g 18 -a 0,7 
+Add to group operation successful. 
+
+> dcgmi group -g 0 -i
++-------------------+----------------------------------------------------------+
+| GROUP INFO                                                                   |
++===================+==========================================================+
+| 0                 |                                                          |
+| -> Group ID       | 0                                                        |
+| -> Group Name     | DCGM_ALL_SUPPORTED_GPUS                                  |
+| -> Entities       | GPU 0, GPU 1, GPU 2, GPU 3, GPU 4, GPU 5, GPU 6, GPU 7   |
++-------------------+----------------------------------------------------------+
+
+> dcgmi group -g 18 -i
++-------------------+----------------------------------------------------------+
+| GROUP INFO                                                                   |
++===================+==========================================================+
+| 18                |                                                          |
+| -> Group ID       | 18                                                       |
+| -> Group Name     | GPU_Group_Demo                                           |
+| -> Entities       | GPU 0, GPU 7                                             |
++-------------------+----------------------------------------------------------+
 ```
 
 
