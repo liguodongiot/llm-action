@@ -29,7 +29,7 @@ Flags:
         subsystem   The desired subsystem to be accessed.
  Subsystems Available:
         topo        GPU Topology [dcgmi topo -h for more info] (GPU拓扑)
-        stats       Process Statistics [dcgmi stats -h for more info] (流程统计)
+        stats       Process Statistics [dcgmi stats -h for more info] (统计)
         diag        System Validation/Diagnostic [dcgmi diag –h for more info] (系统验证/诊断)
         policy      Policy Management [dcgmi policy –h for more info] (策略管理)
         health      Health Monitoring [dcgmi health –h for more info] (健康监测)
@@ -284,6 +284,92 @@ Flags:
                 "GPU ID: 7"
         ]
 }
+```
+
+
+## dcgmi stats
+```
+> dcgmi stats -h
+
+ stats -- Used to view process statistics.
+
+Usage: dcgmi stats
+   dcgmi stats --host <IP/FQDN> -g <groupId> -e -u <> -m <>
+   dcgmi stats --host <IP/FQDN> -g <groupId> -d
+   dcgmi stats --host <IP/FQDN> -g <groupId> -p <pid> -v
+   dcgmi stats --host <IP/FQDN> -g <groupId> -s <job id>
+   dcgmi stats --host <IP/FQDN> -x <job id>
+   dcgmi stats --host <IP/FQDN> -j <job id> -v --host <IP/FQDN> -r <job id>
+        -v
+   dcgmi stats --host <IP/FQDN> -a -v
+
+Flags:
+  -g  --group      groupId    The GPU group to query on the specified host.
+      --host       IP/FQDN    Connects to specified IP or fully-qualified domain
+                               name. To connect to a host engine that was
+                               started with -d (unix socket), prefix the unix
+                               socket filename with 'unix://'. [default =
+                               localhost]
+  -p  --pid        pid        View statistics for the specified pid.
+  -e  --enable                Enable system watches and start recording
+                               information.
+  -d  --disable               Disable system watches and stop recording
+                               information.
+  -s  --jstart     job id     Start recording job statistics.
+  -x  --jstop      job id     Stop recording job statistics.
+  -j  --job        job id     Display job statistics.
+  -r  --jremove    job id     Remove job statistics.
+  -a  --jremoveall            Remove all job statistics.
+  -h  --help                  Displays usage information and exits.
+  -v  --verbose               Show process information for each GPU.
+  -u  --update-interval           How often to update the underlying job stats
+                               in ms.
+  -m  --max-keep-age           How long to retain job stats data for in seconds.
+                               This should be longer than your job/process
+                               duration.
+  --  --ignore_rest           Ignores the rest of the labeled arguments
+                               following this flag.
+
+ Process Statistics Information:
+
+ --  Execution Stats --
+ Start Time                (*) - Process start time
+ End Time                  (*) - Process end time
+ Total Execution Time      (*) - Total execution time in seconds
+ No. Conflicting Processes (*) - Number of other processes that ran
+ Conflicting Compute PID       - PID of conflicting compute process
+ Conflicting Graphics PID      - PID of conflicting graphics process
+
+ --  Performance Stats --
+ Energy Consumed         - Total energy consumed during process in joules
+ Max GPU Memory Used (*) - Maximum amount of GPU memory used in bytes
+ SM Clock                - Statistics for SM clocks(s) in MHz
+ Memory Clock            - Statistics for memory clock(s) in MHz
+ SM Utilization          - Utilization of the GPU's SMs in percent
+ Memory Utilization      - Utilization of the GPU's memory in percent
+ PCIe Rx Bandwidth       - PCIe bytes read from the GPU
+ PCIe Tx Bandwidth       - PCIe bytes written to the GPU
+
+ --  Event Stats --
+ Single Bit ECC Errors - Number of ECC single bit errors that occurred
+ Double Bit ECC Errors - Number of ECC double bit errors that occurred
+ PCIe Replay Warnings  - Number of PCIe replay warnings
+ Critical XID Errors   - Number of critical XID Errors
+ XID                   - Time of XID error in since start of process
+
+ --  Slowdown Stats --
+ Power           - Runtime % at reduced clocks due to power violation
+ Thermal         - Runtime % at reduced clocks due to thermal limit
+ Reliability     - Runtime % at reduced clocks due to reliability limit
+ Board Limit     - Runtime % at reduced clocks due to board's voltage limit
+ Low Utilization - Runtime % at reduced clocks due to low utilization
+ Sync Boost      - Runtime % at reduced clocks due to sync boost
+
+ (*) Represents a process statistic. Otherwise device statistic during
+ process lifetime listed.
+
+ NVIDIA Datacenter GPU Management Interface
+
 ```
 
 ## dcgmi discovery
