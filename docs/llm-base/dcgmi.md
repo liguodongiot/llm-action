@@ -29,7 +29,7 @@ Flags:
         subsystem   The desired subsystem to be accessed.
  Subsystems Available:
         topo        GPU Topology [dcgmi topo -h for more info] (GPU拓扑)
-        stats       Process Statistics [dcgmi stats -h for more info] (统计)
+        stats       Process Statistics [dcgmi stats -h for more info] (过程统计)
         diag        System Validation/Diagnostic [dcgmi diag –h for more info] (系统验证/诊断)
         policy      Policy Management [dcgmi policy –h for more info] (策略管理)
         health      Health Monitoring [dcgmi health –h for more info] (健康监测)
