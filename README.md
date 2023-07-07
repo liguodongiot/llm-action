@@ -89,9 +89,6 @@ LLM 实战
 
 ## ⭐️ Star History
 
-
-## Star History
-
 [![Star History Chart](https://api.star-history.com/svg?repos=liguodongiot/llm-action&type=Date)](https://star-history.com/#liguodongiot/llm-action&Date)
 
 
