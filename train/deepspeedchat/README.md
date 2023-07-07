@@ -4,9 +4,9 @@
 
 ```
 > ls -al --block-size=K /tmp/data_files/
-total 6285920K
-drwxrwxr-x    2 guodong.li guodong.li       4K Jul  6 10:31 .
-drwxrwxrwt. 328 root       root            24K Jul  6 13:53 ..
+total 6533712K
+drwxrwxr-x    2 guodong.li guodong.li       4K Jul  6 16:02 .
+drwxrwxrwt. 328 root       root            24K Jul  7 10:00 ..
 -rw-rw-r--    1 guodong.li guodong.li      10K Jul  6 10:26 Dahoas_full_hh_rlhf_seed1234_eval_2,4,4_0.npy
 -rw-rw-r--    1 guodong.li guodong.li      20K Jul  6 10:26 Dahoas_full_hh_rlhf_seed1234_eval_2,4,4_1.npy
 -rw-rw-r--    1 guodong.li guodong.li      20K Jul  6 10:26 Dahoas_full_hh_rlhf_seed1234_eval_2,4,4_2.npy
@@ -28,7 +28,9 @@ drwxrwxrwt. 328 root       root            24K Jul  6 13:53 ..
 -rw-rw-r--    1 guodong.li guodong.li     117K Jul  6 10:28 Dahoas_synthetic_instruct_gptj_pairwise_seed1234_train_eval_9,1_0.npy
 -rw-rw-r--    1 guodong.li guodong.li      14K Jul  6 10:28 Dahoas_synthetic_instruct_gptj_pairwise_seed1234_train_eval_9,1_1.npy
 -rw-rw-r--    1 guodong.li guodong.li  508630K Jul  6 10:31 evaldata_1cddaf9eb98d6e8394f4c53fd5ab8c97c5db3cce6e2699bc8e607027a642af35.pt
+-rw-rw-r--    1 guodong.li guodong.li   15778K Jul  6 16:02 evaldata_d32e7f6108f0e9ba9b6d2642029fa6f57d50b7bc812d3ce2436afab7714d181d.pt
 -rw-rw-r--    1 guodong.li guodong.li 5775824K Jul  6 10:31 traindata_1cddaf9eb98d6e8394f4c53fd5ab8c97c5db3cce6e2699bc8e607027a642af35.pt
+-rw-rw-r--    1 guodong.li guodong.li  232010K Jul  6 16:02 traindata_d32e7f6108f0e9ba9b6d2642029fa6f57d50b7bc812d3ce2436afab7714d181d.pt
 -rw-rw-r--    1 guodong.li guodong.li       5K Jul  6 10:30 yitingxie_rlhf_reward_datasets_seed1234_eval_2,4,4_0.npy
 -rw-rw-r--    1 guodong.li guodong.li       9K Jul  6 10:30 yitingxie_rlhf_reward_datasets_seed1234_eval_2,4,4_1.npy
 -rw-rw-r--    1 guodong.li guodong.li       9K Jul  6 10:30 yitingxie_rlhf_reward_datasets_seed1234_eval_2,4,4_2.npy
