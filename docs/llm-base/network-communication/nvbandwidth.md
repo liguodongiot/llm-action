@@ -8,11 +8,15 @@ nvbandwidth 报告系统上当前测量的带宽。 可能需要额外的系统�
 
 
 ## 安装
-<details><summary>Example output</summary><p>
-
 
 ```
 > sh ./debian_install.sh
+```
+
+<details><summary>详细输出</summary><p>
+
+
+```
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -78,6 +82,12 @@ Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
 
 ```
 ./nvbandwidth -h
+```
+
+<details><summary>详细输出</summary><p>
+
+
+```
 nvbandwidth Version: v0.2
 Built from Git version: 42e94d2
 
@@ -91,6 +101,8 @@ nvbandwidth CLI:
   -d [ --disableAffinity ]  Disable automatic CPU affinity control
 
 ```
+
+</p></details>
 
 ---
 
