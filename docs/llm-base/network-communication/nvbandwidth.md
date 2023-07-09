@@ -6,6 +6,7 @@
 
 nvbandwidth 报告系统上当前测量的带宽。 可能需要额外的系统特定调整才能实现最大峰值带宽。
 
+<details><summary>Example output</summary><p>
 ```
 > sh ./debian_install.sh
 Reading package lists... Done
@@ -65,6 +66,8 @@ Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
 [100%] Linking CXX executable nvbandwidth
 [100%] Built target nvbandwidth
 ```
+</p></details>
+
 
 ## help
 
