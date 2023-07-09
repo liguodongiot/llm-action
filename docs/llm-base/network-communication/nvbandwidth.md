@@ -6,6 +6,8 @@
 
 nvbandwidth 报告系统上当前测量的带宽。 可能需要额外的系统特定调整才能实现最大峰值带宽。
 
+
+## 安装
 <details><summary>Example output</summary><p>
 
 
