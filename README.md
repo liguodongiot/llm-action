@@ -64,6 +64,7 @@ LLM 实战
 
 - [A800服务器常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/a800-env-install.md)
 - [H800服务器常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
+- [昇腾910服务器常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
 
 
 ## LLM学习交流群
