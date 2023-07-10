@@ -2,11 +2,65 @@
 
 ## 安装驱动与固件
 
-先按照驱动，在安装固件。
+先安装驱动，再安装固件。
+
+```
+chmod +x Ascend-hdk-910-npu-driver_23.0.rc1_linux-aarch64.run
+./Ascend-hdk-910-npu-driver_23.0.rc1_linux-aarch64.run --full --install-path=/usr/local/Ascend
+```
+
+<details><summary>详细输出</summary><p>
+
+```
+Verifying archive integrity...  100%   SHA256 checksums are OK. All good.
+Uncompressing ASCEND DRIVER RUN PACKAGE  100%  
+[Driver] [2023-07-10 22:24:33] [INFO]Start time: 2023-07-10 22:24:33
+[Driver] [2023-07-10 22:24:33] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Driver] [2023-07-10 22:24:33] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Driver] [2023-07-10 22:24:33] [WARNING]Do not power off or restart the system during the installation/upgrade
+[Driver] [2023-07-10 22:24:33] [INFO]set username and usergroup, HwHiAiUser:HwHiAiUser
+[Driver] [2023-07-10 22:24:34] [INFO]driver install type: Direct
+[Driver] [2023-07-10 22:24:34] [INFO]upgradePercentage:10%
+[Driver] [2023-07-10 22:24:38] [INFO]upgradePercentage:30%
+[Driver] [2023-07-10 22:24:38] [INFO]upgradePercentage:40%
+[Driver] [2023-07-10 22:24:40] [INFO]upgradePercentage:90%
+[Driver] [2023-07-10 22:24:40] [INFO]Waiting for device startup...
+[Driver] [2023-07-10 22:24:42] [INFO]Device startup success
+[Driver] [2023-07-10 22:24:53] [INFO]upgradePercentage:100%
+[Driver] [2023-07-10 22:25:04] [INFO]Driver package installed successfully! The new version takes effect immediately. 
+[Driver] [2023-07-10 22:25:04] [INFO]End time: 2023-07-10 22:25:04
+```
+
+</p></details>
+
+
+```
+chmod +x Ascend-hdk-910-npu-firmware_6.3.0.1.241.run
+./Ascend-hdk-910-npu-firmware_6.3.0.1.241.run --check
+./Ascend-hdk-910-npu-firmware_6.3.0.1.241.run  --full
+```
+
+<details><summary>详细输出</summary><p>
 
 ```
 
+Verifying archive integrity...  100%   SHA256 checksums are OK. All good.
+Uncompressing ASCEND-HDK-910-NPU FIRMWARE RUN PACKAGE  100%  
+[Firmware] [2023-07-10 22:27:29] [INFO]Start time: 2023-07-10 22:27:29
+[Firmware] [2023-07-10 22:27:29] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Firmware] [2023-07-10 22:27:29] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Firmware] [2023-07-10 22:27:29] [WARNING]Do not power off or restart the system during the installation/upgrade
+[Firmware] [2023-07-10 22:27:34] [INFO]upgradePercentage: 0%
+[Firmware] [2023-07-10 22:27:42] [INFO]upgradePercentage: 0%
+[Firmware] [2023-07-10 22:27:51] [INFO]upgradePercentage: 0%
+[Firmware] [2023-07-10 22:27:57] [INFO]upgradePercentage: 100%
+[Firmware] [2023-07-10 22:27:57] [INFO]The firmware of [8] chips are successfully upgraded.
+[Firmware] [2023-07-10 22:27:57] [INFO]Firmware package installed successfully! Reboot now or after driver installation for the installation/upgrade to take effect.
+[Firmware] [2023-07-10 22:27:57] [INFO]End time: 2023-07-10 22:27:57
 ```
+
+</p></details>
+
 
 ## 卸载固件与驱动
 
@@ -44,7 +98,12 @@ reboot
 
 
 
+## 安装CANN
 
+```
+wget -c https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%206.3.RC1/Ascend-cann-kernels-910_6.3.RC1_linux.run
+wget -c https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%206.3.RC1/Ascend-cann-toolkit_6.3.RC1_linux-aarch64.run
+```
 
 
 
