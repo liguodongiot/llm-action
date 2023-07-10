@@ -114,9 +114,59 @@ wget -c https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%206.3.RC1/
 
 安装：
 ```
-chmod +x Ascend-cann-kernels-910_6.3.RC1_linux.run
-./Ascend-cann-kernels-910_6.3.RC1_linux.run --install --install-for-all
+chmod +x Ascend-cann-toolkit_6.3.RC1_linux-aarch64.run
+./Ascend-cann-toolkit_6.3.RC1_linux-aarch64.run --install --install-for-all
 ```
+
+<details><summary>详细输出</summary><p>
+
+
+```
+Verifying archive integrity...  100%   SHA256 checksums are OK. All good.
+Uncompressing ASCEND_RUN_PACKAGE  100%  
+[Toolkit] [20230710-22:44:15] [INFO] LogFile:/var/log/ascend_seclog/ascend_toolkit_install.log
+[Toolkit] [20230710-22:44:15] [INFO] install start
+[Toolkit] [20230710-22:44:15] [INFO] The installation path is /usr/local/Ascend.
+[Toolkit] [20230710-22:44:15] [INFO] install package CANN-runtime-6.3.0.1.241-linux.aarch64.run start
+[Toolkit] [20230710-22:44:21] [INFO] CANN-runtime-6.3.0.1.241-linux.aarch64.run --full --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:44:21] [INFO] install package CANN-compiler-6.3.0.1.241-linux.aarch64.run start
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[Toolkit] [20230710-22:44:56] [INFO] CANN-compiler-6.3.0.1.241-linux.aarch64.run --full --pylocal --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:44:56] [INFO] install package CANN-opp-6.3.0.1.241-linux.aarch64.run start
+[Toolkit] [20230710-22:45:39] [INFO] CANN-opp-6.3.0.1.241-linux.aarch64.run --full --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:45:39] [INFO] install package CANN-toolkit-6.3.0.1.241-linux.aarch64.run start
+[Toolkit] [20230710-22:46:20] [INFO] CANN-toolkit-6.3.0.1.241-linux.aarch64.run --full --pylocal --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:46:20] [INFO] install package CANN-aoe-6.3.0.1.241-linux.aarch64.run start
+[Toolkit] [20230710-22:46:23] [INFO] CANN-aoe-6.3.0.1.241-linux.aarch64.run --full --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:46:23] [INFO] install package Ascend-mindstudio-toolkit_6.0.RC1_linux-aarch64.run start
+[Toolkit] [20230710-22:46:30] [INFO] Ascend-mindstudio-toolkit_6.0.RC1_linux-aarch64.run --full --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:46:30] [INFO] install package Ascend-test-ops_6.3.RC1_linux.run start
+[Toolkit] [20230710-22:46:30] [INFO] Ascend-test-ops_6.3.RC1_linux.run --full --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:46:30] [INFO] install package Ascend-pyACL_6.3.RC1_linux-aarch64.run start
+[Toolkit] [20230710-22:46:30] [INFO] Ascend-pyACL_6.3.RC1_linux-aarch64.run --full --quiet --nox11 --install-for-all install success
+[Toolkit] [20230710-22:46:30] [INFO] install package CANN-ncs-6.3.0.1.241-linux.aarch64.run start
+[Toolkit] [20230710-22:46:33] [INFO] CANN-ncs-6.3.0.1.241-linux.aarch64.run --full --quiet --nox11 --install-for-all install success
+
+
+===========
+= Summary =
+===========
+
+Driver:   Installed in /usr/local/Ascend/driver.
+Toolkit:  Ascend-cann-toolkit_6.3.RC1_linux-aarch64 install success, installed in /usr/local/Ascend.
+
+Please make sure that the environment variables have been configured.
+-  To take effect for all users, you can add "source /usr/local/Ascend/ascend-toolkit/set_env.sh" to /etc/profile.
+-  To take effect for current user, you can exec command below: source /usr/local/Ascend/ascend-toolkit/set_env.sh or add "source /usr/local/Ascend/ascend-toolkit/set_env.sh" to ~/.bashrc.
+```
+
+</p></details>
+
+
 
 需要注意的是，NPU驱动、固件以及CANN软件安装完成之后，需**设置环境变量**：
 
