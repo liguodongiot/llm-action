@@ -62,6 +62,13 @@ Uncompressing ASCEND-HDK-910-NPU FIRMWARE RUN PACKAGE  100%
 </p></details>
 
 
+安装驱动和固件后，根据系统提示信息决定是否重启服务器，若需要重启系统，请执行以下命令；否则，请跳过此步骤。
+
+```
+reboot
+```
+
+
 ## 卸载固件与驱动
 
 驱动和固件的卸载没有先后顺序要求。
@@ -97,15 +104,71 @@ reboot
 ```
 
 
+## 安装开发工具集（CANN）
 
-## 安装CANN
-
+下载：
 ```
 wget -c https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%206.3.RC1/Ascend-cann-kernels-910_6.3.RC1_linux.run
 wget -c https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%206.3.RC1/Ascend-cann-toolkit_6.3.RC1_linux-aarch64.run
 ```
 
+安装：
+```
+chmod +x Ascend-cann-kernels-910_6.3.RC1_linux.run
+./Ascend-cann-kernels-910_6.3.RC1_linux.run --install --install-for-all
+```
 
+需要注意的是，NPU驱动、固件以及CANN软件安装完成之后，需**设置环境变量**：
+
+如果昇腾AI处理器配套软件包安装在默认路径，则直接使用如下命名直接设置即可。
+
+```
+# 建议配置在~/.bashrc中
+source /usr/local/Ascend/ascend-toolkit/set_env.sh 
+```
+
+如果昇腾AI处理器配套软件包**没有安装在默认路径**，安装好 MindSpore 之后，需要导出Runtime相关环境变量，下述命令中`LOCAL_ASCEND=/usr/local/Ascend`的`/usr/local/Ascend`表示配套软件包的安装路径，**需将其改为配套软件包的实际安装路径**。
+
+```
+# control log level. 0-DEBUG, 1-INFO, 2-WARNING, 3-ERROR, 4-CRITICAL, default level is WARNING.
+export GLOG_v=2
+
+# Conda environmental options
+LOCAL_ASCEND=/usr/local/Ascend # the root directory of run package
+
+# lib libraries that the run package depends on
+export LD_LIBRARY_PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/lib64:${LOCAL_ASCEND}/driver/lib64:${LOCAL_ASCEND}/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:${LD_LIBRARY_PATH}
+
+# Environment variables that must be configured
+## TBE operator implementation tool path
+export TBE_IMPL_PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe
+## OPP path
+export ASCEND_OPP_PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/opp
+## AICPU path
+export ASCEND_AICPU_PATH=${ASCEND_OPP_PATH}/..
+## TBE operator compilation tool path
+export PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/compiler/ccec_compiler/bin/:${PATH}
+## Python library that TBE implementation depends on
+export PYTHONPATH=${TBE_IMPL_PATH}:${PYTHONPATH}
+```
+
+## 升级GCC以及安装Cmake。
+
+```
+# 安装GCC
+sudo yum install gcc -y
+
+
+# 安装Cmake， aarch64使用
+curl -O https://cmake.org/files/v3.19/cmake-3.19.8-Linux-aarch64.sh
+
+sudo mkdir /usr/local/cmake-3.19.8
+sudo bash cmake-3.19.8-Linux-*.sh --prefix=/usr/local/cmake-3.19.8 --exclude-subdir
+
+
+echo -e "export PATH=/usr/local/cmake-3.19.8/bin:\$PATH" >> ~/.bashrc
+source ~/.bashrc
+```
 
 
 ## 安装bypy，下载百度网盘数据
