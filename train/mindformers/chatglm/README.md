@@ -61,3 +61,89 @@ start training for rank 7, device 7
 cd /root/workspace/code/mindformers
 vim configs/glm/run_glm_6b_lora.yaml
 ```
+
+
+
+
+模型训练启动成功，输出目录的结构如下所示。
+```
+output/
+├── checkpoint
+├── log
+└── strategy
+```
+其中，checkpoint文件夹放置权重文件，log文件夹方式日志文件，strategy文件夹放置模型切分策略文件。
+
+
+查看日志：
+```
+# cd /root/workspace/code/mindformers/output/
+cd log/rank_0
+tail -100f info.log 
+```
+
+模型输出权重文件：
+
+```
+> tree -h checkpoint/
+checkpoint/
+├── [ 4.0K]  rank_0
+│   ├── [ 3.4G]  glm-6b-lora_rank_0-31_4.ckpt
+│   └── [ 6.5M]  glm-6b-lora_rank_0-graph.meta
+├── [ 4.0K]  rank_1
+│   ├── [ 3.4G]  glm-6b-lora_rank_1-31_4.ckpt
+│   └── [ 6.5M]  glm-6b-lora_rank_1-graph.meta
+├── [ 4.0K]  rank_2
+│   ├── [ 3.4G]  glm-6b-lora_rank_2-31_4.ckpt
+│   └── [ 6.5M]  glm-6b-lora_rank_2-graph.meta
+└── [ 4.0K]  rank_3
+    ├── [ 3.4G]  glm-6b-lora_rank_3-31_4.ckpt
+    └── [ 6.5M]  glm-6b-lora_rank_3-graph.meta
+
+4 directories, 8 files
+```
+模型切分策略文件。
+```
+> tree -h strategy/
+strategy/
+├── [  22K]  ckpt_strategy_rank_0.ckpt
+├── [  22K]  ckpt_strategy_rank_1.ckpt
+├── [  22K]  ckpt_strategy_rank_2.ckpt
+└── [  22K]  ckpt_strategy_rank_3.ckpt
+```
+
+
+
+## 权重合并
+
+
+### 全量微调
+
+```
+python3 merge_ckpt.py --src_postfix=31_4 \
+> --src_checkpoints_dir=/root/workspace/output/fullft_output \
+> --src_strategy_file=/root/workspace/output/fullft_output/strategy/ckpt_strategy_rank_0.ckpt \
+> --dst_checkpoints_dir=/root/workspace/output/fullft_merge_checkpoint/
+
+args_opt.src_strategy_file:  /root/workspace/output/fullft_output/strategy/ckpt_strategy_rank_0.ckpt
+checkpoint_file_map {7: '/root/workspace/output/fullft_output/checkpoint/rank_7/glm-6b_rank_7-31_4.ckpt', 6: '/root/workspace/output/fullft_output/checkpoint/rank_6/glm-6b_rank_6-31_4.ckpt', 5: '/root/workspace/output/fullft_output/checkpoint/rank_5/glm-6b_rank_5-31_4.ckpt', 4: '/root/workspace/output/fullft_output/checkpoint/rank_4/glm-6b_rank_4-31_4.ckpt', 3: '/root/workspace/output/fullft_output/checkpoint/rank_3/glm-6b_rank_3-31_4.ckpt', 2: '/root/workspace/output/fullft_output/checkpoint/rank_2/glm-6b_rank_2-31_4.ckpt', 1: '/root/workspace/output/fullft_output/checkpoint/rank_1/glm-6b_rank_1-31_4.ckpt', 0: '/root/workspace/output/fullft_output/checkpoint/rank_0/glm-6b_rank_0-31_4.ckpt'}
+save_checkpoint_path /root/workspace/output/fullft_merge_checkpoint/transformed.ckpt
+
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:32:38.347.469 [mindspore/parallel/_parallel_serialization.py:351] The parameter scale_sense is not in src_strategy.
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:32:38.347.863 [mindspore/parallel/_parallel_serialization.py:351] The parameter global_step is not in src_strategy.
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:35:28.541.985 [mindspore/parallel/_parallel_serialization.py:351] The parameter current_iterator_step is not in src_strategy.
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:35:28.542.313 [mindspore/parallel/_parallel_serialization.py:351] The parameter last_overflow_iterator_step is not in src_strategy.
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:35:28.542.392 [mindspore/parallel/_parallel_serialization.py:351] The parameter epoch_num is not in src_strategy.
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:35:28.542.460 [mindspore/parallel/_parallel_serialization.py:351] The parameter step_num is not in src_strategy.
+[WARNING] ME(8507:281472874964864,MainProcess):2023-07-11-15:35:28.542.523 [mindspore/parallel/_parallel_serialization.py:351] The parameter loss_scale is not in src_strategy.
+
+transform ckpt done.
+Filtering ckpt, this may take a while.
+
+100%|###############################################################################| 1027/1027 [00:35<00:00, 28.57it/s]
+```
+
+
+
+
+
