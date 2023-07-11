@@ -261,7 +261,7 @@ systemctl start docker
 
 
 
-## tree
+## 安装 tree
 
 ```
 yum install -y tree
