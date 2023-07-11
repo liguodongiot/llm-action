@@ -8,6 +8,7 @@ LLM 实战
 - [LLM训练](#LLM训练)
 - [LLM推理](#LLM推理)
 - [LLM微调技术原理](#LLM微调技术原理)
+- [LLM国产化适配](#LLM国产化适配)
 - [LLM生态相关技术](#LLM生态相关技术)
 - [LLM学习交流群](#LLM学习交流群)
 - [微信公众号](#微信公众号)
@@ -51,14 +52,21 @@ LLM 实战
 -    [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://zhuanlan.zhihu.com/p/636999010)
 
 
+## LLM国产化适配
+
+- [大模型国产化适配1-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
+- [大模型国产化适配2-基于昇腾910使用ChatGLM-6B进行模型推理](https://juejin.cn/post/7254446353367482423)
+- [大模型国产化适配3-基于昇腾910使用ChatGLM-6B进行模型训练]()
+
+
 ## LLM生态相关技术
 
 - [大模型词表扩充必备工具SentencePiece](https://zhuanlan.zhihu.com/p/630696264)
-- [大模型国产化适配-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
 - [大模型实践总结](https://www.zhihu.com/question/601594836/answer/3032763174)
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
+
 
 ## 服务器基础环境软件安装
 
