@@ -203,7 +203,7 @@ export PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/compiler/ccec_compiler/bin/:${
 export PYTHONPATH=${TBE_IMPL_PATH}:${PYTHONPATH}
 ```
 
-## 升级GCC以及安装Cmake。
+## 升级GCC以及安装Cmake
 
 ```
 # 安装GCC
@@ -222,7 +222,7 @@ source ~/.bashrc
 ```
 
 
-## 安装bypy，下载百度网盘数据
+## 安装 bypy，下载百度网盘数据
 
 ```
 安装模块
