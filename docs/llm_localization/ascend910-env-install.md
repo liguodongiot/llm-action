@@ -261,6 +261,13 @@ systemctl start docker
 
 
 
+## tree
+
+```
+yum install -y tree
+```
+
+
 ## 安装 git-lfs
 
 EulerOS和openEuler使用以下命令安装：
