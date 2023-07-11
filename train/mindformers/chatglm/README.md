@@ -153,6 +153,16 @@ Filtering ckpt, this may take a while.
 └── [  63G]  transformed.ckpt
 ```
 
+
+### LoRA 微调
+```
+python3 merge_ckpt.py --src_postfix=31_4 \
+--src_checkpoints_dir=/root/workspace/output/lora_output \
+--src_strategy_file=/root/workspace/code/mindformers/output/strategy/ckpt_strategy_rank_0.ckpt \
+--dst_checkpoints_dir=/root/workspace/output/lora_merge_checkpoint_v2/
+```
+
+
 ## 模型评估
 
 ### 全量微调模型评估
@@ -506,6 +516,19 @@ bleu-4:  4.540767999999999
 ```
 
 </p></details>
+
+
+
+### LoRA 微调模型评估
+
+```
+python run_mindformer.py \
+--config ./configs/glm/run_glm_6b_lora_infer.yaml \
+--run_mode eval \
+--load_checkpoint /root/workspace/output/lora_merge_checkpoint_v2/filtered_transformed.ckpt \
+--eval_dataset_dir /root/workspace/data/AdvertiseGen-ms/eval_0711_256.mindrecord \
+--device_id 0
+```
 
 
 
