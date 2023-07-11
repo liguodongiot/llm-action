@@ -143,7 +143,11 @@ Filtering ckpt, this may take a while.
 100%|###############################################################################| 1027/1027 [00:35<00:00, 28.57it/s]
 ```
 
-
-
-
+合并之后的权重文件如下所示：
+```
+> tree -h /root/workspace/output/fullft_merge_checkpoint
+/root/workspace/output/fullft_merge_checkpoint
+├── [  13G]  filtered_transformed.ckpt
+└── [  63G]  transformed.ckpt
+```
 
