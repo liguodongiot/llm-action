@@ -53,6 +53,35 @@ start training for rank 7, device 7
 ```
 
 
+部分训练日志如下所示：
+
+```
+...
+[INFO] 2023-07-11 10:38:43,568 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:550] training_process: .........Build Running Wrapper From Config For Train..........
+[INFO] 2023-07-11 10:38:43,568 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:391] create_model_wrapper: .........Build Model Wrapper for Train From Config..........
+[INFO] 2023-07-11 10:38:43,582 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:562] training_process: .........Starting Init Train Model..........
+[INFO] 2023-07-11 10:38:43,583 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:581] training_process: .........Build Callbacks For Train..........
+[INFO] 2023-07-11 10:38:43,583 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:400] create_callbacks: .........Build Callbacks for Train From Config..........
+[INFO] 2023-07-11 10:38:43,584 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:340] __init__: Integrated_save is changed to False when using auto_parallel.
+[INFO] 2023-07-11 10:38:43,585 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:609] training_process: .........Starting Training Model..........
+[INFO] 2023-07-11 10:38:43,585 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:610] training_process: .........Model Compiling, Please Wait a Moment...........
+[INFO] 2023-07-11 10:47:36,427 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:269] print_output_info: Epoch:[  1/  1], step:[    4/  125], loss:[2.244/2.244], time:507844.205 ms, lr:[0.], overflow cond: True, loss_scale: 268435460.0
+[INFO] 2023-07-11 10:47:37,342 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:146] epoch_end: Per sink_size step time: 533756.177 ms, per step time: 133439.044 ms, avg loss: 2.244
+[INFO] 2023-07-11 10:47:44,861 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:269] print_output_info: Epoch:[  1/  1], step:[    8/  125], loss:[2.499/2.499], time:7480.938 ms, lr:[0.], overflow cond: True, loss_scale: 16777216.0
+[INFO] 2023-07-11 10:47:44,874 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:146] epoch_end: Per sink_size step time: 7518.224 ms, per step time: 1879.556 ms, avg loss: 2.499
+...
+[INFO] 2023-07-11 10:48:35,199 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:146] epoch_end: Per sink_size step time: 1958.791 ms, per step time: 489.698 ms, avg loss: 2.091
+[INFO] 2023-07-11 10:48:37,162 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:269] print_output_info: Epoch:[  1/  1], step:[  116/  125], loss:[2.220/2.220], time:1951.612 ms, lr:[2.4499998e-06], overflow cond: False, loss_scale: 16384.0
+[INFO] 2023-07-11 10:48:37,163 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:146] epoch_end: Per sink_size step time: 1963.915 ms, per step time: 490.979 ms, avg loss: 2.220
+[INFO] 2023-07-11 10:48:39,125 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:269] print_output_info: Epoch:[  1/  1], step:[  120/  125], loss:[2.092/2.092], time:1953.753 ms, lr:[2.5499999e-06], overflow cond: False, loss_scale: 16384.0
+[INFO] 2023-07-11 10:48:39,126 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:146] epoch_end: Per sink_size step time: 1962.049 ms, per step time: 490.512 ms, avg loss: 2.092
+[INFO] 2023-07-11 10:48:41,083 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:269] print_output_info: Epoch:[  1/  1], step:[  124/  125], loss:[2.346/2.346], time:1949.995 ms, lr:[2.65e-06], overflow cond: False, loss_scale: 16384.0
+[INFO] 2023-07-11 10:48:41,084 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/core/callback/callback.py:146] epoch_end: Per sink_size step time: 1958.268 ms, per step time: 489.567 ms, avg loss: 2.346
+[INFO] 2023-07-11 10:49:26,307 [/root/workspace/code/mindformers/scripts/mf_parallel1/mindformers/trainer/base_trainer.py:616] training_process: .........Training Over!.............
+```
+
+
+
 ## LoRA微调
 
 
