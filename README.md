@@ -51,6 +51,12 @@ LLM 实战
 -    [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://zhuanlan.zhihu.com/p/636362246)
 -    [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://zhuanlan.zhihu.com/p/636999010)
 
+## LLM微调实战
+
+待更新...
+
+
+
 
 ## LLM国产化适配
 
