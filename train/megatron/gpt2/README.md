@@ -1,9 +1,20 @@
 
 ## GPT2 模型训练 
 
-- megatron/tokenizer/file_utils.py
-- tools/openwebtext/merge_data.py
-- 
+
+
+## 环境
+```
+docker run -dt --name nvidia_pytorch_2304_temp --restart=always --gpus all \
+--network=host \
+--shm-size 4G \
+-v /home/gdong/workspace:/workspace \
+-w /workspace \
+nvcr.io/nvidia/pytorch:23.04-py3 \
+/bin/bash
+
+docker exec -it nvidia_pytorch_2304_temp bash
+```
 
 
 
@@ -14,6 +25,15 @@ git clone https://github.com/NVIDIA/Megatron-LM.git
 cd Megatron-LM
 git checkout 992da75
 ```
+
+修改代码：
+- megatron/tokenizer/file_utils.py
+- tools/openwebtext/merge_data.py
+
+脚本：
+- pretrain_gpt.sh：单机
+- pretrain_gpt_distributed.sh：数据并行
+- pretrain_gpt_distributed_with_mp.sh：模型并行+数据并行
 
 
 ## 权重
@@ -30,8 +50,6 @@ megatron
 > cat megatron/latest_checkpointed_iteration.txt 
 release
 ```
-
-
 
 
 ## 训练
