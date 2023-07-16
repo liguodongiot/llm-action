@@ -3,6 +3,17 @@
 
 - megatron/tokenizer/file_utils.py
 - tools/openwebtext/merge_data.py
+- 
+
+
+
+## 代码
+
+```
+git clone https://github.com/NVIDIA/Megatron-LM.git
+cd Megatron-LM
+git checkout 992da75
+```
 
 
 ## 权重
