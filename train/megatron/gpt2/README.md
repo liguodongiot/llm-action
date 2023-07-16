@@ -5,6 +5,22 @@
 - tools/openwebtext/merge_data.py
 
 
+## 权重
+
+```
+> tree -h megatron
+megatron
+├── [   8]  latest_checkpointed_iteration.txt
+└── [4.0K]  release
+    └── [4.0K]  mp_rank_00
+        └── [677M]  model_optim_rng.pt
+
+2 directories, 2 files
+> cat megatron/latest_checkpointed_iteration.txt 
+release
+```
+
+
 
 
 ## 训练
@@ -420,6 +436,28 @@ saving checkpoint at iteration    5000 to /workspace/model/megatron-models/345m
 -------------------------------------------------------------------------------------------------------------------
 ```
 </p></details>
+
+
+
+输出权重：
+
+```
+> tree -h 345m
+345m
+├── [4.0K]  iter_0005000
+│   └── [4.0K]  mp_rank_00
+│       └── [4.6G]  model_optim_rng.pt
+├── [   4]  latest_checkpointed_iteration.txt
+└── [4.0K]  release
+    └── [4.0K]  mp_rank_00
+        └── [677M]  model_optim_rng.pt
+
+4 directories, 3 files
+
+> cat 345m/latest_checkpointed_iteration.txt 
+5000
+```
+
 
 
 
