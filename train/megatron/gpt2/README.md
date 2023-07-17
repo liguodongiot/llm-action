@@ -2293,4 +2293,18 @@ saving checkpoint at iteration    2000 to /workspace/model/megatron-models/345m-
 </p></details>
 
 
+显存占用：
+```
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   2630871      C   /usr/bin/python                  8680MiB |
+|    1   N/A  N/A   2630872      C   /usr/bin/python                  6408MiB |
+|    2   N/A  N/A   2630873      C   /usr/bin/python                  5080MiB |
+|    3   N/A  N/A   2630874      C   /usr/bin/python                  5436MiB |
++-----------------------------------------------------------------------------+
+```
+
 
