@@ -2,7 +2,23 @@
 
 ## 环境
 
+
 ```
+cd /home/guodong.li/virtual-venv
+virtualenv -p /usr/bin/python3.10 peft-venv-py310-cu117
+source /home/guodong.li/virtual-venv/peft-venv-py310-cu117/bin/activate
+
+
+pip install torch-1.13.1+cu117-cp310-cp310-linux_x86_64.whl
+pip install torchvision-0.14.1+cu117-cp310-cp310-linux_x86_64.whl
+
+git clone https://github.com/huggingface/peft
+cd peft
+git checkout 42ab106
+pip install -e .
+
+pip install datasets
+
 pip install jupyterlab
 ```
 
