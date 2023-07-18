@@ -53,6 +53,14 @@ nohup jupyter lab --allow-root > jupyterlab.log 2>&1 &
 ```
 
 
+
+# 任务类型
+
+- 因果语言模型（Causal Language Modeling）
+- 条件生成（Conditional Generation）
+
+
+
 ## 高效微调
 
 ### 大模型参数高效微调技术实战（一）-Prefix Tuning 
