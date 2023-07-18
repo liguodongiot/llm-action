@@ -20,6 +20,8 @@ pip install -e .
 pip install datasets
 
 pip install jupyterlab
+
+pip install deepspeed
 ```
 
 生成配置文件：
