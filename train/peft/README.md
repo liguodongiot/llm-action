@@ -58,6 +58,16 @@ nohup jupyter lab --allow-root > jupyterlab.log 2>&1 &
 
 - 因果语言模型（Causal Language Modeling）
 - 条件生成（Conditional Generation）
+- 序列分类（Sequence Classification）：整个序列输出一个标签。
+- Token 分类（Token Classification）：每个 Token 输出一个标签。
+- 文本-图像生成（Text-to-Image Generation）
+- 图像分类（Image Classification）
+- 序列到序列语言模型（Seq2Seq LM）
+- 问答任务（Question Answering）：返回给定问题的答案。常见的问答任务有两种类型：
+  - 提取：从给定的上下文中提取答案。
+  - 摘要：从上下文中生成正确回答问题的答案。
+
+
 
 
 
