@@ -51,6 +51,14 @@ nohup jupyter lab --allow-root > jupyterlab.log 2>&1 &
 ```
 
 
+- 大模型参数高效微调技术实战（一）-Prefix Tuning 
+- 大模型参数高效微调技术实战（二）-Prompt Tuning
+- 大模型参数高效微调技术实战（三）-P-Tuning
+- 大模型参数高效微调技术实战（三）-LoRA
+- 大模型参数高效微调技术实战（四）-AdaLoRA
+- 大模型参数高效微调技术实战（五）-QLoRA
+
+
 
 
 
