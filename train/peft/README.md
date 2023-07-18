@@ -53,16 +53,52 @@ nohup jupyter lab --allow-root > jupyterlab.log 2>&1 &
 ```
 
 
+## 高效微调
+
+### 大模型参数高效微调技术实战（一）-Prefix Tuning 
+### 大模型参数高效微调技术实战（二）-Prompt Tuning
+### 大模型参数高效微调技术实战（三）-P-Tuning
+
+### 大模型参数高效微调技术实战（三）-LoRA
+
+
+<details><summary>详细输出：</summary><p>
+```
+
+```
+</p></details>
+
+
+
+```
+> tree -h /data/nfs/llm/model/bloomz-560m_LORA_CAUSAL_LM
+/data/nfs/llm/model/bloomz-560m_LORA_CAUSAL_LM
+├── [ 447]  adapter_config.json
+├── [ 14K]  adapter_model.bin
+└── [  93]  README.md
+
+0 directories, 3 files
+```
+
+### 大模型参数高效微调技术实战（四）-AdaLoRA
+
+
+### 大模型参数高效微调技术实战（五）-QLoRA
+
+
+
+
+
+
+
+
+
+
 - 大模型参数高效微调技术实战（一）-Prefix Tuning 
 - 大模型参数高效微调技术实战（二）-Prompt Tuning
 - 大模型参数高效微调技术实战（三）-P-Tuning
 - 大模型参数高效微调技术实战（三）-LoRA
 - 大模型参数高效微调技术实战（四）-AdaLoRA
 - 大模型参数高效微调技术实战（五）-QLoRA
-
-
-
-
-
 
 
