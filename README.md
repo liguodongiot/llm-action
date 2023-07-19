@@ -19,6 +19,7 @@
 - [服务器基础环境软件安装](#服务器基础环境软件安装)
 - [LLM学习交流群](#llm学习交流群)
 - [微信公众号](#微信公众号)
+- [:star: Star History](#Star History)
 
 
 ## LLM训练
@@ -150,7 +151,7 @@
 
 
 
-## ⭐️ Star History
+## :star: Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=liguodongiot/llm-action&type=Date)](https://star-history.com/#liguodongiot/llm-action&Date)
 
