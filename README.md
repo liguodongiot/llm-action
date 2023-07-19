@@ -5,21 +5,21 @@
 
 ## 目录
 
-- [LLM训练](#llm训练)
+- [:fire: LLM训练](#llm训练)
   - [LLM训练实战](#llm训练实战)
   - [LLM参数高效微调技术原理综述](#llm微调技术原理)
   - [LLM参数高效微调技术实战](#llm微调实战)
   - [LLM分布式训练并行技术](#llm分布式训练并行技术)
-- [LLM推理](#llm推理)
+- [:racehorse: LLM推理](#llm推理)
   - [模型推理加速](#模型推理加速)
   - [模型推理服务化](#模型推理服务化)
   - [LLM量化](#llm量化)
-- [LLM国产化适配](#llm国产化适配)
-- [LLM生态相关技术](#llm生态相关技术)
-- [服务器基础环境软件安装](#服务器基础环境软件安装)
-- [LLM学习交流群](#llm学习交流群)
-- [微信公众号](#微信公众号)
-- [:star: Star History](#star-star-history)
+- [:boom: LLM国产化适配](#llm国产化适配)
+- [:cyclone: LLM生态相关技术](#llm生态相关技术)
+- [:hammer: 服务器基础环境软件安装](#服务器基础环境软件安装)
+- [:speech_balloon: LLM学习交流群](#llm学习交流群)
+- [:busts_in_silhouette: 微信公众号](#微信公众号)
+- [:star: Star History](#star-history)
 
 
 ## LLM训练
@@ -151,7 +151,7 @@
 
 
 
-## :star: Star History
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=liguodongiot/llm-action&type=Date)](https://star-history.com/#liguodongiot/llm-action&Date)
 
