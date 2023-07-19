@@ -19,7 +19,7 @@
 - [服务器基础环境软件安装](#服务器基础环境软件安装)
 - [LLM学习交流群](#llm学习交流群)
 - [微信公众号](#微信公众号)
-- [:star: Star History](#Star History)
+- [:star: Star History](#star-star-history)
 
 
 ## LLM训练
