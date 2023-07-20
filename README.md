@@ -15,7 +15,7 @@
   - [:rocket: 模型推理加速](#模型推理加速)
   - [:airplane: 模型推理服务化](#模型推理服务化)
   - [:triangular_ruler: LLM量化](#llm量化)
-- [:u4e2d: :u56fd: LLM国产化适配](#llm国产化适配)
+- [:u4e2d: LLM国产化适配](#llm国产化适配)
 - [:mushroom: LLM生态相关技术](#llm生态相关技术)
 - [:hammer: 服务器基础环境软件安装](#服务器基础环境软件安装)
 - [:speech_balloon: LLM学习交流群](#llm学习交流群)
