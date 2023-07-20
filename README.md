@@ -86,6 +86,18 @@
 - 大模型分布式训练并行技术（八）-MOE并行
 
 
+### 分布式AI框架
+
+- Pytorch
+  - Pytorch 单机多卡训练
+  - Pytorch 多机多卡训练
+- Megatron-LM
+  - Megatron-LM 单机多卡训练
+  - Megatron-LM 多机多卡训练
+- DeepSpeed
+  - DeepSpeed 单机多卡训练
+  - DeepSpeed 多机多卡训练
+
 
 ## LLM推理
 
