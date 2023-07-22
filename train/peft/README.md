@@ -81,9 +81,61 @@ nohup jupyter lab --allow-root > jupyterlab.log 2>&1 &
 
 ## 高效微调
 
-### 大模型参数高效微调技术实战（一）-Prefix Tuning 
 ### 大模型参数高效微调技术实战（二）-Prompt Tuning
+
 ### 大模型参数高效微调技术实战（三）-P-Tuning
+
+
+LSTM:
+```
+PeftModelForCausalLM(
+  (base_model): BloomForCausalLM(
+    (transformer): BloomModel(
+      (word_embeddings): Embedding(250880, 1024)
+      (word_embeddings_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (h): ModuleList(
+        (0): BloomBlock(
+          (input_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (self_attention): BloomAttention(
+            (query_key_value): Linear(in_features=1024, out_features=3072, bias=True)
+            (dense): Linear(in_features=1024, out_features=1024, bias=True)
+            (attention_dropout): Dropout(p=0.0, inplace=False)
+          )
+          (post_attention_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (mlp): BloomMLP(
+            (dense_h_to_4h): Linear(in_features=1024, out_features=4096, bias=True)
+            (gelu_impl): BloomGelu()
+            (dense_4h_to_h): Linear(in_features=4096, out_features=1024, bias=True)
+          )
+        )
+        ...
+        (23): BloomBlock(
+          ...
+        )
+      )
+      (ln_f): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+    (lm_head): Linear(in_features=1024, out_features=250880, bias=False)
+  )
+  (prompt_encoder): ModuleDict(
+    (default): PromptEncoder(
+      (embedding): Embedding(20, 1024)
+      (lstm_head): LSTM(1024, 128, num_layers=2, batch_first=True, bidirectional=True)
+      (mlp_head): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1024, bias=True)
+      )
+    )
+  )
+  (word_embeddings): Embedding(250880, 1024)
+)
+```
+
+
+### 大模型参数高效微调技术实战（四）-Prefix Tuning 
+
+
 
 ### 大模型参数高效微调技术实战（三）-LoRA
 
