@@ -15,7 +15,8 @@
   - [:rocket: 模型推理加速](#模型推理加速)
   - [:airplane: 模型推理服务化](#模型推理服务化)
   - [:triangular_ruler: LLM量化](#llm量化)
-- [:dizzy: LLM国产化适配](#llm国产化适配)
+- [:jigsaw: LLM应用开发](#llm应用开发)
+- [:mahjong: LLM国产化适配](#llm国产化适配)
 - [:mushroom: LLM生态相关技术](#llm生态相关技术)
 - [:hammer: 服务器基础环境软件安装](#服务器基础环境软件安装)
 - [:speech_balloon: LLM学习交流群](#llm学习交流群)
@@ -122,6 +123,12 @@
 - [大模型国产化适配1-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
 - [大模型国产化适配2-基于昇腾910使用ChatGLM-6B进行模型推理](https://juejin.cn/post/7254446353367482423)
 - [大模型国产化适配3-基于昇腾910使用ChatGLM-6B进行模型训练](https://juejin.cn/post/7256769427600064569)
+
+
+## LLM应用开发
+
+- [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://juejin.cn/post/7081440038772293663 )
+- [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://juejin.cn/post/7081672823931928606)
 
 
 
