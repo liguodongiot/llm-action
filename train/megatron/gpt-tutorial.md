@@ -292,10 +292,21 @@ wc -l merged_cleand.json
 python find_duplicates.py --inputs /workspace/data/merged_cleand.json merged_cleand_id  --output /workspace/data/output_possible_duplicate_urls
 ```
 
+3. 基于相似性度量，在函数 is_similar 中定义（默认值：0.9），对相似的 URL 进行分组。 基本上，对于每一组，我们只应保留一个网址并删除其余的网址。
 
+```
+python group_duplicate_urls.py <possible duplicate urls file> <output file containing similar urls>
+```
 
+4. 删除上一步中检测到的类似文档。
+python remove_group_duplicates.py <包含相似文档的文件> <已清理的数据文件> <包含去重数据的输出文件>
 
+5. Shuffle the dataset.
 
+```
+# shuf <cleaned deduped data file> -o train_data.json
+shuf /workspace/data/merged_cleand.json -o /workspace/data/train_data.json
+```
 ### 数据预处理
 
 ```
