@@ -22,6 +22,9 @@ docker exec -it nvidia_pytorch_2304_temp bash
 pip freeze > requirements.txt
 ```
 
+
+## [GPT2教程](https://github.com/liguodongiot/llm-action/blob/main/train/megatron/gpt2/gpt-tutorial.md)
+
 ## 代码
 
 ```
