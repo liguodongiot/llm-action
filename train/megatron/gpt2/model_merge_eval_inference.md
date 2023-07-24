@@ -707,7 +707,7 @@ vim examples/run_text_generation_server_345M.sh
 
 
 ```
-sh examples/run_text_generation_server_345M.sh
+> sh examples/run_text_generation_server_345M.sh
 Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
 Requirement already satisfied: flask-restful in /usr/local/lib/python3.8/dist-packages (0.3.10)
 Requirement already satisfied: aniso8601>=0.82 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (9.0.1)
@@ -1050,6 +1050,15 @@ Enter prompt:
 
 ## 模型评估
 
+```
+git clone https://github.com/NVIDIA/Megatron-LM.git
+
+git checkout 6ef5bdc
+```
+
+
+
+
 <details><summary>详细输出：</summary><p>
 
 
@@ -1335,66 +1344,7 @@ building GPT model ...
 > working on iteration: 10
 > working on iteration: 20
 > working on iteration: 30
-> working on iteration: 40
-> working on iteration: 50
-> working on iteration: 60
-> working on iteration: 70
-> working on iteration: 80
-> working on iteration: 90
-> working on iteration: 100
-> working on iteration: 110
-> working on iteration: 120
-> working on iteration: 130
-> working on iteration: 140
-> working on iteration: 150
-> working on iteration: 160
-> working on iteration: 170
-> working on iteration: 180
-> working on iteration: 190
-> working on iteration: 200
-> working on iteration: 210
-> working on iteration: 220
-> working on iteration: 230
-> working on iteration: 240
-> working on iteration: 250
-> working on iteration: 260
-> working on iteration: 270
-> working on iteration: 280
-> working on iteration: 290
-> working on iteration: 300
-> working on iteration: 310
-> working on iteration: 320
-> working on iteration: 330
-> working on iteration: 340
-> working on iteration: 350
-> working on iteration: 360
-> working on iteration: 370
-> working on iteration: 380
-> working on iteration: 390
-> working on iteration: 400
-> working on iteration: 410
-> working on iteration: 420
-> working on iteration: 430
-> working on iteration: 440
-> working on iteration: 450
-> working on iteration: 460
-> working on iteration: 470
-> working on iteration: 480
-> working on iteration: 490
-> working on iteration: 500
-> working on iteration: 510
-> working on iteration: 520
-> working on iteration: 530
-> working on iteration: 540
-> working on iteration: 550
-> working on iteration: 560
-> working on iteration: 570
-> working on iteration: 580
-> working on iteration: 590
-> working on iteration: 600
-> working on iteration: 610
-> working on iteration: 620
-> working on iteration: 630
+...
 > working on iteration: 640
 --------------------------------------------------------------------------------------------------------------------
  validation results on LAMBADA | number correct: 0.0000E+00 | total examples: 5.1530E+03 | avg accuracy: 0.0000E+00
@@ -1403,6 +1353,9 @@ done :-)
 ```
 
 </p></details>
+
+
+
 
 
 
