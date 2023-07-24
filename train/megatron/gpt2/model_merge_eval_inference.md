@@ -568,14 +568,7 @@ sending transformer layer 1
  > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
 Setting consumed_train_samples to 80000 and consumed_valid_samples to 960
 sending transformer layer 2
-sending transformer layer 3
-sending transformer layer 4
-sending transformer layer 5
-sending transformer layer 6
-sending transformer layer 7
-sending transformer layer 8
-sending transformer layer 9
-sending transformer layer 10
+...
 sending transformer layer 11
 building GPT model ...
  loading checkpoint from /workspace/model/megatron-models/345m-init-mp at iteration 5000
@@ -583,16 +576,7 @@ received embeddings
  > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
 building GPT model ...
 received transformer layer 0
-received transformer layer 1
-received transformer layer 2
-received transformer layer 3
-received transformer layer 4
-received transformer layer 5
-received transformer layer 6
-received transformer layer 7
-received transformer layer 8
-received transformer layer 9
-received transformer layer 10
+...
 received transformer layer 11
  checkpoint version 3.0
   successfully loaded checkpoint from /workspace/model/megatron-models/345m-init-mp at iteration 5000
@@ -1030,7 +1014,7 @@ start time:  2023-07-23 16:03:23.518545
 ```
 
 
-
+<details><summary>详细输出：</summary><p>
 ```
 > python tools/text_generation_cli.py localhost:5000
 Enter prompt: hello
@@ -1043,6 +1027,692 @@ Megatron Response:
 worldboarding-
 Enter prompt: 
 ```
+</p></details>
+
+
+
+### 4TP
+
+
+<details><summary>详细输出：</summary><p>
+
+
+```
+> sh examples/run_text_generation_server_345M_4_tensor_parallel.sh 
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: flask-restful in /usr/local/lib/python3.8/dist-packages (0.3.10)
+Requirement already satisfied: six>=1.3.0 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (1.16.0)
+Requirement already satisfied: pytz in /usr/local/lib/python3.8/dist-packages (from flask-restful) (2023.3)
+Requirement already satisfied: aniso8601>=0.82 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (9.0.1)
+Requirement already satisfied: Flask>=0.8 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (2.3.2)
+Requirement already satisfied: blinker>=1.6.2 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (1.6.2)
+Requirement already satisfied: Werkzeug>=2.3.3 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (2.3.6)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (6.3.0)
+Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (8.1.3)
+Requirement already satisfied: itsdangerous>=2.1.2 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (2.1.2)
+Requirement already satisfied: Jinja2>=3.1.2 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (3.1.2)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.8/dist-packages (from importlib-metadata>=3.6.0->Flask>=0.8->flask-restful) (3.15.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.8/dist-packages (from Jinja2>=3.1.2->Flask>=0.8->flask-restful) (2.1.2)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 21.2.4; however, version 23.2.1 is available.
+You should consider upgrading via the '/usr/bin/python -m pip install --upgrade pip' command.
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+using world size: 4, data-parallel-size: 1, tensor-model-parallel size: 4, pipeline-model-parallel size: 1 
+WARNING: overriding default arguments for tokenizer_type:GPT2BPETokenizer                        with tokenizer_type:GPT2BPETokenizer
+setting global batch size to 1
+using torch.float16 for parameters ...
+------------------------ arguments ------------------------
+  accumulate_allreduce_grads_in_fp32 .............. False
+  adam_beta1 ...................................... 0.9
+  adam_beta2 ...................................... 0.999
+  adam_eps ........................................ 1e-08
+  add_bias_linear ................................. True
+  add_position_embedding .......................... True
+  adlr_autoresume ................................. False
+  adlr_autoresume_interval ........................ 1000
+  apply_layernorm_1p .............................. False
+  apply_query_key_layer_scaling ................... True
+  apply_residual_connection_post_layernorm ........ False
+  async_tensor_model_parallel_allreduce ........... True
+  attention_dropout ............................... 0.1
+  attention_softmax_in_fp32 ....................... False
+  barrier_with_L1_time ............................ True
+  bert_binary_head ................................ True
+  bert_embedder_type .............................. megatron
+  bert_load ....................................... None
+  bf16 ............................................ False
+  bias_dropout_fusion ............................. True
+  bias_gelu_fusion ................................ True
+  biencoder_projection_dim ........................ 0
+  biencoder_shared_query_context_model ............ False
+  block_data_path ................................. None
+  classes_fraction ................................ 1.0
+  clip_grad ....................................... 1.0
+  consumed_train_samples .......................... 0
+  consumed_valid_samples .......................... 0
+  data_cache_path ................................. None
+  data_impl ....................................... infer
+  data_parallel_random_init ....................... False
+  data_parallel_size .............................. 1
+  data_path ....................................... None
+  data_per_class_fraction ......................... 1.0
+  data_sharding ................................... True
+  dataloader_type ................................. single
+  DDP_impl ........................................ local
+  decoder_num_layers .............................. None
+  decoder_seq_length .............................. None
+  dino_bottleneck_size ............................ 256
+  dino_freeze_last_layer .......................... 1
+  dino_head_hidden_size ........................... 2048
+  dino_local_crops_number ......................... 10
+  dino_local_img_size ............................. 96
+  dino_norm_last_layer ............................ False
+  dino_teacher_temp ............................... 0.07
+  dino_warmup_teacher_temp ........................ 0.04
+  dino_warmup_teacher_temp_epochs ................. 30
+  distribute_saved_activations .................... False
+  distributed_backend ............................. nccl
+  distributed_timeout_minutes ..................... 10
+  embedding_path .................................. None
+  empty_unused_memory_level ....................... 0
+  encoder_num_layers .............................. 24
+  encoder_seq_length .............................. 1024
+  end_weight_decay ................................ 0.01
+  eod_mask_loss ................................... False
+  eval_interval ................................... 1000
+  eval_iters ...................................... 100
+  evidence_data_path .............................. None
+  exit_duration_in_mins ........................... None
+  exit_interval ................................... None
+  exit_on_missing_checkpoint ...................... False
+  exit_signal_handler ............................. False
+  ffn_hidden_size ................................. 4096
+  finetune ........................................ False
+  fp16 ............................................ True
+  fp16_lm_cross_entropy ........................... False
+  fp32_residual_connection ........................ False
+  fp8_amax_compute_algo ........................... most_recent
+  fp8_amax_history_len ............................ 1
+  fp8_e4m3 ........................................ False
+  fp8_hybrid ...................................... False
+  fp8_interval .................................... 1
+  fp8_margin ...................................... 0
+  fp8_wgrad ....................................... True
+  global_batch_size ............................... 1
+  gradient_accumulation_fusion .................... True
+  head_lr_mult .................................... 1.0
+  hidden_dropout .................................. 0.1
+  hidden_size ..................................... 1024
+  hysteresis ...................................... 2
+  ict_head_size ................................... None
+  ict_load ........................................ None
+  img_h ........................................... 224
+  img_w ........................................... 224
+  indexer_batch_size .............................. 128
+  indexer_log_interval ............................ 1000
+  inference_batch_times_seqlen_threshold .......... 512
+  init_method_std ................................. 0.02
+  init_method_xavier_uniform ...................... False
+  initial_loss_scale .............................. 4294967296
+  iter_per_epoch .................................. 1250
+  kv_channels ..................................... 64
+  layernorm_epsilon ............................... 1e-05
+  lazy_mpu_init ................................... None
+  load ............................................ /workspace/model/megatron-models/345m-init-4tp
+  local_rank ...................................... None
+  log_batch_size_to_tensorboard ................... False
+  log_interval .................................... 100
+  log_learning_rate_to_tensorboard ................ True
+  log_loss_scale_to_tensorboard ................... True
+  log_memory_to_tensorboard ....................... False
+  log_num_zeros_in_grad ........................... False
+  log_params_norm ................................. False
+  log_timers_to_tensorboard ....................... False
+  log_validation_ppl_to_tensorboard ............... False
+  log_world_size_to_tensorboard ................... False
+  loss_scale ...................................... None
+  loss_scale_window ............................... 1000
+  lr .............................................. None
+  lr_decay_iters .................................. None
+  lr_decay_samples ................................ None
+  lr_decay_style .................................. linear
+  lr_warmup_fraction .............................. None
+  lr_warmup_iters ................................. 0
+  lr_warmup_samples ............................... 0
+  make_vocab_size_divisible_by .................... 128
+  mask_factor ..................................... 1.0
+  mask_prob ....................................... 0.15
+  mask_type ....................................... random
+  masked_softmax_fusion ........................... True
+  max_position_embeddings ......................... 1024
+  max_tokens_to_oom ............................... 12000
+  merge_file ...................................... /workspace/model/gpt2-vocab/gpt2-merges.txt
+  micro_batch_size ................................ 1
+  min_loss_scale .................................. 1.0
+  min_lr .......................................... 0.0
+  mmap_warmup ..................................... False
+  no_load_optim ................................... True
+  no_load_rng ..................................... True
+  no_persist_layer_norm ........................... False
+  no_save_optim ................................... None
+  no_save_rng ..................................... None
+  num_attention_heads ............................. 16
+  num_channels .................................... 3
+  num_classes ..................................... 1000
+  num_experts ..................................... None
+  num_layers ...................................... 24
+  num_layers_per_virtual_pipeline_stage ........... None
+  num_workers ..................................... 2
+  onnx_safe ....................................... None
+  openai_gelu ..................................... False
+  optimizer ....................................... adam
+  out_seq_length .................................. 1024
+  output_bert_embeddings .......................... False
+  overlap_p2p_comm ................................ False
+  override_opt_param_scheduler .................... False
+  params_dtype .................................... torch.float16
+  patch_dim ....................................... 16
+  perform_initialization .......................... True
+  pipeline_model_parallel_size .................... 1
+  pipeline_model_parallel_split_rank .............. None
+  query_in_block_prob ............................. 0.1
+  rampup_batch_size ............................... None
+  rank ............................................ 0
+  recompute_granularity ........................... None
+  recompute_method ................................ None
+  recompute_num_layers ............................ 1
+  reset_attention_mask ............................ False
+  reset_position_ids .............................. False
+  retriever_report_topk_accuracies ................ []
+  retriever_score_scaling ......................... False
+  retriever_seq_length ............................ 256
+  retro_add_retriever ............................. False
+  retro_cyclic_train_iters ........................ None
+  retro_encoder_attention_dropout ................. 0.1
+  retro_encoder_hidden_dropout .................... 0.1
+  retro_encoder_layers ............................ 2
+  retro_num_neighbors ............................. 2
+  retro_num_retrieved_chunks ...................... 2
+  retro_return_doc_ids ............................ False
+  retro_workdir ................................... None
+  rotary_percent .................................. 1.0
+  sample_rate ..................................... 1.0
+  save ............................................ None
+  save_interval ................................... None
+  scatter_gather_tensors_in_pipeline .............. True
+  seed ............................................ 42
+  seq_length ...................................... 1024
+  sequence_parallel ............................... False
+  sgd_momentum .................................... 0.9
+  short_seq_prob .................................. 0.1
+  split ........................................... 969, 30, 1
+  squared_relu .................................... False
+  standalone_embedding_stage ...................... False
+  start_weight_decay .............................. 0.01
+  swiglu .......................................... False
+  swin_backbone_type .............................. tiny
+  temperature ..................................... 1.0
+  tensor_model_parallel_size ...................... 4
+  tensorboard_dir ................................. None
+  tensorboard_log_interval ........................ 1
+  tensorboard_queue_size .......................... 1000
+  test_data_path .................................. None
+  timing_log_level ................................ 0
+  timing_log_option ............................... minmax
+  titles_data_path ................................ None
+  tokenizer_model ................................. None
+  tokenizer_type .................................. GPT2BPETokenizer
+  top_k ........................................... 0
+  top_p ........................................... 0.9
+  train_data_path ................................. None
+  train_iters ..................................... None
+  train_samples ................................... None
+  transformer_impl ................................ local
+  transformer_pipeline_model_parallel_size ........ 1
+  untie_embeddings_and_output_weights ............. False
+  use_checkpoint_args ............................. False
+  use_checkpoint_opt_param_scheduler .............. False
+  use_contiguous_buffers_in_local_ddp ............. True
+  use_cpu_initialization .......................... None
+  use_distributed_optimizer ....................... False
+  use_flash_attn .................................. False
+  use_one_sent_docs ............................... False
+  use_ring_exchange_p2p ........................... False
+  use_rotary_position_embeddings .................. False
+  valid_data_path ................................. None
+  variable_seq_lengths ............................ False
+  virtual_pipeline_model_parallel_size ............ None
+  vision_backbone_type ............................ vit
+  vision_pretraining .............................. False
+  vision_pretraining_type ......................... classify
+  vocab_extra_ids ................................. 0
+  vocab_file ...................................... /workspace/model/gpt2-vocab/gpt2-vocab.json
+  vocab_size ...................................... None
+  weight_decay .................................... 0.01
+  weight_decay_incr_style ......................... constant
+  world_size ...................................... 4
+-------------------- end of arguments ---------------------
+setting number of micro-batches to constant 1
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 431 dummy tokens (new size: 50688)
+> initializing torch distributed ...
+> initialized tensor model parallel with size 4
+> initialized pipeline model parallel with size 1
+> setting random seeds to 42 ...
+> compiling dataset index builder ...
+make: Entering directory '/workspace/code/Megatron-LM/megatron/data'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/workspace/code/Megatron-LM/megatron/data'
+>>> done with dataset index builder. Compilation time: 0.185 seconds
+> compiling and loading fused kernels ...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /workspace/code/Megatron-LM/megatron/fused_kernels/build/build.ninja...
+Building extension module scaled_upper_triang_masked_softmax_cuda...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module scaled_upper_triang_masked_softmax_cuda...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /workspace/code/Megatron-LM/megatron/fused_kernels/build/build.ninja...
+Building extension module scaled_masked_softmax_cuda...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module scaled_masked_softmax_cuda...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /workspace/code/Megatron-LM/megatron/fused_kernels/build/build.ninja...
+Building extension module scaled_softmax_cuda...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module scaled_softmax_cuda...
+>>> done with compiling and loading fused kernels. Compilation time: 3.342 seconds
+building GPT model ...
+ > number of parameters on (tensor, pipeline) model parallel rank (2, 0): 89714688
+ > number of parameters on (tensor, pipeline) model parallel rank (3, 0): 89714688
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 0): 89714688
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 0): 89714688
+ loading checkpoint from /workspace/model/megatron-models/345m-init-4tp at iteration 2000
+ checkpoint version 3.0
+  successfully loaded checkpoint from /workspace/model/megatron-models/345m-init-4tp at iteration 2000
+ * Serving Flask app 'megatron.text_generation_server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.78.137:5000
+Press CTRL+C to quit
+request IP: 127.0.0.1
+{"prompts": ["Hello world"], "tokens_to_generate": 1}
+start time:  2023-07-24 08:02:14.824674
+127.0.0.1 - - [24/Jul/2023 08:02:18] "PUT /api HTTP/1.1" 200 -
+
+```
+
+</p></details>
+
+
+<details><summary>详细输出：</summary><p>
+
+```
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   1844443      C   /usr/bin/python                   788MiB |
+|    1   N/A  N/A   1844444      C   /usr/bin/python                   788MiB |
+|    2   N/A  N/A   1844445      C   /usr/bin/python                   788MiB |
+|    3   N/A  N/A   1844446      C   /usr/bin/python                   788MiB |
++-----------------------------------------------------------------------------+
+```
+</p></details>
+
+
+### 2TP+2PP
+
+
+<details><summary>详细输出：</summary><p>
+
+
+```
+ sh examples/run_text_generation_server_345M_2tp_2dp.sh 
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: flask-restful in /usr/local/lib/python3.8/dist-packages (0.3.10)
+Requirement already satisfied: six>=1.3.0 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (1.16.0)
+Requirement already satisfied: pytz in /usr/local/lib/python3.8/dist-packages (from flask-restful) (2023.3)
+Requirement already satisfied: aniso8601>=0.82 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (9.0.1)
+Requirement already satisfied: Flask>=0.8 in /usr/local/lib/python3.8/dist-packages (from flask-restful) (2.3.2)
+Requirement already satisfied: Jinja2>=3.1.2 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (3.1.2)
+Requirement already satisfied: Werkzeug>=2.3.3 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (2.3.6)
+Requirement already satisfied: blinker>=1.6.2 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (1.6.2)
+Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (8.1.3)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (6.3.0)
+Requirement already satisfied: itsdangerous>=2.1.2 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->flask-restful) (2.1.2)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.8/dist-packages (from importlib-metadata>=3.6.0->Flask>=0.8->flask-restful) (3.15.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.8/dist-packages (from Jinja2>=3.1.2->Flask>=0.8->flask-restful) (2.1.2)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 21.2.4; however, version 23.2.1 is available.
+You should consider upgrading via the '/usr/bin/python -m pip install --upgrade pip' command.
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+using world size: 4, data-parallel-size: 1, tensor-model-parallel size: 2, pipeline-model-parallel size: 2 
+WARNING: overriding default arguments for tokenizer_type:GPT2BPETokenizer                        with tokenizer_type:GPT2BPETokenizer
+setting global batch size to 1
+using torch.float16 for parameters ...
+------------------------ arguments ------------------------
+  accumulate_allreduce_grads_in_fp32 .............. False
+  adam_beta1 ...................................... 0.9
+  adam_beta2 ...................................... 0.999
+  adam_eps ........................................ 1e-08
+  add_bias_linear ................................. True
+  add_position_embedding .......................... True
+  adlr_autoresume ................................. False
+  adlr_autoresume_interval ........................ 1000
+  apply_layernorm_1p .............................. False
+  apply_query_key_layer_scaling ................... True
+  apply_residual_connection_post_layernorm ........ False
+  async_tensor_model_parallel_allreduce ........... True
+  attention_dropout ............................... 0.1
+  attention_softmax_in_fp32 ....................... False
+  barrier_with_L1_time ............................ True
+  bert_binary_head ................................ True
+  bert_embedder_type .............................. megatron
+  bert_load ....................................... None
+  bf16 ............................................ False
+  bias_dropout_fusion ............................. True
+  bias_gelu_fusion ................................ True
+  biencoder_projection_dim ........................ 0
+  biencoder_shared_query_context_model ............ False
+  block_data_path ................................. None
+  classes_fraction ................................ 1.0
+  clip_grad ....................................... 1.0
+  consumed_train_samples .......................... 0
+  consumed_valid_samples .......................... 0
+  data_cache_path ................................. None
+  data_impl ....................................... infer
+  data_parallel_random_init ....................... False
+  data_parallel_size .............................. 1
+  data_path ....................................... None
+  data_per_class_fraction ......................... 1.0
+  data_sharding ................................... True
+  dataloader_type ................................. single
+  DDP_impl ........................................ local
+  decoder_num_layers .............................. None
+  decoder_seq_length .............................. None
+  dino_bottleneck_size ............................ 256
+  dino_freeze_last_layer .......................... 1
+  dino_head_hidden_size ........................... 2048
+  dino_local_crops_number ......................... 10
+  dino_local_img_size ............................. 96
+  dino_norm_last_layer ............................ False
+  dino_teacher_temp ............................... 0.07
+  dino_warmup_teacher_temp ........................ 0.04
+  dino_warmup_teacher_temp_epochs ................. 30
+  distribute_saved_activations .................... False
+  distributed_backend ............................. nccl
+  distributed_timeout_minutes ..................... 10
+  embedding_path .................................. None
+  empty_unused_memory_level ....................... 0
+  encoder_num_layers .............................. 24
+  encoder_seq_length .............................. 1024
+  end_weight_decay ................................ 0.01
+  eod_mask_loss ................................... False
+  eval_interval ................................... 1000
+  eval_iters ...................................... 100
+  evidence_data_path .............................. None
+  exit_duration_in_mins ........................... None
+  exit_interval ................................... None
+  exit_on_missing_checkpoint ...................... False
+  exit_signal_handler ............................. False
+  ffn_hidden_size ................................. 4096
+  finetune ........................................ False
+  fp16 ............................................ True
+  fp16_lm_cross_entropy ........................... False
+  fp32_residual_connection ........................ False
+  fp8_amax_compute_algo ........................... most_recent
+  fp8_amax_history_len ............................ 1
+  fp8_e4m3 ........................................ False
+  fp8_hybrid ...................................... False
+  fp8_interval .................................... 1
+  fp8_margin ...................................... 0
+  fp8_wgrad ....................................... True
+  global_batch_size ............................... 1
+  gradient_accumulation_fusion .................... True
+  head_lr_mult .................................... 1.0
+  hidden_dropout .................................. 0.1
+  hidden_size ..................................... 1024
+  hysteresis ...................................... 2
+  ict_head_size ................................... None
+  ict_load ........................................ None
+  img_h ........................................... 224
+  img_w ........................................... 224
+  indexer_batch_size .............................. 128
+  indexer_log_interval ............................ 1000
+  inference_batch_times_seqlen_threshold .......... 512
+  init_method_std ................................. 0.02
+  init_method_xavier_uniform ...................... False
+  initial_loss_scale .............................. 4294967296
+  iter_per_epoch .................................. 1250
+  kv_channels ..................................... 64
+  layernorm_epsilon ............................... 1e-05
+  lazy_mpu_init ................................... None
+  load ............................................ /workspace/model/megatron-models/345m-init-mp
+  local_rank ...................................... None
+  log_batch_size_to_tensorboard ................... False
+  log_interval .................................... 100
+  log_learning_rate_to_tensorboard ................ True
+  log_loss_scale_to_tensorboard ................... True
+  log_memory_to_tensorboard ....................... False
+  log_num_zeros_in_grad ........................... False
+  log_params_norm ................................. False
+  log_timers_to_tensorboard ....................... False
+  log_validation_ppl_to_tensorboard ............... False
+  log_world_size_to_tensorboard ................... False
+  loss_scale ...................................... None
+  loss_scale_window ............................... 1000
+  lr .............................................. None
+  lr_decay_iters .................................. None
+  lr_decay_samples ................................ None
+  lr_decay_style .................................. linear
+  lr_warmup_fraction .............................. None
+  lr_warmup_iters ................................. 0
+  lr_warmup_samples ............................... 0
+  make_vocab_size_divisible_by .................... 128
+  mask_factor ..................................... 1.0
+  mask_prob ....................................... 0.15
+  mask_type ....................................... random
+  masked_softmax_fusion ........................... True
+  max_position_embeddings ......................... 1024
+  max_tokens_to_oom ............................... 12000
+  merge_file ...................................... /workspace/model/gpt2-vocab/gpt2-merges.txt
+  micro_batch_size ................................ 1
+  min_loss_scale .................................. 1.0
+  min_lr .......................................... 0.0
+  mmap_warmup ..................................... False
+  no_load_optim ................................... True
+  no_load_rng ..................................... True
+  no_persist_layer_norm ........................... False
+  no_save_optim ................................... None
+  no_save_rng ..................................... None
+  num_attention_heads ............................. 16
+  num_channels .................................... 3
+  num_classes ..................................... 1000
+  num_experts ..................................... None
+  num_layers ...................................... 24
+  num_layers_per_virtual_pipeline_stage ........... None
+  num_workers ..................................... 2
+  onnx_safe ....................................... None
+  openai_gelu ..................................... False
+  optimizer ....................................... adam
+  out_seq_length .................................. 1024
+  output_bert_embeddings .......................... False
+  overlap_p2p_comm ................................ False
+  override_opt_param_scheduler .................... False
+  params_dtype .................................... torch.float16
+  patch_dim ....................................... 16
+  perform_initialization .......................... True
+  pipeline_model_parallel_size .................... 2
+  pipeline_model_parallel_split_rank .............. None
+  query_in_block_prob ............................. 0.1
+  rampup_batch_size ............................... None
+  rank ............................................ 0
+  recompute_granularity ........................... None
+  recompute_method ................................ None
+  recompute_num_layers ............................ 1
+  reset_attention_mask ............................ False
+  reset_position_ids .............................. False
+  retriever_report_topk_accuracies ................ []
+  retriever_score_scaling ......................... False
+  retriever_seq_length ............................ 256
+  retro_add_retriever ............................. False
+  retro_cyclic_train_iters ........................ None
+  retro_encoder_attention_dropout ................. 0.1
+  retro_encoder_hidden_dropout .................... 0.1
+  retro_encoder_layers ............................ 2
+  retro_num_neighbors ............................. 2
+  retro_num_retrieved_chunks ...................... 2
+  retro_return_doc_ids ............................ False
+  retro_workdir ................................... None
+  rotary_percent .................................. 1.0
+  sample_rate ..................................... 1.0
+  save ............................................ None
+  save_interval ................................... None
+  scatter_gather_tensors_in_pipeline .............. True
+  seed ............................................ 42
+  seq_length ...................................... 1024
+  sequence_parallel ............................... False
+  sgd_momentum .................................... 0.9
+  short_seq_prob .................................. 0.1
+  split ........................................... 969, 30, 1
+  squared_relu .................................... False
+  standalone_embedding_stage ...................... False
+  start_weight_decay .............................. 0.01
+  swiglu .......................................... False
+  swin_backbone_type .............................. tiny
+  temperature ..................................... 1.0
+  tensor_model_parallel_size ...................... 2
+  tensorboard_dir ................................. None
+  tensorboard_log_interval ........................ 1
+  tensorboard_queue_size .......................... 1000
+  test_data_path .................................. None
+  timing_log_level ................................ 0
+  timing_log_option ............................... minmax
+  titles_data_path ................................ None
+  tokenizer_model ................................. None
+  tokenizer_type .................................. GPT2BPETokenizer
+  top_k ........................................... 0
+  top_p ........................................... 0.9
+  train_data_path ................................. None
+  train_iters ..................................... None
+  train_samples ................................... None
+  transformer_impl ................................ local
+  transformer_pipeline_model_parallel_size ........ 2
+  untie_embeddings_and_output_weights ............. False
+  use_checkpoint_args ............................. False
+  use_checkpoint_opt_param_scheduler .............. False
+  use_contiguous_buffers_in_local_ddp ............. True
+  use_cpu_initialization .......................... None
+  use_distributed_optimizer ....................... False
+  use_flash_attn .................................. False
+  use_one_sent_docs ............................... False
+  use_ring_exchange_p2p ........................... False
+  use_rotary_position_embeddings .................. False
+  valid_data_path ................................. None
+  variable_seq_lengths ............................ False
+  virtual_pipeline_model_parallel_size ............ None
+  vision_backbone_type ............................ vit
+  vision_pretraining .............................. False
+  vision_pretraining_type ......................... classify
+  vocab_extra_ids ................................. 0
+  vocab_file ...................................... /workspace/model/gpt2-vocab/gpt2-vocab.json
+  vocab_size ...................................... None
+  weight_decay .................................... 0.01
+  weight_decay_incr_style ......................... constant
+  world_size ...................................... 4
+-------------------- end of arguments ---------------------
+setting number of micro-batches to constant 1
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 175 dummy tokens (new size: 50432)
+> initializing torch distributed ...
+> initialized tensor model parallel with size 2
+> initialized pipeline model parallel with size 2
+> setting random seeds to 42 ...
+> compiling dataset index builder ...
+make: Entering directory '/workspace/code/Megatron-LM/megatron/data'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/workspace/code/Megatron-LM/megatron/data'
+>>> done with dataset index builder. Compilation time: 0.206 seconds
+> compiling and loading fused kernels ...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /workspace/code/Megatron-LM/megatron/fused_kernels/build/build.ninja...
+Building extension module scaled_upper_triang_masked_softmax_cuda...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module scaled_upper_triang_masked_softmax_cuda...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /workspace/code/Megatron-LM/megatron/fused_kernels/build/build.ninja...
+Building extension module scaled_masked_softmax_cuda...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module scaled_masked_softmax_cuda...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /workspace/code/Megatron-LM/megatron/fused_kernels/build/build.ninja...
+Building extension module scaled_softmax_cuda...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module scaled_softmax_cuda...
+>>> done with compiling and loading fused kernels. Compilation time: 3.460 seconds
+building GPT model ...
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 0): 102483968
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 1): 101437440
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 1): 101437440
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 0): 102483968
+ loading checkpoint from /workspace/model/megatron-models/345m-init-mp at iteration 5000
+ checkpoint version 3.0
+  successfully loaded checkpoint from /workspace/model/megatron-models/345m-init-mp at iteration 5000
+ * Serving Flask app 'megatron.text_generation_server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.78.137:5000
+Press CTRL+C to quit
+request IP: 127.0.0.1
+{"prompts": ["hello"], "tokens_to_generate": 5}
+start time:  2023-07-24 08:11:43.956061
+[W ProcessGroupNCCL.cpp:1692] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1692] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1692] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1692] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+127.0.0.1 - - [24/Jul/2023 08:11:53] "PUT /api HTTP/1.1" 200 -
+```
+
+
+</p></details>
+
+
+
+
+
+<details><summary>详细输出：</summary><p>
+
+```
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   1869409      C   /usr/bin/python                  1222MiB |
+|    1   N/A  N/A   1869410      C   /usr/bin/python                  1222MiB |
+|    2   N/A  N/A   1869411      C   /usr/bin/python                  1222MiB |
+|    3   N/A  N/A   1869412      C   /usr/bin/python                  1222MiB |
++-----------------------------------------------------------------------------+
+```
+</p></details>
+
 
 
 
