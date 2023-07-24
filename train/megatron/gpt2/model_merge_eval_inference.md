@@ -1048,3 +1048,366 @@ Enter prompt:
 
 
 
+## 模型评估
+
+<details><summary>详细输出：</summary><p>
+
+
+```
+> sh eval_gpt2_lambada.sh 
+using world size: 1, data-parallel-size: 1, tensor-model-parallel size: 1, pipeline-model-parallel size: 1 
+setting global batch size to 8
+using torch.float16 for parameters ...
+------------------------ arguments ------------------------
+  accumulate_allreduce_grads_in_fp32 .............. False
+  adam_beta1 ...................................... 0.9
+  adam_beta2 ...................................... 0.999
+  adam_eps ........................................ 1e-08
+  add_bias_linear ................................. True
+  add_position_embedding .......................... True
+  adlr_autoresume ................................. False
+  adlr_autoresume_interval ........................ 1000
+  apply_layernorm_1p .............................. False
+  apply_query_key_layer_scaling ................... True
+  apply_residual_connection_post_layernorm ........ False
+  async_tensor_model_parallel_allreduce ........... True
+  attention_dropout ............................... 0.1
+  attention_softmax_in_fp32 ....................... False
+  barrier_with_L1_time ............................ True
+  bert_binary_head ................................ True
+  bert_embedder_type .............................. megatron
+  bert_load ....................................... None
+  bf16 ............................................ False
+  bias_dropout_fusion ............................. True
+  bias_gelu_fusion ................................ True
+  biencoder_projection_dim ........................ 0
+  biencoder_shared_query_context_model ............ False
+  block_data_path ................................. None
+  classes_fraction ................................ 1.0
+  clip_grad ....................................... 1.0
+  consumed_train_samples .......................... 0
+  consumed_valid_samples .......................... 0
+  data_cache_path ................................. None
+  data_impl ....................................... infer
+  data_parallel_random_init ....................... False
+  data_parallel_size .............................. 1
+  data_path ....................................... None
+  data_per_class_fraction ......................... 1.0
+  data_sharding ................................... True
+  dataloader_type ................................. single
+  DDP_impl ........................................ local
+  decoder_num_layers .............................. None
+  decoder_seq_length .............................. None
+  dino_bottleneck_size ............................ 256
+  dino_freeze_last_layer .......................... 1
+  dino_head_hidden_size ........................... 2048
+  dino_local_crops_number ......................... 10
+  dino_local_img_size ............................. 96
+  dino_norm_last_layer ............................ False
+  dino_teacher_temp ............................... 0.07
+  dino_warmup_teacher_temp ........................ 0.04
+  dino_warmup_teacher_temp_epochs ................. 30
+  distribute_saved_activations .................... False
+  distributed_backend ............................. nccl
+  distributed_timeout_minutes ..................... 10
+  embedding_path .................................. None
+  embedding_weights_in_fp32 ....................... False
+  empty_unused_memory_level ....................... 0
+  encoder_num_layers .............................. 24
+  encoder_seq_length .............................. 1024
+  end_weight_decay ................................ 0.01
+  eod_mask_loss ................................... False
+  epochs .......................................... None
+  eval_interval ................................... 1000
+  eval_iters ...................................... 100
+  eval_micro_batch_size ........................... None
+  evidence_data_path .............................. None
+  exit_duration_in_mins ........................... None
+  exit_interval ................................... None
+  exit_on_missing_checkpoint ...................... False
+  exit_signal_handler ............................. False
+  faiss_match ..................................... string
+  faiss_topk_retrievals ........................... 100
+  faiss_use_gpu ................................... False
+  ffn_hidden_size ................................. 4096
+  finetune ........................................ False
+  fp16 ............................................ True
+  fp16_lm_cross_entropy ........................... False
+  fp32_residual_connection ........................ False
+  fp8_amax_compute_algo ........................... most_recent
+  fp8_amax_history_len ............................ 1
+  fp8_e4m3 ........................................ False
+  fp8_hybrid ...................................... False
+  fp8_interval .................................... 1
+  fp8_margin ...................................... 0
+  fp8_wgrad ....................................... True
+  global_batch_size ............................... 8
+  gradient_accumulation_fusion .................... True
+  head_lr_mult .................................... 1.0
+  hidden_dropout .................................. 0.1
+  hidden_size ..................................... 1024
+  hysteresis ...................................... 2
+  ict_head_size ................................... None
+  ict_load ........................................ None
+  img_h ........................................... 224
+  img_w ........................................... 224
+  indexer_batch_size .............................. 128
+  indexer_log_interval ............................ 1000
+  inference_batch_times_seqlen_threshold .......... 512
+  init_method_std ................................. 0.02
+  init_method_xavier_uniform ...................... False
+  initial_loss_scale .............................. 4294967296
+  iter_per_epoch .................................. 1250
+  keep_last ....................................... False
+  kv_channels ..................................... 64
+  layernorm_epsilon ............................... 1e-05
+  lazy_mpu_init ................................... None
+  load ............................................ /workspace/model/megatron-models/345m-init-mp-out
+  local_rank ...................................... None
+  log_batch_size_to_tensorboard ................... False
+  log_interval .................................... 10
+  log_learning_rate_to_tensorboard ................ True
+  log_loss_scale_to_tensorboard ................... True
+  log_memory_to_tensorboard ....................... False
+  log_num_zeros_in_grad ........................... False
+  log_params_norm ................................. False
+  log_timers_to_tensorboard ....................... False
+  log_validation_ppl_to_tensorboard ............... False
+  log_world_size_to_tensorboard ................... False
+  loss_scale ...................................... None
+  loss_scale_window ............................... 1000
+  lr .............................................. None
+  lr_decay_iters .................................. None
+  lr_decay_samples ................................ None
+  lr_decay_style .................................. linear
+  lr_warmup_fraction .............................. None
+  lr_warmup_iters ................................. 0
+  lr_warmup_samples ............................... 0
+  make_vocab_size_divisible_by .................... 128
+  mask_factor ..................................... 1.0
+  mask_prob ....................................... 0.15
+  mask_type ....................................... random
+  masked_softmax_fusion ........................... True
+  max_position_embeddings ......................... 1024
+  max_tokens_to_oom ............................... 12000
+  merge_file ...................................... /workspace/model/gpt2-vocab/gpt2-merges.txt
+  micro_batch_size ................................ 8
+  min_loss_scale .................................. 1.0
+  min_lr .......................................... 0.0
+  mmap_warmup ..................................... False
+  no_load_optim ................................... True
+  no_load_rng ..................................... True
+  no_persist_layer_norm ........................... False
+  no_save_optim ................................... None
+  no_save_rng ..................................... None
+  num_attention_heads ............................. 16
+  num_channels .................................... 3
+  num_classes ..................................... 1000
+  num_experts ..................................... None
+  num_layers ...................................... 24
+  num_layers_per_virtual_pipeline_stage ........... None
+  num_workers ..................................... 2
+  onnx_safe ....................................... None
+  openai_gelu ..................................... False
+  optimizer ....................................... adam
+  output_bert_embeddings .......................... False
+  overlap_p2p_comm ................................ False
+  overlapping_eval ................................ 32
+  override_opt_param_scheduler .................... False
+  params_dtype .................................... torch.float16
+  patch_dim ....................................... 16
+  perform_initialization .......................... True
+  pipeline_model_parallel_size .................... 1
+  pipeline_model_parallel_split_rank .............. None
+  position_embedding_type ......................... learned_absolute
+  pretrained_checkpoint ........................... None
+  profile ......................................... False
+  profile_ranks ................................... [0]
+  profile_step_end ................................ 12
+  profile_step_start .............................. 10
+  qa_data_dev ..................................... None
+  qa_data_test .................................... None
+  query_in_block_prob ............................. 0.1
+  rampup_batch_size ............................... None
+  rank ............................................ 0
+  recompute_granularity ........................... None
+  recompute_method ................................ None
+  recompute_num_layers ............................ 1
+  reset_attention_mask ............................ False
+  reset_position_ids .............................. False
+  retriever_report_topk_accuracies ................ []
+  retriever_score_scaling ......................... False
+  retriever_seq_length ............................ 256
+  retro_add_retriever ............................. False
+  retro_cyclic_train_iters ........................ None
+  retro_encoder_attention_dropout ................. 0.1
+  retro_encoder_hidden_dropout .................... 0.1
+  retro_encoder_layers ............................ 2
+  retro_num_neighbors ............................. 2
+  retro_num_retrieved_chunks ...................... 2
+  retro_return_doc_ids ............................ False
+  retro_workdir ................................... None
+  rotary_percent .................................. 1.0
+  sample_rate ..................................... 1.0
+  save ............................................ None
+  save_interval ................................... None
+  scatter_gather_tensors_in_pipeline .............. True
+  seed ............................................ 1234
+  seq_length ...................................... 1024
+  sequence_parallel ............................... False
+  sgd_momentum .................................... 0.9
+  short_seq_prob .................................. 0.1
+  skip_train ...................................... False
+  split ........................................... 969, 30, 1
+  squared_relu .................................... False
+  standalone_embedding_stage ...................... False
+  start_weight_decay .............................. 0.01
+  strict_lambada .................................. True
+  swiglu .......................................... False
+  swin_backbone_type .............................. tiny
+  task ............................................ LAMBADA
+  tensor_model_parallel_size ...................... 1
+  tensorboard_dir ................................. None
+  tensorboard_log_interval ........................ 1
+  tensorboard_queue_size .......................... 1000
+  test_data_path .................................. None
+  timing_log_level ................................ 0
+  timing_log_option ............................... minmax
+  titles_data_path ................................ None
+  tokenizer_model ................................. None
+  tokenizer_type .................................. GPT2BPETokenizer
+  train_data ...................................... None
+  train_data_path ................................. None
+  train_hard_neg .................................. 0
+  train_iters ..................................... None
+  train_samples ................................... None
+  train_with_neg .................................. False
+  transformer_impl ................................ local
+  transformer_pipeline_model_parallel_size ........ 1
+  untie_embeddings_and_output_weights ............. False
+  use_checkpoint_args ............................. False
+  use_checkpoint_opt_param_scheduler .............. False
+  use_contiguous_buffers_in_local_ddp ............. True
+  use_cpu_initialization .......................... None
+  use_distributed_optimizer ....................... False
+  use_flash_attn .................................. False
+  use_one_sent_docs ............................... False
+  use_ring_exchange_p2p ........................... False
+  use_rotary_position_embeddings .................. False
+  val_av_rank_hard_neg ............................ 30
+  val_av_rank_other_neg ........................... 30
+  valid_data ...................................... ['/workspace/data/lambada_test.jsonl']
+  valid_data_path ................................. None
+  variable_seq_lengths ............................ False
+  virtual_pipeline_model_parallel_size ............ None
+  vision_backbone_type ............................ vit
+  vision_pretraining .............................. False
+  vision_pretraining_type ......................... classify
+  vocab_extra_ids ................................. 0
+  vocab_file ...................................... /workspace/model/gpt2-vocab/gpt2-vocab.json
+  vocab_size ...................................... None
+  weight_decay .................................... 0.01
+  weight_decay_incr_style ......................... constant
+  world_size ...................................... 1
+-------------------- end of arguments ---------------------
+setting number of micro-batches to constant 1
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> initializing torch distributed ...
+> initialized tensor model parallel with size 1
+> initialized pipeline model parallel with size 1
+> setting random seeds to 1234 ...
+> compiling dataset index builder ...
+make: Entering directory '/workspace/code/bak/Megatron-LM/megatron/data'
+g++ -O3 -Wall -shared -std=c++11 -fPIC -fdiagnostics-color -I/usr/include/python3.8 -I/usr/local/lib/python3.8/dist-packages/pybind11/include helpers.cpp -o helpers.cpython-38-x86_64-linux-gnu.so
+make: Leaving directory '/workspace/code/bak/Megatron-LM/megatron/data'
+>>> done with dataset index builder. Compilation time: 13.399 seconds
+> compiling and loading fused kernels ...
+>>> done with compiling and loading fused kernels. Compilation time: 1.411 seconds
+building GPT model ...
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 0): 354871296
+ loading checkpoint from /workspace/model/megatron-models/345m-init-mp-out at iteration 5000
+ checkpoint version 3.0
+  successfully loaded checkpoint from /workspace/model/megatron-models/345m-init-mp-out at iteration 5000
+> building lambada dataset from /workspace/data/lambada_test.jsonl ...
+ > found 5153 samples.
+> working on iteration: 0
+> working on iteration: 10
+> working on iteration: 20
+> working on iteration: 30
+> working on iteration: 40
+> working on iteration: 50
+> working on iteration: 60
+> working on iteration: 70
+> working on iteration: 80
+> working on iteration: 90
+> working on iteration: 100
+> working on iteration: 110
+> working on iteration: 120
+> working on iteration: 130
+> working on iteration: 140
+> working on iteration: 150
+> working on iteration: 160
+> working on iteration: 170
+> working on iteration: 180
+> working on iteration: 190
+> working on iteration: 200
+> working on iteration: 210
+> working on iteration: 220
+> working on iteration: 230
+> working on iteration: 240
+> working on iteration: 250
+> working on iteration: 260
+> working on iteration: 270
+> working on iteration: 280
+> working on iteration: 290
+> working on iteration: 300
+> working on iteration: 310
+> working on iteration: 320
+> working on iteration: 330
+> working on iteration: 340
+> working on iteration: 350
+> working on iteration: 360
+> working on iteration: 370
+> working on iteration: 380
+> working on iteration: 390
+> working on iteration: 400
+> working on iteration: 410
+> working on iteration: 420
+> working on iteration: 430
+> working on iteration: 440
+> working on iteration: 450
+> working on iteration: 460
+> working on iteration: 470
+> working on iteration: 480
+> working on iteration: 490
+> working on iteration: 500
+> working on iteration: 510
+> working on iteration: 520
+> working on iteration: 530
+> working on iteration: 540
+> working on iteration: 550
+> working on iteration: 560
+> working on iteration: 570
+> working on iteration: 580
+> working on iteration: 590
+> working on iteration: 600
+> working on iteration: 610
+> working on iteration: 620
+> working on iteration: 630
+> working on iteration: 640
+--------------------------------------------------------------------------------------------------------------------
+ validation results on LAMBADA | number correct: 0.0000E+00 | total examples: 5.1530E+03 | avg accuracy: 0.0000E+00
+--------------------------------------------------------------------------------------------------------------------
+done :-)
+```
+
+</p></details>
+
+
+
+
+
+
+
+
