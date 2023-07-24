@@ -986,7 +986,7 @@ building GPT model ...
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.78.137:5000
+ * Running on http://192.168.78.1:5000
 Press CTRL+C to quit
 request IP: 127.0.0.1
 {"prompts": ["Hello world"], "tokens_to_generate": 1}
@@ -1343,7 +1343,7 @@ building GPT model ...
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.78.137:5000
+ * Running on http://192.168.78.1:5000
 Press CTRL+C to quit
 request IP: 127.0.0.1
 {"prompts": ["Hello world"], "tokens_to_generate": 1}
@@ -1681,7 +1681,7 @@ building GPT model ...
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.78.137:5000
+ * Running on http://192.168.78.1:5000
 Press CTRL+C to quit
 request IP: 127.0.0.1
 {"prompts": ["hello"], "tokens_to_generate": 5}
