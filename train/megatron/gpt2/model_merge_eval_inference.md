@@ -1015,6 +1015,8 @@ start time:  2023-07-23 16:03:23.518545
 
 
 <details><summary>详细输出：</summary><p>
+
+        
 ```
 > python tools/text_generation_cli.py localhost:5000
 Enter prompt: hello
@@ -1027,6 +1029,7 @@ Megatron Response:
 worldboarding-
 Enter prompt: 
 ```
+
 </p></details>
 
 
