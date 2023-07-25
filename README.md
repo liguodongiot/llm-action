@@ -62,9 +62,9 @@
 
 下面给大家分享**大模型参数高效微调技术实战**系列文章，该系列共6篇文章。
 
-- 大模型参数高效微调技术实战（一）-PEFT概述及环境搭建
+- [大模型参数高效微调技术实战（一）-PEFT概述及环境搭建](https://juejin.cn/post/7257895211710627901)
 - 大模型参数高效微调技术实战（二）-Prompt Tuning
-- 大模型参数高效微调技术实战（三）-P-Tuning
+- 大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2
 - 大模型参数高效微调技术实战（四）-Prefix Tuning
 - 大模型参数高效微调技术实战（五）-LoRA
 - 大模型参数高效微调技术实战（六）-IA3
@@ -96,6 +96,7 @@
 - Megatron-LM
   - Megatron-LM 单机多卡训练
   - Megatron-LM 多机多卡训练
+  - [基于Megatron-LM从0到1完成GPT2模型预训练、模型评估及推理](https://juejin.cn/post/7259682893648724029)
 - DeepSpeed
   - DeepSpeed 单机多卡训练
   - DeepSpeed 多机多卡训练
