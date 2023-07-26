@@ -6,7 +6,8 @@ BloomAttention
 BloomMLP
 BloomBlock
 BloomPreTrainedModel
-BloomModel
+BloomModel(BloomPreTrainedModel)
+BloomForCausalLM(BloomPreTrainedModel)
 ```
 
 
