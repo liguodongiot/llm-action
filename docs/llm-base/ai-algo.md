@@ -13,6 +13,12 @@
 - https://github.com/openai/human-eval
 
 
+## Transformer
+
+- 哈佛的NLP团队实现：https://github.com/harvardnlp/annotated-transformer
+
+
+## Bert
 
 
 ## GPT2
@@ -20,6 +26,19 @@
 - Language Models are Unsupervised Multitask Learners
 
 
+
+## Bloom
+
+
+
+
+## LLaMA / LLaMA2
+
+
+
+## ChatGLM
+
+## ChatGLM2
 
 
 
