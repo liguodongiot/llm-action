@@ -62,12 +62,17 @@
 
 下面给大家分享**大模型参数高效微调技术实战**系列文章，该系列共6篇文章。
 
-- [大模型参数高效微调技术实战（一）-PEFT概述及环境搭建](https://juejin.cn/post/7257895211710627901)
-- 大模型参数高效微调技术实战（二）-Prompt Tuning
-- 大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2
-- 大模型参数高效微调技术实战（四）-Prefix Tuning
-- 大模型参数高效微调技术实战（五）-LoRA
-- 大模型参数高效微调技术实战（六）-IA3
+| 教程 | 代码 | 
+| ----------------------------- | ----------------------------- | 
+| [大模型参数高效微调技术实战（一）-PEFT概述及环境搭建](https://juejin.cn/post/7257895211710627901) | N/A | 
+| 大模型参数高效微调技术实战（二）-Prompt Tuning | [配套代码]() | 
+| 大模型参数高效微调技术实战（三）-P-Tuning | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_clm.ipynb) |
+| 大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2 |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_v2_clm.ipynb) | 
+| 大模型参数高效微调技术实战（五）-LoRA |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_lora_clm.ipynb) | 
+| 大模型参数高效微调技术实战（六）-IA3 |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_ia3_clm.ipynb) | 
+
+
+
 
 
 ### LLM分布式训练并行技术
