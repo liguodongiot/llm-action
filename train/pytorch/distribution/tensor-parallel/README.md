@@ -56,3 +56,29 @@ torch.distributed.tensor.parallel.style.make_input_replicate_1d(input, device_me
 
 
 
+
+
+
+
+
+
+
+
+---
+
+DeviceMesh 设备网格
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
