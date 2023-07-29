@@ -65,7 +65,7 @@
 | 教程 | 代码 | 框架 |
 | ----------------------------- | ----------------------------- |  ----------------------------- | 
 | [大模型参数高效微调技术实战（一）-PEFT概述及环境搭建](https://juejin.cn/post/7257895211710627901) | N/A | HuggingFace PEFT | 
-| [大模型参数高效微调技术实战（二）-Prompt Tuning](https://zhuanlan.zhihu.com/p/635686756) | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_prompt_tuning_clm.ipynb) |  HuggingFace PEFT | 
+| [大模型参数高效微调技术实战（二）-Prompt Tuning](https://zhuanlan.zhihu.com/p/646748939) | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_prompt_tuning_clm.ipynb) |  HuggingFace PEFT | 
 | [大模型参数高效微调技术实战（三）-P-Tuning]() | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_clm.ipynb) | HuggingFace PEFT | 
 | [大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2]() |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_v2_clm.ipynb) |  HuggingFace PEFT | 
 | [大模型参数高效微调技术实战（五）-LoRA]() |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_lora_clm.ipynb) |  HuggingFace PEFT | 
@@ -86,11 +86,11 @@
 - [大模型分布式训练并行技术（一）-概述](https://juejin.cn/post/7195845066887053368)
 - [大模型分布式训练并行技术（二）-数据并行](https://juejin.cn/post/7254001262646738981)
 - [大模型分布式训练并行技术（三）-流水线并行]()
-- 大模型分布式训练并行技术（四）-张量并行
-- 大模型分布式训练并行技术（五）-序列并行
-- 大模型分布式训练并行技术（六）-多维混合并行
-- 大模型分布式训练并行技术（七）-自动并行
-- 大模型分布式训练并行技术（八）-MOE并行
+- [大模型分布式训练并行技术（四）-张量并行]()
+- [大模型分布式训练并行技术（五）-序列并行]()
+- [大模型分布式训练并行技术（六）-多维混合并行]()
+- [大模型分布式训练并行技术（七）-自动并行]()
+- [大模型分布式训练并行技术（八）-MOE并行]()
 
 
 ### 分布式AI框架
