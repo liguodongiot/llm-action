@@ -65,11 +65,11 @@
 | 教程 | 代码 | 框架 |
 | ----------------------------- | ----------------------------- |  ----------------------------- | 
 | [大模型参数高效微调技术实战（一）-PEFT概述及环境搭建](https://juejin.cn/post/7257895211710627901) | N/A | HuggingFace PEFT | 
-| 大模型参数高效微调技术实战（二）-Prompt Tuning | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_prompt_tuning_clm.ipynb) |  HuggingFace PEFT | 
-| 大模型参数高效微调技术实战（三）-P-Tuning | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_clm.ipynb) | HuggingFace PEFT | 
-| 大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2 |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_v2_clm.ipynb) |  HuggingFace PEFT | 
-| 大模型参数高效微调技术实战（五）-LoRA |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_lora_clm.ipynb) |  HuggingFace PEFT | 
-| 大模型参数高效微调技术实战（六）-IA3 |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_ia3_clm.ipynb) |  HuggingFace PEFT | 
+| [大模型参数高效微调技术实战（二）-Prompt Tuning](https://zhuanlan.zhihu.com/p/635686756) | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_prompt_tuning_clm.ipynb) |  HuggingFace PEFT | 
+| [大模型参数高效微调技术实战（三）-P-Tuning]() | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_clm.ipynb) | HuggingFace PEFT | 
+| [大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2]() |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_v2_clm.ipynb) |  HuggingFace PEFT | 
+| [大模型参数高效微调技术实战（五）-LoRA]() |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_lora_clm.ipynb) |  HuggingFace PEFT | 
+| [大模型参数高效微调技术实战（六）-IA3]() |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_ia3_clm.ipynb) |  HuggingFace PEFT | 
 
 
 
