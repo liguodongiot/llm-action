@@ -11,7 +11,7 @@
   - :rabbit: [LLM参数高效微调技术实战](#llm微调实战)
   - :elephant: [LLM分布式训练并行技术](#llm分布式训练并行技术)
   - :volcano: [分布式AI框架](#分布式ai框架)
-  - :satellite: [分布式AI框架](#分布式训练网络通信)
+  - :satellite: [分布式训练网络通信](#分布式训练网络通信)
 - :racehorse: [LLM推理](#llm推理)
   - :rocket: [模型推理加速](#模型推理加速)
   - :airplane: [模型推理服务化](#模型推理服务化)
