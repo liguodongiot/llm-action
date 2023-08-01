@@ -14,6 +14,8 @@
 
 大模型算法结构：
 
+- Transformer
+- GPT2 (345M)
 - Bloom
 - LLaMA / LLaMA2
 - ChatGLM 
