@@ -12,11 +12,12 @@
   - :elephant: [LLM分布式训练并行技术](#llm分布式训练并行技术)
   - :volcano: [分布式AI框架](#分布式ai框架)
   - :satellite: [分布式训练网络通信](#分布式训练网络通信)
-  - :atom: [大模型结构与算法](#大模型结构与算法)
 - :racehorse: [LLM推理](#llm推理)
   - :rocket: [模型推理加速](#模型推理加速)
   - :airplane: [模型推理服务化](#模型推理服务化)
+- :recycle: [LLM压缩](#llm压缩)
   - :triangular_ruler: [LLM量化](#llm量化)
+- :atom: [大模型结构与算法](#大模型结构与算法)
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - :mahjong: [LLM国产化适配](#llm国产化适配)
 - :mushroom: [LLM生态相关技术](#llm生态相关技术)
@@ -114,11 +115,6 @@
 - AI 集群通信软硬件
 
 
-### 大模型结构与算法
-
-- ChatGLM / ChatGLM2 大模型解析
-- Bloom 大模型解析
-- LLaMA / LLaMA2 大模型解析
 
 
 ## LLM推理
@@ -132,9 +128,17 @@
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 
 
+## LLM压缩
 ### LLM量化
 
 待更新...
+
+
+## 大模型结构与算法
+
+- ChatGLM / ChatGLM2 大模型解析
+- Bloom 大模型解析
+- LLaMA / LLaMA2 大模型解析
 
 
 ## LLM国产化适配
