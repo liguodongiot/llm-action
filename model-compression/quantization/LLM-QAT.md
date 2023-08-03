@@ -48,11 +48,39 @@
 
 
 
+```math
+\mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor{{\rm Clip}(\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}, 0, 1)}\rceil + \beta
+```
 
 
+$$
+\mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor{{\rm Clip}(\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}, 0, 1)}\rceil + \beta
+$$
 
 
+$$
+\mathbf{X}_\mathbf{Q}^i = \alpha \lfloor{\frac{\mathbf{X}_\mathbf{R}^i}{\alpha}}\rceil, \ \ \ \alpha = \frac{\max(|\mathbf{X}_\mathbf{R}|)}{2^{N-1} -1}
+$$
 
+
+$$
+\mathcal{L}_{CE} = -\frac{1}{n}\sum_c\sum^n_{i=1} p_c^{\mathcal{T}}(X_i)\log(p_c^{\mathcal{S}}(X_i)),
+$$
+
+
+```math
+\mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor{{\rm Clip}(\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}, 0, 1)}\rceil + \beta
+```
+
+
+```math
+
+\mathbf{X}_\mathbf{Q}^i = \alpha \lfloor{\frac{\mathbf{X}_\mathbf{R}^i}{\alpha}}\rceil, \ \ \ \alpha = \frac{\max(|\mathbf{X}_\mathbf{R}|)}{2^{N-1} -1}
+```
+
+```math
+\mathcal{L}_{CE} = -\frac{1}{n}\sum_c\sum^n_{i=1} p_c^{\mathcal{T}}(X_i)\log(p_c^{\mathcal{S}}(X_i)),
+```
 
 ## 3.2 Main Results
 
