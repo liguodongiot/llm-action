@@ -42,6 +42,10 @@
 \mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}} \rceil + \beta
 ```
 
+$$
+\mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}} \rceil + \beta
+$$
+
 ```math
 \mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \nint {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}}  + \beta
 ```
