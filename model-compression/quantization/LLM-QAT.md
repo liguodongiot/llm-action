@@ -54,6 +54,14 @@ $\alpha = \frac{\max(|\mathbf{X}_\mathbf{R}|)}{2^{N-1} -1} , \ \beta = 0.$
 \alpha = \frac{\max(|\mathbf{X}_\mathbf{R}|)}{2^{N-1} -1} , \ \beta = 0
 ```
 
+
+$\alpha = \frac{\max(\mathbf{X}_\mathbf{R}) - \min(\mathbf{X}_\mathbf{R})}{2^N -1} , \ \beta = \min(\mathbf{X}_\mathbf{R}).$
+
+```math
+\alpha = \frac{\max(\mathbf{X}_\mathbf{R}) - \min(\mathbf{X}_\mathbf{R})}{2^N -1} , \ \beta = \min(\mathbf{X}_\mathbf{R}).
+```
+
+
 ---
 
 
