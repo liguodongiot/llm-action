@@ -46,6 +46,18 @@ $$
 \mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}} \rceil + \beta
 $$
 
+
+---
+$\alpha = \frac{\max(|\mathbf{X}_\mathbf{R}|)}{2^{N-1} -1} , \ \beta = 0.$
+
+```math
+\alpha = \frac{\max(|\mathbf{X}_\mathbf{R}|)}{2^{N-1} -1} , \ \beta = 0
+```
+
+---
+
+
+
 ```math
 \mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \nint {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}}  + \beta
 ```
