@@ -38,11 +38,13 @@
 
 在 MinMax 量化中，量化过程可以表述为：
 
-$$\mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}} \rceil + \beta$$
+```math
+\mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \lfloor {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}} \rceil + \beta
+```
 
-$$
+```math
 \mathbf{X}_\mathbf{Q}^i = \alpha \mathbf{\hat{X}_Q}^i = \alpha \nint {\frac{\mathbf{X}_\mathbf{R}^i - \beta}{\alpha}} \rceil + \beta
-$$
+```
 
 
 
