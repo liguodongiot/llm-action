@@ -129,9 +129,13 @@
 
 
 ## LLM压缩
+
 ### LLM量化
 
+- SmoothQuant
+- ZeroQuant
 - [大模型训练感知量化开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
+
 
 
 ## 大模型结构与算法
