@@ -43,7 +43,38 @@ CUDA_VISIBLE_DEVICES=7 python generate_data.py 7
 
 
 ```
+tree -h gen_data/
+gen_data/
+├── [4.1M]  gen.chunk.00.jsonl
+├── [4.9M]  gen.chunk.01.jsonl
+├── [4.7M]  gen.chunk.02.jsonl
+├── [4.8M]  gen.chunk.03.jsonl
+├── [4.5M]  gen.chunk.04.jsonl
+├── [4.4M]  gen.chunk.05.jsonl
+├── [4.5M]  gen.chunk.06.jsonl
+└── [4.6M]  gen.chunk.07.jsonl
 
+0 directories, 8 files
+(llm-qat-venv-py310-cu117) [guodong.li@ai-app-2-46-msxf LLM-QAT]$ wc -l gen_data/gen.chunk.07.jsonl
+1500 gen_data/gen.chunk.07.jsonl
+
+
+
+
+head -n1 gen_data/gen.chunk.02.jsonl
+{"text": "ied with the idea of it and they've only one thing in mind: to find it. ...I needed the first, but I needed the second more, because I cried from beginning to"}
+
+
+------------------------------
+
+
+python merge_gen_data.py
+
+wc -l  all_gen.jsonl
+12000 all_gen.jsonl
+
+
+------------------------
 
 ```
 
