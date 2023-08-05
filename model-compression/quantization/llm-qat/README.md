@@ -137,5 +137,60 @@ LlamaForCausalLM(
 ```
 
 
+```
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096, padding_idx=31999)
+    (layers): ModuleList(
+      (0): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): FlattenParamsWrapper(
+          (_fpw_module): LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (k_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (v_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (o_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): QuantizeLinear(in_features=4096, out_features=11008, bias=False)
+              (down_proj): QuantizeLinear(in_features=11008, out_features=4096, bias=False)
+              (up_proj): QuantizeLinear(in_features=4096, out_features=11008, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+      )
+      ...
+      (31): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): FlattenParamsWrapper(
+          (_fpw_module): LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (k_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (v_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (o_proj): QuantizeLinear(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): QuantizeLinear(in_features=4096, out_features=11008, bias=False)
+              (down_proj): QuantizeLinear(in_features=11008, out_features=4096, bias=False)
+              (up_proj): QuantizeLinear(in_features=4096, out_features=11008, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)
+```
+
 
 
