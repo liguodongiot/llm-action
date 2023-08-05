@@ -1,4 +1,5 @@
 
+## env
 - https://download.pytorch.org/whl/cu117/torch-2.0.1%2Bcu117-cp310-cp310-linux_x86_64.whl
 
 ```
@@ -89,8 +90,13 @@ wc -l  all_gen.jsonl
 
 ```
 
+
+## train
 ```
 sh run_train_chunk.sh 8 8 8
+
+sh run_train.sh 8 8 8
+
 ```
 
 
