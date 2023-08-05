@@ -204,4 +204,23 @@ LlamaForCausalLM(
 ```
 
 
+模型输出：
+
+```
+tree -h
+.
+├── [  28]  llama
+│   └── [  34]  models
+│       └── [ 195]  7B-finetuned
+│           ├── [ 663]  config.json
+│           ├── [ 132]  generation_config.json
+│           ├── [9.2G]  pytorch_model-00001-of-00002.bin
+│           ├── [2.9G]  pytorch_model-00002-of-00002.bin
+│           └── [ 26K]  pytorch_model.bin.index.json
+└── [  26]  output
+    └── [  29]  runs
+        └── [4.0K]  current
+            ├── [4.1K]  events.out.tfevents.1691114271.ai-app-2-46-msxf
+
+```
 
