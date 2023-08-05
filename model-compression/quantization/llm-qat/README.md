@@ -1,4 +1,8 @@
 
+
+- https://github.com/facebookresearch/LLM-QAT
+
+
 ## env
 - https://download.pytorch.org/whl/cu117/torch-2.0.1%2Bcu117-cp310-cp310-linux_x86_64.whl
 
@@ -33,7 +37,12 @@ pip install -r requirement.txt
 
 /home/guodong.li/model/llama-7b-hf
 
-合成数据：
+
+```
+
+## 合成数据
+```
+
 
 
 config.json
