@@ -2,7 +2,11 @@
 ## 简介
 
 - https://docs.nvidia.com/deeplearning/tensorrt/tensorflow-quantization-toolkit/docs/docs/qat.html
+- Quantization Aware Training (QAT)
 - https://github.com/HuangOwen/Awesome-LLM-Compression
+- https://blog.csdn.net/jinzhuojun/article/details/106955059
+- 闲话模型压缩之量化（Quantization）篇
+
 
 一文总结当下常用的大型 transformer 效率优化方案
 - https://zhuanlan.zhihu.com/p/604118644
