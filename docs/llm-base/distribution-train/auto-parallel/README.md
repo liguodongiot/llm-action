@@ -1,8 +1,12 @@
 
 
+- 分布式训练自动并行论文：https://zhuanlan.zhihu.com/p/642446009
+- 北大河图大模型自动并行训练工具Galvatron：https://zhuanlan.zhihu.com/p/591924340
+- 大规模模型训练：https://www.zhihu.com/question/508671222
+- 
 
+---
 
-北大河图大模型自动并行训练工具Galvatron：https://zhuanlan.zhihu.com/p/591924340
 
 大模型的自动并行之难主要体现在以下三个方面：
 
