@@ -117,7 +117,7 @@
 
 
 
-## LLM推理
+## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
 
 ### 模型推理加速
 - [大模型的好伙伴，浅析推理加速引擎FasterTransformer](https://zhuanlan.zhihu.com/p/626008090)
