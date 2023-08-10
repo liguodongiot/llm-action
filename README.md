@@ -130,7 +130,7 @@
 
 ## LLM压缩
 
-### LLM量化
+### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
 - SmoothQuant
 - ZeroQuant
