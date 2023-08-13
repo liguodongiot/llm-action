@@ -2,6 +2,8 @@
 
 # SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
 
+- https://huggingface.co/mit-han-lab/opt-6.7b-smoothquant
+- 
 ## 概要
 
 大语言模型 (LLM) 显示出了出色的性能，但属于计算和内存密集型。 量化可以减少内存并加速推理。 
