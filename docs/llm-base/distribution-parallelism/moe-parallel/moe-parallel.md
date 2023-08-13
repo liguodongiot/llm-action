@@ -1,5 +1,7 @@
 
 
+- 飞浆-MOE：https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/06_distributed_training/moe_cn.html
+- 
 - https://blog.csdn.net/qq_41185868/article/details/103219988
 - [GShard-MoE](https://arxiv.org/abs/2006.16668)
 
