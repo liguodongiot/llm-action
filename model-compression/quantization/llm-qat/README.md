@@ -1,9 +1,21 @@
 
 
+
+
+
+
 - https://github.com/facebookresearch/LLM-QAT
+
+## 版本
+
+- 第一版：cfd70ff
+- 第二版：f4d873a
+- 
+
 
 
 ## env
+
 - https://download.pytorch.org/whl/cu117/torch-2.0.1%2Bcu117-cp310-cp310-linux_x86_64.whl
 
 ```
