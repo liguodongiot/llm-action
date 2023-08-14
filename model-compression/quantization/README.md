@@ -17,6 +17,13 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 - https://towardsdatascience.com/introduction-to-weight-quantization-2494701b9c0c
 
 
+大规模 Transformer 模型 8 比特矩阵乘简介 - 基于 Hugging Face Transformers、Accelerate 以及 bitsandbytes
+- https://huggingface.co/blog/zh/hf-bitsandbytes-integration
+
+
+---
+
+
 在深度神经网络上应用量化策略有两种常见的方法：
 
 - 训练后量化（PTQ）：首先需要模型训练至收敛，然后将其权重的精度降低。与训练过程相比，量化操作起来往往代价小得多；
