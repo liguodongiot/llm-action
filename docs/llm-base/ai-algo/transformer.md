@@ -1,6 +1,14 @@
 
 OpenAI ChatGPT（一）：十分钟读懂 Transformer
 - https://zhuanlan.zhihu.com/p/600773858
+OpenAI ChatGPT（一）：Tensorflow实现Transformer
+- https://zhuanlan.zhihu.com/p/603243890
+Transformer源码详解（Pytorch版本）
+- https://zhuanlan.zhihu.com/p/398039366
+Transformer模型详解（图解最完整版）
+- https://zhuanlan.zhihu.com/p/338817680
+
+
 
 
 
