@@ -12,6 +12,11 @@
 - https://zhuanlan.zhihu.com/p/604118644
 - https://lilianweng.github.io/posts/2023-01-10-inference-optimization/
 
+
+Introduction to Weight Quantization：Reducing the size of Large Language Models with 8-bit quantization
+- https://towardsdatascience.com/introduction-to-weight-quantization-2494701b9c0c
+
+
 在深度神经网络上应用量化策略有两种常见的方法：
 
 - 训练后量化（PTQ）：首先需要模型训练至收敛，然后将其权重的精度降低。与训练过程相比，量化操作起来往往代价小得多；
@@ -35,6 +40,9 @@
 - GPTQ: Accurate Post-training Compression for Generative Pretrained Transformers
 - AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration
   - https://github.com/mit-han-lab/llm-awq
+- LLM.int8()
+  - LLM.int8()——在大模型上使用int8量化:https://zhuanlan.zhihu.com/p/586406082
+
 
 ## Quantization Aware Training（QAT）
 
