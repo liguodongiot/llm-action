@@ -1,6 +1,6 @@
 
 
-
+- https://github.com/TimDettmers/bitsandbytes
 
 
 本质上，LLM.int8() 通过三个步骤完成矩阵乘法计算:
