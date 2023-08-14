@@ -1,6 +1,8 @@
 
 
+## 测试环境
 
+DeepSpeed v0.9.5
 
 ## 验证案例及结果
 
@@ -14,9 +16,11 @@
 
 ## Flash attention
 
+- https://github.com/Dao-AILab/flash-attention
+
 
 
 ## Rotary Positional Embedding (RoPE)
 
 
-## 
+
