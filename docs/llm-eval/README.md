@@ -1,4 +1,7 @@
 
+- How to Evaluate a Large Language Model (LLM)?：https://www.analyticsvidhya.com/blog/2023/05/how-to-evaluate-a-large-language-model-llm/
+
+
 
 ## 评估指标
 
