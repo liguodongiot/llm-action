@@ -1,6 +1,7 @@
 
 
 
+<details><summary>训练日志详细输出</summary><p>
 
 ```
 > bash examples_deepspeed/pretrain_llama_distributed.sh
@@ -751,7 +752,7 @@ Evaluating iter 10/10
 ---------------------------------------------------------------------------------------------------------------------------------
 ```
 
-
+</p></details>
 
 
 
