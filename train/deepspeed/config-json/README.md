@@ -215,6 +215,20 @@ CPU 卸载适用于 ZeRO 阶段 1、2、3。NVMe 卸载仅适用于 ZeRO 阶段 
 ```
 
 
+## Logging
+
+### steps_per_print
+
+
+### wall_clock_breakdown
+
+
+### dump_state
+
+
+
+
+
 ## Flops 分析器（Flops Profiler）
 
 - detailed：是否打印详细的模型配置。
@@ -233,6 +247,23 @@ CPU 卸载适用于 ZeRO 阶段 1、2、3。NVMe 卸载仅适用于 ZeRO 阶段 
     }
 }
 ```
+
+
+## 监控模块（TensorBoard、WandB、CSV）
+
+
+### tensorboard
+
+TensorBoard配置示例：
+```
+"tensorboard": {
+    "enabled": true,
+    "output_path": "output/ds_logs/",
+    "job_name": "train_bert"
+}
+```
+
+
 
 
 
