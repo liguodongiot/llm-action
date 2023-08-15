@@ -1,9 +1,16 @@
 
 
+## bf16
+
+```
+"bf16": {
+   "enabled": true
+ }
+```
 
 
 
-
+## fp16
 ```
 "fp16": {
     "enabled": true,
