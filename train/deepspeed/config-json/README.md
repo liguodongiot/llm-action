@@ -16,6 +16,13 @@ train_batch_size 必须等于 train_micro_batch_size_per_gpu * gradient_accumula
 
 ### gradient_accumulation_steps
 
+在平均和应用梯度之前进行累积梯度的训练step数。 
+
+此功能有时对于提高可扩展性很有用，因为它会降低step之间梯度通信的频率。 
+
+此功能的另一个影响是能够在每个 GPU 上使用更大的批量大小进行训练。
+
+
 
 ## Optimizer 参数
 
@@ -112,7 +119,13 @@ scheduler 示例：
 - 注意：此模式不能与下述amp模式结合使用。
 - 注意：该模式不能与上述fp16模式结合使用。
 
+使用 bfloat16 浮点格式作为 FP16 替代方案。 
 
+BFLOAT16 需要硬件支持（例如：NVIDIA A100）。 
+
+使用 bfloat16 进行训练不需要损失缩放。
+
+示例如下所示。 
 
 ```
 "bf16": {
@@ -137,6 +150,10 @@ scheduler 示例：
 
 
 ## 梯度裁剪(Gradient Clipping)
+
+- gradient_clipping
+
+
 
 
 
