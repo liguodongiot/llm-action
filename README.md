@@ -118,6 +118,7 @@
 - AI 集群通信软硬件
 
 
+**[⬆ 回到目录](#目录)**
 
 
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
@@ -131,6 +132,8 @@
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 
 
+**[⬆ 回到目录](#目录)**
+
 ## LLM压缩
 
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
@@ -139,7 +142,7 @@
 - ZeroQuant
 - [大模型训练感知量化开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
 
-
+**[⬆ 回到目录](#目录)**
 
 ## 大模型结构与算法
 
@@ -147,6 +150,7 @@
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
 
+**[⬆ 回到目录](#目录)**
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
 随着 ChatGPT 的现象级走红，引领了AI大模型时代的变革，从而导致 AI 算力日益紧缺。与此同时，中美贸易战以及美国对华进行AI芯片相关的制裁导致 AI 算力的国产化适配势在必行。本系列将对一些国产化 AI 加速卡进行讲解。
@@ -157,6 +161,9 @@
 - [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://juejin.cn/post/7265627782712901686)
 
 
+**[⬆ 回到目录](#目录)**
+
+
 ## LLM应用开发
 大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。
 
@@ -164,6 +171,8 @@
 - [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://juejin.cn/post/7081672823931928606)
 
 
+
+**[⬆ 回到目录](#目录)**
 
 
 ## LLM生态相关技术
@@ -176,12 +185,15 @@
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 
 
+**[⬆ 回到目录](#目录)**
+
 ## 服务器基础环境软件安装
 
 - [英伟达A800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/a800-env-install.md)
 - [英伟达H800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
 - [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
 
+**[⬆ 回到目录](#目录)**
 
 ## LLM学习交流群
 
