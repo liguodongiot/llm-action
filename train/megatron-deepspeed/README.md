@@ -8,7 +8,7 @@
 ## bigscience
 
 - [Megatron-DeepSpeed](https://github.com/bigscience-workshop/Megatron-DeepSpeed)
-- https://github.com/bigscience-workshop/bigscience
+- 训练过程：https://github.com/bigscience-workshop/bigscience
 - https://huggingface.co/blog/zh/bloom-megatron-deepspeed
 - 支持bloom
 - 未支持序列并行
