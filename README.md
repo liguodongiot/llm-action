@@ -118,7 +118,7 @@
 - AI 集群通信软硬件
 
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
@@ -132,7 +132,7 @@
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 ## LLM压缩
 
@@ -142,7 +142,7 @@
 - ZeroQuant
 - [大模型训练感知量化开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 ## 大模型结构与算法
 
@@ -150,7 +150,7 @@
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
 随着 ChatGPT 的现象级走红，引领了AI大模型时代的变革，从而导致 AI 算力日益紧缺。与此同时，中美贸易战以及美国对华进行AI芯片相关的制裁导致 AI 算力的国产化适配势在必行。本系列将对一些国产化 AI 加速卡进行讲解。
@@ -161,7 +161,7 @@
 - [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://juejin.cn/post/7265627782712901686)
 
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 
 ## LLM应用开发
@@ -172,7 +172,7 @@
 
 
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 
 ## LLM生态相关技术
@@ -185,7 +185,7 @@
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 ## 服务器基础环境软件安装
 
@@ -193,11 +193,11 @@
 - [英伟达H800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
 - [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
 
-**[⬆ 回到目录](#目录)**
+**[⬆ 一键返回目录](#目录)**
 
 ## LLM学习交流群
 
-我创建了大模型学习交流群，供大家一起学习交流大模型相关的最新技术，目前已有4个群，每个群都有上百人的规模，**可加我微信进群**（加微信请备注来意，如：进大模型学习交流群+GitHub）。**一定要备注哟，否则不予通过**。
+我创建了大模型学习交流群，供大家一起学习交流大模型相关的最新技术，目前已有5个群，每个群都有上百人的规模，**可加我微信进群**（加微信请备注来意，如：进大模型学习交流群+GitHub）。**一定要备注哟，否则不予通过**。
 
 <p align="center">
   <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/%E5%BE%AE%E4%BF%A1.jpeg" width="25%" height="25%">
