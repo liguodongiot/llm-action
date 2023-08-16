@@ -17,7 +17,7 @@
   - :airplane: [模型推理服务化](#模型推理服务化)
 - :recycle: [LLM压缩](#llm压缩)
   - :triangular_ruler: [LLM量化](#llm量化)
-- :atom: [大模型结构与算法](#大模型结构与算法)
+- :atom: [LLM算法架构](#llm算法架构)
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - :mahjong: [LLM国产化适配](#llm国产化适配)
 - :mushroom: [LLM生态相关技术](#llm生态相关技术)
@@ -144,7 +144,7 @@
 
 **[⬆ 一键返回目录](#目录)**
 
-## 大模型结构与算法
+## LLM算法架构
 
 - ChatGLM / ChatGLM2 大模型解析
 - Bloom 大模型解析
