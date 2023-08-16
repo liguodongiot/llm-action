@@ -46,6 +46,7 @@
 | Chinese-LLaMA-Alpaca(LLaMA)          | LoRA（预训练+微调）                  | 7B  | [中文LLaMA&Alpaca大语言模型词表扩充+预训练+指令精调](https://zhuanlan.zhihu.com/p/631360711)                                                                                                              | [配套代码](https://github.com/liguodongiot/llm-action/tree/main/train/chinese-llama-alpaca) |
 |  LLaMA         | QLoRA                  | 7B/65B  | [高效微调技术QLoRA实战，基于LLaMA-65B微调仅需48G显存，真香](https://zhuanlan.zhihu.com/p/636644164)                                                                                                              | [配套代码](https://github.com/liguodongiot/llm-action/tree/main/train/qlora) |
 
+**[⬆ 一键返回目录](#目录)**
 
 ### LLM微调技术原理
 
@@ -75,7 +76,7 @@
 | [大模型参数高效微调技术实战（六）-IA3](https://zhuanlan.zhihu.com/p/649707359) |  [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_ia3_clm.ipynb) |  HuggingFace PEFT | 
 
 
-
+**[⬆ 一键返回目录](#目录)**
 
 
 ### LLM分布式训练并行技术
@@ -97,7 +98,7 @@
 - [大模型分布式训练并行技术（九）-总结]()
 
 
-
+**[⬆ 一键返回目录](#目录)**
 
 ### 分布式AI框架
 
@@ -132,7 +133,6 @@
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 
 
-**[⬆ 一键返回目录](#目录)**
 
 ## LLM压缩
 
@@ -142,7 +142,7 @@
 - ZeroQuant
 - [大模型训练感知量化开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
 
-**[⬆ 一键返回目录](#目录)**
+
 
 ## LLM算法架构
 
@@ -150,7 +150,7 @@
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
 
-**[⬆ 一键返回目录](#目录)**
+
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
 随着 ChatGPT 的现象级走红，引领了AI大模型时代的变革，从而导致 AI 算力日益紧缺。与此同时，中美贸易战以及美国对华进行AI芯片相关的制裁导致 AI 算力的国产化适配势在必行。本系列将对一些国产化 AI 加速卡进行讲解。
@@ -172,7 +172,7 @@
 
 
 
-**[⬆ 一键返回目录](#目录)**
+
 
 
 ## LLM生态相关技术
@@ -193,7 +193,7 @@
 - [英伟达H800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
 - [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
 
-**[⬆ 一键返回目录](#目录)**
+
 
 ## LLM学习交流群
 
@@ -215,7 +215,7 @@
   <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/%E5%85%AC%E4%BC%97%E5%8F%B7.jpeg" width="30%" height="30%" div align=center>
 </p>
 
-
+**[⬆ 一键返回目录](#目录)**
 
 ## Star History
 
