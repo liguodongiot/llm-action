@@ -102,7 +102,7 @@
 
 ### 分布式AI框架
 
-- PyTorch
+- [PyTorch](https://github.com/liguodongiot/llm-action/tree/main/train/pytorch/)
   - PyTorch 单机多卡训练
   - PyTorch 多机多卡训练
 - [Megatron-LM](https://github.com/liguodongiot/llm-action/tree/main/train/megatron)
