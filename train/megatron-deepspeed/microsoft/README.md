@@ -24,3 +24,33 @@ DeepSpeed v0.9.5
 
 
 
+
+## 模型转换
+
+
+```
+PYTHONPATH=/workspace/code/Megatron-DeepSpeed-llama-20230815 \
+python tools/convert_checkpoint/deepspeed_to_megatron.py --target_tp 1 --target_pp 1 \
+--input_folder /workspace/code/Megatron-DeepSpeed-llama-20230815/tmp/global_step2500 \
+--output_folder /workspace/output/llama-7b-megatron-pretrain
+
+
+> tree -h workspace/output/llama-7b-megatron-pretrain
+workspace/output/llama-7b-megatron-pretrain
+├── [  32]  iter_0002500
+│   └── [  40]  mp_rank_00
+│       └── [ 12G]  model_optim_rng.pt
+└── [   4]  latest_checkpointed_iteration.txt
+
+
+
+
+cd /hf/transformers
+PYTHONPATH=/workspace/code/Megatron-DeepSpeed-llama-20230815 \
+python src/transformers/models/megatron_gpt2/convert_megatron_gpt2_checkpoint.py \
+/workspace/output/llama-7b-megatron-pretrain/iter_0002500/mp_rank_00/model_optim_rng.pt
+```
+
+
+
+
