@@ -4,5 +4,7 @@
 
 - torch.distributed.get_rank() # 取得当前进程的全局序号
 - torch.distributed.get_world_size() # 取得全局进程的个数
+- torch.cuda.set_device(device) # 为当前进程分配GPU
+- torch.distributed.new_group(ranks) # 设置组
 
 
