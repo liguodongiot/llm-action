@@ -3,7 +3,7 @@
 ## 微软
 - [Megatron-DeepSpeed](https://github.com/microsoft/Megatron-DeepSpeed)
 - 目前，已支持llama/llama2
-- 
+
 
 ## bigscience
 
