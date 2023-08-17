@@ -65,6 +65,11 @@ Model, optimizer, and learning rate.
 
 
 
+### get_model: 构建模型
+
+
+
+
 
 ---
 
@@ -99,6 +104,47 @@ Model, optimizer, and learning rate.
 
 
 
+## megatron.model.gpt_model
+
+
+### GPTModel
+
+
+
+
+## megatron.model.module
+
+
+### MegatronModule
+
+Megatron 针对 torch.nn.Module 的特定扩展以支持流水线。
+
+
+
+### Float16Module
+
+
+
+
+## megatron.model.transformer
+
+### ParallelTransformer
+
+### ParallelTransformerLayer
+
+一个 transformer 层
+
+Transformer 层接受大小为 [s, b, h] 的输入并返回相同大小的输出。
+
+
+### ParallelAttention
+
+并行自注意力层抽象类。
+
+
+### ParallelMLP
+
+并行 MLP 层。
 
 
 
@@ -116,6 +162,89 @@ Model, optimizer, and learning rate.
 
 
 
+
+## megatron.model.language_model
+
+
+### TransformerLanguageModel
+
+Transformer 语言模型
+
+
+### Embedding
+
+语言模型 Embedding
+
+
+
+
+## megatron.core.tensor_parallel.cross_entropy
+
+### _VocabParallelCrossEntropy
+
+计算交叉熵。
+
+
+
+
+
+
+## megatron.core.tensor_parallel.layers
+
+
+### VocabParallelEmbedding
+
+
+### ColumnParallelLinear
+
+列并行线性层
+
+### RowParallelLinear
+
+行并行线性层
+
+
+### _initialize_affine_weight_gpu
+
+初始化 GPU 上模型并行的仿射权重。
+
+
+
+
+## megatron.core.tensor_parallel.mappings
+
+
+### copy_to_tensor_model_parallel_region
+
+### _CopyToModelParallelRegion
+
+将输入传递到模型并行区域。
+
+### gather_from_tensor_model_parallel_region
+### _GatherFromModelParallelRegion
+
+从模型并行区域收集输入拼接在一起。
+
+
+### _ScatterToModelParallelRegion 
+
+分割输入并仅将相应的chuck保留到rank中
+
+
+
+### _ReduceFromModelParallelRegion
+
+All-reduce来自模型并行区域的输入
+
+
+
+
+## megatron.core.model_parallel_config
+
+
+### ModelParallelConfig
+
+Megatron Core 基础配置
 
 
 
