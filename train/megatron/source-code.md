@@ -248,4 +248,29 @@ Megatron Core 基础配置
 
 
 
+---
+
+
+## megatron.training
+
+
+### build_train_valid_test_datasets(build_train_valid_test_datasets_provider)
+
+构建预训练数据集
+
+
+
+
+
+## megatron.data.data_samplers
+
+### build_pretraining_data_loader(dataset, consumed_samples)
+
+给定一个数据集构建数据加载器
+
+
+
+
+
+
 
