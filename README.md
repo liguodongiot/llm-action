@@ -117,7 +117,7 @@
   - 基于 Megatron-DeepSpeed 从 0 到1 完成 Bloom 预训练
 
 
-### 分布式训练网络通信
+### [分布式训练网络通信](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/network-communication)
 
 - 分布式训练网络通讯原语
 - AI 集群通信软硬件
@@ -148,7 +148,7 @@
 
 
 
-## LLM算法架构
+## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
 - ChatGLM / ChatGLM2 大模型解析
 - Bloom 大模型解析
