@@ -9,3 +9,10 @@
 - torch.cuda.current_device()
 
 
+
+
+---
+
+
+- https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html
+- 
