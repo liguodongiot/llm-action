@@ -79,7 +79,7 @@
 **[⬆ 一键返回目录](#目录)**
 
 
-### LLM分布式训练并行技术
+### [LLM分布式训练并行技术](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/distribution-parallelism)
 
 近年来，随着Transformer、MOE架构的提出，使得深度学习模型轻松突破上万亿规模参数，传统的单机单卡模式已经无法满足超大模型进行训练的要求。因此，我们需要基于单机多卡、甚至是多机多卡进行分布式大模型的训练。
 
