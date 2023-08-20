@@ -203,6 +203,8 @@
 
 我创建了大模型学习交流群，供大家一起学习交流大模型相关的最新技术，目前已有5个群，每个群都有上百人的规模，**可加我微信进群**（加微信请备注来意，如：进大模型学习交流群+GitHub）。**一定要备注哟，否则不予通过**。
 
+PS: **成都有个本地大模型交流群，想进可以另外单独备注下。**
+
 <p align="center">
   <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/%E5%BE%AE%E4%BF%A1.jpeg" width="25%" height="25%">
 </p>
