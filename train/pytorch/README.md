@@ -1,5 +1,11 @@
 
 
+- https://github.com/pytorch/examples
+- https://github.com/pytorch/examples.git
+- https://github.com/pytorch/pytorch
+
+---
+
 
 
 - torch.distributed.get_rank() # 取得当前进程的全局序号
