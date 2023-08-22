@@ -125,5 +125,10 @@ torchrun --nnodes=2 --nproc_per_node=8 --node_rank=1 --rdzv_id=100 --rdzv_backen
 
 
 
+- GETTING STARTED WITH FULLY SHARDED DATA PARALLEL(FSDP)：https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html
+- ADVANCED MODEL TRAINING WITH FULLY SHARDED DATA PARALLEL (FSDP)：https://pytorch.org/tutorials/intermediate/FSDP_adavnced_tutorial.html
+
+
+
 
 

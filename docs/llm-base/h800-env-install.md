@@ -84,6 +84,7 @@ pip install torchvision-0.15.0+cu118-cp310-cp310-linux_x86_64.whl
 
 
 ### Deepspeed...
+
 ```
 pip install deepspeed==0.9.5
 pip install accelerate
@@ -91,6 +92,7 @@ pip install tensorboardX
 ```
 
 ### 安装Apex
+
 ```
 git clone https://github.com/NVIDIA/apex.git
 cd apex

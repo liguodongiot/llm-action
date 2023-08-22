@@ -5,6 +5,7 @@
 
 源码：
 - OpenAI ChatGPT（一）：Tensorflow实现Transformer：https://zhuanlan.zhihu.com/p/603243890
+- OpenAI ChatGPT（一）：十分钟读懂 Transformer: https://zhuanlan.zhihu.com/p/600773858
 - GPT （一）transformer原理和代码详解：https://zhuanlan.zhihu.com/p/632880248
 - Transformer源码详解（Pytorch版本）：https://zhuanlan.zhihu.com/p/398039366
 
