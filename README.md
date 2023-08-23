@@ -180,8 +180,6 @@
 
 
 
-
-
 ## LLM生态相关技术
 
 - [大模型词表扩充必备工具SentencePiece](https://zhuanlan.zhihu.com/p/630696264)
@@ -190,6 +188,8 @@
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
 - [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
+- [关于大模型驱动的AI智能体Agent的一些思考](https://zhuanlan.zhihu.com/p/651921120)
+
 
 
 **[⬆ 一键返回目录](#目录)**
