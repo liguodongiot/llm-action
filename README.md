@@ -179,7 +179,6 @@
 
 
 
-
 ## LLM生态相关技术
 
 - [大模型词表扩充必备工具SentencePiece](https://zhuanlan.zhihu.com/p/630696264)
@@ -194,11 +193,19 @@
 
 **[⬆ 一键返回目录](#目录)**
 
-## 服务器基础环境软件安装
+## 服务器基础环境安装及常用工具
 
+基础环境安装：
 - [英伟达A800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/a800-env-install.md)
 - [英伟达H800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
 - [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
+
+常用工具：
+- [Conda 常用命令大全](https://juejin.cn/post/7089093437223338015)
+- [Docker常用命令大全](https://juejin.cn/post/7016238524286861325)
+- [Docker Dockerfile指令大全](https://juejin.cn/post/7016595442062327844)
+- [Linux常见命令大全](https://juejin.cn/post/6992742028605915150)
+- [Kubernetes常用命令大全](https://juejin.cn/post/7031201391553019911)
 
 
 
