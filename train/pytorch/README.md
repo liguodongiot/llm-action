@@ -15,8 +15,6 @@
 - torch.cuda.current_device()
 
 
-
-
 ---
 
 

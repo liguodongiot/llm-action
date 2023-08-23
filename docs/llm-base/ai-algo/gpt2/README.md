@@ -11,3 +11,6 @@
 
 
 - GPT（三）GPT2原理和代码详解: https://zhuanlan.zhihu.com/p/637782385
+- GPT2参数量剖析: https://zhuanlan.zhihu.com/p/640501114
+
+
