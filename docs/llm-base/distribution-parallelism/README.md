@@ -8,8 +8,10 @@
   - 这篇文章在抽象上更进一步，发现数据并行，模型并行都只是张量切分方式的不同罢了，有的是切数据，有的是切模型，而且对于多维张量，在不同的维度上切分，效果也不同，譬如在sample, channel, width, length等维度都可以切分。
   - 其次，不同的切分方式，都是一种构型（configuration)，不同的构型会导致不同的效果，所以寻找最优的并行方式，其实就是在构型空间里面搜索最优的构型而已，问题形式化成一个搜索问题。
   - 最后，引入了代价模型来衡量每个构型的优劣，并提出了一系列对搜索空间剪枝的策略，并实现了原型系统。
+
 - BEYOND DATA AND MODEL PARALLELISM FOR DEEP NEURAL NETWORKS（FlexFlow）
   - 主要是提出了execution simulator来完善cost model。
+  
 - Supporting Very Large Models using Automatic Dataflow Graph Partitioning（Tofu）
   - tofu 提出了一套DSL，方便开发者描述张量的划分策略，使用了类似poly的integer interval analysis来描述并行策略，同样，并行策略的搜索算法上也做了很多很有特色的工作。
   - Tofu与所有其它工作的不同之处在于，它的关注点是operator的划分，其它工作的关注点是tensor的划分，二者当然是等价的。

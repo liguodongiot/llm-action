@@ -21,7 +21,7 @@
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - :mahjong: [LLM国产化适配](#llm国产化适配)
 - :mushroom: [LLM生态相关技术](#llm生态相关技术)
-- :hammer: [服务器基础环境软件安装](#服务器基础环境软件安装)
+- :hammer: [服务器基础环境安装及常用工具](#服务器基础环境安装及常用工具)
 - :speech_balloon: [LLM学习交流群](#llm学习交流群)
 - :busts_in_silhouette: [微信公众号](#微信公众号)
 - :star: [Star History](#star-history)
@@ -201,11 +201,12 @@
 - [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
 
 常用工具：
+- [Linux 常见命令大全](https://juejin.cn/post/6992742028605915150)
 - [Conda 常用命令大全](https://juejin.cn/post/7089093437223338015)
-- [Docker常用命令大全](https://juejin.cn/post/7016238524286861325)
-- [Docker Dockerfile指令大全](https://juejin.cn/post/7016595442062327844)
-- [Linux常见命令大全](https://juejin.cn/post/6992742028605915150)
-- [Kubernetes常用命令大全](https://juejin.cn/post/7031201391553019911)
+- [Poetry 常用命令大全](https://juejin.cn/post/6999405667261874183)
+- [Docker 常用命令大全](https://juejin.cn/post/7016238524286861325)
+- [Docker Dockerfile 指令大全](https://juejin.cn/post/7016595442062327844)
+- [Kubernetes 常用命令大全](https://juejin.cn/post/7031201391553019911)
 
 
 
