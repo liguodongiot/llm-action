@@ -15,4 +15,14 @@
 
 
 
+## 工具
+
+
+### nvidia-visual-profiler
+
+- nvprof
+- nvidia-visual-profiler
+- https://developer.nvidia.com/nvidia-visual-profiler
+
+
 

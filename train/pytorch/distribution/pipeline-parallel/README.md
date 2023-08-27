@@ -1,6 +1,6 @@
 
 
-- Pipeline Parallelism：https://pytorch.org/docs/stable/pipeline.html
+- Pipeline Parallelism：https://pytorch.org/docs/stable/pipeline.html  基本API
 - Sequence-to-Sequence Modeling with nn.Transformer and TorchText：https://pytorch.org/tutorials/intermediate/pipeline_tutorial.html
 - TRAINING TRANSFORMER MODELS USING PIPELINE PARALLELISM：https://pytorch.org/tutorials/beginner/transformer_tutorial.html
 - TRAINING TRANSFORMER MODELS USING DISTRIBUTED DATA PARALLEL AND PIPELINE PARALLELISM

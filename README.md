@@ -90,7 +90,7 @@
 - [大模型分布式训练并行技术（一）-概述](https://zhuanlan.zhihu.com/p/598714869)
 - [大模型分布式训练并行技术（二）-数据并行](https://zhuanlan.zhihu.com/p/650002268)
 - [大模型分布式训练并行技术（三）-流水线并行](https://juejin.cn/post/7262274383287484476)
-- [大模型分布式训练并行技术（四）-张量并行]()
+- [大模型分布式训练并行技术（四）-张量并行](https://juejin.cn/post/7269698032655728640)
 - [大模型分布式训练并行技术（五）-序列并行]()
 - [大模型分布式训练并行技术（六）-多维混合并行]()
 - [大模型分布式训练并行技术（七）-自动并行]()
@@ -207,6 +207,7 @@
 - [Docker 常用命令大全](https://juejin.cn/post/7016238524286861325)
 - [Docker Dockerfile 指令大全](https://juejin.cn/post/7016595442062327844)
 - [Kubernetes 常用命令大全](https://juejin.cn/post/7031201391553019911)
+- [集群环境 GPU 管理和监控工具 DCGM 常用命令大全](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/dcgmi.md)
 
 
 
