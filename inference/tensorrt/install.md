@@ -55,18 +55,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/guodong.li/TensorRT-8.6.1.6/lib
 
 
 
-import tensorrt 
-print(tensorrt.version) 
-assert tensorrt.Builder(tensorrt.Logger())
-
-
-import tensorrt_lean as trt
-print(trt.version) 
-assert trt.Builder(trt.Logger())
-
-
-----exit
-
 python3
 >>> import tensorrt
 >>> print(tensorrt.__version__)
