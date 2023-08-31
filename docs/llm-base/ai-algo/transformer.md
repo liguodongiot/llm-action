@@ -12,7 +12,7 @@
 
 
 
-
+- 哈佛annotated-transformer：https://github.com/harvardnlp/annotated-transformer/blob/master/AnnotatedTransformer.ipynb
 
 
 
@@ -39,6 +39,14 @@ Transformer 中除了单词的Embedding，还需要使用位置Embedding 表示�
 
 
 位置Embedding用 PE 表示，  PE 的维度与单词Embedding相同。 PE 可以通过训练得到，也可以使用某种公式计算得到。在Transformer中采用了后者。
+
+
+- Overview: The Implemented Transformer: https://medium.com/@hunter-j-phillips/overview-the-implemented-transformer-eafd87fe9589
+- Multi-Head Attention: https://medium.com/@hunter-j-phillips/multi-head-attention-7924371d477a
+- Layer Normalization: https://medium.com/@hunter-j-phillips/layer-normalization-e9ae93eb3c9c
+- Positional Encoding: https://medium.com/@hunter-j-phillips/positional-encoding-7a93db4109e6
+
+
 
 
 

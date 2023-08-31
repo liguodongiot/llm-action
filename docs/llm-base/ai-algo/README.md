@@ -26,9 +26,11 @@
 - 通常 seq_length 与 max_position_embeddings 相等。
 - key_value头数：This is the number of key_value heads that should be used to implement Grouped Query Attention. If
   `num_key_value_heads=num_attention_heads`, the model will use Multi Head Attention (MHA), if
-  `num_key_value_heads=1 the model will use Multi Query Attention (MQA) otherwise GQA is used. When
+  `num_key_value_heads=1` the model will use Multi Query Attention (MQA) otherwise GQA is used. When
   converting a multi-head checkpoint to a GQA checkpoint, each group key and value head should be constructed
   by meanpooling all the original heads within that group.
+
+
 
 ## LLaMA
 
@@ -37,7 +39,7 @@
 | 词表大小（vocab_size）                                         | 32000                         | 32000                         | 32000     | 32000       | 32000     | 32000     | 32000       |
 | Transformer层（n_layer, num_layers, num_hidden_layers）     | 32                            | 32                            | 40        | 40          | 60        | 80        | 80          |
 | 注意力头数（num_attention_heads, n_head）                       | 32                            | 32                            | 40        | 40          | 52        | 64        | 64          |
-| key_value头数（num_key_value_heads）                         | N/A                           | N/A                           | N/A       | 40          | N/A       | N/A       | 8           |
+| key_value头数（num_key_value_heads）                         | N/A                           | 32                         | N/A       | 40          | N/A       | N/A       | 8           |
 | 隐藏层大小（hidden_size）                                       | 4096                          | 4096                          | 5120      | 5120        | 6656      | 8192      | 8192        |
 | 前馈神经网络的隐藏层大小（ffn_hidden_size, intermediate_size,n_inner） | 11008                         | 11008                         | 13824     | 13824       | 17920     | 22016     | 28672       |
 | seq_length, n_ctx                                        | 2048(max_position_embeddings) | 2048(max_position_embeddings) | 2048      | N/A         | 2048      |           | N/A         |
