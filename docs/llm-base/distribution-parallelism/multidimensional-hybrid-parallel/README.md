@@ -9,14 +9,14 @@
 
 
 
-|    模型          | DP  | TP  | PP  | ZeRO Stage | FSDP（ZeRO Stage 3） | GPUs                    |
-| ------------ | --- | --- | --- | ---------- | ------------------ | ----------------------- |
-| Bloom-176B   | 8   | 4   | 12  | ZeRO-1     | -                  | 384 张 A100 80GB         |
-| CodeGeeX-13B | 192 | 8   | -   | ZeRO-2     | -                  | 1,536 张 Ascend 910 32GB |
-| GLM-130B     | 24  | 4   | 8   | ZeRO-1     | -                  | 768 张 A100 40G          |
-| OPT-175B     | -   | 8   | -   | -          | ✅             | 992 张 80GB A100         |
-| Megatron-Turing NLG（530B） | 16 | 8   | 35  |  -    | -                  | 4480 张 A100 80G |
-| GPT-NeoX-20B | 12 | 2   | 4  |ZeRO-1    | -                  | 96 张 A100 40G |
+|    模型          | DP  | TP  | PP  | ZeRO Stage | FSDP（ZeRO Stage 3） | GPUs         |   FP16/BF16        |
+| ------------ | --- | --- | --- | ---------- | ------------------ | ----------------------- | ------ |
+| Bloom-176B   | 8   | 4   | 12  | ZeRO-1     | -                  | 384 张 A100 80GB         | BF16    |
+| CodeGeeX-13B | 192 | 8   | -   | ZeRO-2     | -                  | 1,536 张 Ascend 910 32GB | FP16  |
+| GLM-130B     | 24  | 4   | 8   | ZeRO-1     | -                  | 768 张 A100 40G          | FP16 |
+| OPT-175B     | 124   | 8   | -   | -          | ✅             | 992 张 80GB A100         | FP16 |
+| Megatron-Turing NLG-530B | 16 | 8   | 35  |  -    | -                  | 4480 张 A100 80G | BF16 |
+| GPT-NeoX-20B | 12 | 2   | 4  |ZeRO-1    | -                  | 96 张 A100 40G |   FP16  |
 
 
 
@@ -112,7 +112,10 @@ Global batch size: 3072
 ```
 
 
-
+we use Adam optimizer (Kingma and Ba, 2014) to optimize the loss in Equation 2.
+The model weights are under FP16 format, except that we use FP32 for layer-norm and softmax for
+higher precision and stability. The model takes about 27GB of GPU memory. We start from an initial
+learning rate 1e-4, and apply a cosine learning rate decay 
 
 
 
@@ -198,6 +201,29 @@ ZeRO shards the training state (model parameters, gradients, and optimizer state
 
 
 ## Megatron-Turing NLG（530B）
+
+我们使用了 Transformer 解码器的架构 [52]，它是一个从左到右、自回归、基于生成 Transformer 的语言模型，并将其扩展到 5300 亿个参数。 层数、隐藏维度、注意力头分别为 105、20480 和 128。 序列长度为2048，全局批量大小为1920。
+
+我们使用 8 路张量和 35 路管道并行。 学习率为5:0e−5。
+
+我们使用 10 亿个代币进行线性学习率预热。
+
+我们使用余弦衰减来使学习率目标达到超过 3400 亿代币价值的 10%。
+
+在前 120 亿个代币中，我们从 32 的批量大小开始，并以 32 为增量逐渐增加批量大小，直到达到最终的批量大小 1920。
+
+我们使用 Adam 优化器，β1 = 0:9、β2 = 0:95 和 = 10−8。 我们将梯度范数限制为 1.0，并使用 0.1 的权重衰减。 对于权重初始化，我们使用均值为零、标准差为 4:0e−3 的正态分布。 我们的训练数据集由 3390 亿个令牌组成，我们通过混合上述 15 个训练数据集在 2700 亿个令牌上训练 MT-NLG。
+
+我们还留出 2% 的数据进行验证。
+
+对于 MT-NLG 等模型的规模，训练稳定性是一个根本性的挑战。 在训练模型时，我们观察到学习率、权重初始化和 Adam 优化器参数直接影响模型的稳定性。
+
+我们通过在 [9] 中绘制学习率与模型大小来预测 MT-NLG 的学习率。 较高的学习率会增加模型的稳定性。 我们使用大约 p1=(3 ∗ H) 作为权重初始化的标准差，其中 H 表示隐藏维度的大小。 与[45]类似，我们还观察到使用更高的方差进行权重初始化无法收敛。 我们还降低了 β2 的标准值 0:99，以减少训练损失的峰值。
+
+
+
+
+
 
 
 训练过程一共使用了4480块英伟达A100 GPU
