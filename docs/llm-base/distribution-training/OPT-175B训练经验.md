@@ -1,5 +1,5 @@
 
-OPT-175B是如何炼成的
+## OPT-175B是如何炼成的
 - https://zhuanlan.zhihu.com/p/622061951
 
 
@@ -110,9 +110,111 @@ A：你要问老黄。如果老黄的驱动是开源的，我们还能帮他debu
 
 
 
-
+## 大模型调研之 OPT-175B是如何炼成的
 
 - https://zhuanlan.zhihu.com/p/644780639
+
+
+
+重要控制参数：
+- weight decay
+- global grad norm clipping
+- Adam优化器beta2
+- Adam优化器epsilon
+- 增加warmup的步数（steps）
+
+
+
+
+教训：要先在小规模数据上试跑，以便提早发现代码bug
+
+
+
+```
+Run 11: 
+
+一组认为可能还不错的参数设置：
+
+2M batch size
+FP32 Adam
+Tensor parallel(8x MP)
+
+新data，来自实验29（之前的数据集中存在问题，曾额外添加了转义字符，于是模型训练时通过找转义字符而降低了loss，而非真正学到东西）
+
+训练中学习positional embedding。因为不太有信心学到positional embedding，所以通过正弦init(sinusoidal init)学习positional embedding，使之与原transformer论文相符合。
+
+weight decay, 0.05
+LR of 3+4, end LR of le-5。学习率开始时高，后期变低以避免训练变得不稳定
+No dropout on embeddings
+
+Normformer (impact on grad norm is making earlier layers be more similar with later layers)
+
+Gradient pre-divide factor: 32(Naman has been running with this)，目的是实现局部梯度积累(local gradient accumulation)
+
+Clip (12 norm): 2.5(后被证实是重要的，当时并不清楚这样的重要性)
+
+
+将Gelu替换为Relu，因为Gelu的公式里有个x^3，可能造成不稳定
+
+```
+
+
+
+
+```
+Run 12.00:Beginning of the "final" run
+
+
+Overall weight initialization updated: 总体的权重初始化
+
+Removed extra layer norms from Normformer setup
+
+Removed embedding scaling
+
+Gaussian init for learned positional embeddings (instead of sinusoidal init)，此处观点是，也许较小的标准差有助于提高稳定性
+
+Weight decay = 0.1
+
+Clipping = 1.0
+
+Adam beta2 = 0.95
+
+Max LR of 1.2e-4
+
+
+
+
+
+Run 12.(01-15): Mainly "systems" issues 大量系统问题
+
+Lost GPU(12.01, 12.10)
+CUDA errors (12.02, 12.03, 12.04, 12.09, 12.15, 12.17)
+Job hanging (12.05, 12.06)
+NCCL error (12.08)
+Job slowdown (12.11)
+
+
+
+For Run 12.16:
+
+Reduce clipping to 0.3
+Backup plan:reset Adam state and do fresh warmup
+
+
+Runs 12.(17-34):
+
+Hardware issues (ECC errors, lost GPU, high#DRAM correctables, etc.)
+
+Mysterious job hanging issues
+Blob storage issues
+Gradient overflow issues
+Used loss scaling state "reset" with restarts to try and circumvent the same fate
+
+
+```
+
+
+
 
 
 
