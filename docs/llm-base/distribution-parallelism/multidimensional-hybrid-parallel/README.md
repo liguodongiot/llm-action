@@ -8,15 +8,14 @@
 ## 大模型多维混合并行汇总
 
 
-
-|    模型          | DP  | TP  | PP  | ZeRO Stage | FSDP（ZeRO Stage 3） | GPUs         |   FP16/BF16        |
-| ------------ | --- | --- | --- | ---------- | ------------------ | ----------------------- | ------ |
-| Bloom-176B   | 8   | 4   | 12  | ZeRO-1     | -                  | 384 张 A100 80GB         | BF16    |
-| CodeGeeX-13B | 192 | 8   | -   | ZeRO-2     | -                  | 1,536 张 Ascend 910 32GB | FP16  |
-| GLM-130B     | 24  | 4   | 8   | ZeRO-1     | -                  | 768 张 A100 40G          | FP16 |
-| OPT-175B     | 124   | 8   | -   | -          | ✅             | 992 张 80GB A100         | FP16 |
-| Megatron-Turing NLG-530B | 16 | 8   | 35  |  -    | -                  | 4480 张 A100 80G | BF16 |
-| GPT-NeoX-20B | 12 | 2   | 4  |ZeRO-1    | -                  | 96 张 A100 40G |   FP16  |
+|    模型          | DP  | TP  | PP  | ZeRO Stage | FSDP（ZeRO Stage 3） | GPUs         |   FP16/BF16        | 训练框架  |
+| ------------ | --- | --- | --- | ---------- | ------------------ | ----------------------- | ------ |  ------ | 
+| Bloom-176B   | 8   | 4   | 12  | ZeRO-1     | -                  | 384 张 A100 80GB         | BF16    |  Megatron-DeepSpeed    |
+| CodeGeeX-13B | 192 | 8   | -   | ZeRO-2     | -                  | 1,536 张 Ascend 910 32GB | FP16  |   Megatron-LM    |
+| GLM-130B     | 24  | 4   | 8   | ZeRO-1     | -                  | 768 张 A100 40G          | FP16 |  Megatron-LM + DeepSpeed    |
+| OPT-175B     | 124   | 8   | -   | -          | ✅             | 992 张 80GB A100         | FP16 |   PyTorch + Megatron     |
+| Megatron-Turing NLG-530B | 16 | 8   | 35  |  -    | -                  | 4480 张 A100 80G | BF16 |  Megatron-LM  + DeepSpeed     |
+| GPT-NeoX-20B | 12 | 2   | 4  |ZeRO-1    | -                  | 96 张 A100 40G |   FP16  |   PyTorch v1.10.0 + NCCL 2.10.3 + CUDA 11.1 + Megatron-LM + DeepSpeed   |
 
 
 

@@ -91,7 +91,7 @@
 - [大模型分布式训练并行技术（二）-数据并行](https://zhuanlan.zhihu.com/p/650002268)
 - [大模型分布式训练并行技术（三）-流水线并行](https://juejin.cn/post/7262274383287484476)
 - [大模型分布式训练并行技术（四）-张量并行](https://juejin.cn/post/7269698032655728640)
-- [大模型分布式训练并行技术（五）-序列并行]()
+- [大模型分布式训练并行技术（五）-序列并行](https://juejin.cn/post/7273680143658287156)
 - [大模型分布式训练并行技术（六）-多维混合并行]()
 - [大模型分布式训练并行技术（七）-自动并行]()
 - [大模型分布式训练并行技术（八）-MOE并行]()
@@ -129,6 +129,7 @@
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
 
 ### 模型推理加速
+
 - [大模型的好伙伴，浅析推理加速引擎FasterTransformer](https://zhuanlan.zhihu.com/p/626008090)
 
 ### 模型推理服务化
@@ -153,6 +154,7 @@
 
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
+- [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
 - ChatGLM / ChatGLM2 大模型解析
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
@@ -160,6 +162,7 @@
 
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
+
 随着 ChatGPT 的现象级走红，引领了AI大模型时代的变革，从而导致 AI 算力日益紧缺。与此同时，中美贸易战以及美国对华进行AI芯片相关的制裁导致 AI 算力的国产化适配势在必行。本系列将对一些国产化 AI 加速卡进行讲解。
 
 - [大模型国产化适配1-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
@@ -172,6 +175,7 @@
 
 
 ## LLM应用开发
+
 大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。
 
 - [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://juejin.cn/post/7081440038772293663 )

@@ -1,5 +1,8 @@
 
 
+- 镜像：https://hub.docker.com/r/pytorch/pytorch
+
+
 - https://github.com/pytorch/examples
 - https://github.com/pytorch/examples.git
 - https://github.com/pytorch/pytorch
@@ -16,6 +19,10 @@
 
 
 ---
+
+
+
+
 
 
 - https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html
