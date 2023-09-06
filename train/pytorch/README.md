@@ -43,3 +43,13 @@
 
 
 
+
+
+
+## 问题排查
+
+
+- 将环境变量 NCCL_DEBUG 设置为 INFO 以打印有助于诊断问题的详细日志。（export NCCL_DEBUG=INFO）
+- 显式设置网络接口。（export NCCL_SOCKET_IFNAME=eth0）
+
+
