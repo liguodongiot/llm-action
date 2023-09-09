@@ -47,6 +47,8 @@ PP + ZeRO 2/3 不推荐一起训练。 PP需要累积梯度（accumulate gradien
 ## RLHF
 
 > RLHF 完整训练过程是什么？RL建模过程中涉及到几个模型？
+
+
 > RLHF 过程中RM随着训练过程的进行，得分越来越高，效果就一定好吗？
 
 > 
