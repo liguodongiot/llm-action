@@ -40,10 +40,10 @@ export NCCL_SOCKET_IFNAME=bond0
 
 for NODE in $NODELIST; do
     if [ "$NODE" == "$MASTER_NODE" ]; then
-        srun --nodes=1 --ntasks=1 -w $NODE torchrun --nproc_per_node=4 --nnodes=$NODE_NUM --node_rank=0 --master_addr=xx.99.2.45 --master_port=29500 main.py &
+        srun --nodes=1 --ntasks=1 -w $NODE torchrun --nproc_per_node=4 --nnodes=$NODE_NUM --node_rank=0 --master_addr=xx.99.2.xx --master_port=29500 main.py &
     else
         ((NODE_COUNT++))
-        srun --nodes=1 --ntasks=1 -w $NODE torchrun --nproc_per_node=4 --nnodes=$NODE_NUM --node_rank=$NODE_COUNT --master_addr=xx.99.2.45 --master_port=29500 main.py &
+        srun --nodes=1 --ntasks=1 -w $NODE torchrun --nproc_per_node=4 --nnodes=$NODE_NUM --node_rank=$NODE_COUNT --master_addr=xx.99.2.xx --master_port=29500 main.py &
     fi
 done
 wait
