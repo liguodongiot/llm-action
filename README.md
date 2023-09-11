@@ -131,6 +131,11 @@
 ### 模型推理加速
 
 - [大模型的好伙伴，浅析推理加速引擎FasterTransformer](https://zhuanlan.zhihu.com/p/626008090)
+- TensorRT-LLM
+- PageAttention
+- FlashAttention
+
+
 
 ### 模型推理服务化
 - [模型推理服务化框架Triton保姆式教程（一）：快速入门](https://zhuanlan.zhihu.com/p/629336492)
@@ -146,10 +151,12 @@
 训练后量化：
 - SmoothQuant
 - ZeroQuant
+- GPTQ
+- LLM.int8()
+
 
 训练感知量化：
 - [大模型训练感知量化开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
-
 
 
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
