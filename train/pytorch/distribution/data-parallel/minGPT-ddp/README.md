@@ -206,9 +206,84 @@ Snapshot not found. Training model from scratch
 [GPU0] Epoch 10 | Iter 0 | Eval Loss 1.94594
 [GPU1] Epoch 10 | Iter 0 | Eval Loss 1.98116
 [GPU2] Epoch 10 | Iter 0 | Eval Loss 1.94512
+```
+
+
+
+
+## singularity
+
+
+```
+singularity pull pytorch-multinode.sif docker://harbor.aip.io/base/pytorch-multinode:v1
+
+singularity run --nv \
+--pwd /workspace/examples-main/distributed/minGPT-ddp/mingpt \
+-B /data/hpc/home/guodong.li/:/workspaces:rw \
+pytorch-multinode.sif 
 
 ```
 
+
+### 单机多卡
+```
+
+singularity run --nv \
+--pwd /workspaces/examples-main/distributed/minGPT-ddp/mingpt \
+-B /data/hpc/home/guodong.li/:/workspaces:rw \
+pytorch-multinode.sif \
+torchrun --standalone --nproc_per_node=4 main.py
+
+```
+
+
+### 多级多卡
+```
+
+singularity run --nv \
+--pwd /workspaces/examples-main/distributed/minGPT-ddp/mingpt \
+-B /data/hpc/home/guodong.li/:/workspaces:rw \
+pytorch-multinode.sif 
+
+
+
+export NCCL_IB_DISABLE=1
+export NCCL_SOCKET_IFNAME=bond0
+
+
+singularity run --nv \
+--pwd /workspaces/examples-main/distributed/minGPT-ddp/mingpt \
+-B /data/hpc/home/guodong.li/:/workspaces:rw \
+pytorch-multinode.sif \
+torchrun --nproc_per_node=4 \
+--nnodes=2 \
+--node_rank=0 \
+--master_addr=10.xx.2.xxx \
+--master_port=29500 \
+main.py
+
+
+
+singularity run --nv \
+--pwd /workspaces/examples-main/distributed/minGPT-ddp/mingpt \
+-B /data/hpc/home/guodong.li/:/workspaces:rw \
+pytorch-multinode.sif \
+torchrun --nproc_per_node=4 \
+--nnodes=2 \
+--node_rank=1 \
+--master_addr=10.xx.2.xxx \
+--master_port=29500 \
+main.py
+
+```
+
+
+
+### slurm
+
+```
+slurm/sbatch_run_sig.sh
+```
 
 
 
