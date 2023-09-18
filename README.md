@@ -148,6 +148,7 @@
 
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
+
 训练后量化：
 - SmoothQuant
 - ZeroQuant
@@ -155,8 +156,77 @@
 - LLM.int8()
 
 
-训练感知量化：
-- [大模型训练感知量化开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
+量化感知训练：
+- [大模型量化感知训练开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
+
+量化感知微调：
+- QLoRA
+- PEQA
+
+
+
+
+
+### LLM剪枝
+
+
+**结构化剪枝**：
+
+- LLM-Pruner 
+
+**非结构化剪枝**：
+
+- SparseGPT
+- LoRAPrune
+- Wanda
+
+
+
+### LLM知识蒸馏
+
+**Standard KD**:
+
+使学生模型学习教师模型(LLM)所拥有的常见知识，如输出分布和特征信息，这种方法类似于传统的KD。
+
+
+- MINILLM
+- GKD
+
+
+
+**EA-based KD**:
+
+不仅仅是将LLM的常见知识转移到学生模型中，还涵盖了蒸馏它们独特的涌现能力。具体来说，EA-based KD又分为了上下文学习（ICL）、思维链（CoT）和指令跟随（IF）。
+
+
+In-Context Learning：
+
+- In-Context Learning distillation
+
+
+Chain-of-Thought：
+
+- MT-COT 
+- Fine-tune-CoT 
+- DISCO 
+- SCOTT 
+- SOCRATIC CoT
+
+Instruction Following：
+
+- Lion
+
+
+### 低秩分解
+
+低秩分解旨在通过将给定的权重矩阵分解成两个或多个较小维度的矩阵，从而对其进行近似。低秩分解背后的核心思想是找到一个大的权重矩阵W的分解，得到两个矩阵U和V，使得W≈U V，其中U是一个m×k矩阵，V是一个k×n矩阵，其中k远小于m和n。U和V的乘积近似于原始的权重矩阵，从而大幅减少了参数数量和计算开销。
+
+在LLM研究的模型压缩领域，研究人员通常将多种技术与低秩分解相结合，包括修剪、量化等。
+
+- ZeroQuant-FP（低秩分解+量化）
+- LoRAPrune（低秩分解+剪枝）
+
+
 
 
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
