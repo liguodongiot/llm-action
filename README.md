@@ -20,7 +20,7 @@
   - :beginner: [LLM剪枝](#llm剪枝)
   - :chart: [LLM知识蒸馏](#llm知识蒸馏)
   - :capricorn: [低秩分解](#低秩分解)
-- :atom: [LLM算法架构](#llm算法架构)
+- :virgo: [LLM算法架构](#llm算法架构)
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - :mahjong: [LLM国产化适配](#llm国产化适配)
 - :mushroom: [LLM生态相关技术](#llm生态相关技术)

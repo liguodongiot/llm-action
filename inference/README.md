@@ -5,6 +5,9 @@
 
 - [OpenLLM](https://github.com/bentoml/OpenLLM): An open platform for operating large language models (LLMs) in production.
 - Triton
+- Text Generation Inference：https://github.com/huggingface/text-generation-inference
+- vLLM：https://github.com/vllm-project/vllm
+
 
 
 
@@ -13,3 +16,8 @@
 - FastTransformer：https://github.com/NVIDIA/FasterTransformer
 - vLLM：https://github.com/vllm-project/vllm
 - LLM Accelerator：https://github.com/microsoft/LMOps
+
+
+
+
+

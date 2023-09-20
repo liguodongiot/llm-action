@@ -22,3 +22,19 @@
 
 
 
+
+---
+
+## slurm
+
+
+- https://github.com/bigscience-workshop/bigscience/blob/master/train/tr10-13B-ml/tr10-13B.slurm
+- https://github.com/bigscience-workshop/bigscience/blob/master/train/tr11-176B-ml/tr11-176B-ml.slurm
+
+
+
+
+
+
+
+
