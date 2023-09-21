@@ -34,13 +34,18 @@ ghcr.io/flexflow/flexflow-cuda-12.0:latest
 
 
 
-### Speculative 推理
+### 投机（Speculative） 推理
 
-使 FlexFlow Serve 能够加速 LLM 服务的一项关键技术是Speculative推理，它结合了各种集体boost-tuned的小型推测模型 (SSM) 来共同预测 LLM 的输出；
+使 FlexFlow Serve 能够加速 LLM 服务的一项关键技术是Speculative推理，它结合了各种集体boost-tuned的小型投机模型 (SSM) 来共同预测 LLM 的输出；
 
 预测被组织为token树，每个节点代表一个候选 token 序列。 使用一种新颖的基于树的并行解码机制，根据 LLM 的输出并行验证由 token 树表示的所有候选 token 序列的正确性。
 
 FlexFlow Serve 使用 LLM 作为 token 树验证器而不是增量解码器，这大大减少了服务生成 LLM 的端到端推理延迟和计算要求，同时，可证明保持模型质量。
+
+
+
+
+
 
 
 ### CPU Offloading
@@ -132,6 +137,10 @@ llm.compile(generation_config, ssms=ssms)
 result = llm.generate("Here are some travel tips for Tokyo:\n")
 
 ```
+
+
+- GenerationResult
+
 
 
 

@@ -1,4 +1,6 @@
 
+
+
 - LLM推理优化技术综述：KVCache、PageAttention、FlashAttention、MQA、GQA：https://zhuanlan.zhihu.com/p/655325832
 
 ## KVCache
@@ -178,8 +180,6 @@ GEMV 操作相关优化：在 LLM 推理的解码阶段，运行热点函数由 
 
 
 ## 服务相关优化
-
-服务相关优化主要包括 Continuous Batching、Dynamic Batching 和 异步 Tokenize / Detokenize。其中 Continuous Batching 和 Dynamic Batching 主要围绕提高可并发的 batchsize 来提高吞吐量，异步 Tokenize / Detokenize 则通过多线程方式将 Tokenize / Detokenize 执行与模型推理过程时间交叠，实现降低时延目的。
 
 
 
