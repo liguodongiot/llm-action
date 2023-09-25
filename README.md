@@ -315,7 +315,7 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 微信公众号：**吃果冻不吐果冻皮**，该公众号主要分享AI工程化（大模型、MLOps等）相关实践经验，免费电子书籍、论文等。
 
 <p align="center">
-  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/%E5%85%AC%E4%BC%97%E5%8F%B7.jpeg" width="30%" height="30%" div align=center>
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/wx-gzh.png" >
 </p>
 
 **[⬆ 一键返回目录](#目录)**
