@@ -1,7 +1,7 @@
-# llm-action
 
-本项目旨在分享大模型相关技术原理以及实战经验。
-
+<p align="center">
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action.png" >
+</p>
 
 ## 目录
 
@@ -305,8 +305,6 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 <p align="center">
   <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/wx.jpg">
 </p>
-
-
 
 
 
