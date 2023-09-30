@@ -11,6 +11,16 @@
 
 
 
+投机采样：
+- https://github.com/feifeibear/LLMSpeculativeSampling
+
+美杜莎：
+- https://github.com/FasterDecoding/Medusa
+- Medusa: Simple Framework for Accelerating LLM Generation with Multiple Decoding Heads
+- https://sites.google.com/view/medusa-llm
+
+
+
 
 ## Triton
 
