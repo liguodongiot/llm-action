@@ -1,6 +1,28 @@
 
 
 
+```
+docker run -dt --name nvidia_pytorch_env --restart=always --gpus all \
+--network=host \
+--shm-size 4G \
+-v /home/guodong.li/workspace:/workspace \
+-w /workspace \
+nvcr.io/nvidia/pytorch:23.04-py3 \
+/bin/bash
+
+docker exec -it nvidia_pytorch_env bash
+```
+
+
+```
+pip install sentencepiece
+pip install transformers
+pip install deepspeed==0.9.5
+pip install einops==0.6.1
+pip uninstall -y flash-attn && pip install flash-attn --no-build-isolation
+```
+
+
 <details><summary>训练日志详细输出</summary><p>
 
 ```
