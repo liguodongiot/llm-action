@@ -94,7 +94,7 @@
 - [大模型分布式训练并行技术（二）-数据并行](https://zhuanlan.zhihu.com/p/650002268)
 - [大模型分布式训练并行技术（三）-流水线并行](https://zhuanlan.zhihu.com/p/653860567)
 - [大模型分布式训练并行技术（四）-张量并行](https://zhuanlan.zhihu.com/p/657921100)
-- [大模型分布式训练并行技术（五）-序列并行](https://juejin.cn/post/7273680143658287156)
+- [大模型分布式训练并行技术（五）-序列并行](https://zhuanlan.zhihu.com/p/659792351)
 - [大模型分布式训练并行技术（六）-多维混合并行](https://juejin.cn/post/7277799192966578176)
 - [大模型分布式训练并行技术（七）-自动并行]()
 - [大模型分布式训练并行技术（八）-MOE并行]()
@@ -131,19 +131,22 @@
 
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
 
-### 模型推理加速
 
+### LLM框架
+
+- [大模型推理框架概述](https://zhuanlan.zhihu.com/p/659792625) 
 - [大模型的好伙伴，浅析推理加速引擎FasterTransformer](https://zhuanlan.zhihu.com/p/626008090)
 - TensorRT-LLM
-- PageAttention
-- FlashAttention
-
-
-
-### 模型推理服务化
 - [模型推理服务化框架Triton保姆式教程（一）：快速入门](https://zhuanlan.zhihu.com/p/629336492)
 - [模型推理服务化框架Triton保姆式教程（二）：架构解析](https://zhuanlan.zhihu.com/p/634143650)
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
+
+
+
+### LLM推理优化技术
+
+- PageAttention
+- FlashAttention
 
 
 
@@ -168,8 +171,6 @@
 
 
 
-
-
 ### LLM剪枝
 
 
@@ -187,6 +188,8 @@
 
 ### LLM知识蒸馏
 
+- [大模型知识蒸馏概述]()
+
 **Standard KD**:
 
 使学生模型学习教师模型(LLM)所拥有的常见知识，如输出分布和特征信息，这种方法类似于传统的KD。
@@ -194,7 +197,6 @@
 
 - MINILLM
 - GKD
-
 
 
 **EA-based KD**:
