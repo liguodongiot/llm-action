@@ -1,7 +1,8 @@
 git pull origin main
 git add .
 
-time=`date -I minutes`
+#time=`date -Iminutes`
+time=`date +"%Y-%m-%d_%H:%M:%S"`
 
 echo $time
 
