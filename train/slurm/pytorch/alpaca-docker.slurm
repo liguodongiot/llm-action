@@ -36,3 +36,4 @@ torchrun --nproc_per_node=8 --master_port=25001 train.py \
 --fsdp "full_shard auto_wrap" \
 --fsdp_transformer_layer_cls_to_wrap 'LlamaDecoderLayer' \
 --tf32 True
+

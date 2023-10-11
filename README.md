@@ -96,7 +96,7 @@
 - [大模型分布式训练并行技术（四）-张量并行](https://zhuanlan.zhihu.com/p/657921100)
 - [大模型分布式训练并行技术（五）-序列并行](https://zhuanlan.zhihu.com/p/659792351)
 - [大模型分布式训练并行技术（六）-多维混合并行](https://juejin.cn/post/7277799192966578176)
-- [大模型分布式训练并行技术（七）-自动并行]()
+- [大模型分布式训练并行技术（七）-自动并行](https://juejin.cn/post/7280861248421019659)
 - [大模型分布式训练并行技术（八）-MOE并行]()
 - [大模型分布式训练并行技术（九）-总结]()
 
@@ -127,6 +127,15 @@
 
 
 **[⬆ 一键返回目录](#目录)**
+
+
+## AI编译器
+
+- TVM
+- MLIR
+- TensorRT
+
+
 
 
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
@@ -188,7 +197,8 @@
 
 ### LLM知识蒸馏
 
-- [大模型知识蒸馏概述]()
+- [大模型知识蒸馏概述](https://www.zhihu.com/question/625415893/answer/3243565375)
+
 
 **Standard KD**:
 
@@ -234,13 +244,14 @@ Instruction Following：
 
 
 
-## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
+## [LLM算法](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
 - ChatGLM / ChatGLM2 大模型解析
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
-
+- [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
+- [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
 
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
@@ -269,8 +280,6 @@ Instruction Following：
 
 - [大模型词表扩充必备工具SentencePiece](https://zhuanlan.zhihu.com/p/630696264)
 - [大模型实践总结](https://www.zhihu.com/question/601594836/answer/3032763174)
-- [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
-- [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
 - [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 - [关于大模型驱动的AI智能体Agent的一些思考](https://zhuanlan.zhihu.com/p/651921120)

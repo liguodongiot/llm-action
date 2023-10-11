@@ -21,6 +21,16 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 - https://huggingface.co/blog/zh/hf-bitsandbytes-integration
 
 
+
+
+
+
+- 大模型量化原理综述（一）：概述
+- 大模型量化原理综述（二）：GPTQ
+- 大模型量化原理综述（三）：LLM.int8()
+- 大模型量化原理综述（）：训练感知量化 LLM-QAT
+
+
 ---
 
 
@@ -55,5 +65,10 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 
 - LLM-QAT: Data-Free Quantization Aware Training for Large Language Models
   - https://github.com/facebookresearch/LLM-QAT
+
+
+
+
+
 
 

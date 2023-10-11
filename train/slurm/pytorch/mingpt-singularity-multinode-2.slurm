@@ -59,3 +59,4 @@ for NODE in $NODELIST; do
     fi
 done
 wait
+

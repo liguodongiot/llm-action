@@ -41,3 +41,4 @@ torchrun --nproc_per_node=8 --master_port=11223 train.py \
 --gradient_checkpointing True \
 --fp16 True \
 --deepspeed ds_config_zero2.json
+

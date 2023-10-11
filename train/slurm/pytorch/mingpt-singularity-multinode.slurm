@@ -30,3 +30,4 @@ export NCCL_SOCKET_IFNAME=bond0
 
 
 srun --mpi=pmix_v3 singularity run --nv --pwd /workspaces/examples-main/distributed/minGPT-ddp/mingpt -B /data/hpc/home/guodong.li/:/workspaces:rw pytorch-multinode.sif torchrun --nproc_per_node=4 main.py
+
