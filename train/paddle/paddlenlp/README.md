@@ -13,6 +13,10 @@
 
 ```
 pip install --upgrade paddlenlp==2.6.1 -i https://pypi.org/simple
+
+
+
+sudo pip install --pre --upgrade paddlenlp -f https://www.paddlepaddle.org.cn/whl/paddlenlp.html
 ```
 
 
@@ -51,6 +55,19 @@ bigscience/bloomz-560m/
 ```
 
 
+### bloom
+
+```
+https://bj.bcebos.com/paddlenlp/models/community/bigscience/bloomz-560m/tokenizer_config.json
+
+```
+
+
+
+```
+from paddlenlp.transformers.bloom.tokenizer import BloomTokenizer
+tokenizer = BloomTokenizer.from_pretrained("bigscience/bloomz-560m")
+```
 
 
 
@@ -58,15 +75,53 @@ bigscience/bloomz-560m/
 
 ## 推理
 
+```
+import paddlenlp
+from pprint import pprint
+from paddlenlp import Taskflow
+schema = ['时间', '选手', '赛事名称'] # Define the schema for entity extraction
+ie = Taskflow('information_extraction', schema=schema)
+pprint(ie("2月8日上午北京冬奥会自由式滑雪女子大跳台决赛中中国选手谷爱凌以188.25分获得金牌！"))
+```
+
+
+
+```
+https://bj.bcebos.com/paddlenlp/taskflow/information_extraction/uie_base_v1.1/model_state.pdparams
+
+/Users/liguodong/.paddlenlp/taskflow/information_extraction/uie-base/model_state.pdparams
+
+```
+
+---
 
 
 ```
 from paddlenlp.transformers import AutoTokenizer, AutoModelForCausalLM
-tokenizer = AutoTokenizer.from_pretrained("linly-ai/chinese-llama-2-7b")
-model = AutoModelForCausalLM.from_pretrained("linly-ai/chinese-llama-2-7b", dtype="float16")
+tokenizer = AutoTokenizer.from_pretrained("bigscience/bloomz-560m")
+
+model = AutoModelForCausalLM.from_pretrained("bigscience/bloomz-560m", dtype="float32")
 input_features = tokenizer("你好！请自我介绍一下。", return_tensors="pd")
 outputs = model.generate(**input_features, max_length=128)
 tokenizer.batch_decode(outputs[0])
+
+
+
+
+tokenizer = AutoTokenizer.from_pretrained("bigscience/bloom-560m", from_hf_hub=True)
+
+
+tokenizer = AutoTokenizer.from_pretrained("ziqingyang/chinese-llama-7b", from_hf_hub=True)
+
+
+
+
+
+model = AutoModelForCausalLM.from_pretrained("bigscience/bloom-560m", dtype="float32",from_aistudio = False, from_hf_hub=True, convert_from_torch=True)
+
+
+tokenizer = AutoTokenizer.from_pretrained("bigscience/bloom-560m", from_hf_hub=True)
+
 ```
 
 

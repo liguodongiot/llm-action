@@ -41,6 +41,13 @@ GPU 运算能力超过 3.5 的硬件设备
 
 
 ```
+conda create -n paddle python=3.8 -y
+conda activate paddle
+```
+
+
+
+```
 python -m pip install paddlepaddle-gpu==2.5.1.post117 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
 ```
 
@@ -65,9 +72,12 @@ python3 -m pip uninstall paddlepaddle-gpu
 
 
 ```
+python -m pip install paddlepaddle==0.0.0 -f https://www.paddlepaddle.org.cn/whl/linux/cpu-mkl/develop.html
 python -m pip install paddlepaddle==0.0.0 -f https://www.paddlepaddle.org.cn/whl/mac/cpu/develop.html
 
 pip install --pre --upgrade paddlenlp -f https://www.paddlepaddle.org.cn/whl/paddlenlp.html
+sudo pip install --pre --upgrade paddlenlp -f https://www.paddlepaddle.org.cn/whl/paddlenlp.html
+
 ```
 
 

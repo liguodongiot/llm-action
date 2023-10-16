@@ -20,4 +20,9 @@
 
 
 
+- BigDL：https://github.com/intel-analytics/BigDL
+- OpenVINO：https://github.com/openvinotoolkit/openvino 
+
+
+
 
