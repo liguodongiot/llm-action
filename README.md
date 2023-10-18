@@ -23,11 +23,15 @@
 - :virgo: [LLM算法架构](#llm算法架构)
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - :mahjong: [LLM国产化适配](#llm国产化适配)
+- :six_pointed_star: [AI编译器](#ai编译器)
+- :heart_decoration: [LLMOps](#llmops)
 - :mushroom: [LLM生态相关技术](#llm生态相关技术)
 - :hammer: [服务器基础环境安装及常用工具](#服务器基础环境安装及常用工具)
 - :speech_balloon: [LLM学习交流群](#llm学习交流群)
 - :busts_in_silhouette: [微信公众号](#微信公众号)
 - :star: [Star History](#star-history)
+
+
 
 
 ## LLM训练
@@ -128,12 +132,6 @@
 
 **[⬆ 一键返回目录](#目录)**
 
-
-## AI编译器
-
-- TVM
-- MLIR
-- TensorRT
 
 
 
@@ -274,6 +272,19 @@ Instruction Following：
 - [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://juejin.cn/post/7081440038772293663 )
 - [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://juejin.cn/post/7081672823931928606)
 
+
+
+## AI编译器
+
+- TVM
+- MLIR
+- TensorRT
+
+
+
+## LLMOps
+
+待更新...
 
 
 ## LLM生态相关技术

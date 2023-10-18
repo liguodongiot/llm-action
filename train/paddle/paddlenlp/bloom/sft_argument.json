@@ -1,0 +1,31 @@
+{
+    "model_name_or_path": "/home/guodong.li/.paddlenlp/models/bigscience/bloomz-560m",
+    "dataset_name_or_path": "/home/guodong.li/workspace/data/AdvertiseGen",
+    "output_dir": "./checkpoints/bloom_sft_ckpts",
+    "per_device_train_batch_size": 100,
+    "gradient_accumulation_steps": 100,
+    "per_device_eval_batch_size": 8,
+    "eval_accumulation_steps":16,
+    "num_train_epochs": 3,
+    "learning_rate": 3e-05,
+    "warmup_steps": 30,
+    "logging_steps": 1,
+    "evaluation_strategy": "epoch",
+    "save_strategy": "epoch",
+    "src_length": 1024,
+    "max_length": 2048,
+    "fp16": true,
+    "fp16_opt_level": "O2",
+    "do_train": true,
+    "do_eval": true,
+    "disable_tqdm": true,
+    "load_best_model_at_end": true,
+    "eval_with_do_generation": false,
+    "metric_for_best_model": "accuracy",
+    "recompute": true,
+    "save_total_limit": 1,
+    "tensor_parallel_degree": 4,
+    "pipeline_parallel_degree": 1
+}
+
+
