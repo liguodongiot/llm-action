@@ -154,6 +154,10 @@
 
 ### LLM推理优化技术
 
+
+- [LLM推理优化技术概述]()
+
+
 - PageAttention
 - FlashAttention
 
@@ -163,21 +167,23 @@
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
 
+- [大模型量化概述](https://www.zhihu.com/question/627484732/answer/3261671478)
+
 训练后量化：
+
 - SmoothQuant
 - ZeroQuant
 - GPTQ
 - LLM.int8()
 
-
 量化感知训练：
+
 - [大模型量化感知训练开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
 
 量化感知微调：
+
 - QLoRA
 - PEQA
-
-
 
 ### LLM剪枝
 
@@ -281,6 +287,13 @@ Instruction Following：
 - TVM
 - MLIR
 - TensorRT
+
+
+## AI基础设施
+
+
+- AI集群
+- AI集群网络通讯
 
 
 

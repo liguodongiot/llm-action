@@ -26,9 +26,12 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 
 
 - 大模型量化原理综述（一）：概述
+- 大模型量化原理综述（二）：训练感知量化 LLM-QAT
+- 大模型量化原理综述（二）：SmoothQuant
+- 大模型量化原理综述（二）：AWQ
 - 大模型量化原理综述（二）：GPTQ
 - 大模型量化原理综述（三）：LLM.int8()
-- 大模型量化原理综述（）：训练感知量化 LLM-QAT
+
 
 
 ---
@@ -59,12 +62,32 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
   - https://github.com/mit-han-lab/llm-awq
 - LLM.int8()
   - LLM.int8()——在大模型上使用int8量化:https://zhuanlan.zhihu.com/p/586406082
+- OWQ: Lessons learned from activation outliers for weight quantization in large language models
+	- https://github.com/xvyaward/owq
+- Spqr: A sparse-quantized representation for near-lossless LLM weight compression
+	- https://arxiv.org/pdf/2306.03078.pdf
+	- Tim Dettmers
+- LLM.int8()
+	- Tim Dettmers
+- RPTQ
+	- https://github.com/hahnyuan/RPTQ4LLM
+- OliVe
+- Outlier Suppression+
+	- https://github.com/wimh966/outlier_suppression
+
+
 
 
 ## Quantization Aware Training（QAT）
 
 - LLM-QAT: Data-Free Quantization Aware Training for Large Language Models
   - https://github.com/facebookresearch/LLM-QAT
+
+
+
+
+
+
 
 
 
