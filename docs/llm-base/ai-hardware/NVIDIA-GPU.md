@@ -19,3 +19,8 @@ Nvidia下游市场分为四类：游戏、专业可视化、数据中心、汽�
 
 生产级：https://www.nvidia.cn/data-center/a100/
 
+
+
+
+
+不同GPU型号的计算能力：https://developer.nvidia.com/cuda-gpus#compute
