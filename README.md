@@ -133,7 +133,7 @@
 - [模型推理服务化框架Triton保姆式教程（一）：快速入门](https://zhuanlan.zhihu.com/p/629336492)
 - [模型推理服务化框架Triton保姆式教程（二）：架构解析](https://zhuanlan.zhihu.com/p/634143650)
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
-- TensorRT-LLM保姆级教程（一）-快速入门
+- [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
 - TensorRT-LLM保姆级教程（二）-开发实践
 - TensorRT-LLM保姆级教程（三）-基于Triton完成模型服务化
 - TensorRT-LLM保姆级教程（四）-新模型适配
@@ -244,8 +244,8 @@ Instruction Following：
 
 大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。
 
-- [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://juejin.cn/post/7081440038772293663)
-- [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://juejin.cn/post/7081672823931928606)
+- [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://zhuanlan.zhihu.com/p/476025527)
+- [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://zhuanlan.zhihu.com/p/477231485)
 
 ## AI编译器
 

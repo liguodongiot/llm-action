@@ -28,6 +28,7 @@ PPL越小越好，PPL越小，p(wi)则越大，也就是说这句话中每个词
 - https://crfm.stanford.edu/helm/latest/
 
 ### 59 metrics
+
 ```
 
 # Accuracy
@@ -179,6 +180,12 @@ Micro-F1
 ## CLEVA
 
 中文语言模型评估平台
+
+- https://github.com/LaVi-Lab/CLEVA
+- http://www.lavicleva.com/#/homepage/overview
+
+
+
 
 
 
