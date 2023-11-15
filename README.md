@@ -95,8 +95,8 @@
 - [大模型分布式训练并行技术（四）-张量并行](https://zhuanlan.zhihu.com/p/657921100)
 - [大模型分布式训练并行技术（五）-序列并行](https://zhuanlan.zhihu.com/p/659792351)
 - [大模型分布式训练并行技术（六）-多维混合并行](https://zhuanlan.zhihu.com/p/661279318)
-- [大模型分布式训练并行技术（七）-自动并行](https://juejin.cn/post/7280861248421019659)
-- [大模型分布式训练并行技术（八）-MOE并行](https://juejin.cn/post/7289661052806594618)
+- [大模型分布式训练并行技术（七）-自动并行](https://zhuanlan.zhihu.com/p/662517647)
+- [大模型分布式训练并行技术（八）-MOE并行](https://zhuanlan.zhihu.com/p/662518387)
 - [大模型分布式训练并行技术（九）-总结](https://juejin.cn/post/7290740395913969705)
 
 **[⬆ 一键返回目录](#目录)**
