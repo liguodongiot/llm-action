@@ -134,7 +134,7 @@
 - [模型推理服务化框架Triton保姆式教程（二）：架构解析](https://zhuanlan.zhihu.com/p/634143650)
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
-- TensorRT-LLM保姆级教程（二）-开发实践
+- [TensorRT-LLM保姆级教程（二）-开发实践](https://zhuanlan.zhihu.com/p/667572720)
 - TensorRT-LLM保姆级教程（三）-基于Triton完成模型服务化
 - TensorRT-LLM保姆级教程（四）-新模型适配
 
@@ -157,6 +157,8 @@
 - ZeroQuant
 - GPTQ
 - LLM.int8()
+- AWQ
+
 
 量化感知训练：
 

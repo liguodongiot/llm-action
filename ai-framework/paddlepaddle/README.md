@@ -14,4 +14,12 @@ pip install --upgrade paddlenlp
 ```
 
 
+```
+docker pull paddlepaddle/paddle:2.5.2-gpu-cuda11.7-cudnn8.4-trt8.4
+
+docker pull paddlepaddle/paddle:2.5.2
+```
+
+
+
 

@@ -1,7 +1,25 @@
 
 
 
-# 场景
+## 算法
+
+CLIP
+
+BLIP
+
+
+BLIP2 
+
+LLaVA 
+
+miniGPT4
+
+InstructBLIP
+
+
+
+
+## 任务
 
 文生图，还能实现图生文、图文联合生成、无条件图文生成、图文改写
 
@@ -21,24 +39,6 @@
 细粒度视觉定位
 
 
-
-CLIP
-
-BLIP
-
-
-BLIP2 
-
-LLaVA 
-
-miniGPT4
-
-InstructBLIP
-
-
-
-
-## 任务
 
 例如给定一张图片，可以完成以下任务：
 

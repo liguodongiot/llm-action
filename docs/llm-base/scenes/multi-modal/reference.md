@@ -15,3 +15,14 @@
 - [Qwen-VL](https://github.com/QwenLM/Qwen-VL/blob/master/README_CN.md)
 
 
+
+
+
+- https://github.com/facebookresearch/multimodal
+
+LateFusion, FLAVA and CLIP
+
+
+
+
+
