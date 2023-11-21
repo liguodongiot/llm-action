@@ -10,7 +10,6 @@ python -m pip install paddlepaddle==2.5.2 -i https://pypi.tuna.tsinghua.edu.cn/s
 
 
 pip install --upgrade paddlenlp
-
 ```
 
 

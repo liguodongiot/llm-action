@@ -117,10 +117,9 @@
   - 基于 Megatron-DeepSpeed 从 0 到1 完成 LLaMA 预训练
   - 基于 Megatron-DeepSpeed 从 0 到1 完成 Bloom 预训练
 
-### [分布式训练网络通信](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/network-communication)
 
-- 分布式训练网络通讯原语
-- AI 集群通信软硬件
+
+
 
 **[⬆ 一键返回目录](#目录)**
 
@@ -146,6 +145,11 @@
 - FlashAttention
 
 ## LLM压缩
+
+- 模型压缩技术原理（一）：知识蒸馏 
+- 模型压缩技术原理（二）：模型量化
+- 模型压缩技术原理（三）：模型剪枝 
+
 
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
@@ -224,11 +228,12 @@ Instruction Following：
 ## [LLM算法](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
-- ChatGLM / ChatGLM2 大模型解析
+- ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
+
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
 
@@ -248,18 +253,45 @@ Instruction Following：
 
 - [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://zhuanlan.zhihu.com/p/476025527)
 - [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://zhuanlan.zhihu.com/p/477231485)
+- [关于大模型驱动的AI智能体Agent的一些思考](https://zhuanlan.zhihu.com/p/651921120)
+
 
 ## AI编译器
 
+AI编译器是指将机器学习算法从开发阶段，通过变换和优化算法，使其变成部署状态。
+
+- [AI编译器技术原理（一）-概述]()
+- [AI编译器技术原理（二）-编译器前端]()
+- [AI编译器技术原理（三）-编译器后端]()
+
+
+框架：
 - TVM
 - MLIR
 - TensorRT
 
+
+
 ## AI基础设施
 
-- AI处理器
-- AI集群
-- AI集群网络通讯
+### AI加速卡
+
+- [AI芯片技术原理剖析（一）：国内外AI芯片概述](https://zhuanlan.zhihu.com/p/667686665)
+- AI芯片技术原理剖析（二）：英伟达GPU 
+- AI芯片技术原理剖析（三）：谷歌TPU
+
+### AI集群
+
+待更新...
+
+
+### [AI集群网络通信](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/network-communication)
+
+待更新...
+
+- 分布式训练网络通讯原语
+- AI 集群通信软硬件
+
 
 ## LLMOps
 
@@ -271,7 +303,6 @@ Instruction Following：
 - [大模型实践总结](https://www.zhihu.com/question/601594836/answer/3032763174)
 - [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
-- [关于大模型驱动的AI智能体Agent的一些思考](https://zhuanlan.zhihu.com/p/651921120)
 - [为什么很多新发布的大模型默认使用BF16而不是FP16？](https://www.zhihu.com/question/616600181/answer/3195333332)
 
 **[⬆ 一键返回目录](#目录)**

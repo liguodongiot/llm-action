@@ -17,6 +17,43 @@ miniGPT4
 InstructBLIP
 
 
+MDETR
+
+
+
+### Stable Diffusion  
+
+扩散模型 ， 多模态任务：文生图 图生图
+
+- https://huggingface.co/docs/peft/task_guides/dreambooth_lora
+- https://github.com/huggingface/peft/tree/v0.6.2/examples/lora_dreambooth
+- 推理：https://github.com/huggingface/peft/blob/v0.6.2/examples/lora_dreambooth/lora_dreambooth_inference.ipynb
+- 数据：https://huggingface.co/datasets/diffusers/docs-images
+
+支持多种微调技术：LoRA、	LoHa、	LoKr
+
+
+- 扩散模型库：https://huggingface.co/docs/diffusers/tutorials/tutorial_overview
+
+
+
+
+
+
+
+
+
+### Blip2 
+image to text (Multi-modal models)
+
+- 微调：https://github.com/huggingface/peft/blob/v0.6.2/examples/int8_training/fine_tune_blip2_int8.py
+- 模型及示例：https://huggingface.co/Salesforce/blip2-opt-2.7b
+- 使用 BLIP-2 零样本“图生文：https://huggingface.co/blog/zh/blip-2
+
+
+
+
+
 
 
 ## 任务
@@ -79,3 +116,28 @@ InstructBLIP
 2）以文搜图。输入文本，输出图片
 
 3）以图搜图，输入图片，输出图片
+
+
+
+
+
+
+
+
+## 多模态通用模型 FLAVA
+
+https://github.com/facebookresearch/multimodal/tree/main/examples/flava
+
+
+
+
+
+
+
+
+
+
+
+
+
+
