@@ -37,9 +37,9 @@ MDETR
 
 
 
+CompVis/stable-diffusion-v1-4
 
-
-
+lambdalabs/pokemon-blip-captions：https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions
 
 
 
