@@ -21,7 +21,7 @@
 	- AI编译前端优化：图算融合、内存分配、常量折叠、公共子表达式消除、死代码消除、代数化简
 	- AI编译后端优化：算子融合、循环优化
 显存优化：
-	- 通过 PagedAttention对 KV Cache 的有效管理，参考：vllm
+	- 通过 PagedAttention 对 KV Cache 的有效管理，参考：vllm
 	- CPU Offloading是将张量保存在CPU内存中，并且在计算时仅将张量复制到GPU。
 低精度浮点数优化：
 	- FP8（NVIDIA H系列GPU开始支持FP8，兼有FP16的稳定性和INT8的速度），Nvidia Transformer Engine 兼容 FP8 框架，主要利用这种精度进行 GEMM（通用矩阵乘法）计算，同时以 FP16 或 FP32 高精度保持主权重和梯度。  MS-AMP (使用FP8进行训练)
