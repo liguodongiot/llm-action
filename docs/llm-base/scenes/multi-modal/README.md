@@ -77,6 +77,12 @@ image to text (Multi-modal models)
 
 
 
+- https://github.com/THUDM/CogView
+
+
+
+
+
 例如给定一张图片，可以完成以下任务：
 
 一、VQA（Visual Question Answering）视觉问答输入：一张图片、一个自然语言描述的问题输出：答案（单词或短语）
