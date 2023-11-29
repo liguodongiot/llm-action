@@ -31,3 +31,30 @@
 
 - 算子循环优化
 - 指令和内存优化
+
+
+
+
+
+
+
+
+
+
+## 树模型
+
+- https://mlsys.org/Conferences/doc/2018/196.pdf
+- https://github.com/dmlc/treelite
+- https://treelite.readthedocs.io/en/latest/
+
+
+- https://zhuanlan.zhihu.com/p/347514385
+- https://zhuanlan.zhihu.com/p/487539515
+Treelite是用于有效部署决策树集合的模型编译器。
+
+
+
+
+
+
+

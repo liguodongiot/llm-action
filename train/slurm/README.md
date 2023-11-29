@@ -1,7 +1,7 @@
 
 
 - srun文档： https://slurm.schedmd.com/srun.html
-
+- SCOW（web管理）：https://github.com/PKUHPC/SCOW
 
 ## pytorch
 

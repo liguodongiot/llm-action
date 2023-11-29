@@ -22,3 +22,11 @@ docker pull paddlepaddle/paddle:2.5.2
 
 
 
+
+
+## 可视化
+
+
+```
+visualdl --logdir ./log
+```
