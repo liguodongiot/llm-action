@@ -12,13 +12,6 @@ import os
 import matplotlib.pyplot as plt
 from PIL import Image
 
-# Let's define the LoraConfig
-config = LoraConfig(
-    r=16,
-    lora_alpha=32,
-    lora_dropout=0.05,
-    bias="none",
-)
 
 
 class ImageCaptioningDataset(Dataset):
@@ -80,6 +73,14 @@ def main():
     model = AutoModelForVision2Seq.from_pretrained(pretrain_model_path, load_in_8bit=True)
     processor = AutoProcessor.from_pretrained(pretrain_model_path)
 
+
+    # Let's define the LoraConfig
+    config = LoraConfig(
+        r=16,
+        lora_alpha=32,
+        lora_dropout=0.05,
+        bias="none",
+    )
     # Get our peft model and print the number of trainable parameters
     model = get_peft_model(model, config)
     model.print_trainable_parameters()
