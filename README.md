@@ -78,10 +78,8 @@
 | [大模型参数高效微调技术实战（四）-Prefix Tuning / P-Tuning v2](https://zhuanlan.zhihu.com/p/648156780) | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_p_tuning_v2_clm.ipynb)   | HuggingFace PEFT |
 | [大模型参数高效微调技术实战（五）-LoRA](https://zhuanlan.zhihu.com/p/649315197)                        | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_lora_clm.ipynb)          | HuggingFace PEFT |
 | [大模型参数高效微调技术实战（六）-IA3](https://zhuanlan.zhihu.com/p/649707359)                         | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/clm/peft_ia3_clm.ipynb)           | HuggingFace PEFT |
-| [大模型微调实战（七）-基于LoRA微调多模态大模型](https://zhuanlan.zhihu.com/p/670048482)       |     [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/multimodal/blip2_lora_int8_fine_tune.py)
-       | HuggingFace PEFT |
-| [大模型微调实战（八）-使用INT8/FP4/NF4微调大模型](https://zhuanlan.zhihu.com/p/670116171)    |     [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/multimodal/finetune_bloom_bnb_peft.ipynb)
-       | HuggingFace PEFT、bitsandbytes |
+| [大模型微调实战（七）-基于LoRA微调多模态大模型](https://zhuanlan.zhihu.com/p/670048482)       |     [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/multimodal/blip2_lora_int8_fine_tune.py) | HuggingFace PEFT |
+| [大模型微调实战（八）-使用INT8/FP4/NF4微调大模型](https://zhuanlan.zhihu.com/p/670116171)    |     [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/peft/multimodal/finetune_bloom_bnb_peft.ipynb) | HuggingFace PEFT、bitsandbytes |
 
 
 
