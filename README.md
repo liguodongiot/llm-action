@@ -236,7 +236,7 @@ Instruction Following：
 - ZeroQuant-FP（低秩分解+量化）
 - LoRAPrune（低秩分解+剪枝）
 
-## [LLM算法](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
+## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
 - ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
@@ -244,6 +244,18 @@ Instruction Following：
 - LLaMA / LLaMA2 大模型解析
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
+
+
+
+
+## LLM应用开发
+
+大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。
+
+- [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://zhuanlan.zhihu.com/p/476025527)
+- [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://zhuanlan.zhihu.com/p/477231485)
+- [关于大模型驱动的AI智能体Agent的一些思考](https://zhuanlan.zhihu.com/p/651921120)
+
 
 
 ## [LLM国产化适配](https://github.com/liguodongiot/llm-action/tree/main/docs/llm_localization)
@@ -257,14 +269,6 @@ Instruction Following：
 - [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://juejin.cn/post/7291513759470960679)
 
 **[⬆ 一键返回目录](#目录)**
-
-## LLM应用开发
-
-大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。
-
-- [云原生向量数据库Milvus（一）-简述、系统架构及应用场景](https://zhuanlan.zhihu.com/p/476025527)
-- [云原生向量数据库Milvus（二）-数据与索引的处理流程、索引类型及Schema](https://zhuanlan.zhihu.com/p/477231485)
-- [关于大模型驱动的AI智能体Agent的一些思考](https://zhuanlan.zhihu.com/p/651921120)
 
 
 ## [AI编译器](https://github.com/liguodongiot/llm-action/tree/main/ai-compiler)
