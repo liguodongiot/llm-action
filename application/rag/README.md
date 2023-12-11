@@ -29,3 +29,8 @@
 
 
 
+
+
+## 密集检索和检索增强LLM
+
+- https://github.com/FlagOpen/FlagEmbedding/tree/master
