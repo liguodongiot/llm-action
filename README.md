@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v2.png" >
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v3.png" >
 </p>
 
 ## 目录
