@@ -2,6 +2,16 @@
   <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v3.png" >
 </p>
 
+
+<p> 
+<a href="https://github.com/liguodongiot/llm-action/stargazers">![GitHub Repo stars](https://img.shields.io/github/stars/liguodongiot/llm-action?style=social)</a>
+<a href="https://github.com/liguodongiot/llm-action/blob/main/pic/wx.jpg"> <img src="https://img.shields.io/badge/吃果冻不吐果冻皮-1AAD19.svg?style=plastic&logo=wechat&logoColor=white" height="25px"> </a>
+<a href="https://www.zhihu.com/people/liguodong-iot"> <img src="https://img.shields.io/badge/吃果冻不吐果冻皮-0079FF.svg?style=plastic&logo=zhihu&logoColor=white" height="25px"> </a>
+<a href="https://juejin.cn/user/3642056016410728"> <img src="https://img.shields.io/badge/掘金-吃果冻不吐果冻皮-000099.svg?style=plastic&logo=juejin" height="25px"> </a>
+<a href="https://liguodong.blog.csdn.net/"> <img src="https://img.shields.io/badge/CSDN-吃果冻不吐果冻皮-6B238E.svg" height="25px"> </a>
+</p> 
+
+
 ## 目录
 
 - 🔥 [LLM训练](#llm训练)

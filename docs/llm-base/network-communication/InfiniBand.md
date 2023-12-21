@@ -2,7 +2,7 @@
 
 InfiniBand网络接口的一种分类方式，按照数据传输速率的的不同进行区分。具体如下：
 
-SDR（Single Data Rate）：单倍数据率，即8Gb/s。
+SDR（Single Data Rate）：单倍数据率，即8Gb/s 。
 DDR（Double Data Rate）：双倍数据率，即16Gb/s。
 QDR（Quad Data Rate）：四倍数据率，即32Gb/s。
 FDR（Fourteen Data Rate）：十四倍数据率，即56Gb/s。

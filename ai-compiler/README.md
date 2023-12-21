@@ -53,6 +53,13 @@
 Treelite是用于有效部署决策树集合的模型编译器。
 
 
+- 决策树Ensemble的编译优化：https://zhuanlan.zhihu.com/p/597511551
+
+
+
+
+
+
 
 
 
