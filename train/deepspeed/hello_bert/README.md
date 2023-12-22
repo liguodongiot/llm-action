@@ -106,7 +106,7 @@ experiments_ds/
     ├── hparams.json
     ├── latest
     ├── tb_dir
-    │   └── events.out.tfevents.1686707924.ai-app-2-46-msxf.599.0
+    │   └── events.out.tfevents.1686707924.ai-app-2-46.599.0
     └── zero_to_fp32.py
 
 
@@ -129,7 +129,7 @@ tree -h ./experiments_multigpu
     ├── [ 298]  hparams.json
     ├── [  14]  latest
     ├── [  77]  tb_dir
-    │   └── [2.4K]  events.out.tfevents.1686710280.ai-app-2-46-msxf.14672.0
+    │   └── [2.4K]  events.out.tfevents.1686710280.ai-app-2-46.14672.0
     └── [ 18K]  zero_to_fp32.py
 ```
 
