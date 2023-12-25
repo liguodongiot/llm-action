@@ -31,6 +31,9 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 ```
 
 
+
+
+
 ## NCCL 安装
 
 ```
@@ -83,6 +86,10 @@ pip install torchvision-0.15.0+cu118-cp310-cp310-linux_x86_64.whl
 ```
 
 
+
+
+
+
 ### Deepspeed...
 
 ```
@@ -103,5 +110,32 @@ pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation -
 
 
 
+
+## 配套
+
+
+```
+wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/cuda_12.1.1_530.30.02_linux.run
+sudo sh cuda_12.1.1_530.30.02_linux.run
+```
+
+
+```
+NCCL：
+
+https://developer.nvidia.com/downloads/compute/machine-learning/nccl/secure/2.18.3/agnostic/x64/nccl_2.18.3-1+cuda12.1_x86_64.txz/
+
+
+CUDNN：
+
+
+
+
+pytorch:
+
+https://download.pytorch.org/whl/cu121/torch-2.1.2%2Bcu121-cp310-cp310-linux_x86_64.whl
+https://download.pytorch.org/whl/cu121/torchaudio-2.1.2%2Bcu121-cp310-cp310-linux_x86_64.whl
+https://download.pytorch.org/whl/cu121/torchvision-0.16.2%2Bcu121-cp310-cp310-linux_x86_64.whl
+```
 
 

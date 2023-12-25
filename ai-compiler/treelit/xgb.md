@@ -3,5 +3,5 @@
 
 
 ```
-conda create -n model-server-venv python=3.8 -y
+conda create -n model-server-venv python=3.9 -y
 ```
