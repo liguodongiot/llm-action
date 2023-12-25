@@ -88,7 +88,7 @@ gen_data/
 └── [4.6M]  gen.chunk.07.jsonl
 
 0 directories, 8 files
-(llm-qat-venv-py310-cu117) [guodong.li@ai-app-2-46-msxf LLM-QAT]$ wc -l gen_data/gen.chunk.07.jsonl
+(llm-qat-venv-py310-cu117) [guodong.li@ai-app-2-46 LLM-QAT]$ wc -l gen_data/gen.chunk.07.jsonl
 1500 gen_data/gen.chunk.07.jsonl
 
 
@@ -247,7 +247,7 @@ tree -h
 └── [  26]  output
     └── [  29]  runs
         └── [4.0K]  current
-            ├── [4.1K]  events.out.tfevents.1691114271.ai-app-2-46-msxf
+            ├── [4.1K]  events.out.tfevents.1691114271.ai-app-2-46
 
 ```
 
