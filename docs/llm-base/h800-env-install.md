@@ -58,6 +58,22 @@ sudo chmod a+r /usr/local/cuda-11.8/include/cudnn*.h /usr/local/cuda-11.8/lib64/
 
 
 
+## OpenMPI
+
+
+```
+tar -xvzf openmpi-5.0.1.tar.gz
+
+cd openmpi-5.0.1
+./configure --prefix=/data/hpc/software/openmpi
+make -j 80
+sudo make install -j 80
+
+export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64:/usr/local/nccl_2.11.4-1+cuda11.0_x86_64/lib:/usr/local/openmpi/lib:$LD_LIBRARY_PATH
+export PATH=/usr/local/openmpi/bin:/usr/local/cuda-11.0/bin:$PATH
+```
+
+
 ## 虚拟环境
 
 ```
