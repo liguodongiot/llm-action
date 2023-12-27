@@ -3,7 +3,19 @@
 - srun文档： https://slurm.schedmd.com/srun.html
 - SCOW（web管理）：https://github.com/PKUHPC/SCOW
 
+
+
+## MUNGE-免密
+
+MUNGE (MUNGE Uid 'N' Gid Emporium)是一种用于创建和验证凭证的身份验证服务。它允许进程在
+一组具有公共用户和组的主机中验证另一个本地或远程进程的UID和GID。
+
+
+
+
+
 ## pytorch
+
 
 
 
@@ -106,6 +118,12 @@ srun --mpi=list
 ```
 sbatch pp-multinode-singularity.slurm
 ```
+
+
+
+
+
+
 
 
 

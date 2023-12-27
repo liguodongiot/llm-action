@@ -2,6 +2,12 @@
 
 - https://github.com/NVIDIA/nccl-tests
 - https://cloud.baidu.com/doc/GPU/s/Yl3mr0ren
+- HPC-基于NCCL通信库的多机RDMA网络性能测试: https://www.volcengine.com/docs/6419/105002
+
+
+
+
+------
 
 
 
@@ -25,6 +31,16 @@ $ make MPI=1 MPI_HOME=/path/to/mpi CUDA_HOME=/path/to/cuda NCCL_HOME=/path/to/nc
 
 
 
+```
+Run on 8 GPUs (-g 8), scanning from 8 Bytes to 128MBytes :
+
+$ ./build/all_reduce_perf -b 8 -e 128M -f 2 -g 8
+
+
+Run with MPI on 10 processes (potentially on multiple nodes) with 4 GPUs each, for a total of 40 GPUs:
+
+$ mpirun -np 10 ./build/all_reduce_perf -b 8 -e 128M -f 2 -g 4
+```
 
 
 

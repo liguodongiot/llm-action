@@ -1,0 +1,95 @@
+
+
+
+
+
+
+
+```
+wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/cuda_12.1.1_530.30.02_linux.run
+sudo sh cuda_12.1.1_530.30.02_linux.run
+```
+
+
+
+/usr/local/cuda/bin/nvcc -V  #查看CUDA版本，可正确查看，表示CUDA已安装成功。
+
+
+
+```
+tar -xvzf openmpi-4.1.1.tar.gz
+
+cd openmpi-4.1.1/
+
+./configure --prefix=/usr/local/openmpi
+
+make -j 80
+
+make install -j 80
+
+export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64:/usr/local/nccl_2.11.4-1+cuda11.0_x86_64/lib:/usr/local/openmpi/lib:$LD_LIBRARY_PATH
+
+export PATH=/usr/local/openmpi/bin:/usr/local/cuda-11.0/bin:$PATH
+
+ldconfig 
+```
+
+
+```
+wget https://github.com/NVIDIA/nccl-tests/archive/refs/tags/v2.10.1.tar.gz
+
+make -j40 MPI=1  MPI_HOME=/usr/local/openmpi CUDA_HOME=/usr/local/cuda-11.0 NCCL_HOME=/usr/local/nccl_2.11.4-1+cuda11.0_x86_64
+```
+
+---
+
+
+在节点A执行以下命令
+
+```
+ibdev2netdev
+
+ifconfig
+```
+
+
+```
+ib_write_bw -a -b -d mlx5_1 -x 3 --report_gbits
+```
+
+
+
+
+在节点B执行以下命令，IP地址（198.XX.XX.XX）需替换为节点A的mlx5_1网卡IP。
+
+
+```
+ib_write_bw -a -b -F 198.XX.XX.XX -d mlx5_1 --report_gbits -x 3
+```
+
+
+使用NCCL Tests测试工具评估集群性能
+
+```
+mpirun -x NCCL_IB_HCA=mlx5_1:1 -x NCCL_IB_DISABLE=0 -x NCCL_SOCKET_IFNAME=eth1 -x NCCL_IB_GID_INDEX=3 -x NCCL_IB_TIMEOUT=23 -x NCCL_IB_RETRY_CNT=7 -hostfile hostfile -n 16 -N 8 --allow-run-as-root --mca btl tcp,self --mca btl_tcp_if_exclude lo,mlx5_0 ./build/all_reduce_perf -b 8 -e 1G -f 2 -g 1 -c 1 -n 100
+```
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

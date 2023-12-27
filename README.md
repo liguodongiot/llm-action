@@ -159,6 +159,8 @@
 - [TensorRT-LLM保姆级教程（二）-开发实践](https://zhuanlan.zhihu.com/p/667572720)
 - TensorRT-LLM保姆级教程（三）-基于Triton完成模型服务化
 - TensorRT-LLM保姆级教程（四）-新模型适配
+- TensorRT
+
 
 
 ### LLM推理优化技术
@@ -301,7 +303,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - MLIR
 - XLA
 - TVM
-- TensorRT
+
 
 
 
