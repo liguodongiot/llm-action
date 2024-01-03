@@ -4,6 +4,9 @@
 - 大模型主流应用RAG的介绍——从架构到技术细节：https://luxiangdong.com/2023/09/25/ragone/#/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2
 - 从 RAG 到 Self-RAG —— LLM 的知识增强：https://zhuanlan.zhihu.com/p/661465330
 - 大模型检索增强生成（RAG）有哪些好用的技巧？：https://www.zhihu.com/question/625481187
+- The limits of LLMs and how RAG remedies them：https://konfuzio.com/en/limits-llms-retrieval-augmented-generation/
+
+
 
 
 
