@@ -1,4 +1,31 @@
 
+## 查看服务器的型号信息
+```
+> apt-get install dmidecode
+
+> dmidecode -t system
+# dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 3.3.0 present.
+
+Handle 0x0001, DMI type 1, 27 bytes
+System Information
+        Manufacturer: Huawei
+        Product Name: A800 9000 A2
+        Version: To be filled by O.E.M.
+        Serial Number: 2102314RHT10P81000xx
+        UUID: a61414fb-b04f-b618-ee11-c0441xx24b6d
+        Wake-up Type: Power Switch
+        SKU Number: To be filled by O.E.M.
+        Family: To be filled by O.E.M.
+
+Handle 0x0005, DMI type 32, 11 bytes
+System Boot Information
+        Status: No errors detected
+```
+
+
+
 以下操作如无特别说明，都是针对EulerOS系统。
 
 ## 安装驱动与固件
