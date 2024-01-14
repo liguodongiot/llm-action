@@ -3,6 +3,10 @@
 
 
 
+- 多机部署：https://docs.vllm.ai/en/latest/serving/distributed_serving.html
+
+
+
 
 
 ## 安装

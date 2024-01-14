@@ -180,18 +180,22 @@ class WikiTextMLMDataset(Dataset):
         tokens, labels = self.masking_function(self.dataset[idx]["text"])
         return (tokens, labels)
 
-
+# TypeVar 声明类型变量T
 T = TypeVar("T")
 
 
+# 使用迭代器，用到的时候再取
 class InfiniteIterator(object):
     def __init__(self, iterable: Iterable[T]) -> None:
         self._iterable = iterable
         self._iterator = iter(self._iterable)
 
+    # 返回一个特殊的迭代器对象， 这个迭代器对象实现了 next() 方法并通过 StopIteration 异常标识迭代的完成。
     def __iter__(self):
         return self
 
+    # 会返回下一个迭代器对象。我们就可以通过next函数访问这个对象的下一个元素了，
+    # 并且在你不想继续有迭代的情况下抛出一个StopIteration的异常
     def __next__(self) -> T:
         next_item = None
         try:
@@ -250,13 +254,18 @@ def create_data_iterator(
         unmask_replace_prob=unmask_replace_prob,
         max_length=max_seq_length,
     )
+
     dataset = WikiTextMLMDataset(wikitext_dataset, masking_function_partial)
     collate_fn_partial = partial(collate_function,
                                  pad_token_id=tokenizer.pad_token_id)
+
+
+    # 加载数据
     dataloader = DataLoader(dataset,
                             batch_size=batch_size,
                             shuffle=True,
                             collate_fn=collate_fn_partial)
+
 
     return InfiniteIterator(dataloader)
 
@@ -360,6 +369,8 @@ def create_model(num_layers: int, num_heads: int, ff_dim: int, h_dim: int,
                  dropout: float) -> RobertaMLMModel:
     """Create a Bert model with the specified `num_heads`, `ff_dim`,
     `h_dim` and `dropout`
+
+    创建一个bert模型
 
     Args:
         num_layers (int):
@@ -696,8 +707,10 @@ def train(
     tb_dir = exp_dir / "tb_dir"
     assert tb_dir.exists()
     summary_writer = SummaryWriter(log_dir=tb_dir)
+
+
     ################################
-    ###### Create Datasets #########
+    ###### 创建数据集 #########
     ################################
     logger.info("Creating Datasets")
     data_iterator = create_data_iterator(
@@ -710,7 +723,7 @@ def train(
     )
     logger.info("Dataset Creation Done")
     ################################
-    ###### Create Model ############
+    ###### 创建模型 ############
     ################################
     logger.info("Creating Model")
     model = create_model(
@@ -722,12 +735,17 @@ def train(
     )
     model = model.to(device)
     logger.info("Model Creation Done")
+
+
     ################################
-    ###### Create Optimizer #######
+    ###### 创建 Optimizer #######
     ################################
     logger.info("Creating Optimizer")
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
     logger.info("Optimizer Creation Done")
+
+
+
     ################################
     #### Load Model checkpoint #####
     ################################
@@ -756,8 +774,10 @@ def train(
         loss = model(**batch)
         # Backward pass
         loss.backward()
+
         # Optimizer Step
         optimizer.step()
+        
         losses.append(loss.item())
         if step % log_every == 0:
             logger.info("Loss: {0:.4f}".format(np.mean(losses)))
@@ -767,6 +787,7 @@ def train(
                 "model": model.state_dict(),
                 "optimizer": optimizer.state_dict(),
             }
+            # 保存模型及优化器
             torch.save(obj=state_dict,
                        f=str(exp_dir / f"checkpoint.iter_{step}.pt"))
             logger.info("Saved model to {0}".format(

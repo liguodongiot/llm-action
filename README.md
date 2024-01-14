@@ -279,8 +279,12 @@ Instruction Following：
 - [大模型国产化适配1-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
 - [大模型国产化适配2-基于昇腾910使用ChatGLM-6B进行模型推理](https://zhuanlan.zhihu.com/p/650730807)
 - [大模型国产化适配3-基于昇腾910使用ChatGLM-6B进行模型训练](https://zhuanlan.zhihu.com/p/651324599)
-- [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://juejin.cn/post/7265627782712901686)
+- [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://zhuanlan.zhihu.com/p/655902796)
 - [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://juejin.cn/post/7291513759470960679)
+
+
+
+
 
 **[⬆ 一键返回目录](#目录)**
 
@@ -291,12 +295,12 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 
 - [AI编译器技术剖析（一）-概述](https://zhuanlan.zhihu.com/p/669347560)
 - [AI编译器技术剖析（二）-传统编译器](https://zhuanlan.zhihu.com/p/671477784)
-- [AI编译器技术剖析（三）-树模型编译优化]()
+- [AI编译器技术剖析（三）-树模型编译工具 Treelite 详解]()
 - [AI编译器技术剖析（四）-编译器前端]()
 - [AI编译器技术剖析（五）-编译器后端]()
 - [AI编译器技术剖析（六）-主流编译框架]()
 - [AI编译器技术剖析（七）-深度学习模型编译优化]()
-
+- [lleaves：使用 LLVM 编译梯度提升决策树将预测速度提升10+倍](https://zhuanlan.zhihu.com/p/672584013)
 
 框架：
 
@@ -335,7 +339,10 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 
 ## LLMOps
 
-待更新...
+- [在 Kubernetes 上部署机器学习模型的指南](https://zhuanlan.zhihu.com/p/676389726)
+- [使用 Kubernetes 部署机器学习模型的优势](https://juejin.cn/post/7320513026188099619)
+
+
 
 ## LLM生态相关技术
 
