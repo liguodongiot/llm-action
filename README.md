@@ -179,6 +179,14 @@
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
 - [大模型量化概述](https://www.zhihu.com/question/627484732/answer/3261671478)
+- [大模型量化技术原理-GPTQ、LLM.int8()]()
+- [大模型量化技术原理-SmoothQuant]()
+- [大模型量化技术原理-AWQ、AutoAWQ]()
+- [大模型量化技术原理-SpQR]()
+- [大模型量化技术原理-ZeroQuant系列]()
+
+
+
 
 训练后量化：
 

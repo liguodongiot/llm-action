@@ -12,6 +12,19 @@
 nvidia-smi
 ```
 
+### 查询GPU卡信息和统计GPU卡数
+
+
+```
+nvidia-smi -L
+```
+
+
+```
+nvidia-smi -L | wc -l
+```
+
+
 ### 可以列出所有GPU设备的详细信息
 
 使用 nvidia-smi -q 可以列出所有GPU设备的详细信息。

@@ -24,6 +24,7 @@
 ### 坑点
 
 - 使用 Hugingface Transformers 进行多机多卡训练时，反复加载模型，设置卡等，不然可能导致代码错乱，比如：保存模型不成功，保存模型不完整等等。
+- 使用Megatron-Deepspeed、Hugingface Transformers (Deepspeed)进行分布式训练时，使用一些共享存储可能会遇到问题，比如一个进程写入文件之后，另一个进程无法马上读取到文件。
 
 
 
