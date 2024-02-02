@@ -96,12 +96,6 @@
 
 
 
-
-
-
-
-
-
 **[⬆ 一键返回目录](#目录)**
 
 ### [LLM分布式训练并行技术](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/distribution-parallelism)
@@ -179,23 +173,14 @@
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
 - [大模型量化概述](https://www.zhihu.com/question/627484732/answer/3261671478)
+
+训练后量化：
+
 - [大模型量化技术原理-GPTQ、LLM.int8()]()
 - [大模型量化技术原理-SmoothQuant]()
 - [大模型量化技术原理-AWQ、AutoAWQ]()
 - [大模型量化技术原理-SpQR]()
 - [大模型量化技术原理-ZeroQuant系列]()
-
-
-
-
-训练后量化：
-
-- SmoothQuant
-- ZeroQuant
-- GPTQ
-- LLM.int8()
-- AWQ
-
 
 量化感知训练：
 
@@ -207,6 +192,7 @@
 - PEQA
 
 ### LLM剪枝
+
 
 **结构化剪枝**：
 
@@ -268,8 +254,6 @@ Instruction Following：
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
 
 
-
-
 ## LLM应用开发
 
 大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。
@@ -290,9 +274,6 @@ Instruction Following：
 - [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://zhuanlan.zhihu.com/p/655902796)
 - [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://juejin.cn/post/7291513759470960679)
 - [大模型国产化适配6-基于昇腾910B快速验证ChatGLM3-6B/BaiChuan2-7B模型推理](https://zhuanlan.zhihu.com/p/677799157)
-
-
-
 
 
 
