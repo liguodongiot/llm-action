@@ -176,7 +176,7 @@
 
 训练后量化：
 
-- [大模型量化技术原理-GPTQ、LLM.int8()]()
+- [大模型量化技术原理-GPTQ、LLM.int8()](https://zhuanlan.zhihu.com/p/680212402)
 - [大模型量化技术原理-SmoothQuant]()
 - [大模型量化技术原理-AWQ、AutoAWQ]()
 - [大模型量化技术原理-SpQR]()
