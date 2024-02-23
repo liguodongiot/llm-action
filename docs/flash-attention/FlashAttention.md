@@ -3,7 +3,10 @@
 
 
 
+- https://github.com/Dao-AILab/flash-attention
 
+- FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
+- FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
 
 
 Flash Attention的主要目的是加速和节省内存，主要贡献包括：

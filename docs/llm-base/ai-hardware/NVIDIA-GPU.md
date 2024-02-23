@@ -20,10 +20,15 @@ Nvidia下游市场分为四类：游戏、专业可视化、数据中心、汽�
 生产级：https://www.nvidia.cn/data-center/a100/
 
 
+## 计算能力（Compute Capability）
 
-
+标识设备的核心架构、gpu硬件支持的功能和指令
 
 不同GPU型号的计算能力：https://developer.nvidia.com/cuda-gpus#compute
+
+
+
+计算能力包括主修订号X和次修订号Y来表示, 主修订号标明核心架构，次修订号标识在此核心架构上的增量更新。
 
 
 

@@ -177,10 +177,11 @@
 训练后量化：
 
 - [大模型量化技术原理-GPTQ、LLM.int8()](https://zhuanlan.zhihu.com/p/680212402)
-- [大模型量化技术原理-SmoothQuant]()
-- [大模型量化技术原理-AWQ、AutoAWQ]()
-- [大模型量化技术原理-SpQR]()
+- [大模型量化技术原理-SmoothQuant](https://www.zhihu.com/question/576376372/answer/3388402085)
+- [大模型量化技术原理-AWQ、AutoAWQ](https://zhuanlan.zhihu.com/p/681578090)
+- [大模型量化技术原理-SpQR](https://zhuanlan.zhihu.com/p/682871823)
 - [大模型量化技术原理-ZeroQuant系列]()
+- [大模型量化技术原理-总结]()
 
 量化感知训练：
 
@@ -188,7 +189,7 @@
 
 量化感知微调：
 
-- QLoRA
+- [QLoRA](https://zhuanlan.zhihu.com/p/636215898)
 - PEQA
 
 ### LLM剪枝
@@ -286,7 +287,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 
 - [AI编译器技术剖析（一）-概述](https://zhuanlan.zhihu.com/p/669347560)
 - [AI编译器技术剖析（二）-传统编译器](https://zhuanlan.zhihu.com/p/671477784)
-- [AI编译器技术剖析（三）-树模型编译工具 Treelite 详解]()
+- [AI编译器技术剖析（三）-树模型编译工具 Treelite 详解](https://zhuanlan.zhihu.com/p/676723324)
 - [AI编译器技术剖析（四）-编译器前端]()
 - [AI编译器技术剖析（五）-编译器后端]()
 - [AI编译器技术剖析（六）-主流编译框架]()

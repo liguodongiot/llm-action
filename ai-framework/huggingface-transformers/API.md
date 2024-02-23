@@ -9,6 +9,16 @@
 
 
 
+## 保存模型
+
+- model.save_pretrained('./path_to_model/')
+- model.config.to_json_file("config.json")
+
+
+
+
+
+
 
 
 
