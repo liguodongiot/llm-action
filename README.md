@@ -165,32 +165,32 @@
 
 ## LLM压缩
 
-- 模型压缩技术原理（一）：知识蒸馏 
-- 模型压缩技术原理（二）：模型量化
-- 模型压缩技术原理（三）：模型剪枝 
+近年来，随着Transformer、MOE架构的提出，使得深度学习模型轻松突破上万亿规模参数，从而导致模型变得越来越大，因此，我们需要一些大模型压缩技术来降低模型部署的成本，并提升模型的推理性能。
+模型压缩主要分为如下几类：
+
+-   剪枝（Pruning）
+-   知识蒸馏（Knowledge Distillation）
+-   量化
+
 
 
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
+本系列将针对一些常见大模型量化方案（GPTQ、LLM.int8()、SmoothQuant、AWQ等）进行讲述。
+
 - [大模型量化概述](https://www.zhihu.com/question/627484732/answer/3261671478)
+- 量化感知训练：
+    - [大模型量化感知训练技术原理：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
+    - [大模型量化感知微调技术原理：QLoRA]()
+    - PEQA
+- 训练后量化：
+    - [大模型量化技术原理：GPTQ、LLM.int8()](https://zhuanlan.zhihu.com/p/680212402)
+    - [大模型量化技术原理：SmoothQuant](https://www.zhihu.com/question/576376372/answer/3388402085)
+    - [大模型量化技术原理：AWQ、AutoAWQ](https://zhuanlan.zhihu.com/p/681578090)
+    - [大模型量化技术原理：SpQR](https://zhuanlan.zhihu.com/p/682871823)
+    - [大模型量化技术原理：ZeroQuant系列](https://zhuanlan.zhihu.com/p/683813769)
+- [大模型量化技术原理：总结]()
 
-训练后量化：
-
-- [大模型量化技术原理-GPTQ、LLM.int8()](https://zhuanlan.zhihu.com/p/680212402)
-- [大模型量化技术原理-SmoothQuant](https://www.zhihu.com/question/576376372/answer/3388402085)
-- [大模型量化技术原理-AWQ、AutoAWQ](https://zhuanlan.zhihu.com/p/681578090)
-- [大模型量化技术原理-SpQR](https://zhuanlan.zhihu.com/p/682871823)
-- [大模型量化技术原理-ZeroQuant系列]()
-- [大模型量化技术原理-总结]()
-
-量化感知训练：
-
-- [大模型量化感知训练开山之作：LLM-QAT](https://zhuanlan.zhihu.com/p/647589650)
-
-量化感知微调：
-
-- [QLoRA](https://zhuanlan.zhihu.com/p/636215898)
-- PEQA
 
 ### LLM剪枝
 
