@@ -17,7 +17,10 @@ PPL越小越好，PPL越小，p(wi)则越大，也就是说这句话中每个词
 
 
 
+### Rouge
 
+
+https://github.com/Isaac-JL-Chen/rouge_chinese
 
 
 
