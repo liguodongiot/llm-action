@@ -2,7 +2,6 @@
 
 本文给大家分享一篇论文（LESS: Selecting Influential Data for Targeted Instruction Tuning），通过选择有影响力的少量数据进行目标指令调优。
 
-> 文章较长，建议先点赞收藏，后续再慢慢观看。另外，我撰写的**大模型相关的博客及配套代码**均整理放置在Github：[llm-action](https://github.com/liguodongiot/llm-action/tree/main)，有需要的朋友自取。
 
 以下是省流版：
 
@@ -74,7 +73,6 @@ LESS 首先构建具有低维梯度特征的高度**可重用和可转移的梯�
 
 $$
 \ell(z';\theta^{t+1}) \approx \ell(z';\theta^t) + \langle\nabla\ell(z';\theta^t), \theta^{t+1}-\theta^t\rangle 
-
 $$
 
 为了便于说明，假设我们使用批量大小为 $1$、学习率为 $\eta_t$ 的 SGD 来训练模型。如果 $z$  是时间步 t 的训练数据，我们可以将 SGD 更新写为 $\theta^{t+1} - \theta^t = -\eta_t \nabla\ell(z;\theta^t)$。那么泰勒展开式可以写为
