@@ -50,6 +50,12 @@ Adam 优化器示例：
   }
 ```
 
+参数：
+
+- torch_adam: Use torch’s implementation of adam instead of our fused adam implementation ， 默认为false
+ 
+
+
 
 
 ## Scheduler 参数
