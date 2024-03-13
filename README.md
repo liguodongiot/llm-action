@@ -60,6 +60,7 @@
 | MiniGPT-4(LLaMA)            | full fine-turning             | 7B       | [大杀器，多模态大模型MiniGPT-4入坑指南](https://zhuanlan.zhihu.com/p/627671257)                                                                                                                                             | N/A                                                                                      |
 | Chinese-LLaMA-Alpaca(LLaMA) | LoRA（预训练+微调）           | 7B       | [中文LLaMA&amp;Alpaca大语言模型词表扩充+预训练+指令精调](https://zhuanlan.zhihu.com/p/631360711)                                                                                                                            | [配套代码](https://github.com/liguodongiot/llm-action/tree/main/train/chinese-llama-alpaca) |
 | LLaMA                       | QLoRA                         | 7B/65B   | [高效微调技术QLoRA实战，基于LLaMA-65B微调仅需48G显存，真香](https://zhuanlan.zhihu.com/p/636644164)                                                                                                                         | [配套代码](https://github.com/liguodongiot/llm-action/tree/main/train/qlora)                |
+| LLaMA                       | GaLore                         | 60M/7B   | [突破内存瓶颈，使用 GaLore 一张4090消费级显卡也能预训练LLaMA-7B](https://zhuanlan.zhihu.com/p/686686751)   | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/train/galore/torchrun_main.py)  |
 
 **[⬆ 一键返回目录](#目录)**
 
