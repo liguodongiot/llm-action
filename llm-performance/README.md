@@ -1,6 +1,12 @@
 
 
 
+## llm 框架对比
+
+
+- https://github.com/ninehills/llm-inference-benchmark
+
+
 
 ## nvidia-ml-py3、pynvml
 
@@ -32,4 +38,9 @@ def print_gpu_utilization():
     print(f"GPU memory occupied: {info.used//1024**2} MB.")
 
 ```
+
+
+
+
+
 

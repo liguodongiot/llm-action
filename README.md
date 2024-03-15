@@ -41,6 +41,7 @@
 - 💬 [LLM学习交流群](#llm学习交流群)
 - 👥 [微信公众号](#微信公众号)
 - ⭐️ [Star History](#star-history)
+- [AI工程化课程推荐](#ai工程化课程推荐)
 
 ## LLM训练
 
@@ -392,3 +393,15 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=liguodongiot/llm-action&type=Date)](https://star-history.com/#liguodongiot/llm-action&Date)
+
+
+## AI工程化课程推荐
+
+如今人工智能的发展可谓是如火如荼，ChatGPT、Sora、文心一言等AI大模型如雨后春笋般纷纷涌现。AI大模型优势在于它能处理复杂性问题；因此，越来越多的企业需要具备**AI算法设计、AI应用开发、模型推理加速及模型压缩**等AI工程化落地的能力。这就导致行业内的工程师，需要快速提升自身的技术栈，以便于在行业内站稳脚跟。这里给大家推理了一些AI工程化相关课程，![点击]()查看详情。
+
+
+
+
+
+
+

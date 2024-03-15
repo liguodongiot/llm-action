@@ -122,6 +122,59 @@ https://blog.csdn.net/wjinjie/article/details/129733252
 
 
 
+## bitsandbytes
+
+- Exception: cublasLt ran into an error! 
+
+H100 上面使用 LLM.int8()  加载模型进行微调时，目前不支持。
 
 
+https://github.com/TimDettmers/bitsandbytes/issues/538
+
+```
+TimDettmers commented on Nov 2, 2023（作者回复）
+
+This is actually a more complicated issue. The 8-bit implementation uses cuBLASLt which uses special format for 8-bit matrix multiplication. There are special formats for Ampere, Turning, and now Hopper GPUs. Hopper GPUs do not support Ampere or Turing formats. This means multiple CUDA kernels and the cuBLASLt integration need to be implemented to make 8-bit work on Hopper GPUs.
+
+I think for now, the more realistic thing is to throw and error to let the user know that this features is currently not supported.
+
+```
+
+
+- Error named symbol not found at line 74 in file /bitsandbytes/csrc/ops.cu
+
+使用int8 lora 和 qlora 训练都会报错
+
+H800 上面运行报错
+
+H800 支持cuda11.8以上， 但这里需升级cuda到12以上
+
+
+
+
+## FEFT 
+
+
+- element 0 of tensors does not require grad and does not have a grad_fn
+
+使用Lora（FP16加载，而不是LLM.int8加载）微调时报错。
+
+
+https://github.com/huggingface/peft/issues/137
+
+
+以下两种方案均可：
+
+model.enable_input_require_grads() : 启用输入嵌入的梯度。这有助于在保持模型权重固定的同时，对适配器权重进行微调。
+
+
+
+
+PeftModel.from_pretrained(model, peft_model_id, is_trainable=True).to(device) 
+
+
+
+
+- https://github.com/huggingface/transformers/blob/c9e3c0b45419804e11885120e25a35803d1fcf44/src/transformers/modeling_utils.py#L1559
+- https://github.com/huggingface/peft/blob/6008f272a565f56c146c5d9fd78d00cb24392d7b/src/peft/peft_model.py#L284
 
