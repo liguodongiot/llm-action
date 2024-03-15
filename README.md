@@ -397,9 +397,7 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 
 ## AI工程化课程推荐
 
-如今人工智能的发展可谓是如火如荼，ChatGPT、Sora、文心一言等AI大模型如雨后春笋般纷纷涌现。AI大模型优势在于它能处理复杂性问题；因此，越来越多的企业需要具备**AI算法设计、AI应用开发、模型推理加速及模型压缩**等AI工程化落地的能力。这就导致行业内的工程师，需要快速提升自身的技术栈，以便于在行业内站稳脚跟。这里给大家推理了一些AI工程化相关课程，![点击]()查看详情。
-
-
+如今人工智能的发展可谓是如火如荼，ChatGPT、Sora、文心一言等AI大模型如雨后春笋般纷纷涌现。AI大模型优势在于它能处理复杂性问题；因此，越来越多的企业需要具备**AI算法设计、AI应用开发、模型推理加速及模型压缩**等AI工程化落地的能力。这就导致行业内的工程师，需要快速提升自身的技术栈，以便于在行业内站稳脚跟。我在[llm-resource](https://github.com/liguodongiot/llm-resource) 和 [ai-system](https://github.com/liguodongiot/ai-system)梳理了一些大模型和AI工程化相关资料，同时，推荐一些AI工程化的相关课程，[点击](https://mp.weixin.qq.com/s?__biz=MzU3Mzg5ODgxMg==&mid=2247487651&idx=1&sn=48a3e2729bd0bd3b195c2cb1d45798af&chksm=fd3bf9f0ca4c70e673ac8ec29d2c0f8f17e319b6a88c0741e0dc665d5b3a588e4e51f155452e&token=1188452664&lang=zh_CN#rd)查看详情。
 
 
 
