@@ -2,7 +2,7 @@
 
 - https://github.com/ray-project/llmperf-leaderboard
 - https://github.com/ray-project/llmperf
-
+- 指标定义：https://github.com/ray-project/llmperf/blob/main/src/llmperf/common_metrics.py
 
 
 - 可复现的语言大模型推理性能指标: https://zhuanlan.zhihu.com/p/667612787
