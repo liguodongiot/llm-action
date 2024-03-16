@@ -51,7 +51,7 @@ experiments/
     ├── githash.log
     ├── hparams.json
     └── tb_dir
-        └── events.out.tfevents.1686659679.ai-app-2-46-msxf.54673.0
+        └── events.out.tfevents.1686659679.ai-app-2-46.54673.0
 
 ```
 
