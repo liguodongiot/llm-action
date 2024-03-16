@@ -790,7 +790,7 @@ if __name__ == "__main__":
     np.random.seed(0)
     random.seed(0)
     fire.Fire(train)
-(llama-venv-py310-cu117) [guodong.li@ai-app-2-46-msxf HelloDeepSpeed]$ cat train_bert_ds.py
+(llama-venv-py310-cu117) [guodong.li@ai-app-2-46 HelloDeepSpeed]$ cat train_bert_ds.py
 """
 Modified version of train_bert.py that adds DeepSpeed
 """
