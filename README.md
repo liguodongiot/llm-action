@@ -160,7 +160,8 @@
 - [LLM微调高效数据筛选技术原理-MoDS]()
 - [LLM微调高效数据筛选技术原理-IFD]()
 - [LLM微调高效数据筛选技术原理-CaR]()
-
+- [LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调](https://zhuanlan.zhihu.com/p/686007325)
+- [LESS 实践：用少量的数据进行目标指令微调](https://zhuanlan.zhihu.com/p/686687923)
 
 
 **[⬆ 一键返回目录](#目录)**
@@ -368,7 +369,6 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 - [为什么很多新发布的大模型默认使用BF16而不是FP16？](https://www.zhihu.com/question/616600181/answer/3195333332)
-- [LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调](https://zhuanlan.zhihu.com/p/686007325)
 
 
 
