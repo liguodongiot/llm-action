@@ -17,11 +17,13 @@
 
 - 🔥 [LLM训练](#llm训练)
   - 🐫 [LLM训练实战](#llm训练实战)
-  - 🐼 [LLM参数高效微调技术原理综述](#llm微调技术原理)
+  - 🐼 [LLM参数高效微调技术原理](#llm微调技术原理)
   - 🐰 [LLM参数高效微调技术实战](#llm微调实战)
   - 🐘 [LLM分布式训练并行技术](#llm分布式训练并行技术)
   - 🌋 [分布式AI框架](#分布式ai框架)
   - 📡 [分布式训练网络通信](#分布式训练网络通信)
+  - :herb: [LLM训练优化技术](#llm训练优化技术)
+- :dolphin: [LLM微调高效数据筛选技术原理](#llm微调高效数据筛选技术原理)
 - 🐎 [LLM推理](#llm推理)
   - 🚀 [LLM推理框架](#llm推理框架)
   - ✈️ [LLM推理优化技术](#llm推理优化技术)
@@ -141,6 +143,26 @@
 待更新...
 
 
+### LLM训练优化技术
+
+- FlashAttention V1、V2
+- 混合精度训练
+- 重计算
+- MQA / GQA
+- 梯度累积
+
+
+
+## LLM微调高效数据筛选技术原理
+
+
+- [LLM微调高效数据筛选技术原理-DEITA]()
+- [LLM微调高效数据筛选技术原理-MoDS]()
+- [LLM微调高效数据筛选技术原理-IFD]()
+- [LLM微调高效数据筛选技术原理-CaR]()
+
+
+
 **[⬆ 一键返回目录](#目录)**
 
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
@@ -163,8 +185,11 @@
 ### LLM推理优化技术
 
 - [LLM推理优化技术概述]()
-- PageAttention
 - FlashAttention
+- Continuous Batching
+- KV Cache
+- Flash Decoding
+
 
 ## LLM压缩
 
@@ -174,8 +199,6 @@
 -   剪枝（Pruning）
 -   知识蒸馏（Knowledge Distillation）
 -   量化
-
-
 
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
@@ -196,7 +219,6 @@
 
 
 ### LLM剪枝
-
 
 **结构化剪枝**：
 

@@ -32,6 +32,10 @@
 
 
 
+自动混合精度
+
+- https://github.com/Azure/MS-AMP
+- FP8-LM
 
 
 

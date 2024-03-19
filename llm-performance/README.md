@@ -10,7 +10,7 @@
 
 ## nvidia-ml-py3、pynvml
 
-- Model training anatomy：https://huggingface.co/docs/transformers/model_memory_anatomy
+- Model training anatomy(模型训练解剖 - huggingface )：https://huggingface.co/docs/transformers/model_memory_anatomy
 - https://www.cnblogs.com/devilmaycry812839668/p/15563995.html
 - BERT优化技术：https://www.jianshu.com/p/c9c34c5f7bcb
 
