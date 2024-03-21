@@ -23,7 +23,6 @@
   - 🌋 [分布式AI框架](#分布式ai框架)
   - 📡 [分布式训练网络通信](#分布式训练网络通信)
   - :herb: [LLM训练优化技术](#llm训练优化技术)
-- :dolphin: [LLM微调高效数据筛选技术原理](#llm微调高效数据筛选技术原理)
 - 🐎 [LLM推理](#llm推理)
   - 🚀 [LLM推理框架](#llm推理框架)
   - ✈️ [LLM推理优化技术](#llm推理优化技术)
@@ -32,6 +31,8 @@
   - 🔰 [LLM剪枝](#llm剪枝)
   - 💹 [LLM知识蒸馏](#llm知识蒸馏)
   - ♑️ [低秩分解](#低秩分解)
+- :palm_tree: [LLM数据工程（Data Engineering）](#llm数据工程)
+  - :dolphin: [LLM微调高效数据筛选技术](#llm微调高效数据筛选技术)
 - ♍️ [LLM算法架构](#llm算法架构)
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - 🀄️ [LLM国产化适配](#llm国产化适配)
@@ -153,16 +154,6 @@
 
 
 
-## LLM微调高效数据筛选技术原理
-
-
-- [LLM微调高效数据筛选技术原理-DEITA]()
-- [LLM微调高效数据筛选技术原理-MoDS]()
-- [LLM微调高效数据筛选技术原理-IFD]()
-- [LLM微调高效数据筛选技术原理-CaR]()
-- [LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调](https://zhuanlan.zhihu.com/p/686007325)
-- [LESS 实践：用少量的数据进行目标指令微调](https://zhuanlan.zhihu.com/p/686687923)
-
 
 **[⬆ 一键返回目录](#目录)**
 
@@ -190,6 +181,7 @@
 - Continuous Batching
 - KV Cache
 - Flash Decoding
+- FlashDecoding++
 
 
 ## LLM压缩
@@ -270,6 +262,26 @@ Instruction Following：
 
 - ZeroQuant-FP（低秩分解+量化）
 - LoRAPrune（低秩分解+剪枝）
+
+
+## LLM数据工程
+
+
+### 预训练语料
+
+- 数据收集
+- 数据处理
+
+
+### LLM微调高效数据筛选技术
+
+- [LLM微调高效数据筛选技术原理-DEITA]()
+- [LLM微调高效数据筛选技术原理-MoDS]()
+- [LLM微调高效数据筛选技术原理-IFD]()
+- [LLM微调高效数据筛选技术原理-CaR]()
+- [LESS：仅选择5%有影响力的数据优于全量数据集进行目标指令微调](https://zhuanlan.zhihu.com/p/686007325)
+- [LESS 实践：用少量的数据进行目标指令微调](https://zhuanlan.zhihu.com/p/686687923)
+
 
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
