@@ -31,7 +31,7 @@
   - 🔰 [LLM剪枝](#llm剪枝)
   - 💹 [LLM知识蒸馏](#llm知识蒸馏)
   - ♑️ [低秩分解](#低秩分解)
-- :palm_tree: [LLM数据工程（Data Engineering）](#llm数据工程)
+- :palm_tree: [LLM数据工程](#llm数据工程)
   - :dolphin: [LLM微调高效数据筛选技术](#llm微调高效数据筛选技术)
 - ♍️ [LLM算法架构](#llm算法架构)
 - :jigsaw: [LLM应用开发](#llm应用开发)
@@ -265,6 +265,8 @@ Instruction Following：
 
 
 ## LLM数据工程
+
+LLM Data Engineering
 
 
 ### 预训练语料
