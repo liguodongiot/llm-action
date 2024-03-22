@@ -58,5 +58,4 @@ add_generation_prompt = False
 rendered_chat = compiled_template.render(
     messages=chat, system=system, user=user, add_prompt=True, prompt = prompt, add_generation_prompt=add_generation_prompt
 )
-# rendered_chat+="</s>"
 print(rendered_chat)

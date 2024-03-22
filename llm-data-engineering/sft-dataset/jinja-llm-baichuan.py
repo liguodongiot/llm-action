@@ -8,18 +8,15 @@ system = "system"
 user = "user"
 
 chat_template=(
-"{% if add_prompt %}"
-"{{ '<|system|>\n' + prompt + '\n'}}"
-"{% endif %}"
 "{% for message in messages %}"
-"{% if message['role'] == 'system' %}"
-"{{'<|user|>\n' + message['content'] + '\n'}}"
-"{% elif message['role'] == 'user' %}"
-"{{'<|assistant|>\n' + message['content'] + '\n'}}"
+"{% if message['role'] == 'user' %}"
+"{{ '<reserved_102>' + message['content'] }}"
+"{% elif message['role'] == 'assistant' %}"
+"{{ '<reserved_103>' + message['content'] + '</s>'}}"
 "{% endif %}"
 "{% endfor %}"
-"{% if add_generation_prompt %}"
-"{{ '<|assistant|>\n' }}"
+"{% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}"
+"{{ '<reserved_103>' }}"
 "{% endif %}"
 )
 
@@ -37,18 +34,22 @@ prompt="You are a helpful assistant."
 
 chat = [
         {
-            "role": "system",
+            "role": "user",
             "content": "What is your name?"
         },
         {
-            "role": "user",
+            "role": "assistant",
             "content": "My name is Qwen."
+        },
+        {
+            "role": "user",
+            "content": "What is your name?"
         }
     ]
 
 add_generation_prompt = True
 rendered_chat = compiled_template.render(
-    messages=chat, system=system, user=user, add_prompt=True, prompt = prompt, add_generation_prompt=add_generation_prompt
+    messages=chat, system=system, user=user, add_generation_prompt=add_generation_prompt
 )
 print(rendered_chat)
 
@@ -56,7 +57,6 @@ print("--------------------train")
 
 add_generation_prompt = False
 rendered_chat = compiled_template.render(
-    messages=chat, system=system, user=user, add_prompt=True, prompt = prompt, add_generation_prompt=add_generation_prompt
+    messages=chat, system=system, user=user, add_generation_prompt=add_generation_prompt
 )
-# rendered_chat+="</s>"
 print(rendered_chat)
