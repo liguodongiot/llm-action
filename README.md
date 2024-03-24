@@ -33,6 +33,7 @@
   - ♑️ [低秩分解](#低秩分解)
 - :palm_tree: [LLM数据工程](#llm数据工程)
   - :dolphin: [LLM微调高效数据筛选技术](#llm微调高效数据筛选技术)
+- :cyclone: [提示工程](#提示工程)
 - ♍️ [LLM算法架构](#llm算法架构)
 - :jigsaw: [LLM应用开发](#llm应用开发)
 - 🀄️ [LLM国产化适配](#llm国产化适配)
@@ -271,7 +272,7 @@ Instruction Following：
 LLM Data Engineering
 
 
-### 预训练语料
+### 预训练语料处理技术
 
 - 数据收集
 - 数据处理
@@ -287,7 +288,20 @@ LLM Data Engineering
 - [LESS 实践：用少量的数据进行目标指令微调](https://zhuanlan.zhihu.com/p/686687923)
 
 
+## 提示工程
+
+- Zero-Shot Prompting
+- Few-Shot Prompting
+- Chain-of-Thought (CoT) Prompting
+- Automatic Chain-of-Thought (Auto-CoT) Prompting
+- Tree-of-Thoughts (ToT) Prompting
+
+
+
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
+
+![llm-famliy](./pic/llm/model/llm-famliy.jpg)
+
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
 - ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
@@ -295,6 +309,11 @@ LLM Data Engineering
 - LLaMA / LLaMA2 大模型解析
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
+
+
+
+
+
 
 
 ## LLM应用开发
