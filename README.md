@@ -77,6 +77,9 @@
 
 因此，该技术值得我们进行深入分析其背后的机理，本系列大体分七篇文章进行讲解。
 
+![peft方法](./pic/llm/train/sft/peft方法.jpg)
+
+
 - [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://zhuanlan.zhihu.com/p/635152813)
 - [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://zhuanlan.zhihu.com/p/635686756)
 - [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://zhuanlan.zhihu.com/p/635848732)
