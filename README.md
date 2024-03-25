@@ -276,6 +276,8 @@ LLM Data Engineering
 
 ### 预训练语料处理技术
 
+![llm-pretrain-pipeline](./pic/llm/train/pretrain/llm-pretrain-pipeline.png)
+
 - 数据收集
 - 数据处理
 
@@ -306,6 +308,9 @@ LLM Data Engineering
 
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
+
+![llm-famliy](./pic/llm/model/llm-timeline.png)
+
 - ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
