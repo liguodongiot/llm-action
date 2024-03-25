@@ -305,12 +305,12 @@ LLM Data Engineering
 
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
-![llm-famliy](./pic/llm/model/llm-famliy-v2.jpg)
+![llm-famliy](./pic/llm/model/llm-famliy.jpg)
 
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
 
-![llm-famliy](./pic/llm/model/llm-timeline.png)
+![llm-famliy](./pic/llm/model/llm-timeline-v2.png)
 
 - ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
 - Bloom 大模型解析
