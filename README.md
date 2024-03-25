@@ -276,7 +276,7 @@ LLM Data Engineering
 
 ### 预训练语料处理技术
 
-![llm-pretrain-pipeline](./pic/llm/train/pretrain/llm-pretrain-pipeline.png)
+![llm-pretrain-pipeline](./pic/llm/train/pretrain/llm-pretrain-pipeline-v2.png)
 
 - 数据收集
 - 数据处理
@@ -305,7 +305,7 @@ LLM Data Engineering
 
 ## [LLM算法架构](https://github.com/liguodongiot/llm-action/tree/main/docs/llm-base/ai-algo)
 
-![llm-famliy](./pic/llm/model/llm-famliy.jpg)
+![llm-famliy](./pic/llm/model/llm-famliy-v2.jpg)
 
 
 - [大模型算法演进](https://zhuanlan.zhihu.com/p/600016134)
