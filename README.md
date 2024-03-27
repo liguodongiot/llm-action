@@ -220,13 +220,17 @@
 
 **结构化剪枝**：
 
-- LLM-Pruner
+- LLM-Pruner(LLM-Pruner: On the Structural Pruning of Large Language Models)
 
 **非结构化剪枝**：
 
-- SparseGPT
-- LoRAPrune
-- Wanda
+- SparseGPT(SparseGPT: Massive Language Models Can be Accurately Pruned in One-Shot)
+- LoRAPrune(LoRAPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning)
+- Wanda(A Simple and Effective Pruning Approach for Large Language Models)
+- Flash-LLM(Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity)
+
+
+
 
 ### LLM知识蒸馏
 
@@ -317,9 +321,6 @@ LLM Data Engineering
 - LLaMA / LLaMA2 大模型解析
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
-
-
-
 
 
 
