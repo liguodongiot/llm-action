@@ -183,6 +183,7 @@
 
 - [LLM推理优化技术概述]()
 - FlashAttention
+- PagedAttention
 - Continuous Batching
 - KV Cache
 - Flash Decoding
@@ -221,6 +222,8 @@
 **结构化剪枝**：
 
 - LLM-Pruner(LLM-Pruner: On the Structural Pruning of Large Language Models)
+- LLM-Shearing(Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning)
+
 
 **非结构化剪枝**：
 

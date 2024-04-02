@@ -23,3 +23,9 @@ max_split_size_mb 阻止原生（native）分配器分割大于此大小（MB）
 默认值没有限制，即所有块都可以分割。memory_stats()和 memory_summary()方法可用于调整。如果工作负载因 "内存不足 "而终止，并显示大量未活动的分割块，则应在万不得已时使用该选项。 max_split_size_mb 只对 backend:native 有意义。在使用 backend:cudaMallocAsync 时，max_split_size_mb 将被忽略。
 
 - 官方：https://pytorch.org/docs/stable/notes/cuda.html
+
+
+
+
+
+
