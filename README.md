@@ -219,6 +219,9 @@
 
 ### LLM剪枝
 
+- [大模型剪枝概述](https://www.zhihu.com/question/652126515/answer/3457652467)
+
+
 **结构化剪枝**：
 
 - LLM-Pruner(LLM-Pruner: On the Structural Pruning of Large Language Models)

@@ -278,7 +278,7 @@ torch_npu:
 
 torch_npu(Ascend Adapter for PyTorch插件)使昇腾NPU可以适配PyTorch框架，为使用PyTorch框架的开发者提供昇腾AI处理器的超强算力。
 
-https://gitee.com/ascend/pytorch
+- https://gitee.com/ascend/pytorch
 
 
 
@@ -319,3 +319,27 @@ https://gitee.com/ascend/pytorch
 - 全参微调、Lora微调
 - ModelLink
 - https://gitee.com/ascend/ModelLink/tree/master/modellink/tasks/inference/text_generation
+
+
+
+
+## 推理
+
+
+- https://gitee.com/mindspore/llm-serving
+- https://gitee.com/mindspore/serving
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

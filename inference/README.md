@@ -22,3 +22,6 @@
 
 - AWQ、AutoAWQ
 
+llama.cpp、vllm、lightLLM、fastLLM
+
+
