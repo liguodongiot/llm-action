@@ -349,9 +349,9 @@ LLM Data Engineering
 - [大模型国产化适配2-基于昇腾910使用ChatGLM-6B进行模型推理](https://zhuanlan.zhihu.com/p/650730807)
 - [大模型国产化适配3-基于昇腾910使用ChatGLM-6B进行模型训练](https://zhuanlan.zhihu.com/p/651324599)
 - [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://zhuanlan.zhihu.com/p/655902796)
-- [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://juejin.cn/post/7291513759470960679)
+- [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://zhuanlan.zhihu.com/p/665807431)
 - [大模型国产化适配6-基于昇腾910B快速验证ChatGLM3-6B/BaiChuan2-7B模型推理](https://zhuanlan.zhihu.com/p/677799157)
-
+- [大模型国产化适配7-华为昇腾LLM落地可选解决方案（MindFormers、ModelLink、MindIE）](https://zhuanlan.zhihu.com/p/692377206)
 
 
 **[⬆ 一键返回目录](#目录)**

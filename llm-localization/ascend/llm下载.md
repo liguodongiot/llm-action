@@ -19,6 +19,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 
 
 huggingface-cli download --token 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 --resume-download Baichuan2-7B-Base --local-dir Baichuan2-7B-Base
+
 huggingface-cli download --token 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 --resume-download baichuan-inc/Baichuan2-7B-Chat --local-dir Baichuan2-7B-Chat --local-dir-use-symlinks False
 
 
@@ -28,6 +29,9 @@ nohup huggingface-cli download --token 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 --r
 
 nohup huggingface-cli download --token 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 --resume-download THUDM/chatglm3-6b --local-dir chatglm3-6b-chat --local-dir-use-symlinks False > chatglm3.log 2>&1 &
 
+
+
+nohup huggingface-cli download --token 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 --resume-download Qwen/Qwen-72B-Chat --local-dir Qwen-72B-Chat --local-dir-use-symlinks False > qwen-72b.log 2>&1 &
 
 
 ```

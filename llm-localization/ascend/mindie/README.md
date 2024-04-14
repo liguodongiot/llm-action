@@ -2,11 +2,7 @@
 
 
 
-
-
-
 ```
-
 docker run -it -u root --name=mindie_server_t35 --net=host --ipc=host \
 --device=/dev/davinci0 \
 --device=/dev/davinci1 \

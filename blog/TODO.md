@@ -10,3 +10,9 @@ llm推理优化技术：
 
 
 
+
+
+- 大模型优化技术-FlashAttention V1/V2 
+- 大模型显存优化技术-KV Cache 
+- 大模型推理服务调度优化技术-Continuous batching 
+- 大模型显存优化技术-PagedAttention 
