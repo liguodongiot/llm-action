@@ -9,6 +9,11 @@
 
 - https://gitee.com/ascend/ModelLink
 
+
+- 昇腾Ascend处理器相关介绍：https://huahuaboy.blog.csdn.net/article/details/127171363
+- AI芯片：华为Ascend（昇腾）910结构分析：https://blog.csdn.net/evolone/article/details/100061616
+
+
 ## 海光
 
 

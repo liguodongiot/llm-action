@@ -220,6 +220,7 @@
 ### LLM剪枝
 
 - [大模型剪枝概述](https://www.zhihu.com/question/652126515/answer/3457652467)
+- [万字长文谈深度神经网络剪枝综述](https://zhuanlan.zhihu.com/p/692858636?)
 
 
 **结构化剪枝**：
@@ -381,7 +382,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 
 ## AI基础设施
 
-- [AI 集群基础设施 NVMe SSD 详解](https://juejin.cn/post/7311604023184162835)
+- [AI 集群基础设施 NVMe SSD 详解](https://zhuanlan.zhihu.com/p/672098336)
 - [AI 集群基础设施 InfiniBand 详解](https://zhuanlan.zhihu.com/p/673903240)
 - [大模型训练基础设施：算力篇]()
 
@@ -419,7 +420,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [ChatGLM 和 ChatGPT 的技术区别在哪里？](https://www.zhihu.com/question/604393963/answer/3061358152)
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 - [为什么很多新发布的大模型默认使用BF16而不是FP16？](https://www.zhihu.com/question/616600181/answer/3195333332)
-
+- [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
 
 
 **[⬆ 一键返回目录](#目录)**
