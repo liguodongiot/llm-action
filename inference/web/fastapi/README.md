@@ -1,5 +1,10 @@
 
 ```
+uvicorn llm-server:app --host 0.0.0.0 --port 8000 --reload
+```
+
+
+```
 from typing import Optional
 from pydantic import BaseModel, Field
  
