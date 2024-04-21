@@ -291,7 +291,10 @@ LLM Data Engineering
 
 - 数据收集
 - 数据处理
-
+  - 去重
+  - 过滤
+  - 选择
+  - 组合
 
 ### LLM微调高效数据筛选技术
 
@@ -328,8 +331,8 @@ LLM Data Engineering
 - LLaMA / LLaMA2 大模型解析
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
-
-
+- [LLaMA3 技术剖析](https://www.zhihu.com/question/653374932/answer/3470909634)
+- QWen 大模型剖析
 
 
 ## LLM应用开发
@@ -376,8 +379,6 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - MLIR
 - XLA
 - TVM
-
-
 
 
 ## AI基础设施
