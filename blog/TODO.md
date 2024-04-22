@@ -12,11 +12,13 @@ llm推理优化技术：
 
 大模型优化技术
 
-- 大模型显存I/O优化技术-FlashAttention V1/V2 
-- 大模型显存优化技术-PagedAttention
 - 大模型显存优化技术-KV Cache 
+- 大模型推理优化技术-Flash-Decoding 
+- 大模型显存优化技术-PagedAttention
+- 大模型显存I/O优化技术-FlashAttention V1
 - 大模型显存优化技术-ZeRO系列
 - 大模型解码优化-Speculative Decoding及其变体
 - 大模型推理服务化调度优化技术-Dynamic batching/Continuous batching 
+- 大模型显存优化技术-混合精度训练
 
-
+- 大模型显存I/O优化技术-FlashAttention V2 

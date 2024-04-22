@@ -1,3 +1,4 @@
+
 {
     "OtherParam":
     {
@@ -39,15 +40,15 @@
     "ModelDeployParam":
     {
         "maxSeqLen" : 2560,
-        "npuDeviceIds" : [[0,1,2,3,4,5,6,7]],
+        "npuDeviceIds" : [[0,1,2,3]],
         "ModelParam" : [
             {
                 "modelInstanceType": "Standard",
-                "modelName" : "qwen-72b",
-                "modelWeightPath" : "/workspace/aicc/model_from_hf/qwen-72b-chat-hf",
-                "worldSize" : 8,
+                "modelName" : "baichuan2-7b",
+                "modelWeightPath" : "/workspace/aicc/model_from_hf/Baichuan2-7B-Chat",
+                "worldSize" : 4,
                 "cpuMemSize" : 5,
-                "npuMemSize" : 30,
+                "npuMemSize" : 16,
                 "backendType": "atb"
             }
         ]
