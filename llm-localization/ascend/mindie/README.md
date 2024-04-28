@@ -89,3 +89,20 @@ Page Attention的启动脚本路径为${llm_path}/examples/run_pa.py
 
 
 
+## 镜像
+
+
+
+- https://ascendhub.huawei.com/#/detail/mindie
+
+```
+# 获取登录访问权限，输入已设置的“镜像下载凭证”,如果未设置或凭证超过24小时过期,请点击登录用户名下拉设置镜像下载凭证
+docker login -u 157xxxx4031 ascendhub.huawei.com
+
+# 下载镜像 
+docker pull ascendhub.huawei.com/public-ascendhub/mindie:1.0.RC1-800I-A2-aarch64
+```
+
+
+
+
