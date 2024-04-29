@@ -138,17 +138,39 @@ docker exec -itu root mindie-dev bash
 
 cd /opt/package
 # 安装CANN包
-source install_and_enable_cann.sh
+source ./install_and_enable_cann.sh
+
+
 # 若退出后重新进入容器，则需要重新加载 CANN 环境变量，执行以下三行命令
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 source /usr/local/Ascend/mindie/set_env.sh
 source /usr/local/Ascend/llm_model/set_env.sh
 
 
+vim /usr/local/Ascend/mindie/latest/mindie-service/conf/config.json
+
+- /home/aicc/model_from_hf/Qwen1.5-14B-Chat
+
+
+
 
 export PYTHONPATH=/usr/local/Ascend/llm_model:$PYTHONPATH
 cd /usr/local/Ascend/mindie/latest/mindie-service/bin
 ./mindieservice_daemon
+
+
+
+```
+
+```
+transformers==4.30.2
+
+
+pip install transformers==4.37.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+"torch_dtype": "bfloat16"  改为 "float16" 
 ```
 
 
@@ -156,7 +178,9 @@ cd /usr/local/Ascend/mindie/latest/mindie-service/bin
 
 
 
-
+```
+docker build --network=host  -f mindie-1.0.Dockerfile -t ascendhub.huawei.com/public-ascendhub/mindie-service-env:1.0.RC1-800I-A2-aarch64 .
+```
 
 
 

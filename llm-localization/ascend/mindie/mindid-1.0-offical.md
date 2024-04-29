@@ -1,5 +1,8 @@
 # README
 
+
+- https://www.hiascend.com/document/detail/zh/mindie/10RC1/description/whatismindie/mindie_what_0000.html
+
 - 此README对各模型统一的脚本及其使用方式进行介绍
 
 ## 路径变量解释

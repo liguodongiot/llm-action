@@ -1,4 +1,5 @@
 
+- https://www.hiascend.com/document/detail/zh/mindie/10RC1/description/whatismindie/mindie_what_0000.html
 
 
 

@@ -34,6 +34,7 @@
 | pandas                        | 0.8.2  |
 
 ### 下载模型权重
+
 下载模型权重，放置到自定义`${model_download_path}` (请下载链接中'Files and versions'页签下的所有文件)
 ```
 https://huggingface.co/Qwen/Qwen-72B
