@@ -1,6 +1,5 @@
 
-
-
+NVIDIA A100 80GB PCIe GPU: https://www.edomtech.com.cn/product-detail/nvidia-a100-80gb-pcie-gpu/
 
 ## Nvidia GPU
 

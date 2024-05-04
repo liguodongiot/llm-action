@@ -110,14 +110,10 @@ python examples/run_pa.py --model_path ${CHECKPOINT} --input_texts "What is deep
 
 # docker rm -f mindie-dev
 
-docker run --name mindie-dev -it -d --net=host --ipc=host \
+docker run --name mindie-dev2 -it -d --net=host --ipc=host \
 --shm-size=50g \
 --privileged=true \
 -w /home \
---device=/dev/davinci0 \
---device=/dev/davinci1 \
---device=/dev/davinci2 \
---device=/dev/davinci3 \
 --device=/dev/davinci_manager \
 --device=/dev/hisi_hdc \
 --device=/dev/devmm_svm \
@@ -132,7 +128,7 @@ docker run --name mindie-dev -it -d --net=host --ipc=host \
 ascendhub.huawei.com/public-ascendhub/mindie:1.0.RC1-800I-A2-aarch64
 
 
-docker exec -itu root mindie-dev bash
+docker exec -itu root mindie-dev2 bash
 
 
 
@@ -146,6 +142,7 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 source /usr/local/Ascend/mindie/set_env.sh
 source /usr/local/Ascend/llm_model/set_env.sh
 
+rm /usr/local/Ascend/mindie/latest/mindie-service/conf/config.json
 
 vim /usr/local/Ascend/mindie/latest/mindie-service/conf/config.json
 
@@ -174,13 +171,6 @@ pip install transformers==4.37.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 
-
-
-
-
-```
-docker build --network=host  -f mindie-1.0.Dockerfile -t ascendhub.huawei.com/public-ascendhub/mindie-service-env:1.0.RC1-800I-A2-aarch64 .
-```
 
 
 
