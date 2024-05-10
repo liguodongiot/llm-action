@@ -13,7 +13,7 @@
         },
         "ServeParam" :
         {
-            "ipAddress" : "0.0.0.0",
+            "ipAddress" : "127.0.0.1",
             "port" : 1025,
             "maxLinkNum" : 300,
             "httpsEnabled" : false,
@@ -39,15 +39,15 @@
     "ModelDeployParam":
     {
         "maxSeqLen" : 2560,
-        "npuDeviceIds" : [[0,1]],
+        "npuDeviceIds" : [[0,1,2,3,4,5,6,7]],
         "ModelParam" : [
             {
                 "modelInstanceType": "Standard",
-                "modelName" : "chatglm3-6b",
-                "modelWeightPath" : "/home/aicc/model_from_hf/chatglm3-6b-chat-full",
-                "worldSize" : 2,
+                "modelName" : "qwen-72b",
+                "modelWeightPath" : "/home/aicc/model_from_hf/qwen-72b-chat-hf",
+                "worldSize" : 8,
                 "cpuMemSize" : 5,
-                "npuMemSize" : 16,
+                "npuMemSize" : 10,
                 "backendType": "atb"
             }
         ]

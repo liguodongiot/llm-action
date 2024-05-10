@@ -1,6 +1,8 @@
 
 
 
+## 进入容器内
+
 ```
 ascendhub.huawei.com/public-ascendhub/mindie:1.0.RC1-800I-A2-aarch64
 
@@ -40,7 +42,7 @@ docker save -o  mindie-service-env.tar ascendhub.huawei.com/public-ascendhub/min
 ```
 
 
-
+## 启动服务
 
 ```
 
@@ -92,6 +94,177 @@ docker run  -it --rm --net=host --ipc=host \
 ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
 
 
+
 ```
+
+### qwen1.5
+
+
+```
+docker run  -it --rm --net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/qwen1.5-14b.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+
+```
+
+
+
+
+### qwen1
+
+
+```
+docker run  -it --rm --net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/qwen-72b.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+```
+
+
+### baichuan2
+
+```
+docker run  -it --rm \
+--net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/baichuan2-7b.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+```
+
+```
+docker run  -it --rm \
+--net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/baichuan2-7b-4tp.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+```
+
+
+
+
+
+
+
+### chatglm3
+
+
+```
+docker run  -it --rm \
+--net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/chatglm3-6b.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+```
+
+
+
+
+```
+docker run  -it --rm \
+--net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/chatglm3-6b-4tp.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+```
+
+
+```
+docker run  -it --rm \
+--net=host --ipc=host \
+--shm-size=50g \
+--privileged=true \
+-w /home \
+--device=/dev/davinci_manager \
+--device=/dev/hisi_hdc \
+--device=/dev/devmm_svm \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/dcmi:/usr/local/dcmi \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /usr/local/sbin:/usr/local/sbin \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+-v /home/aicc/docker/chatglm3-6b-1tp.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+```
+
+
+
+
+
+
 
 
