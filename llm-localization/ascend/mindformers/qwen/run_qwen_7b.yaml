@@ -109,7 +109,7 @@ model:
     layernorm_compute_type: "float32"
     softmax_compute_type: "float16"
     rotary_dtype: "float16"
-    param_init_type: "float16"
+    param_init_type: "float32"
     use_past: True
     use_flash_attention: False
     use_paged_attention: False  # only supported in mslite inference
