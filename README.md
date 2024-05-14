@@ -361,12 +361,16 @@ LLM Data Engineering
 - [大模型国产化适配1-华为昇腾AI全栈软硬件平台总结](https://zhuanlan.zhihu.com/p/637918406)
 - [大模型国产化适配2-基于昇腾910使用ChatGLM-6B进行模型推理](https://zhuanlan.zhihu.com/p/650730807)
 - [大模型国产化适配3-基于昇腾910使用ChatGLM-6B进行模型训练](https://zhuanlan.zhihu.com/p/651324599)
+  - MindRecord数据格式说明、全量微调、LoRA微调
 - [大模型国产化适配4-基于昇腾910使用LLaMA-13B进行多机多卡训练](https://zhuanlan.zhihu.com/p/655902796)
 - [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://zhuanlan.zhihu.com/p/665807431)
 - [大模型国产化适配6-基于昇腾910B快速验证ChatGLM3-6B/BaiChuan2-7B模型推理](https://zhuanlan.zhihu.com/p/677799157)
 - [大模型国产化适配7-华为昇腾LLM落地可选解决方案（MindFormers、ModelLink、MindIE）](https://zhuanlan.zhihu.com/p/692377206)
 - [MindIE 1.0.RC1 发布，华为昇腾终于推出了针对LLM的完整部署方案，结束小米加步枪时代](https://www.zhihu.com/question/654472145/answer/3482521709)
 - [大模型国产化适配8-基于昇腾MindIE推理工具部署Qwen-72B实战（推理引擎、推理服务化）](https://juejin.cn/post/7365879319598727180)
+  - Qwen-72B、Baichuan2-7B、ChatGLM3-6B
+
+
 
 
 

@@ -318,6 +318,10 @@ yum install -y tree
 ```
 
 
+
+
+
+
 ## 安装 git-lfs
 
 EulerOS和openEuler使用以下命令安装：
@@ -347,11 +351,26 @@ ssh 183.66.251.xxx
 ```
 
 
+## Vim中文乱码
+
+修改vimrc文件： 
+- vim /etc/vim/vimrc 
+- vim /etc/vimrc
+
+```
+# 在vimrc文件中添加如下内容 
+
+set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom 
+set termencoding=utf-8 
+set encoding=utf-8 
+```
+
 
 ## 安装MindSpore
 
-配置环境变量
 
+
+配置环境变量
 
 如果昇腾AI处理器配套软件包没有安装在默认路径，安装好MindSpore之后，需要导出Runtime相关环境变量。
 
