@@ -105,5 +105,18 @@ docker pull ascendhub.huawei.com/public-ascendhub/mindie:1.0.RC1-800I-A2-aarch64
 ```
 
 
+## 迁移
+
+```
+docker save -o mindie-1.0.tar ascendhub.huawei.com/public-ascendhub/mindie:1.0.RC1-800I-A2-aarch64
+
+scp root@192.xxx.16.211:/root/mindie-1.0.tar .
+
+# 断点续传
+rsync -P --rsh=ssh -r root@192.xxx.16.211:/root/mindie-1.0.tar .
+```
+
+
+
 
 

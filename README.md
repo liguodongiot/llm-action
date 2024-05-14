@@ -194,7 +194,7 @@
 - FlashAttention
 - PagedAttention
 - Continuous Batching
-- KV Cache
+- [大模型推理优化技术-KV Cache](https://juejin.cn/post/7362789570217885759)
 - Flash Decoding
 - FlashDecoding++
 
@@ -228,7 +228,7 @@
 
 ### LLM剪枝
 
-- [大模型剪枝概述](https://www.zhihu.com/question/652126515/answer/3457652467)
+- [大模型剪枝技术原理（一）-概述](https://www.zhihu.com/question/652126515/answer/3457652467)
 - [万字长文谈深度神经网络剪枝综述](https://zhuanlan.zhihu.com/p/692858636?)
 
 
@@ -365,6 +365,9 @@ LLM Data Engineering
 - [大模型国产化适配5-百度飞浆PaddleNLP大语言模型工具链总结](https://zhuanlan.zhihu.com/p/665807431)
 - [大模型国产化适配6-基于昇腾910B快速验证ChatGLM3-6B/BaiChuan2-7B模型推理](https://zhuanlan.zhihu.com/p/677799157)
 - [大模型国产化适配7-华为昇腾LLM落地可选解决方案（MindFormers、ModelLink、MindIE）](https://zhuanlan.zhihu.com/p/692377206)
+- [MindIE 1.0.RC1 发布，华为昇腾终于推出了针对LLM的完整部署方案，结束小米加步枪时代](https://www.zhihu.com/question/654472145/answer/3482521709)
+- [大模型国产化适配8-基于昇腾MindIE推理工具部署Qwen-72B实战（推理引擎、推理服务化）](https://juejin.cn/post/7365879319598727180)
+
 
 
 **[⬆ 一键返回目录](#目录)**
@@ -441,7 +444,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 
 - [英伟达A800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/a800-env-install.md)
 - [英伟达H800加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm-base/h800-env-install.md)
-- [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/docs/llm_localization/ascend910-env-install.md)
+- [昇腾910加速卡常见软件包安装命令](https://github.com/liguodongiot/llm-action/blob/main/llm_localization/ascend910-env-install.md)
 
 常用工具：
 

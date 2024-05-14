@@ -346,3 +346,64 @@ scp -r /root/.ssh/ 183.66.251.xxx:/root
 ssh 183.66.251.xxx
 ```
 
+
+
+## 安装MindSpore
+
+配置环境变量
+
+
+如果昇腾AI处理器配套软件包没有安装在默认路径，安装好MindSpore之后，需要导出Runtime相关环境变量。
+
+LOCAL_ASCEND=/usr/local/Ascend的/usr/local/Ascend表示配套软件包的安装路径，需注意将其改为配套软件包的实际安装路径。
+
+
+```
+# control log level. 0-DEBUG, 1-INFO, 2-WARNING, 3-ERROR, 4-CRITICAL, default level is WARNING.
+export GLOG_v=2
+
+# Conda environmental options
+LOCAL_ASCEND=/usr/local/Ascend # the root directory of run package
+
+# lib libraries that the run package depends on
+export LD_LIBRARY_PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/lib64:${LOCAL_ASCEND}/driver/lib64:${LOCAL_ASCEND}/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:${LD_LIBRARY_PATH}
+
+# Environment variables that must be configured
+## TBE operator implementation tool path
+export TBE_IMPL_PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe
+## OPP path
+export ASCEND_OPP_PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/opp
+## AICPU path
+export ASCEND_AICPU_PATH=${ASCEND_OPP_PATH}/..
+## TBE operator compilation tool path
+export PATH=${LOCAL_ASCEND}/ascend-toolkit/latest/compiler/ccec_compiler/bin/:${PATH}
+## Python library that TBE implementation depends on
+export PYTHONPATH=${TBE_IMPL_PATH}:${PYTHONPATH}
+```
+
+
+
+验证是否成功安装
+
+方法一：
+
+```
+python -c "import mindspore;mindspore.set_context(device_target='Ascend');mindspore.run_check()"
+```
+
+方法二：
+
+```
+import numpy as np
+import mindspore as ms
+import mindspore.ops as ops
+
+ms.set_context(device_target="Ascend")
+x = ms.Tensor(np.ones([1,3,3,4]).astype(np.float32))
+y = ms.Tensor(np.ones([1,3,3,4]).astype(np.float32))
+print(ops.add(x, y))
+
+```
+
+
+
