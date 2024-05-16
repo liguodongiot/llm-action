@@ -76,25 +76,3 @@ pip3 install --no-use-pep517 -e git+https://mirror.ghproxy.com/https://github.co
 
 
 
-
-## torch_npu
-
-torch_npu(Ascend Adapter for PyTorch插件)使昇腾NPU可以适配PyTorch框架，为使用PyTorch框架的开发者提供昇腾AI处理器的超强算力。
-
-https://gitee.com/ascend/pytorch
-
-
-
-
-
-
-```
-import torch
-import torch_npu
-
-x = torch.randn(2, 2).npu()
-y = torch.randn(2, 2).npu()
-z = x.mm(y)
-
-print(z)
-```

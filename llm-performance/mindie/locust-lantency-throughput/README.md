@@ -139,8 +139,56 @@ prompt_tokens:  65916 completion_tokens:  458532 total_tokens:  524448
 list_token: 4285
 prompt_tokens:  79461 completion_tokens:  537748 total_tokens:  617209
 
+
+
 ```
 
+
+## Qwen1.5
+
+### Qwen1.5-72B-8TP
+
+
+```
+locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+
+list_token: 1808
+prompt_tokens:  33718 completion_tokens:  218677 total_tokens:  252395
+```
+
+
+
+### Qwen1.5-7B-1TP
+
+```
+
+```
+
+
+### Qwen1.5-7B-2TP
+
+```
+
+locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+
+
+list_token: 5022
+prompt_tokens:  93291 completion_tokens:  661053 total_tokens:  754344
+```
+
+
+### Qwen1.5-7B-4TP
+
+```
+locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+
+list_token: 4589
+prompt_tokens:  85327 completion_tokens:  596528 total_tokens:  681855
+
+```
 
 
 ## Qwen1-72B-8TP
@@ -154,7 +202,9 @@ prompt_tokens:  18585 completion_tokens:  253279 total_tokens:  271864
 ```
 
 
-## Baichuan2-7B-2TP
+
+## Baichuan2
+### Baichuan2-7B-2TP
 
 
 ```
@@ -171,17 +221,42 @@ prompt_tokens:  1540 completion_tokens:  22404 total_tokens:  23944
 
 
 
-## Baichuan2-7B-4TP
+### Baichuan2-7B-4TP
 
 
 ```
 locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+```
+
+### Baichuan2-14B-4TP
+
+
+```
+locust -f llm-910b4-baichuan2-7b-2tp.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+
+
+list_token: 4435
+prompt_tokens:  49285 completion_tokens:  626468 total_tokens:  675753
+```
+
+### Baichuan2-14B-2TP
+
+
+```
+locust -f llm-910b4-baichuan2-7b-2tp.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+list_token: 2739
+prompt_tokens:  30579 completion_tokens:  383276 total_tokens:  413855
 
 ```
 
 
 
-## Chatglm3-6B-1TP
+## Chatglm3
+
+
+### Chatglm3-6B-1TP
 
 ```
 list_token: 10432
@@ -189,7 +264,7 @@ prompt_tokens:  183586 completion_tokens:  768828 total_tokens:  952414
 ```
 
 
-## Chatglm3-6B-2TP
+### Chatglm3-6B-2TP
 
 ```
 locust -f llm-910b4-chatglm3-6b-2tp.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
@@ -201,7 +276,7 @@ prompt_tokens:  114704 completion_tokens:  930099 total_tokens:  1044803
 
 
 
-## Chatglm3-6B-4TP
+### Chatglm3-6B-4TP
 
 
 ```

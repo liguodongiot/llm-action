@@ -1,3 +1,4 @@
+
 {
     "OtherParam":
     {
@@ -13,7 +14,7 @@
         },
         "ServeParam" :
         {
-            "ipAddress" : "127.0.0.1",
+            "ipAddress" : "0.0.0.0",
             "port" : 1025,
             "maxLinkNum" : 300,
             "httpsEnabled" : false,
@@ -39,15 +40,15 @@
     "ModelDeployParam":
     {
         "maxSeqLen" : 2560,
-        "npuDeviceIds" : [[0,1,2,3,4,5,6,7]],
+        "npuDeviceIds" : [[0,1,2,3]],
         "ModelParam" : [
             {
                 "modelInstanceType": "Standard",
-                "modelName" : "qwen-72b",
-                "modelWeightPath" : "/home/aicc/model_from_hf/qwen-72b-chat-hf",
-                "worldSize" : 8,
+                "modelName" : "baichuan2-13b",
+                "modelWeightPath" : "/home/aicc/model_from_hf/Baichuan2-13B-Chat",
+                "worldSize" : 4,
                 "cpuMemSize" : 5,
-                "npuMemSize" : 8,
+                "npuMemSize" : 16,
                 "backendType": "atb"
             }
         ]

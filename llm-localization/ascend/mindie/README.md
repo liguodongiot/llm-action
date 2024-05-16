@@ -117,6 +117,14 @@ rsync -P --rsh=ssh -r root@192.xxx.16.211:/root/mindie-1.0.tar .
 ```
 
 
+## 性能测试
+
+```
+nohup python performance-stream-baichuan2.py  > baichuan2.log 2>&1 &
+```
+
+
+
 
 
 

@@ -46,6 +46,25 @@ export HF_ENDPOINT=https://hf-mirror.com
 
 nohup huggingface-cli download --token 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 --resume-download Qwen/Qwen1.5-14B-Chat --local-dir Qwen1.5-14B-Chat --local-dir-use-symlinks False > Qwen1.5-14B-Chat.log 2>&1 &
 
+
+
+export HF_ENDPOINT=https://hf-mirror.com
+
+
+nohup huggingface-cli download --token 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 --resume-download Qwen/Qwen1.5-7B-Chat --local-dir Qwen1.5-7B-Chat --local-dir-use-symlinks False > Qwen1.5-7B-Chat.log 2>&1 &
+
+
+
+export HF_ENDPOINT=https://hf-mirror.com
+
+nohup huggingface-cli download --token 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 --resume-download Qwen/Qwen1.5-72B-Chat --local-dir Qwen1.5-72B-Chat --local-dir-use-symlinks False > Qwen1.5-72B-Chat.log 2>&1 &
+
+
+export HF_ENDPOINT=https://hf-mirror.com
+
+nohup huggingface-cli download --token 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 --resume-download baichuan-inc/Baichuan2-13B-Chat --local-dir Baichuan2-13B-Chat --local-dir-use-symlinks False > Baichuan2-13B-Chat.log 2>&1 &
+
+
 ```
 
 
@@ -95,4 +114,14 @@ wget https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat/resolve/main/tokenize
 wget https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat/resolve/main/tokenizer_config.json
 cd ../../
 
+```
+
+
+## 拷贝模型
+
+
+```
+rsync -P --rsh=ssh -r root@192.xxx.16.210:/home/model_from_hf/Qwen1.5-72B/ ./
+
+scp -r root@192.xxx.16.210:/home/model_from_hf/Qwen1.5-72B/ ./
 ```

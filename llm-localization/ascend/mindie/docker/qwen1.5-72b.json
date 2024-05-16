@@ -43,8 +43,8 @@
         "ModelParam" : [
             {
                 "modelInstanceType": "Standard",
-                "modelName" : "qwen-72b",
-                "modelWeightPath" : "/home/aicc/model_from_hf/qwen-72b-chat-hf",
+                "modelName" : "qwen1.5-72b",
+                "modelWeightPath" : "/home/aicc/model_from_hf/Qwen1.5-72B",
                 "worldSize" : 8,
                 "cpuMemSize" : 5,
                 "npuMemSize" : 8,
@@ -58,10 +58,8 @@
         "maxPrefillTokens" : 8192,
         "prefillTimeMsPerReq" : 150,
         "prefillPolicyType" : 0,
-
         "decodeTimeMsPerReq" : 50,
         "decodePolicyType" : 0,
-
         "maxBatchSize" : 200,
         "maxIterTimes" : 512,
         "maxPreemptCount" : 200,
