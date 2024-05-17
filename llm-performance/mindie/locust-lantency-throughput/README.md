@@ -162,7 +162,11 @@ prompt_tokens:  33718 completion_tokens:  218677 total_tokens:  252395
 ### Qwen1.5-7B-1TP
 
 ```
+locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
 
+
+list_token: 2769
+prompt_tokens:  51357 completion_tokens:  371483 total_tokens:  422840
 ```
 
 
@@ -189,6 +193,31 @@ list_token: 4589
 prompt_tokens:  85327 completion_tokens:  596528 total_tokens:  681855
 
 ```
+
+### qwen1.5-14b-4tp
+
+
+```
+locust -f 910b4-qwen.py --users 60 --spawn-rate 60 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+
+list_token: 3506
+prompt_tokens:  65011 completion_tokens:  442473 total_tokens:  507484
+```
+
+
+### qwen1.5-14b-2tp
+
+
+```
+locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+list_token: 2777
+prompt_tokens:  51878 completion_tokens:  348837 total_tokens:  400715
+```
+
+
+
 
 
 ## Qwen1-72B-8TP
@@ -228,7 +257,7 @@ prompt_tokens:  1540 completion_tokens:  22404 total_tokens:  23944
 locust -f 910b4-qwen.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
 ```
 
-### Baichuan2-14B-4TP
+### Baichuan2-13B-4TP
 
 
 ```
@@ -240,7 +269,7 @@ list_token: 4435
 prompt_tokens:  49285 completion_tokens:  626468 total_tokens:  675753
 ```
 
-### Baichuan2-14B-2TP
+### Baichuan2-13B-2TP
 
 
 ```
@@ -251,7 +280,16 @@ prompt_tokens:  30579 completion_tokens:  383276 total_tokens:  413855
 
 ```
 
+### Baichuan2-13B-8TP
 
+
+```
+locust -f llm-910b4-baichuan2-7b-2tp.py --users 100 --spawn-rate 100 -H http://192.xxx.16.211:1025 --run-time 10m 
+
+list_token: 3859
+prompt_tokens:  42612 completion_tokens:  549432 total_tokens:  592044
+
+```
 
 ## Chatglm3
 

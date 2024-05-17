@@ -1,4 +1,3 @@
-
 import requests
 import json
 import time
@@ -11,10 +10,12 @@ url = "http://192.xxx.16.211:1025/v1/chat/completions"
 input_path = "/home/aicc/alpaca_gpt4_data_input_1k.json"
 list_str = json.load(open(input_path, "r"))
 
-
 first_token_time_list = []
 avg_token_time_list = []
+
+intertoken_time_list = []
 total_time_list = []
+gen_token_len_list = []
 
 count = 0
 
@@ -33,9 +34,11 @@ for line in list_str:
 
   if len(inputs) == 0:
     continue
-  content = f"<reserved_106>{instruction}<reserved_107>"
+  
+  content = f"<|im_start|>user\n{instruction}<|im_end|>\n<|im_start|>assistant\n"
+
   payload = json.dumps({
-    "model": "baichuan2-7b",
+    "model": "qwen1.5-14b",
     "messages": [
       {
         "role": "user",
@@ -46,6 +49,7 @@ for line in list_str:
     "top_p": 0.85,
     "n": 10,
     "logprobs": True,
+    "stop": "<|im_end|>",
     "stream": True
   })
 
@@ -75,6 +79,8 @@ for line in list_str:
     start_time = end_time
 
   avg_token_time = sum(gen_time_list) / len(gen_time_list)
+  intertoken_time_list.extend(gen_time_list)
+  gen_token_len_list.append(len(gen_time_list))
   print("Token间时延：", round(avg_token_time, 4))
   avg_token_time_list.append(avg_token_time)
 
@@ -92,13 +98,32 @@ print("TP99：", np.percentile(np.array(first_token_time_list), 99))
 print("平均：", round(sum(first_token_time_list) / len(first_token_time_list), 4))
 
 
-print("Token间时延---------------------")
+print("平均Token间时延-宏平均---------------------")
 print("最小值：", round(min(avg_token_time_list), 4))
 print("最大值：", round(max(avg_token_time_list), 4))
 print("TP50：", np.percentile(np.array(avg_token_time_list), 50))
 print("TP90：", np.percentile(np.array(avg_token_time_list), 90))
 print("TP99：", np.percentile(np.array(avg_token_time_list), 99))
 print("平均：", round(sum(avg_token_time_list) / len(avg_token_time_list), 4))
+
+
+print("最小值：", round(min(gen_token_len_list), 4))
+print("最大值：", round(max(gen_token_len_list), 4))
+print("TP50：", np.percentile(np.array(gen_token_len_list), 50))
+print("TP90：", np.percentile(np.array(gen_token_len_list), 90))
+print("TP99：", np.percentile(np.array(gen_token_len_list), 99))
+print("平均：", round(sum(gen_token_len_list) / len(gen_token_len_list), 4))
+
+
+
+print("Token间时延-微平均---------------------")
+print("最小值：", round(min(intertoken_time_list), 4))
+print("最大值：", round(max(intertoken_time_list), 4))
+print("TP50：", np.percentile(np.array(intertoken_time_list), 50))
+print("TP90：", np.percentile(np.array(intertoken_time_list), 90))
+print("TP99：", np.percentile(np.array(intertoken_time_list), 99))
+print("平均：", round(sum(intertoken_time_list) / len(intertoken_time_list), 4))
+
 
 
 print("端到端时延---------------------")

@@ -36,14 +36,7 @@ for key, value in model_path_dict.items():
         if len(inputs) == 0:
             continue
 
-        if "Qwen1.5" in key:
-            content = f"<|im_start|>user\n{instruction}<|im_end|>\n<|im_start|>assistant\n"
-        elif "Qwen-72B" in key:
-            content = f"{instruction}"
-        elif "Baichuan2" in key: 
-            content = f"<reserved_106>{instruction}<reserved_107>"
-        elif "chatglm3" in key:
-            content = f"<|user|>\n{instruction}<|assistant|>\n"
+        content = f"<|im_start|>user\n{instruction}<|im_end|>\n<|im_start|>assistant\n"
 
         inputs_ids = tokenizer(content)["input_ids"]
         input_token_lens = len(inputs_ids)
@@ -54,7 +47,7 @@ for key, value in model_path_dict.items():
 
 
     print("--------", key)
-    # print(input_len_list)
+    print(input_len_list)
 
     print("最小值：", round(min(input_len_list), 4))
     print("最大值：", round(max(input_len_list), 4))
