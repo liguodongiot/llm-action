@@ -15,3 +15,4 @@ Qwen1.5显著提升了聊天模型与人类偏好的一致性，并且改善了�
 git clone https://www.modelscope.cn/qwen/Qwen1.5-0.5B.git
 ```
 
+- https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen2/modeling_qwen2.py

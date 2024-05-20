@@ -191,23 +191,38 @@ ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
 
 
 ```
+ASCEND_RT_VISIBLE_DEVICES：设置Device ID,指定应用进程可用的Device。支持一次指定一个或多个Device ID。
+
 docker run  -it --rm --net=host --ipc=host \
--e ASCEND_VISIBLE_DEVICES=0 \
+-e ASCEND_RT_VISIBLE_DEVICES=1 \
 --shm-size=50g \
 --privileged=true \
 -w /home \
---device=/dev/davinci_manager \
---device=/dev/hisi_hdc \
---device=/dev/devmm_svm \
 -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
--v /usr/local/dcmi:/usr/local/dcmi \
 -v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
--v /usr/local/sbin:/usr/local/sbin \
 -v /home:/home \
 -v /tmp:/tmp \
--v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
 -v /home/aicc/docker/qwen1.5-7b-1tp.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
 ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+
+
+
+
+docker run  -it --rm --net=host --ipc=host \
+-e ASCEND_RT_VISIBLE_DEVICES=6,7 \
+--shm-size=50g \
+--privileged=true \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-w /home \
+-v /home:/home \
+-v /tmp:/tmp \
+-v /home/aicc/docker/qwen1.5-7b-2tp.json:/usr/local/Ascend/mindie/latest/mindie-service/conf/config.json \
+ascendhub.huawei.com/public-ascendhub/mindie-service-online:v1.1
+
+
+
+
 
 ```
 

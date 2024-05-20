@@ -426,3 +426,37 @@ print(ops.add(x, y))
 
 
 
+
+### 互连-topo 
+ 
+
+```
+npu-smi info -t topo
+
+     NPU0       NPU1       NPU2       NPU3       NPU4       NPU5       NPU6       NPU7       CPU Affinity
+NPU0       X          HCCS       HCCS       HCCS       HCCS       HCCS       HCCS       HCCS       144-167
+NPU1       HCCS       X          HCCS       HCCS       HCCS       HCCS       HCCS       HCCS       144-167
+NPU2       HCCS       HCCS       X          HCCS       HCCS       HCCS       HCCS       HCCS       96-119
+NPU3       HCCS       HCCS       HCCS       X          HCCS       HCCS       HCCS       HCCS       96-119
+NPU4       HCCS       HCCS       HCCS       HCCS       X          HCCS       HCCS       HCCS       0-23
+NPU5       HCCS       HCCS       HCCS       HCCS       HCCS       X          HCCS       HCCS       0-23
+NPU6       HCCS       HCCS       HCCS       HCCS       HCCS       HCCS       X          HCCS       48-71
+NPU7       HCCS       HCCS       HCCS       HCCS       HCCS       HCCS       HCCS       X          48-71
+
+Legend:
+
+  X    = Self
+  SYS  = Path traversing PCIe and NUMA nodes. Nodes are connected through SMP, such as QPI, UPI.
+  PHB  = Path traversing PCIe and the PCIe host bridge of a CPU.
+  PIX  = Path traversing a single PCIe switch
+  PXB  = Path traversing multipul PCIe switches
+  HCCS = Connection traversing HCCS.
+  NA   = Unknown relationship.
+```
+
+
+
+
+
+
+

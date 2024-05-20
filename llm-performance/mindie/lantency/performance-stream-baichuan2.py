@@ -15,6 +15,8 @@ list_str = json.load(open(input_path, "r"))
 first_token_time_list = []
 avg_token_time_list = []
 total_time_list = []
+gen_token_len_list = []
+
 
 count = 0
 
@@ -75,6 +77,8 @@ for line in list_str:
     start_time = end_time
 
   avg_token_time = sum(gen_time_list) / len(gen_time_list)
+  gen_token_len_list.append(len(gen_time_list))
+  
   print("Token间时延：", round(avg_token_time, 4))
   avg_token_time_list.append(avg_token_time)
 
@@ -99,6 +103,19 @@ print("TP50：", np.percentile(np.array(avg_token_time_list), 50))
 print("TP90：", np.percentile(np.array(avg_token_time_list), 90))
 print("TP99：", np.percentile(np.array(avg_token_time_list), 99))
 print("平均：", round(sum(avg_token_time_list) / len(avg_token_time_list), 4))
+
+
+
+print("生成token长度---------------------")
+
+print("最小值：", round(min(gen_token_len_list), 4))
+print("最大值：", round(max(gen_token_len_list), 4))
+print("TP50：", np.percentile(np.array(gen_token_len_list), 50))
+print("TP90：", np.percentile(np.array(gen_token_len_list), 90))
+print("TP99：", np.percentile(np.array(gen_token_len_list), 99))
+print("平均：", round(sum(gen_token_len_list) / len(gen_token_len_list), 4))
+
+
 
 
 print("端到端时延---------------------")
