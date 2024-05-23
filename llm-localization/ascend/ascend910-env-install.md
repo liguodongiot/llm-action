@@ -44,6 +44,11 @@ System Information
 Handle 0x0005, DMI type 32, 11 bytes
 System Boot Information
         Status: No errors detected
+
+
+
+
+- Atlas 900 RCK A2 Compute Node       
 ```
 
 

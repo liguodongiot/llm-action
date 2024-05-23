@@ -107,6 +107,8 @@ print("TP99：", np.percentile(np.array(avg_token_time_list), 99))
 print("平均：", round(sum(avg_token_time_list) / len(avg_token_time_list), 4))
 
 
+print("生成token长度---------------------")
+
 print("最小值：", round(min(gen_token_len_list), 4))
 print("最大值：", round(max(gen_token_len_list), 4))
 print("TP50：", np.percentile(np.array(gen_token_len_list), 50))
