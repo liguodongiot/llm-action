@@ -48,7 +48,8 @@ System Boot Information
 
 
 
-- Atlas 900 RCK A2 Compute Node       
+- Atlas 900 RCK A2 Compute Node   
+- A800 9000 A2    
 ```
 
 

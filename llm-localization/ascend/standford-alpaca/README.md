@@ -11,6 +11,8 @@ docker exec -it pytorch_ubuntu_dev bash
 conda activate llm-dev 
 source /usr/local/Ascend/ascend-toolkit/set_env.sh
 cd /workspace/code/stanford_alpaca
+
+
 ```
 
 
@@ -183,6 +185,10 @@ torchrun --nproc_per_node=8 --master_port=29001 train.py \
 ```
 
 mkdir -p /workspace/output/baichuan2-13b
+
+rm -rf /workspace/output/baichuan2-13b/*
+
+nohup \ 
 torchrun --nproc_per_node=8 --master_port=29001 train.py \
     --model_name_or_path /workspace/model/Baichuan2-13B-Chat \
     --data_path ./alpaca_data_1k.json \
@@ -202,9 +208,9 @@ torchrun --nproc_per_node=8 --master_port=29001 train.py \
     --warmup_ratio 0.03 \
     --lr_scheduler_type "cosine" \
     --logging_steps 1 \
-    --fsdp "full_shard auto_wrap" \
-    --fsdp_transformer_layer_cls_to_wrap 'BaichuanLayer'
-
+    --fsdp "full_shard offload auto_wrap" \
+    --fsdp_transformer_layer_cls_to_wrap 'BaichuanLayer' \
+> baichuan2-fsdp-13b.log 2>&1 &
 
 ```
 
