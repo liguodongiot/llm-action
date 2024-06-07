@@ -13,7 +13,7 @@
 </p> 
 
 
-🔥🔥🔥 最新正在做一个在 NVIDIA GPU、Ascend NPU 上训练大模型的简易工具[unify-easy-llm](https://github.com/liguodongiot/unify-easy-llm)，欢迎大家关注。
+🔥🔥🔥 最近正在做一个在 NVIDIA GPU、Ascend NPU 上训练大模型的简易工具[unify-easy-llm](https://github.com/liguodongiot/unify-easy-llm)，欢迎大家关注。
 
 
 ## 目录
