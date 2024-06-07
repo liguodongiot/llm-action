@@ -13,12 +13,12 @@
 </p> 
 
 
-最新正在做一个在 NVIDIA GPU、Ascend NPU 上一键式大模型训练工具[unify-easy-llm](https://github.com/liguodongiot/unify-easy-llm)，欢迎大家关注。
+🔥🔥🔥 最新正在做一个在 NVIDIA GPU、Ascend NPU 上训练大模型的简易工具[unify-easy-llm](https://github.com/liguodongiot/unify-easy-llm)，欢迎大家关注。
 
 
 ## 目录
 
-- 🔥 [LLM训练](#llm训练)
+- :snail: [LLM训练](#llm训练)
   - 🐫 [LLM训练实战](#llm训练实战)
   - 🐼 [LLM参数高效微调技术原理](#llm微调技术原理)
   - 🐰 [LLM参数高效微调技术实战](#llm微调实战)
