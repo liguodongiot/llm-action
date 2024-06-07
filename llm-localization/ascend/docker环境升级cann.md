@@ -72,10 +72,8 @@ chmod +x Ascend-cann-toolkit_8.0.RC2.alpha001_linux-aarch64.run
 
 
 
-
-
 ```
-bash Miniconda3-py39_24.4.0-0-Linux-aarch64.sh -p /workspace/installs/conda
+bash Miniconda3-py39_24.4.0-0-Linux-aarch64.sh -p /workspace/installs/conda-upgrade
 
 conda init 
 
@@ -91,7 +89,52 @@ conda list
 
 conda create -n llm-dev python=3.9
 conda activate llm-dev 
+
+
 ```
+
+```
+pip3 install torch==2.1.0 
+pip3 install pyyaml setuptools
+pip3 install torch-npu==2.1.0.post3
+pip3 install numpy attrs decorator psutil absl-py cloudpickle psutil scipy synr tornado
+
+
+
+. /usr/local/Ascend/ascend-toolkit/set_env.sh
+
+
+import torch
+import torch_npu
+
+x = torch.randn(2, 2).npu()
+y = torch.randn(2, 2).npu()
+z = x.mm(y)
+
+print(z)
+```
+
+
+
+```
+pip install --no-cache-dir -r requirements-npu.txt && rm -rf ~/.cache/pip/* && conda clean -all
+```
+
+
+
+
+
+```
+docker start pytorch_ubuntu_upgrade
+docker exec -it pytorch_ubuntu_upgrade bash
+. /usr/local/Ascend/ascend-toolkit/set_env.sh
+conda activate llm-dev 
+
+```
+
+
+docker tag harbor.llm.io/base/llm-train-unify:v1-20240603  harbor.llm.io/base/llm-train-unify:v1-20240603
+
 
 
 

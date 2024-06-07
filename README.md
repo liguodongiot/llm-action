@@ -13,6 +13,9 @@
 </p> 
 
 
+最新正在做一个在 NVIDIA GPU、Ascend NPU 上一键式大模型训练工具[unify-easy-llm](https://github.com/liguodongiot/unify-easy-llm)，欢迎大家关注。
+
+
 ## 目录
 
 - 🔥 [LLM训练](#llm训练)
@@ -49,6 +52,7 @@
 - 👥 [微信公众号](#微信公众号)
 - ⭐️ [Star History](#star-history)
 - :link: [AI工程化课程推荐](#ai工程化课程推荐)
+
 
 ## LLM训练
 
@@ -369,7 +373,8 @@ LLM Data Engineering
 - [MindIE 1.0.RC1 发布，华为昇腾终于推出了针对LLM的完整部署方案，结束小米加步枪时代](https://www.zhihu.com/question/654472145/answer/3482521709)
 - [大模型国产化适配8-基于昇腾MindIE推理工具部署Qwen-72B实战（推理引擎、推理服务化）](https://juejin.cn/post/7365879319598727180)
   - Qwen-72B、Baichuan2-7B、ChatGLM3-6B
-
+- [大模型国产化适配9-LLM推理框架MindIE-Service性能基准测试](https://juejin.cn/post/7370925923455713320)
+- [大模型国产化适配10-快速迁移大模型到昇腾910B保姆级教程（Pytorch版）](https://juejin.cn/post/7375351908896866323)
 
 
 
