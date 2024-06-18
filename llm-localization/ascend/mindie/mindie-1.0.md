@@ -155,8 +155,6 @@ export PYTHONPATH=/usr/local/Ascend/llm_model:$PYTHONPATH
 cd /usr/local/Ascend/mindie/latest/mindie-service/bin
 ./mindieservice_daemon
 
-
-
 ```
 
 ```

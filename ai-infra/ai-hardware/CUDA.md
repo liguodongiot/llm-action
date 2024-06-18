@@ -14,3 +14,9 @@ CUDA CUBLAS库：这是CUDA的线性代数库，提供了高效的矩阵和向�
 CUDA CUFFT库：这是CUDA的快速傅立叶变换库，用于进行傅立叶变换。
 
 CUDA CURAND库：这是CUDA的随机数库，用于生成各种分布的随机数。
+
+
+
+- https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+- https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id4
+CUDA Toolkit and Corresponding Driver Versions
