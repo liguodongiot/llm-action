@@ -8,9 +8,11 @@ https://epochai.org/blog/backward-forward-FLOP-ratio
 
 
 如何计算FLOPs
+
 有两种方式：
 
 根据计算公式和模型结构手动推算
+
 借助第三方工具：calflops、ptflops、thop、torchstat、torchsumary、fvcore
 手动推导FLOPs原则：
 手动推导模型的FLOPs时只推导前向传播，大部分情况默认模型后向传播的计算量是前向传播的2倍， 总共FLOPs是前向的3倍。(结论出自——https://epochai.org/blog/backward-forward-FLOP-ratio)

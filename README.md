@@ -375,7 +375,7 @@ LLM Data Engineering
   - Qwen-72B、Baichuan2-7B、ChatGLM3-6B
 - [大模型国产化适配9-LLM推理框架MindIE-Service性能基准测试](https://juejin.cn/post/7370925923455713320)
 - [大模型国产化适配10-快速迁移大模型到昇腾910B保姆级教程（Pytorch版）](https://juejin.cn/post/7375351908896866323)
-
+- [大模型国产化适配11-LLM训练性能基准测试（昇腾910B3）](https://juejin.cn/post/7380995631790964772)
 
 
 
