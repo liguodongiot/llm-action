@@ -2,7 +2,7 @@
 
 ## [大模型基础](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/base.md)
 
-## [大模型结构](https://github.com/liguodongiot/llm-action/blob/main/llm_interviewllm-algo.md)
+## [大模型结构](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-algo.md)
 
 ## [大模型训练](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-train.md)
 
