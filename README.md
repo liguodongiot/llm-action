@@ -47,6 +47,7 @@
   - :octocat: [AI集群网络通信](#ai集群网络通信)
 - 💟 [LLMOps](#llmops)
 - 🍄 [LLM生态相关技术](#llm生态相关技术)
+- :dizzy: [LLM面试题](#llm面试题)
 - 🔨 [服务器基础环境安装及常用工具](#服务器基础环境安装及常用工具)
 - 💬 [LLM学习交流群](#llm学习交流群)
 - 👥 [微信公众号](#微信公众号)
@@ -443,6 +444,21 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 - [为什么很多新发布的大模型默认使用BF16而不是FP16？](https://www.zhihu.com/question/616600181/answer/3195333332)
 - [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
+
+
+## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/README.md)
+
+- [大模型基础常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/base.md)
+- [大模型算法常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-algo.md)
+- [大模型训练常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-train.md)
+- [大模型微调常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-ft.md)
+- [大模型评估常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-eval.md)
+- [大模型压缩常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-compress.md)
+- [大模型推理常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-inference.md)
+- [大模型应用常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-app.md)
+- [大模型综合性面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/comprehensive.md)
+
+
 
 
 **[⬆ 一键返回目录](#目录)**
