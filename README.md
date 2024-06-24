@@ -449,19 +449,19 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
 
 
-## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/README.md)
+## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/README.md)
 
 正在收集中...
 
-- [大模型基础常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/base.md)
-- [大模型算法常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-algo.md)
+- [大模型基础常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/base.md)
+- [大模型算法常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-algo.md)
 - [大模型训练常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-train.md)
-- [大模型微调常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-ft.md)
-- [大模型评估常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-eval.md)
-- [大模型压缩常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-compress.md)
-- [大模型推理常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-inference.md)
-- [大模型应用常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-app.md)
-- [大模型综合性面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/comprehensive.md)
+- [大模型微调常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-ft.md)
+- [大模型评估常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-eval.md)
+- [大模型压缩常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-compress.md)
+- [大模型推理常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-inference.md)
+- [大模型应用常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-app.md)
+- [大模型综合性面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/comprehensive.md)
 
 
 
