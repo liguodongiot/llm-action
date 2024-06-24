@@ -14,9 +14,20 @@ https://zhuanlan.zhihu.com/p/428620330
 
 https://zhuanlan.zhihu.com/p/656647661
 
+
+
 https://www.zhihu.com/question/395811291/answer/1251829041
 
 选择什么样的归一化方式，取决于你关注数据的哪部分信息。如果某个维度信息的差异性很重要，需要被拟合，那就别在那个维度进行归一化。
+
+
+关联性  --- 差异性
+
+CV 里面 不同样本的同一channel有关联性， 同一样本的不同channel是有差异性的（没有关联性）
+CV 里面 不同样本的同一特性没有关联性（有差异性），同一样本的不同特征有关联性
+
+
+https://zhuanlan.zhihu.com/p/643560888
 
 
 > 为什么像 baichuan2 和 llama 使用 RMSNorm 归一化?

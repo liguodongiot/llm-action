@@ -228,6 +228,9 @@
     - [大模型量化技术原理：AWQ、AutoAWQ](https://zhuanlan.zhihu.com/p/681578090)
     - [大模型量化技术原理：SpQR](https://zhuanlan.zhihu.com/p/682871823)
     - [大模型量化技术原理：ZeroQuant系列](https://zhuanlan.zhihu.com/p/683813769)
+    - [大模型量化技术原理：FP8量化]()
+    - [大模型量化技术原理：FP6量化]()
+    - [大模型量化技术原理：FP4量化]()
 - [大模型量化技术原理：总结]()
 
 
@@ -448,9 +451,11 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 
 ## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/README.md)
 
+正在收集中...
+
 - [大模型基础常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/base.md)
 - [大模型算法常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-algo.md)
-- [大模型训练常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-train.md)
+- [大模型训练常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/llm-train.md)
 - [大模型微调常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-ft.md)
 - [大模型评估常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-eval.md)
 - [大模型压缩常见面试题](https://github.com/liguodongiot/llm-action/blob/main/llm_interview/llm-compress.md)

@@ -23,4 +23,4 @@ COPY llm-server.sh $APP_DIR
 
 RUN  chmod -R 777 $APP_DIR/llm-server.sh
 
-ENTRYPOINT $APP_DIR/llm-server.sh
+ENTRYPOINT ["$APP_DIR/llm-server.sh"]
