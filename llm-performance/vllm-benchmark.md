@@ -50,3 +50,16 @@ print(f"Throughput: {len(requests) / elapsed_time:.2f} requests/s, "
 
 
 
+
+```
+# run python-based benchmarks and upload the result to buildkite
+python3 benchmarks/benchmark_latency.py --output-json latency_results.json 2>&1 | tee benchmark_latency.txt
+bench_latency_exit_code=$?
+
+python3 benchmarks/benchmark_throughput.py --input-len 256 --output-len 256 --output-json throughput_results.json 2>&1 | tee benchmark_throughput.txt
+bench_throughput_exit_code=$?
+```
+
+
+
+
