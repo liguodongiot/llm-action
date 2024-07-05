@@ -131,17 +131,16 @@ for line in list_str:
   total_time_list.append(total_time)
 
 
-print("Token输入输出长度---------------------")
-
-print("平均输入token长度：", round(sum(prompt_tokens_list) / len(prompt_tokens_list), 5))
-
-arr_np = np.array(prompt_tokens_list)
-print("输入token长度-均值：", round(np.mean(arr_np),5))
-print("输入token长度-方差：", round(np.var(arr_np),5))
 
 
-print("平均输出token长度：", round(sum(completion_tokens_list) / len(completion_tokens_list), 5))
-print("平均总token长度：", round(sum(total_tokens_list) / len(total_tokens_list), 5))
+if len(prompt_tokens_list) != 0:
+  print("Token输入输出长度---------------------")
+  print("平均输入token长度：", round(sum(prompt_tokens_list) / len(prompt_tokens_list), 5))
+  arr_np = np.array(prompt_tokens_list)
+  print("输入token长度-均值：", round(np.mean(arr_np),5))
+  print("输入token长度-方差：", round(np.var(arr_np),5))
+  print("平均输出token长度：", round(sum(completion_tokens_list) / len(completion_tokens_list), 5))
+  print("平均总token长度：", round(sum(total_tokens_list) / len(total_tokens_list), 5))
 
 
 print("首Token时延---------------------")
@@ -188,4 +187,5 @@ print("TP50：", np.percentile(np.array(total_time_list), 50))
 print("TP90：", np.percentile(np.array(total_time_list), 90))
 print("TP99：", np.percentile(np.array(total_time_list), 99))
 print("平均：", round(sum(total_time_list) / len(total_time_list), 4))
+
 
