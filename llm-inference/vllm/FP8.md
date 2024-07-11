@@ -13,7 +13,6 @@ result = model.generate("Hello, my name is")
 ```
 
 
-
 离线量化：
 
 
@@ -68,3 +67,22 @@ model = AutoFP8ForCausalLM.from_pretrained(pretrained_model_dir, quantize_config
 model.quantize(examples)
 model.save_quantized(quantized_model_dir)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

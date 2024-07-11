@@ -1,5 +1,8 @@
 
 
+- https://support.huawei.com/enterprise/zh/doc/EDOC1100288566/e39bbfe6
+
+
 
 
 ```
@@ -45,6 +48,29 @@ npu-smi info -t common -i 7
         Temperature(C)                 : 58
 
 
+```
+
+
+## 查询设备1所有芯片的统计信息
+
+```
+npu-smi info -t usages -i 1
+
+NPU ID                         : 1
+Chip Count                     : 1
+
+DDR Capacity(MB)               : 15079
+DDR Usage Rate(%)              : 14
+DDR Hugepages Total(page)      : 0
+DDR Hugepages Usage Rate(%)    : 0
+HBM Capacity(MB)               : 32768
+HBM Usage Rate(%)              : 0
+Aicore Usage Rate(%)           : 0
+Aicpu Usage Rate(%)            : 0
+Ctrlcpu Usage Rate(%)          : 0
+DDR Bandwidth Usage Rate(%)    : 0
+HBM Bandwidth Usage Rate(%)    : 0
+Chip ID                        : 0
 ```
 
 

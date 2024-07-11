@@ -14,3 +14,8 @@ max-num-seqs：默认 256，
 
 
 max-num-batched-tokens：很重要的配置，比如你配置了 max-num-batched-tokens=1000 那么你大概能在一个 batch 里面处理 10 条平均长度约为 100 tokens 的 inputs。max-num-batched-tokens 应尽可能大，来充分发挥 continuous batching 的优势。不过似乎（对于 TGI 是这样，vllm 不太确定），在提供 HF 模型时，该 max-num-batched-tokens 能够被自动推导出来。
+
+
+
+
+

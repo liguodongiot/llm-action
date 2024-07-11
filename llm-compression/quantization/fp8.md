@@ -22,3 +22,7 @@ https://zhuanlan.zhihu.com/p/619431625
 FP8 量化基础
 
 
+
+https://developer.nvidia.com/zh-cn/blog/nvidia-gpu-fp8-training-inference/
+
+
