@@ -1,6 +1,8 @@
 
 
 
+
+- Mastering LLM Techniques: Inference Optimization: https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/
 - 7 Ways To Speed Up Inference of Your Hosted LLMs：https://betterprogramming.pub/speed-up-llm-inference-83653aa24c47
 - How to Speed Up LLM Training with Distributed Systems?：https://www.appypie.com/blog/llm-training-with-distributed-systems
 - 详谈大模型训练和推理优化技术：https://wjn1996.blog.csdn.net/article/details/130764843

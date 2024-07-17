@@ -377,7 +377,7 @@ LLM Data Engineering
 - [MindIE 1.0.RC1 发布，华为昇腾终于推出了针对LLM的完整部署方案，结束小米加步枪时代](https://www.zhihu.com/question/654472145/answer/3482521709)
 - [大模型国产化适配8-基于昇腾MindIE推理工具部署Qwen-72B实战（推理引擎、推理服务化）](https://juejin.cn/post/7365879319598727180)
   - Qwen-72B、Baichuan2-7B、ChatGLM3-6B
-- [大模型国产化适配9-LLM推理框架MindIE-Service性能基准测试](https://juejin.cn/post/7370925923455713320)
+- [大模型国产化适配9-LLM推理框架MindIE-Service性能基准测试](https://zhuanlan.zhihu.com/p/704649189)
 - [大模型国产化适配10-快速迁移大模型到昇腾910B保姆级教程（Pytorch版）](https://juejin.cn/post/7375351908896866323)
 - [大模型国产化适配11-LLM训练性能基准测试（昇腾910B3）](https://juejin.cn/post/7380995631790964772)
 
@@ -447,6 +447,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [现在为什么那么多人以清华大学的ChatGLM-6B为基座进行试验？](https://www.zhihu.com/question/602504880/answer/3041965998)
 - [为什么很多新发布的大模型默认使用BF16而不是FP16？](https://www.zhihu.com/question/616600181/answer/3195333332)
 - [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
+- [一文详解模型权重存储新格式 Safetensors](https://juejin.cn/post/7386360803039838235)
 
 
 ## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/README.md)

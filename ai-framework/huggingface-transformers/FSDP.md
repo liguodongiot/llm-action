@@ -14,7 +14,7 @@ transformers
 
 
 accelerate
-- https://zhuanlan.zhihu.com/p/671742753
+- 使用 PyTorch FSDP 微调 Llama 2 70B:https://zhuanlan.zhihu.com/p/671742753
 - https://huggingface.co/docs/transformers/v4.41.0/en/fsdp#fsdp-configuration
 - https://huggingface.co/docs/transformers/v4.41.0/en/main_classes/trainer#transformers.TrainingArguments
 - https://github.com/pacman100/LLM-Workshop/blob/main/chat_assistant/sft/training/configs/fsdp_config.yaml
