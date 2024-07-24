@@ -6,7 +6,13 @@
 - https://github.com/NVIDIA/TensorRT-LLM
 - https://nvidia.github.io/TensorRT-LLM/index.html
 
-- 性能优化最佳实践：https://nvidia.github.io/TensorRT-LLM/performance/perf-best-practices.htm
+性能基准：
+- https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/performance/perf-overview.md
+
+
+
+
+- 性能优化最佳实践：https://nvidia.github.io/TensorRT-LLM/performance/perf-best-practices.html
 
 
 ## FP8

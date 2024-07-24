@@ -1,0 +1,7 @@
+
+
+- https://github.com/alibaba/rtp-llm
+
+项目主要基于FasterTransformer，并在此基础上集成了TensorRT-LLM的部分kernel实现。FasterTransformer和TensorRT-LLM为我们提供了可靠的性能保障。Flash-Attention2和cutlass也在我们持续的性能优化过程中提供了大量帮助。我们的continuous batching和increment decoding参考了vllm的实现；采样参考了transformers，投机采样部分集成了Medusa的实现，多模态部分集成了llava和qwen-vl的实现。
+
+

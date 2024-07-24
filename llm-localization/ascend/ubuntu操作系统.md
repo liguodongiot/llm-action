@@ -18,5 +18,15 @@ apt-get update
 
 apt-get upgrade
 
+```
+
+
 
 ```
+docker pull ubuntu:20.04
+
+docker pull ubuntu:22.04
+```
+
+
+

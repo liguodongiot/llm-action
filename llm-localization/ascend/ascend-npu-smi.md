@@ -162,6 +162,41 @@ netmask_7=255.255.255.0
 ```
 
 
+
+## 查询所有芯片闪存信息
+
+```
+npu-smi info -t flash -i 0
+
+        NPU ID                         : 0
+        Chip Count                     : 1
+
+        Flash Count                    : 1
+
+        Flash ID                       : 1730504
+        Manufacturer ID                : 0xC8
+        Capacity(MB)                   : 64
+        Chip ID                        : 0
+```
+
+## 查询设备1的所有芯片的内存信息。
+
+
+
+```
+npu-smi info -t memory -i 1
+        NPU ID                         : 1
+        Chip Count                     : 1
+
+        DDR Capacity(MB)               : 0
+        DDR Clock Speed(MHz)           : 0
+        HBM Capacity(MB)               : 32768
+        HBM Clock Speed(MHz)           : 1600
+        HBM Temperature(C)             : 35
+        HBM Manufacturer ID            : 0x57
+        Chip ID                        : 0
+```
+
 ## RDMA ping
 
 ```
