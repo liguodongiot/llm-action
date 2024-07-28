@@ -12,9 +12,14 @@
 关系抽取（Relation Extraction）：从文本中抽取出实体之间的关系或联系。
 信息抽取（Information Extraction）：从非结构化文本中提取结构化的信息，如实体、关系和属性等。
 句子相似度（Sentence Similarity）：衡量两个句子之间的语义相似度或相关性。
+
 文本翻译（Translation）：将一种语言的文本转换为另一种语言的过程。
 自然语言推理（NLI：Natural Language Inference）：判断给定的前提和假设之间的逻辑关系，包括蕴含、矛盾和中立等。
+
+
 情感分类（Sentiment Classification）：将文本分为积极、消极或中性等情感类别。
+
+
 人像抠图（Portrait Matting）：从图像中准确地分离人物主体与背景。
 通用抠图（Universal Matting）：从图像中准确地分离目标物体与背景，不限于人像。
 人体检测（Human Detection）：检测图像或视频中的人体位置。

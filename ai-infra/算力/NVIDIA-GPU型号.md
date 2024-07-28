@@ -1,8 +1,6 @@
 
 
 
-
-
 Nvidia下游市场分为四类：游戏、专业可视化、数据中心、汽车，各市场重点产品如下：
 
 游戏：GeForce RTX/GTX系列GPU（PCs）、GeForce NOW（云游戏）、SHIELD（游戏主机）；

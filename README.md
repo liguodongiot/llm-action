@@ -196,10 +196,10 @@
 ### LLM推理优化技术
 
 - [LLM推理优化技术概述]()
+- [大模型推理优化技术-KV Cache](https://www.zhihu.com/question/653658936/answer/3569365986)
+- Continuous Batching
 - FlashAttention
 - PagedAttention
-- Continuous Batching
-- [大模型推理优化技术-KV Cache](https://www.zhihu.com/question/653658936/answer/3569365986)
 - Flash Decoding
 - FlashDecoding++
 
@@ -228,7 +228,7 @@
     - [大模型量化技术原理：AWQ、AutoAWQ](https://zhuanlan.zhihu.com/p/681578090)
     - [大模型量化技术原理：SpQR](https://zhuanlan.zhihu.com/p/682871823)
     - [大模型量化技术原理：ZeroQuant系列](https://zhuanlan.zhihu.com/p/683813769)
-    - [大模型量化技术原理：FP8]()
+    - [大模型量化技术原理：FP8](https://juejin.cn/post/7392071348480917515)
     - [大模型量化技术原理：FP6]()
     - [大模型量化技术原理：FP4]()
 - [大模型量化技术原理：总结]()

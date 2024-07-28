@@ -1,0 +1,69 @@
+{
+    "OtherParam":
+    {
+        "ResourceParam" :
+        {
+            "cacheBlockSize" : 128,
+            "preAllocBlocks" : 8
+        },
+        "LogParam" :
+        {
+            "logLevel" : "Info",
+            "logPath" : "/logs/mindservice.log"
+        },
+        "ServeParam" :
+        {
+            "ipAddress" : "0.0.0.0",
+            "port" : 1025,
+            "maxLinkNum" : 300,
+            "httpsEnabled" : false,
+            "tlsCaPath" : "security/ca/",
+            "tlsCaFile" : ["ca.pem"],
+            "tlsCert" : "security/certs/server.pem",
+            "tlsPk" : "security/keys/server.key.pem",
+            "tlsPkPwd" : "security/pass/mindie_server_key_pwd.txt",
+            "kmcKsfMaster" : "tools/pmt/master/ksfa",
+            "kmcKsfStandby" : "tools/pmt/standby/ksfb",
+            "tlsCrl" : "security/certs/server_crl.pem"
+        }
+    },
+    "WorkFlowParam":
+    {
+        "TemplateParam" :
+        {
+            "templateType": "Standard",
+            "templateName" : "Standard_llama",
+            "pipelineNumber" : 1
+        }
+    },
+    "ModelDeployParam":
+    {
+        "maxSeqLen" : 2560,
+        "npuDeviceIds" : [[$npuids]],
+        "ModelParam" : [
+            {
+                "modelInstanceType": "Standard",
+                "modelName" : "$model_name",
+                "modelWeightPath" : "$model_weight_path",
+                "worldSize" : $world_size,
+                "cpuMemSize" : 5,
+                "npuMemSize" : $npu_mem_size,
+                "backendType": "atb"
+            }
+        ]
+    },
+    "ScheduleParam":
+    {
+        "maxPrefillBatchSize" : 192,
+        "maxPrefillTokens" : 12000,
+        "prefillTimeMsPerReq" : 150,
+        "prefillPolicyType" : 0,
+        "decodeTimeMsPerReq" : 50,
+        "decodePolicyType" : 0,
+        "maxBatchSize" : 256,
+        "maxIterTimes" : 1024,
+        "maxPreemptCount" : 200,
+        "supportSelectBatch" : true,
+        "maxQueueDelayMicroseconds" : 5000
+    }
+}

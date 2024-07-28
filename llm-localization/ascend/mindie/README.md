@@ -112,6 +112,7 @@ docker save -o mindie-1.0.tar ascendhub.huawei.com/public-ascendhub/mindie:1.0.R
 
 scp root@192.xxx.16.211:/root/mindie-1.0.tar .
 
+
 # 断点续传
 rsync -P --rsh=ssh -r root@192.xxx.16.211:/root/mindie-1.0.tar .
 ```

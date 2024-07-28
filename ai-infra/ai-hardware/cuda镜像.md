@@ -8,7 +8,6 @@ https://gitlab.com/nvidia/container-images/cuda/-/blob/master/dist/12.1.1/centos
 
 nvcr.io/nvidia/cuda:12.1.0-cudnn8-runtime-centos7
 
-
 ```
 
 

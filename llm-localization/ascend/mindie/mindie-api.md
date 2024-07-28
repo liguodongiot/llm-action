@@ -19,7 +19,7 @@ curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -
         "content": "如何养生？"
       }
     ]
-  }' http://127.0.0.1:1025/v1/chat/completions
+  }' http://127.0.0.1:1125/v1/chat/completions
 
 
 
@@ -130,7 +130,7 @@ curl "http://127.0.0.1:1025/v1/chat/completions" \
 
 ----
 
-curl "http://127.0.0.1:1025/v1/chat/completions" \
+curl "http://127.0.0.1:1125/v1/chat/completions" \
   -H "Content-Type: application/json" \
   -d '{
   	"model": "qwen1.5-14b",
