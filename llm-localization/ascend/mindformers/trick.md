@@ -2,9 +2,6 @@
 
 
 
-
-
-
 global_batch_size = batch_size * data_parallel * micro_batch_num * micro_batch_interleave_num = 16 = 2 * 1 * 8 * 1).
 
 
