@@ -73,8 +73,11 @@ curl "http://127.0.0.1:1025/v1/chat/completions" \
   }'
 
 
+# http://127.0.0.1:1025/v1/chat/completions
+# 
+# http://192.168.16.xxx:1725/v1/chat/completions
 
-curl "http://127.0.0.1:1025/v1/chat/completions" \
+curl "http://172.17.0.2:1025/v1/chat/completions" \
   -H "Content-Type: application/json" \
   -d '{
   	"model": "qwen1.5-14b",

@@ -1,0 +1,33 @@
+
+
+tail -100f mindservice.log | grep "COMPLETED REQ ID"
+
+2024-07-24 16:25:04.777655 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1236,   3   ,   272 ,   16  ,   256 ,   20  ,   30  ,   1   
+2024-07-24 16:25:05.234118 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1239,   3   ,   271 ,   15  ,   256 ,   20  ,   29  ,   2   
+2024-07-24 16:25:05.360007 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1262,   1   ,   99  ,   22  ,   77  ,   20  ,   26  ,   1   
+2024-07-24 16:25:05.571847 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1244,   2   ,   234 ,   22  ,   212 ,   20  ,   26  ,   1   
+2024-07-24 16:25:05.705152 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1241,   3   ,   281 ,   25  ,   256 ,   20  ,   25  ,   1   
+2024-07-24 16:25:06.538975 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1258,   2   ,   145 ,   16  ,   129 ,   20  ,   27  ,   2   
+2024-07-24 16:25:06.901611 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1274,   1   ,   41  ,   15  ,   26  ,   20  ,   27  ,   1   
+2024-07-24 16:25:07.724699 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1253,   2   ,   195 ,   13  ,   182 ,   20  ,   29  ,   1   
+2024-07-24 16:25:07.940994 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1277,   1   ,   45  ,   17  ,   28  ,   20  ,   29  ,   1   
+2024-07-24 16:25:08.764214 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1257,   2   ,   201 ,   17  ,   184 ,   20  ,   31  ,   1   
+2024-07-24 16:25:08.973185 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1280,   1   ,   40  ,   19  ,   21  ,   20  ,   31  ,   1   
+2024-07-24 16:25:10.494941 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1282,   1   ,   56  ,   25  ,   31  ,   20  ,   33  ,   1   
+2024-07-24 16:25:10.541398 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1250,   3   ,   269 ,   13  ,   256 ,   19  ,   32  ,   1   
+2024-07-24 16:25:13.150968 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1284,   1   ,   82  ,   28  ,   54  ,   20  ,   40  ,   1   
+2024-07-24 16:25:13.282448 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1259,   3   ,   273 ,   17  ,   256 ,   20  ,   41  ,   2   
+2024-07-24 16:25:13.913430 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1261,   3   ,   273 ,   17  ,   256 ,   20  ,   38  ,   1   
+2024-07-24 16:25:14.495745 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1263,   3   ,   279 ,   23  ,   256 ,   20  ,   40  ,   1   
+2024-07-24 16:25:14.717521 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1264,   3   ,   268 ,   12  ,   256 ,   20  ,   38  ,   2   
+2024-07-24 16:25:15.027415 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1266,   3   ,   268 ,   12  ,   256 ,   20  ,   35  ,   1   
+2024-07-24 16:25:15.521481 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1287,   1   ,   61  ,   16  ,   45  ,   20  ,   34  ,   1   
+2024-07-24 16:25:15.567090 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1267,   3   ,   273 ,   17  ,   256 ,   19  ,   33  ,   1   
+2024-07-24 16:25:16.039858 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1268,   3   ,   272 ,   16  ,   256 ,   20  ,   33  ,   1   
+2024-07-24 16:25:16.432710 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1269,   3   ,   329 ,   73  ,   256 ,   20  ,   31  ,   1   
+2024-07-24 16:25:17.082790 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1270,   3   ,   263 ,   16  ,   247 ,   20  ,   30  ,   1   
+2024-07-24 16:25:17.339481 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1289,   1   ,   72  ,   15  ,   57  ,   20  ,   30  ,   1   
+2024-07-24 16:25:17.993777 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1271,   3   ,   270 ,   14  ,   256 ,   20  ,   31  ,   1   
+2024-07-24 16:25:18.121696 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1273,   3   ,   271 ,   15  ,   256 ,   20  ,   29  ,   1   
+2024-07-24 16:25:18.248203 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1286,   1   ,   116 ,   17  ,   99  ,   20  ,   27  ,   1   
+2024-07-24 16:25:18.458886 1360 info ibis_request.cc:240] COMPLETED REQ ID:     1275,   3   ,   280 ,   24  ,   256 ,   20  ,   27  ,   1   

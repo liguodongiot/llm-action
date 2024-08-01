@@ -1,0 +1,88 @@
+{
+    "OtherParam" :
+    {
+        "ResourceParam" :
+        {
+            "cacheBlockSize" : 128
+        },
+        "LogParam" :
+        {
+            "logLevel" : "Info",
+            "logPath" : "logs/mindservice.log"
+        },
+        "ServeParam" :
+        {
+            "ipAddress" : "172.17.0.2",
+            "managementIpAddress" : "127.0.0.2",
+            "port" : 1025,
+            "managementPort" : 1026,
+            "maxLinkNum" : 1000,
+            "httpsEnabled" : false,
+            "tlsCaPath" : "security/ca/",
+            "tlsCaFile" : ["ca.pem"],
+            "tlsCert" : "security/certs/server.pem",
+            "tlsPk" : "security/keys/server.key.pem",
+            "tlsPkPwd" : "security/pass/mindie_server_key_pwd.txt",
+            "tlsCrl" : "security/certs/server_crl.pem",
+            "managementTlsCaFile" : ["management_ca.pem"],
+            "managementTlsCert" : "security/certs/management_server.pem",
+            "managementTlsPk" : "security/keys/management_server.key.pem",
+            "managementTlsPkPwd" : "security/pass/management_mindie_server_key_pwd.txt",
+            "managementTlsCrl" : "security/certs/management_server_crl.pem",
+            "kmcKsfMaster" : "tools/pmt/master/ksfa",
+            "kmcKsfStandby" : "tools/pmt/standby/ksfb",
+            "multiNodesInferPort" : 1120,
+            "interNodeTLSEnabled" : true,
+            "interNodeTlsCaFile" : "security/ca/ca.pem",
+            "interNodeTlsCert" : "security/certs/server.pem",
+            "interNodeTlsPk" : "security/keys/server.key.pem",
+            "interNodeTlsPkPwd" : "security/pass/mindie_server_key_pwd.txt",
+            "interNodeKmcKsfMaster" : "tools/pmt/master/ksfa",
+            "interNodeKmcKsfStandby" : "tools/pmt/standby/ksfb"
+        }
+    },
+    "WorkFlowParam" :
+    {
+        "TemplateParam" :
+        {
+            "templateType" : "Standard",
+            "templateName" : "Standard_llama"
+        }
+    },
+    "ModelDeployParam" :
+    {
+        "engineName" : "mindieservice_llm_engine",
+        "modelInstanceNumber" : 1,
+        "tokenizerProcessNumber" : 8,
+        "maxSeqLen" : 2560,
+        "npuDeviceIds" : [[$npuids]],
+        "multiNodesInferEnabled" : false,
+        "ModelParam" : [
+            {
+                "modelName" : "$model_name",
+                "modelWeightPath" : "$model_weight_path",
+                "worldSize" : $world_size,
+                "cpuMemSize" : 5,
+                "npuMemSize" : $npu_mem_size,
+                "backendType": "atb",
+                "pluginParams" : ""
+            }
+        ]
+    },
+    "ScheduleParam" :
+    {
+        "maxPrefillBatchSize" : 50,
+        "maxPrefillTokens" : 8192,
+        "prefillTimeMsPerReq" : 150,
+        "prefillPolicyType" : 0,
+
+        "decodeTimeMsPerReq" : 50,
+        "decodePolicyType" : 0,
+
+        "maxBatchSize" : 200,
+        "maxIterTimes" : 512,
+        "maxPreemptCount" : 0,
+        "supportSelectBatch" : true,
+        "maxQueueDelayMicroseconds" : 5000
+    }
+}
