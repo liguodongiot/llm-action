@@ -1,7 +1,7 @@
 
 
 
-
+```
 global_batch_size = batch_size * data_parallel * micro_batch_num * micro_batch_interleave_num = 16 = 2 * 1 * 8 * 1).
 
 
@@ -16,7 +16,7 @@ micro_batch_interleave_num： batch_size的拆分份数，多副本并行开关�
 
 # compute throughput   (samples/s/p)  每一步每一卡每一秒能处理的样本数
 throughput = self.global_batch_size / self.device_num / (per_step_seconds / 1000) 
-
+```
 
 
 
