@@ -187,7 +187,7 @@
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
 - [TensorRT-LLM保姆级教程（二）-开发实践](https://zhuanlan.zhihu.com/p/667572720)
-- TensorRT-LLM保姆级教程（三）-基于Triton完成模型服务化
+- [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
 - TensorRT-LLM保姆级教程（四）-新模型适配
 - TensorRT
 
@@ -197,7 +197,7 @@
 
 - [LLM推理优化技术概述]()
 - [大模型推理优化技术-KV Cache](https://www.zhihu.com/question/653658936/answer/3569365986)
-- Continuous Batching
+- [大模型推理服务调度优化技术-Continuous batching](https://juejin.cn/post/7401065821596336164)
 - FlashAttention
 - PagedAttention
 - Flash Decoding

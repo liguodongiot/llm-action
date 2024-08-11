@@ -9,7 +9,7 @@ docker：
 
 
 
-rsync -P --rsh=ssh -r root@192.168.16.211:/root/mindie-1.0.rc2.tar .
+rsync -P --rsh=ssh -r root@192.168.16.xxx:/root/mindie-1.0.rc2.tar .
 
 
 
@@ -65,6 +65,12 @@ cd /usr/local/Ascend/mindie/latest/mindie-service/bin
 ```
 docker commit -a "guodong" -m "mindie-1.0.RC2" 365815a95f16 harbor/ascend/mindie-base:1.0.RC2
 
+docker save -o mindie-base.tar harbor/ascend/mindie-base:1.0.RC2
+
+rsync -P --rsh=ssh -r root@192.168.16.211:/home/workspace/mindie-base.tar .
+
+
+
 # -p 192.168.16.xx:1025:1025
 
 docker run  -it --rm  \
@@ -105,7 +111,7 @@ harbor/ascend/mindie-base:1.0.RC2 \
 
 
 docker run -it --rm \
--e ASCEND_VISIBLE_DEVICES=4,5 \
+-e ASCEND_VISIBLE_DEVICES=6,7 \
 -p 1525:1025 \
 --env AIE_LLM_CONTINUOUS_BATCHING=1 \
 --shm-size=32g \
@@ -124,6 +130,23 @@ harbor/ascend/mindie-base:1.0.RC2 \
 
 
 
+docker run -it --rm \
+-e ASCEND_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+-p 1525:1025 \
+--env AIE_LLM_CONTINUOUS_BATCHING=1 \
+--shm-size=32g \
+-w /workspace \
+-v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+-v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+-v /data/model_from_hf/Qwen2-72B-Instruct:/workspace/model \
+-v /home/workspace/llm-server3.sh:/workspace/llm-server.sh \
+-v /home/workspace/mindservice.log:/usr/local/Ascend/mindie/latest/mindie-service/logs/mindservice.log \
+harbor/ascend/mindie-base:1.0.RC2 \
+/workspace/llm-server.sh \
+--model_name=qwen-chat \
+--model_weight_path=/workspace/model \
+--world_size=8 \
+--npu_mem_size=8
 
 
 ```

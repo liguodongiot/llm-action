@@ -16,3 +16,11 @@ nvme-of
 
 
 
+
+
+NVIDIA Ada Lovelace Architecture
+- https://www.nvidia.cn/geforce/ada-lovelace-architecture/
+- https://www.nvidia.com/en-us/geforce/ada-lovelace-architecture/
+
+
+
