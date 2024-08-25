@@ -1,5 +1,16 @@
 
 
+
+
+- https://platform.openai.com/docs/api-reference/chat/create
+- https://platform.openai.com/docs/guides/chat-completions
+
+
+
+
+
+
+
 - https://platform.openai.com/docs/guides/text-generation/managing-tokens
 
 

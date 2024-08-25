@@ -189,7 +189,7 @@
 - [TensorRT-LLM保姆级教程（二）-开发实践](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
 - TensorRT-LLM保姆级教程（四）-新模型适配
-- TensorRT
+
 
 
 
@@ -209,9 +209,10 @@
 近年来，随着Transformer、MOE架构的提出，使得深度学习模型轻松突破上万亿规模参数，从而导致模型变得越来越大，因此，我们需要一些大模型压缩技术来降低模型部署的成本，并提升模型的推理性能。
 模型压缩主要分为如下几类：
 
--   剪枝（Pruning）
+-   模型剪枝（Pruning）
 -   知识蒸馏（Knowledge Distillation）
--   量化
+-   模型量化（Quantization）
+-   低秩分解（Low-Rank Factorization）
 
 ### [LLM量化](https://github.com/liguodongiot/llm-action/tree/main/model-compression/quantization)
 
@@ -228,22 +229,36 @@
     - [大模型量化技术原理：AWQ、AutoAWQ](https://zhuanlan.zhihu.com/p/681578090)
     - [大模型量化技术原理：SpQR](https://zhuanlan.zhihu.com/p/682871823)
     - [大模型量化技术原理：ZeroQuant系列](https://zhuanlan.zhihu.com/p/683813769)
-    - [大模型量化技术原理：FP8](https://juejin.cn/post/7392071348480917515)
+    - [大模型量化技术原理：FP8](https://www.zhihu.com/question/658712811/answer/3596678896)
     - [大模型量化技术原理：FP6]()
     - [大模型量化技术原理：FP4]()
+    - 大模型量化技术原理：KIVI、IntactKV、KVQuant
+    - 大模型量化技术原理：QServe(QoQ)、GEAR、QuaRot
+    - 大模型量化技术原理：QuIP、QuIP#
 - [大模型量化技术原理：总结]()
 
 
 ### LLM剪枝
 
-- [大模型剪枝技术原理（一）-概述](https://www.zhihu.com/question/652126515/answer/3457652467)
 - [万字长文谈深度神经网络剪枝综述](https://zhuanlan.zhihu.com/p/692858636?)
+
+
+目前，大多数针对大模型模型的压缩技术都专注于模型量化领域，即降低单个权重的数值表示的精度。另一种模型压缩方法模型剪枝的研究相对较少，即删除网络元素，包括从单个权重（非结构化剪枝）到更高粒度的组件，如权重矩阵的整行/列（结构化剪枝）。
+
+本系列将针对一些常见大模型剪枝方案（LLM-Pruner、SliceGPT、SparseGPT、Wanda等）进行讲述。
+
+- [大模型剪枝技术原理：概述](https://www.zhihu.com/question/652126515/answer/3457652467)
+- [大模型剪枝技术原理：LLM-Pruner、SliceGPT]()
+- [大模型剪枝技术原理：SparseGPT、Wanda]()
+- [大模型剪枝技术原理：总结]()
 
 
 **结构化剪枝**：
 
 - LLM-Pruner(LLM-Pruner: On the Structural Pruning of Large Language Models)
 - LLM-Shearing(Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning)
+- SliceGPT: Compress Large Language Models by Deleting Rows and Columns
+- LoSparse
 
 
 **非结构化剪枝**：
@@ -252,7 +267,6 @@
 - LoRAPrune(LoRAPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning)
 - Wanda(A Simple and Effective Pruning Approach for Large Language Models)
 - Flash-LLM(Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity)
-
 
 
 
