@@ -320,9 +320,7 @@ Instruction Following：
 - [IFEval: Instruction Following Eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)/[Paper](https://arxiv.org/abs/2311.07911)：专注评估大模型遵循指令的能力,包含关键词检测、标点控制、输出格式要求等25种任务。
 - [SuperCLUE](https://github.com/CLUEbenchmark/SuperCLUE)：一个综合性大模型评测基准，本次评测主要聚焦于大模型的四个能力象限，包括语言理解与生成、专业技能与知识、Agent智能体和安全性，进而细化为12项基础能力。
 - [AGIEval](https://github.com/ruixiangcui/AGIEval/)：用于评估基础模型在与人类认知和解决问题相关的任务中的能力。该基准源自 20 项面向普通考生的官方、公开、高标准的入学和资格考试，例如：普通大学入学考试（例如：中国高考（Gaokao）和美国 SAT）、法学院入学考试、数学竞赛、律师资格考试、国家公务员考试。
-- [OpenCompass 司南 2.0 大模型评测体系](https://github.com/open-compass/opencompass/blob/main/README_zh-CN.md)
-
-支持的数据集：
+- [OpenCompass](https://github.com/open-compass/opencompass/blob/main/README_zh-CN.md)：司南 2.0 大模型评测体系。支持的数据集如下：
 
 <table align="center">
   <tbody>
