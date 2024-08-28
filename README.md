@@ -187,7 +187,7 @@
 - [模型推理服务化框架Triton保姆式教程（二）：架构解析](https://zhuanlan.zhihu.com/p/634143650)
 - [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
-- [TensorRT-LLM保姆级教程（二）-开发实践](https://zhuanlan.zhihu.com/p/667572720)
+- [TensorRT-LLM保姆级教程（二）-离线环境搭建、模型量化及推理](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
 - TensorRT-LLM保姆级教程（四）-新模型适配
 
@@ -320,6 +320,268 @@ Instruction Following：
 - [IFEval: Instruction Following Eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)/[Paper](https://arxiv.org/abs/2311.07911)：专注评估大模型遵循指令的能力,包含关键词检测、标点控制、输出格式要求等25种任务。
 - [SuperCLUE](https://github.com/CLUEbenchmark/SuperCLUE)：一个综合性大模型评测基准，本次评测主要聚焦于大模型的四个能力象限，包括语言理解与生成、专业技能与知识、Agent智能体和安全性，进而细化为12项基础能力。
 - [AGIEval](https://github.com/ruixiangcui/AGIEval/)：用于评估基础模型在与人类认知和解决问题相关的任务中的能力。该基准源自 20 项面向普通考生的官方、公开、高标准的入学和资格考试，例如：普通大学入学考试（例如：中国高考（Gaokao）和美国 SAT）、法学院入学考试、数学竞赛、律师资格考试、国家公务员考试。
+- [OpenCompass 司南 2.0 大模型评测体系](https://github.com/open-compass/opencompass/blob/main/README_zh-CN.md)
+
+支持的数据集：
+
+<table align="center">
+  <tbody>
+    <tr align="center" valign="bottom">
+      <td>
+        <b>语言</b>
+      </td>
+      <td>
+        <b>知识</b>
+      </td>
+      <td>
+        <b>推理</b>
+      </td>
+      <td>
+        <b>考试</b>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>
+<details open>
+<summary><b>字词释义</b></summary>
+
+- WiC
+- SummEdits
+
+</details>
+
+<details open>
+<summary><b>成语习语</b></summary>
+
+- CHID
+
+</details>
+
+<details open>
+<summary><b>语义相似度</b></summary>
+
+- AFQMC
+- BUSTM
+
+</details>
+
+<details open>
+<summary><b>指代消解</b></summary>
+
+- CLUEWSC
+- WSC
+- WinoGrande
+
+</details>
+
+<details open>
+<summary><b>翻译</b></summary>
+
+- Flores
+- IWSLT2017
+
+</details>
+
+<details open>
+<summary><b>多语种问答</b></summary>
+
+- TyDi-QA
+- XCOPA
+
+</details>
+
+<details open>
+<summary><b>多语种总结</b></summary>
+
+- XLSum
+
+</details>
+      </td>
+      <td>
+<details open>
+<summary><b>知识问答</b></summary>
+
+- BoolQ
+- CommonSenseQA
+- NaturalQuestions
+- TriviaQA
+
+</details>
+      </td>
+      <td>
+<details open>
+<summary><b>文本蕴含</b></summary>
+
+- CMNLI
+- OCNLI
+- OCNLI_FC
+- AX-b
+- AX-g
+- CB
+- RTE
+- ANLI
+
+</details>
+
+<details open>
+<summary><b>常识推理</b></summary>
+
+- StoryCloze
+- COPA
+- ReCoRD
+- HellaSwag
+- PIQA
+- SIQA
+
+</details>
+
+<details open>
+<summary><b>数学推理</b></summary>
+
+- MATH
+- GSM8K
+
+</details>
+
+<details open>
+<summary><b>定理应用</b></summary>
+
+- TheoremQA
+- StrategyQA
+- SciBench
+
+</details>
+
+<details open>
+<summary><b>综合推理</b></summary>
+
+- BBH
+
+</details>
+      </td>
+      <td>
+<details open>
+<summary><b>初中/高中/大学/职业考试</b></summary>
+
+- C-Eval
+- AGIEval
+- MMLU
+- GAOKAO-Bench
+- CMMLU
+- ARC
+- Xiezhi
+
+</details>
+
+<details open>
+<summary><b>医学考试</b></summary>
+
+- CMB
+
+</details>
+      </td>
+    </tr>
+</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr align="center" valign="bottom">
+      <td>
+        <b>理解</b>
+      </td>
+      <td>
+        <b>长文本</b>
+      </td>
+      <td>
+        <b>安全</b>
+      </td>
+      <td>
+        <b>代码</b>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td>
+<details open>
+<summary><b>阅读理解</b></summary>
+
+- C3
+- CMRC
+- DRCD
+- MultiRC
+- RACE
+- DROP
+- OpenBookQA
+- SQuAD2.0
+
+</details>
+
+<details open>
+<summary><b>内容总结</b></summary>
+
+- CSL
+- LCSTS
+- XSum
+- SummScreen
+
+</details>
+
+<details open>
+<summary><b>内容分析</b></summary>
+
+- EPRSTMT
+- LAMBADA
+- TNEWS
+
+</details>
+      </td>
+      <td>
+<details open>
+<summary><b>长文本理解</b></summary>
+
+- LEval
+- LongBench
+- GovReports
+- NarrativeQA
+- Qasper
+
+</details>
+      </td>
+      <td>
+<details open>
+<summary><b>安全</b></summary>
+
+- CivilComments
+- CrowsPairs
+- CValues
+- JigsawMultilingual
+- TruthfulQA
+
+</details>
+<details open>
+<summary><b>健壮性</b></summary>
+
+- AdvGLUE
+
+</details>
+      </td>
+      <td>
+<details open>
+<summary><b>代码</b></summary>
+
+- HumanEval
+- HumanEvalX
+- MBPP
+- APPs
+- DS1000
+
+</details>
+      </td>
+    </tr>
+</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ## LLM数据工程
