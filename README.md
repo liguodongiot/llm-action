@@ -35,6 +35,7 @@
   - 🔰 [LLM剪枝](#llm剪枝)
   - 💹 [LLM知识蒸馏](#llm知识蒸馏)
   - ♑️ [低秩分解](#低秩分解)
+- :herb: [LLM测评](#llm测评)
 - :palm_tree: [LLM数据工程](#llm数据工程)
   - :dolphin: [LLM微调高效数据筛选技术](#llm微调高效数据筛选技术)
 - :cyclone: [提示工程](#提示工程)
@@ -309,6 +310,15 @@ Instruction Following：
 
 - ZeroQuant-FP（低秩分解+量化）
 - LoRAPrune（低秩分解+剪枝）
+
+
+
+## LLM测评
+
+- [C-Eval](https://github.com/liguodongiot/ceval)：全面的中文基础模型评估套件，涵盖了52个不同学科的13948个多项选择题，分为四个难度级别。
+- [CMMLU](https://github.com/liguodongiot/CMMLU)：一个综合性的中文评估基准，专门用于评估语言模型在中文语境下的知识和推理能力。CMMLU涵盖了从基础学科到高级专业水平的67个主题。它包括：需要计算和推理的自然科学，需要知识的人文科学和社会科学,以及需要生活常识的中国驾驶规则等。此外，CMMLU中的许多任务具有中国特定的答案，可能在其他地区或语言中并不普遍适用。因此是一个完全中国化的中文测试基准。
+- [IFEval: Instruction Following Eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)/[Paper](https://arxiv.org/abs/2311.07911)
+
 
 
 ## LLM数据工程
