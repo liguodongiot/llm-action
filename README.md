@@ -317,8 +317,9 @@ Instruction Following：
 
 - [C-Eval](https://github.com/liguodongiot/ceval)：全面的中文基础模型评估套件，涵盖了52个不同学科的13948个多项选择题，分为四个难度级别。
 - [CMMLU](https://github.com/liguodongiot/CMMLU)：一个综合性的中文评估基准，专门用于评估语言模型在中文语境下的知识和推理能力。CMMLU涵盖了从基础学科到高级专业水平的67个主题。它包括：需要计算和推理的自然科学，需要知识的人文科学和社会科学,以及需要生活常识的中国驾驶规则等。此外，CMMLU中的许多任务具有中国特定的答案，可能在其他地区或语言中并不普遍适用。因此是一个完全中国化的中文测试基准。
-- [IFEval: Instruction Following Eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)/[Paper](https://arxiv.org/abs/2311.07911)
-
+- [IFEval: Instruction Following Eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)/[Paper](https://arxiv.org/abs/2311.07911)：专注评估大模型遵循指令的能力,包含关键词检测、标点控制、输出格式要求等25种任务。
+- [SuperCLUE](https://github.com/CLUEbenchmark/SuperCLUE)：一个综合性大模型评测基准，本次评测主要聚焦于大模型的四个能力象限，包括语言理解与生成、专业技能与知识、Agent智能体和安全性，进而细化为12项基础能力。
+- [AGIEval](https://github.com/ruixiangcui/AGIEval/)：用于评估基础模型在与人类认知和解决问题相关的任务中的能力。该基准源自 20 项面向普通考生的官方、公开、高标准的入学和资格考试，例如：普通大学入学考试（例如：中国高考（Gaokao）和美国 SAT）、法学院入学考试、数学竞赛、律师资格考试、国家公务员考试。
 
 
 ## LLM数据工程
@@ -404,6 +405,8 @@ LLM Data Engineering
 - [大模型国产化适配9-LLM推理框架MindIE-Service性能基准测试](https://zhuanlan.zhihu.com/p/704649189)
 - [大模型国产化适配10-快速迁移大模型到昇腾910B保姆级教程（Pytorch版）](https://juejin.cn/post/7375351908896866323)
 - [大模型国产化适配11-LLM训练性能基准测试（昇腾910B3）](https://juejin.cn/post/7380995631790964772)
+- [国产知名AI芯片厂商产品大揭秘-昇腾、海光、天数智芯...](https://www.zhihu.com/question/662334968/answer/3608356027)
+- [国内AI芯片厂商的计算平台大揭秘-昇腾、海光、天数智芯...]()
 
 
 
