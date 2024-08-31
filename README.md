@@ -666,7 +666,9 @@ LLM Data Engineering
 - [大模型国产化适配10-快速迁移大模型到昇腾910B保姆级教程（Pytorch版）](https://juejin.cn/post/7375351908896866323)
 - [大模型国产化适配11-LLM训练性能基准测试（昇腾910B3）](https://juejin.cn/post/7380995631790964772)
 - [国产知名AI芯片厂商产品大揭秘-昇腾、海光、天数智芯...](https://www.zhihu.com/question/662334968/answer/3608356027)
-- [国内AI芯片厂商的计算平台大揭秘-昇腾、海光、天数智芯...]()
+- [国内AI芯片厂商的计算平台大揭秘-昇腾、海光、天数智芯...](https://www.zhihu.com/question/596309547/answer/3609089892)
+- [【LLM国产化】量化技术在MindIE中的应用]()
+
 
 
 
