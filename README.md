@@ -198,7 +198,8 @@
 
 - [LLM推理优化技术概述]()
 - [大模型推理优化技术-KV Cache](https://www.zhihu.com/question/653658936/answer/3569365986)
-- [大模型推理服务调度优化技术-Continuous batching](https://juejin.cn/post/7401065821596336164)
+- [大模型推理服务调度优化技术-Continuous batching](https://zhuanlan.zhihu.com/p/719610083)
+- [大模型底显存推理优化-Offload技术](https://juejin.cn/post/7405158045628596224)
 - FlashAttention
 - PagedAttention
 - Flash Decoding
@@ -231,7 +232,7 @@
     - [大模型量化技术原理：SpQR](https://zhuanlan.zhihu.com/p/682871823)
     - [大模型量化技术原理：ZeroQuant系列](https://zhuanlan.zhihu.com/p/683813769)
     - [大模型量化技术原理：FP8](https://www.zhihu.com/question/658712811/answer/3596678896)
-    - [大模型量化技术原理：FP6]()
+    - [大模型量化技术原理：FP6](https://juejin.cn/post/7412893752090853386)
     - [大模型量化技术原理：FP4]()
     - 大模型量化技术原理：KIVI、IntactKV、KVQuant
     - 大模型量化技术原理：QServe(QoQ)、GEAR、QuaRot
@@ -667,7 +668,7 @@ LLM Data Engineering
 - [大模型国产化适配11-LLM训练性能基准测试（昇腾910B3）](https://juejin.cn/post/7380995631790964772)
 - [国产知名AI芯片厂商产品大揭秘-昇腾、海光、天数智芯...](https://f46522gm22.feishu.cn/docx/PfWfdMKo8oXYN6xi7uycuhgFnKg)
 - [国内AI芯片厂商的计算平台大揭秘-昇腾、海光、天数智芯...](https://f46522gm22.feishu.cn/docx/XnhcdXVDholUBpxYoMccS11Mnfc)
-- [【LLM国产化】量化技术在MindIE推理框架中的应用]()
+- [【LLM国产化】量化技术在MindIE推理框架中的应用](https://juejin.cn/post/7416723051377377316)
 
 
 
@@ -737,6 +738,7 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [为什么很多新发布的大模型默认使用BF16而不是FP16？](https://www.zhihu.com/question/616600181/answer/3195333332)
 - [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
 - [一文详解模型权重存储新格式 Safetensors](https://juejin.cn/post/7386360803039838235)
+- [一文搞懂大模型文件存储格式新宠GGUF](https://juejin.cn/post/7408858126042726435)
 
 
 ## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/README.md)
