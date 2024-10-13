@@ -200,8 +200,13 @@
 - [大模型推理优化技术-KV Cache](https://www.zhihu.com/question/653658936/answer/3569365986)
 - [大模型推理服务调度优化技术-Continuous batching](https://zhuanlan.zhihu.com/p/719610083)
 - [大模型底显存推理优化-Offload技术](https://juejin.cn/post/7405158045628596224)
-- FlashAttention
-- PagedAttention
+- [大模型推理优化技术-KV Cache量化](https://juejin.cn/post/7420231738558627874)
+- [大模型推理优化技术-KV Cache优化方法综述]()
+- 大模型吞吐优化技术-多LoRA推理服务
+- 大模型推理服务调度优化技术-公平性调度
+- 大模型访存优化技术-FlashAttention
+- 大模型显存优化技术-PagedAttention
+- 大模型解码优化-Speculative Decoding及其变体
 - Flash Decoding
 - FlashDecoding++
 
@@ -233,10 +238,11 @@
     - [大模型量化技术原理：ZeroQuant系列](https://zhuanlan.zhihu.com/p/683813769)
     - [大模型量化技术原理：FP8](https://www.zhihu.com/question/658712811/answer/3596678896)
     - [大模型量化技术原理：FP6](https://juejin.cn/post/7412893752090853386)
+    - [大模型量化技术原理：KIVI、IntactKV、KVQuant](https://juejin.cn/post/7420231738558627874)
+    - [大模型量化技术原理：Atom、QuaRot](https://juejin.cn/post/7424334647570513972)
+    - [大模型量化技术原理：QoQ量化及QServe推理服务系统]()
+    - 大模型量化技术原理：QuIP、QuIP#、OmniQuant
     - [大模型量化技术原理：FP4]()
-    - 大模型量化技术原理：KIVI、IntactKV、KVQuant
-    - 大模型量化技术原理：QServe(QoQ)、GEAR、QuaRot
-    - 大模型量化技术原理：QuIP、QuIP#
 - [大模型量化技术原理：总结]()
 
 
