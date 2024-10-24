@@ -190,13 +190,14 @@
 - [TensorRT-LLM保姆级教程（二）-离线环境搭建、模型量化及推理](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
 - TensorRT-LLM保姆级教程（四）-新模型适配
-
+- vLLM
+- LightLLM
 
 
 
 ### LLM推理优化技术
 
-- [LLM推理优化技术概述]()
+- [LLM推理优化技术-概述]()
 - [大模型推理优化技术-KV Cache](https://www.zhihu.com/question/653658936/answer/3569365986)
 - [大模型推理服务调度优化技术-Continuous batching](https://zhuanlan.zhihu.com/p/719610083)
 - [大模型底显存推理优化-Offload技术](https://juejin.cn/post/7405158045628596224)
