@@ -14,3 +14,16 @@ GGUF量化格式
 
 
 
+
+
+
+```
+CMAKE_ARGS="-DGGML_METAL=on" pip install -U llama-cpp-python --no-cache-dir
+pip install 'llama-cpp-python[server]'
+```
+
+
+```
+export MODEL=/Users/liguodong/model/qwen2/qwen2-0_5b-instruct-q2_k.gguf
+python3 -m llama_cpp.server --model $MODEL  --n_gpu_layers 1
+```
