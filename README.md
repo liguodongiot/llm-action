@@ -208,6 +208,7 @@
 - 大模型访存优化技术-FlashAttention
 - 大模型显存优化技术-PagedAttention
 - 大模型解码优化-Speculative Decoding及其变体
+- 大模型推理优化-结构化文本生成
 - Flash Decoding
 - FlashDecoding++
 
