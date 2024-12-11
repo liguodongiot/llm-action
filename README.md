@@ -13,9 +13,6 @@
 </p> 
 
 
-🔥🔥🔥 最近正在做一个在 NVIDIA GPU、Ascend NPU 上训练大模型的简易工具[unify-easy-llm](https://github.com/liguodongiot/unify-easy-llm)，欢迎大家关注。
-
-
 ## 目录
 
 - :snail: [LLM训练](#llm训练)
@@ -179,6 +176,7 @@
 
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
 
+
 ### LLM推理框架
 
 - [大模型推理框架概述](https://www.zhihu.com/question/625415776/answer/3243562246)
@@ -191,7 +189,8 @@
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
 - TensorRT-LLM保姆级教程（四）-新模型适配
 - vLLM
-- LightLLM
+- [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
+- [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
 
 
 
@@ -242,10 +241,11 @@
     - [大模型量化技术原理：FP6](https://juejin.cn/post/7412893752090853386)
     - [大模型量化技术原理：KIVI、IntactKV、KVQuant](https://juejin.cn/post/7420231738558627874)
     - [大模型量化技术原理：Atom、QuaRot](https://juejin.cn/post/7424334647570513972)
-    - [大模型量化技术原理：QoQ量化及QServe推理服务系统]()
+    - [大模型量化技术原理：QoQ量化及QServe推理服务系统](https://zhuanlan.zhihu.com/p/8047106486)
     - 大模型量化技术原理：QuIP、QuIP#、OmniQuant
     - [大模型量化技术原理：FP4]()
-- [大模型量化技术原理：总结]()
+- [大模型量化技术原理：总结](https://zhuanlan.zhihu.com/p/11886909512)
+
 
 
 ### LLM剪枝

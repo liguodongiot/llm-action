@@ -6,6 +6,11 @@
 
 - https://github.com/ninehills/llm-inference-benchmark
 - https://github.com/triton-inference-server/perf_analyzer
+- https://github.com/triton-inference-server/perf_analyzer/tree/main/genai-perf （推理性能）
+- https://github.com/modelscope/evalscope (模型精度、推理性能)
+
+
+
 
 
 
