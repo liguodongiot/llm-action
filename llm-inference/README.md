@@ -11,6 +11,8 @@
 - FastTransformer：https://github.com/NVIDIA/FasterTransformer
 - vLLM：https://github.com/vllm-project/vllm
 - LLM Accelerator：https://github.com/microsoft/LMOps
+- ZhiLight（知乎&面壁智能）：https://github.com/zhihu/ZhiLight
+
 
 
 - LMDeploy,TurboMind

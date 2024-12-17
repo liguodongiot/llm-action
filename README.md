@@ -177,13 +177,10 @@
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
 
 
-### LLM推理框架
+### 模型推理引擎
 
 - [大模型推理框架概述](https://www.zhihu.com/question/625415776/answer/3243562246)
 - [大模型的好伙伴，浅析推理加速引擎FasterTransformer](https://zhuanlan.zhihu.com/p/626008090)
-- [模型推理服务化框架Triton保姆式教程（一）：快速入门](https://zhuanlan.zhihu.com/p/629336492)
-- [模型推理服务化框架Triton保姆式教程（二）：架构解析](https://zhuanlan.zhihu.com/p/634143650)
-- [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
 - [TensorRT-LLM保姆级教程（二）-离线环境搭建、模型量化及推理](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
@@ -192,6 +189,13 @@
 - [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
 
+
+### 模型推理服务
+
+- [模型推理服务工具综述](https://zhuanlan.zhihu.com/p/721395381)
+- [模型推理服务化框架Triton保姆式教程（一）：快速入门](https://zhuanlan.zhihu.com/p/629336492)
+- [模型推理服务化框架Triton保姆式教程（二）：架构解析](https://zhuanlan.zhihu.com/p/634143650)
+- [模型推理服务化框架Triton保姆式教程（三）：开发实践](https://zhuanlan.zhihu.com/p/634444666)
 
 
 ### LLM推理优化技术
