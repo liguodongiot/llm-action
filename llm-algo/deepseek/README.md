@@ -10,3 +10,6 @@
 
 - DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning: https://arxiv.org/pdf/2501.12948
 
+
+
+- DeepSeek-R1训练数据准备方案：https://zhuanlan.zhihu.com/p/20763180629

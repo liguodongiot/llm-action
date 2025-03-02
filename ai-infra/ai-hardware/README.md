@@ -1,7 +1,11 @@
 
-NVIDIA A100 80GB PCIe GPU: https://www.edomtech.com.cn/product-detail/nvidia-a100-80gb-pcie-gpu/
 
 ## Nvidia GPU
+
+
+NVIDIA A100 80GB PCIe GPU: https://www.edomtech.com.cn/product-detail/nvidia-a100-80gb-pcie-gpu/
+
+- RTX : https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf
 
 
 

@@ -22,15 +22,14 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 
 
 
+## 量化工具
+
+- https://github.com/vllm-project/llm-compressor/ 
 
 
 
-- 大模型量化原理综述（一）：概述
-- 大模型量化原理综述（二）：训练感知量化 LLM-QAT
-- 大模型量化原理综述（二）：SmoothQuant
-- 大模型量化原理综述（二）：AWQ
-- 大模型量化原理综述（二）：GPTQ
-- 大模型量化原理综述（三）：LLM.int8()
+
+
 
 
 

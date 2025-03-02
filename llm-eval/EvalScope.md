@@ -2,6 +2,20 @@
 
 
 
+## 性能压测
+
+https://evalscope.readthedocs.io/zh-cn/latest/user_guides/stress_test/parameters.html
+
+
+## 效果测评
+
+- https://evalscope.readthedocs.io/zh-cn/latest/get_started/basic_usage.html
+- 推理模型评估：https://github.com/modelscope/evalscope/blob/main/docs/zh/best_practice/deepseek_r1_distill.md
+
+
+
+
+
 <p align="center">
     <img src="./evalscope_framework.png" style="width: 70%;">
     <br>EvalScope 整体架构图.
@@ -27,6 +41,14 @@
 6. **Visualization**: 可视化结果，帮助用户更直观地理解评测结果，便于分析和比较不同模型的表现。
 
 </details>
+
+
+
+## 数据集
+
+modelscope download --dataset modelscope/cmmlu --local_dir ./cmmlu
+modelscope download --dataset modelscope/ceval-exam --local_dir ./ceval
+modelscope download --dataset modelscope/gsm8k --local_dir gsm8k
 
 
 
