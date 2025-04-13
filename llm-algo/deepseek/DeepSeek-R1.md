@@ -16,6 +16,9 @@
 - https://github.com/nbasyl/LLM-FP4
 
 
+
+
+
 https://huggingface.co/dwetzel/DeepSeek-R1-Distill-Qwen-32B-GPTQ-INT4
 
 
@@ -23,7 +26,20 @@ https://huggingface.co/dwetzel/DeepSeek-R1-Distill-Qwen-32B-GPTQ-INT4
 https://github.com/sgl-project/sglang/issues/2706
 
 
+- sglang 对 deepseek r1 性能测试： https://github.com/sgl-project/sglang/issues/3956
+
+
 ### vllm
 
 https://huggingface.co/cognitivecomputations/DeepSeek-R1-AWQ/discussions
+
+
+
+
+## hf transformers
+
+- https://github.com/huggingface/transformers/blob/main/docs/source/en/quantization/finegrained_fp8.md
+
+
+
 

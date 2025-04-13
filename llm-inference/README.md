@@ -12,6 +12,8 @@
 - vLLM：https://github.com/vllm-project/vllm
 - LLM Accelerator：https://github.com/microsoft/LMOps
 - ZhiLight（知乎&面壁智能）：https://github.com/zhihu/ZhiLight
+- 赤兔：清华团队：https://github.com/thu-pacman/chitu
+- mini推理框架：https://github.com/harleyszhang/lite_llama/tree/main
 
 
 
@@ -24,6 +26,16 @@
 
 - AWQ、AutoAWQ
 
-llama.cpp、vllm、lightLLM、fastLLM
+- llama.cpp、vllm、lightLLM、fastLLM
+
+
+
+- marlin（FP16xINT4 LLM inference kernel）：https://github.com/IST-DASLab/marlin
+
+
+
+
+
+
 
 

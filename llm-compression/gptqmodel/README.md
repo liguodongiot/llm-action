@@ -1,10 +1,10 @@
 
 
 
-git clone git@github.com:liguodongiot/llm-compressor.git
+git clone git@github.com:liguodongiot/GPTQModel.git
 
 
-git remote add upstream git@github.com:vllm-project/llm-compressor.git
+git remote add upstream git@github.com:ModelCloud/GPTQModel.git
 
 
 # 拉取原始仓库数据
@@ -24,5 +24,7 @@ git push --tags
 
 
 
+git checkout -b dev-code-v2.0.0 v2.0.0
 
-
+# 将新分支推送到远程仓库
+git push -u origin dev-code-v2.0.0

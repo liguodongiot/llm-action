@@ -25,6 +25,10 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 ## 量化工具
 
 - https://github.com/vllm-project/llm-compressor/ 
+- https://nvidia.github.io/TensorRT-Model-Optimizer/guides/_choosing_quant_methods.html
+- https://github.com/NVIDIA/TensorRT-Model-Optimizer/tree/main/examples/llm_ptq
+
+
 
 
 

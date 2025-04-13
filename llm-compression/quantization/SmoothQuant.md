@@ -1,8 +1,18 @@
 
 
+# 源码解读
+
+- https://www.armcvai.cn/2024-10-30/llm-smoothquant.html
+- https://www.armcvai.cn/2024-10-31/smoothquant-inplement.html
+
+
 # SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
 
 - https://huggingface.co/mit-han-lab/opt-6.7b-smoothquant
+
+
+
+
 
 
 

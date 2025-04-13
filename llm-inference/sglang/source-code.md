@@ -35,6 +35,6 @@ git tag
 git checkout -b dev-code-0.4.1 0.4.1
 
 # 将新分支推送到远程仓库
-git push -u origin 0.4.1
+git push -u origin dev-code-0.4.1
 
 
