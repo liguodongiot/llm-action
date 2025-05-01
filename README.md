@@ -45,6 +45,7 @@
   - :octocat: [AI集群网络通信](#ai集群网络通信)
 - 💟 [LLMOps](#llmops)
 - 🍄 [LLM生态相关技术](#llm生态相关技术)
+- [LLM性能分析](#llm性能分析)
 - :dizzy: [LLM面试题](#llm面试题)
 - 🔨 [服务器基础环境安装及常用工具](#服务器基础环境安装及常用工具)
 - 💬 [LLM学习交流群](#llm学习交流群)
@@ -779,6 +780,14 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
 - [一文详解模型权重存储新格式 Safetensors](https://juejin.cn/post/7386360803039838235)
 - [一文搞懂大模型文件存储格式新宠GGUF](https://juejin.cn/post/7408858126042726435)
+
+
+## LLM性能分析
+
+
+- PyTorch Profiler
+- NVIDIA Nsight Systems 
+- NVIDIA Nsight Compute
 
 
 ## [LLM面试题](https://github.com/liguodongiot/llm-action/blob/main/llm-interview/README.md)

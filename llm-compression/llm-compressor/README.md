@@ -1,6 +1,7 @@
 
 
 
+```
 git clone git@github.com:liguodongiot/llm-compressor.git
 
 
@@ -19,10 +20,21 @@ git push
 # 推送tags
 git push --tags
 
+```
+
+
+## llm-compressor
+
+支持的量化类型：
+- https://github.com/neuralmagic/compressed-tensors/blob/main/src/compressed_tensors/quantization/quant_scheme.py
 
 
 
+int8:
+https://github.com/vllm-project/llm-compressor/tree/main/examples/quantization_w8a8_int8
 
+fp8 dynamic:
+https://github.com/vllm-project/llm-compressor/tree/main/examples/quantization_w8a8_fp8
 
 
 
