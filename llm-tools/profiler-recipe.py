@@ -182,8 +182,8 @@ with profile(
 ) as prof:
     model(inputs)
 
-# # Print aggregated stats
-# print(prof.key_averages(group_by_stack_n=5).table(sort_by=sort_by_keyword, row_limit=2))
+# Print aggregated stats
+print(prof.key_averages(group_by_stack_n=5).table(sort_by=sort_by_keyword, row_limit=2))
 
 # -------------------------  -----------------------------------------------------------
 #                      Name  Source Location

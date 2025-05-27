@@ -4,6 +4,7 @@
 # pip install torch_tb_profiler
 # tensorboard --logdir=./log
 # http://localhost:6006/#pytorch_profiler
+# tensorboard --logdir=log_dir --host=127.0.0.1
 
 
 import torch

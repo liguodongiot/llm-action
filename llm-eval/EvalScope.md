@@ -2,6 +2,10 @@
 
 
 
+Qwen3 模型评测最佳实践：https://evalscope.readthedocs.io/zh-cn/latest/best_practice/qwen3.html
+
+
+
 ## 性能压测
 
 https://evalscope.readthedocs.io/zh-cn/latest/user_guides/stress_test/parameters.html
@@ -14,6 +18,7 @@ https://evalscope.readthedocs.io/zh-cn/latest/user_guides/stress_test/parameters
 
 
 
+## 架构图
 
 
 <p align="center">

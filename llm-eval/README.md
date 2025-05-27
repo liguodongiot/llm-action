@@ -9,4 +9,17 @@
 
 
 
+## 测评集
+
+- Humaneval：代码生成
+- CommonSenseQA：知识问答
+- MBPP：代码
+
+
+
+
+
+
+
+
 
