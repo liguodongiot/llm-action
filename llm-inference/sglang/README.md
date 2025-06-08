@@ -32,3 +32,23 @@ docker build . -f docker/Dockerfile --build-arg CUDA_VERSION=${{ matrix.cuda_ver
 
 
 - docker pull lmsysorg/sglang:v0.4.5-cu125          
+
+
+
+
+
+## 文档
+
+
+- SGLang 学习材料：https://github.com/sgl-project/sgl-learning-materials
+- Fast and Expressive LLM Inference with RadixAttention and SGLang：https://lmsys.org/blog/2024-01-17-sglang/
+- Achieving Faster Open-Source Llama3 Serving with SGLang Runtime (vs. TensorRT-LLM, vLLM)：https://lmsys.org/blog/2024-07-25-sglang-llama3/
+- SGLang v0.3 Release: 7x Faster DeepSeek MLA, 1.5x Faster torch.compile, Multi-Image/Video LLaVA-OneVision：https://lmsys.org/blog/2024-09-04-sglang-v0-3/
+- SGLang v0.4: Zero-Overhead Batch Scheduler, Cache-Aware Load Balancer, Faster Structured Outputs：https://lmsys.org/blog/2024-12-04-sglang-v0-4/
+
+
+
+
+
+
+

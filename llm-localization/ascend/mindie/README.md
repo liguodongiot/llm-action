@@ -1,4 +1,15 @@
 
+
+# 入口
+
+https://www.hiascend.com/document/detail/zh/mindie/20RC2/index/index.html
+
+# 支持列表
+
+https://www.hiascend.com/software/mindie/modellist
+
+
+
 - https://www.hiascend.com/document/detail/zh/mindie/10RC1/description/whatismindie/mindie_what_0000.html
 
 

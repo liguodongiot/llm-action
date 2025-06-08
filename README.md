@@ -254,19 +254,20 @@
 
 
 
-### LLM剪枝
+### LLM稀疏化
 
 - [万字长文谈深度神经网络剪枝综述](https://zhuanlan.zhihu.com/p/692858636?)
 
 
 目前，大多数针对大模型模型的压缩技术都专注于模型量化领域，即降低单个权重的数值表示的精度。另一种模型压缩方法模型剪枝的研究相对较少，即删除网络元素，包括从单个权重（非结构化剪枝）到更高粒度的组件，如权重矩阵的整行/列（结构化剪枝）。
 
-本系列将针对一些常见大模型剪枝方案（LLM-Pruner、SliceGPT、SparseGPT、Wanda等）进行讲述。
+本系列将针对一些常见大模型稀疏化方案（LLM-Pruner、SliceGPT、SparseGPT、Wanda等）进行讲述。
 
-- [大模型剪枝技术原理：概述](https://www.zhihu.com/question/652126515/answer/3457652467)
-- [大模型剪枝技术原理：LLM-Pruner、SliceGPT]()
-- [大模型剪枝技术原理：SparseGPT、Wanda]()
-- [大模型剪枝技术原理：总结]()
+- [大模型稀疏化技术原理：概述](https://www.zhihu.com/question/652126515/answer/3457652467)
+- [大模型稀疏化技术原理：Double Sparsity](https://zhuanlan.zhihu.com/p/1912877769827783344)
+- 大模型稀疏化技术原理：LLM-Pruner、SliceGPT
+- 大模型稀疏化技术原理：SparseGPT、Wanda
+- 大模型稀疏化技术原理：总结
 
 
 **结构化剪枝**：
@@ -412,15 +413,14 @@ LLM Data Engineering
 
 ![llm-famliy](./pic/llm/model/llm-timeline-v2.png)
 
-- ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
-- Bloom 大模型解析
-- LLaMA / LLaMA2 大模型解析
 - [百川智能开源大模型baichuan-7B技术剖析](https://www.zhihu.com/question/606757218/answer/3075464500)
 - [百川智能开源大模型baichuan-13B技术剖析](https://www.zhihu.com/question/611507751/answer/3114988669)
 - [LLaMA3 技术剖析](https://www.zhihu.com/question/653374932/answer/3470909634)
+- [大模型算法架构：DeepSeek技术演进及剖析](https://zhuanlan.zhihu.com/p/1912877300439037789)
 - [大模型算法架构：QWen技术演进及剖析]()
-- [大模型算法架构：DeepSeek技术演进及剖析]()
-
+- ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
+- Bloom 大模型解析
+- LLaMA / LLaMA2 大模型解析
 
 ## LLM应用开发
 
