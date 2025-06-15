@@ -22,6 +22,12 @@ Introduction to Weight Quantization：Reducing the size of Large Language Models
 
 
 
+
+Neural Network Weight Quantization（入门）：https://www.analyticsvidhya.com/blog/2025/01/neural-network-weight-quantization/
+
+
+
+
 ## 量化工具
 
 - https://github.com/vllm-project/llm-compressor/ 

@@ -20,7 +20,8 @@ export NCCL_IB_DISABLE=1
 export NCCL_SOCKET_IFNAME=bond0
 export CC=/opt/hpcx/ompi/bin/mpicc
 
-srun --mpi=pmix_v3 singularity run --nv --pwd /workspaces/DeepSpeedExamples-20230430/training/pipeline_parallelism \
+srun --mpi=pmix_v3 singularity run --nv \
+--pwd /workspaces/DeepSpeedExamples-20230430/training/pipeline_parallelism \
 -B /data/hpc/home/guodong.li/:/workspaces:rw \
 deepspeed.sif \
 python -m torch.distributed.run \
