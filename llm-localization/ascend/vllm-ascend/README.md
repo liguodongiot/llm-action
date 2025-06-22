@@ -1,9 +1,11 @@
 
 
+# vllm 支持 NPU
+https://github.com/vllm-project/vllm/issues/7692 
+
 
 
 https://vllm-ascend.readthedocs.io/en/latest/quick_start.html
-
 
 
 
