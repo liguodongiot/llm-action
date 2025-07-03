@@ -19,11 +19,12 @@ CUDA CURAND库：这是CUDA的随机数库，用于生成各种分布的随机�
 
 - https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
 - https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id4
+
 CUDA Toolkit and Corresponding Driver Versions
 
 
 
-
+- https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 - CUDA 编程手册: https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese
 
 

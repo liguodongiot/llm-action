@@ -523,6 +523,8 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [大模型训练时ZeRO-2、ZeRO-3能否和Pipeline并行相结合？](https://www.zhihu.com/question/652836990/answer/3468210626)
 - [一文详解模型权重存储新格式 Safetensors](https://juejin.cn/post/7386360803039838235)
 - [一文搞懂大模型文件存储格式新宠GGUF](https://juejin.cn/post/7408858126042726435)
+- [DeepGEMM 技术剖析](https://juejin.cn/post/7520475965081813055)
+- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
 
 
 ## LLM性能分析
@@ -597,7 +599,7 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 
 ## AI工程化课程推荐
 
-如今人工智能的发展可谓是如火如荼，ChatGPT、Sora、文心一言等AI大模型如雨后春笋般纷纷涌现。AI大模型优势在于它能处理复杂性问题；因此，越来越多的企业需要具备**AI算法设计、AI应用开发、模型推理加速及模型压缩**等AI工程化落地的能力。这就导致行业内的工程师，需要快速提升自身的技术栈，以便于在行业内站稳脚跟。我在[llm-resource](https://github.com/liguodongiot/llm-resource) 和 [ai-system](https://github.com/liguodongiot/ai-system)梳理了一些大模型和AI工程化相关资料，同时，推荐一些AI工程化相关的课程，[点击](https://mp.weixin.qq.com/s?__biz=MzU3Mzg5ODgxMg==&mid=2247488019&idx=1&sn=90ca4657a643431f21df44fa199e695f&chksm=fd3bfb40ca4c72565fdb91717c8a27739bcb71d10fae89c7994f141d375d21059be19e702164&token=701439972&lang=zh_CN#rd)查看详情。
+如今人工智能的发展可谓是如火如荼，ChatGPT、Sora、文心一言等AI大模型如雨后春笋般纷纷涌现。AI大模型优势在于它能处理复杂性问题；因此，越来越多的企业需要具备**AI算法设计、AI应用开发、模型推理加速及模型压缩**等AI工程化落地的能力。这就导致行业内的工程师，需要快速提升自身的技术栈，以便于在行业内站稳脚跟。我在[llm-resource](https://github.com/liguodongiot/llm-resource) 和 [ai-system](https://github.com/liguodongiot/ai-system)梳理了一些大模型和AI工程化相关资料。
 
 
 
