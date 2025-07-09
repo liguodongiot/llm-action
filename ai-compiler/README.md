@@ -1,13 +1,19 @@
 
+## 树模型编译器
+
+- https://mlsys.org/Conferences/doc/2018/196.pdf
+- https://github.com/dmlc/treelite
+- https://treelite.readthedocs.io/en/latest/
 
 
+- https://zhuanlan.zhihu.com/p/347514385
+- https://zhuanlan.zhihu.com/p/487539515
+
+Treelite是用于有效部署决策树集合的模型编译器。
 
 
+- 决策树Ensemble的编译优化：https://zhuanlan.zhihu.com/p/597511551
 
-
-
-
-## 传统编译器
 
 
 ## 深度学习编译器
@@ -53,30 +59,12 @@
 
 
 
-## 树模型编译器
-
-- https://mlsys.org/Conferences/doc/2018/196.pdf
-- https://github.com/dmlc/treelite
-- https://treelite.readthedocs.io/en/latest/
-
-
-- https://zhuanlan.zhihu.com/p/347514385
-- https://zhuanlan.zhihu.com/p/487539515
-
-Treelite是用于有效部署决策树集合的模型编译器。
-
-
-- 决策树Ensemble的编译优化：https://zhuanlan.zhihu.com/p/597511551
-
-
 
 
 ## 深度学习编译优化
 
 
 - 深度学习框架的编译与优化：https://github.com/microsoft/AI-System/tree/main/Textbook/%E7%AC%AC5%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%9A%84%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BC%98%E5%8C%96
-
-
 
 
 
