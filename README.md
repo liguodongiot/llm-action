@@ -604,7 +604,7 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 
 
 <p align="center">
-  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/damodel.jpeg" width="75%">
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/damodel.jpeg" width="50%">
 </p>
 
 
