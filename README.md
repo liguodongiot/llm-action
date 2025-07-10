@@ -603,6 +603,9 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 如今人工智能的发展可谓是如火如荼，ChatGPT、Sora、文心一言等AI大模型如雨后春笋般纷纷涌现。AI大模型优势在于它能处理复杂性问题；因此，越来越多的企业需要具备**AI算法设计、AI应用开发、模型推理加速及模型压缩**等AI工程化落地的能力。这就导致行业内的工程师，需要快速提升自身的技术栈，以便于在行业内站稳脚跟。我在[llm-resource](https://github.com/liguodongiot/llm-resource) 和 [ai-system](https://github.com/liguodongiot/ai-system)梳理了一些大模型和AI工程化相关资料。
 
 
+<p align="center">
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/damodel.jpeg" width="75%">
+</p>
 
 
 
