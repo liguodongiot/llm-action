@@ -186,8 +186,8 @@
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
 - [TensorRT-LLM保姆级教程（二）-离线环境搭建、模型量化及推理](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
-- TensorRT-LLM保姆级教程（四）-新模型适配
 - vLLM
+- SGLang
 - [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
 
