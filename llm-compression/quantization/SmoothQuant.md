@@ -11,13 +11,23 @@
 - https://huggingface.co/mit-han-lab/opt-6.7b-smoothquant
 
 
-
+absmax quantization
 
 
 
 
 - 英特尔模型压缩库-SQ：https://github.com/intel/neural-compressor/blob/master/docs/source/smooth_quant.md
 - 英特尔模型压缩库-仅权重量化方法：https://github.com/intel/neural-compressor/blob/master/docs/source/quantization_weight_only.md
+
+
+
+
+
+
+
+https://github.com/Guangxuan-Xiao/torch-int/
+
+
 
 
 
@@ -32,9 +42,6 @@
 SmoothQuant 支持 LLM 中所有矩阵乘法的权重和激活的 INT8 量化，包括 OPT、BLOOM、GLM、MT-NLG 和 LLaMA 系列。
 我们证明了 LLM 的加速速度高达 1.56 倍，内存减少了 2 倍，而精度损失可以忽略不计。 
 SmoothQuant 支持在单个节点内提供 530B 的 LLM 服务。 我们的工作提供了一个交钥匙解决方案，可以降低硬件成本并使LLM普及。
-
-
-
 
 
 

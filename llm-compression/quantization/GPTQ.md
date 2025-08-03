@@ -6,10 +6,10 @@ LLM.int8() 和 SmoothQuant 都属于 round-to-nearest (RTN) 量化：舍入到�
 
 
 
+非对称量化、并逐层进行处理
 
 
-
-
+zero point quantization
 
 
 
