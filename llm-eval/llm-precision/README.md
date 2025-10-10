@@ -16,6 +16,17 @@ PPL越小越好，PPL越小，p(wi)则越大，也就是说这句话中每个词
 - https://blog.csdn.net/hxxjxw/article/details/107722646
 
 
+计算PPL:
+
+- Ensuring Consistency: Comparing vLLM and Hugging Face Transformers：https://medium.com/@kimdoil1211/ensuring-consistency-comparing-vllm-and-hugging-face-transformers-4cd88b83ed3c
+- https://www.analyticsvidhya.com/blog/2025/01/neural-network-weight-quantization/#h-advantages-of-weight-quantization
+
+
+vllm 计算ppl:
+- https://github.com/vllm-project/vllm/issues/1019
+- https://github.com/vllm-project/vllm/issues/185
+
+
 
 ### Rouge
 
