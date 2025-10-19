@@ -189,6 +189,10 @@
 - SGLang
 - [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
+- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
+- [LLM 确定性推理](https://zhuanlan.zhihu.com/p/1961192621759242664)
+
+
 
 
 ### 模型推理服务
@@ -525,7 +529,6 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [一文详解模型权重存储新格式 Safetensors](https://juejin.cn/post/7386360803039838235)
 - [一文搞懂大模型文件存储格式新宠GGUF](https://juejin.cn/post/7408858126042726435)
 - [DeepGEMM 技术剖析](https://juejin.cn/post/7520475965081813055)
-- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
 
 
 ## LLM性能分析
