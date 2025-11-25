@@ -185,13 +185,13 @@
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
 - [TensorRT-LLM保姆级教程（二）-离线环境搭建、模型量化及推理](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
+- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
+- [谈谈LLM生成文本的惩罚参数](https://zhuanlan.zhihu.com/p/1965476299419132173)
+- [LLM 确定性推理](https://zhuanlan.zhihu.com/p/1961192621759242664)
 - vLLM
 - SGLang
 - [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
-- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
-- [LLM 确定性推理](https://zhuanlan.zhihu.com/p/1961192621759242664)
-
 
 
 
@@ -426,6 +426,9 @@ LLM Data Engineering
 - ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
+- [DeepSeek 视觉语言大模型技术演进（从DeepSeek VL/VL2到DeepSeek OCR）](https://zhuanlan.zhihu.com/p/1976731060562842519)
+
+
 
 ## LLM应用开发
 

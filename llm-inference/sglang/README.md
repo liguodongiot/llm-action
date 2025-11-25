@@ -4,6 +4,8 @@
 
 
 - [SGLang 后端代码解析](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial/blob/main/sglang/code-walk-through/readme-CN.md)
+- Qwen3 think模型 关闭 think：https://qwen.readthedocs.io/zh-cn/latest/deployment/sglang.html
+
 
 
 
@@ -11,9 +13,6 @@
 
 
 https://docs.sglang.ai/backend/quantization.html
-
-
-
 
 
 
