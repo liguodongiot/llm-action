@@ -60,7 +60,7 @@
 **基于大模型实验室的GPU算力实践**
 
 
-|  主题      | 实践          | 博客     |
+|  主题      | 实践          | 博客/视频     |
 |:------------ |:-----------------------------:|:--------:| 
 | 基于ComfyUI调用Flux文生图模型生成动漫风格图像      | [链接](https://www.lab4ai.cn/project/detail?id=f82ca14acda040ba8a3412feb541ba29&type=project)          | [链接](https://mp.weixin.qq.com/s/OEDQO-IkT4uo_HMjBXGuCA)     |
 | 告别传统客服：三步骤，LLaMA-Factory零代码打造会订票的专属大模型      | [链接](https://www.lab4ai.cn/project/detail?id=a78043adcef84cd998516e1bcd39562f&type=project)          | [链接](https://mp.weixin.qq.com/s/N_CQEBEjN0E31x4Vg31rEQ)    |
@@ -77,8 +77,7 @@
 
 **GPU算力优惠活动**
 
-
-待更新...
+- 资源不够用，来Lab4AI享H800GPU，用H800比4090还划算: [详情](https://mp.weixin.qq.com/s/61OtlvP3N4vl0D67eCzSWA)
 
 
 **算力福利**
