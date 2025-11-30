@@ -61,7 +61,6 @@
 
 
 | 主题      | 实践          | 博客     |
-
 | ------------ | ----------------------------- | -------- | 
 | 基于ComfyUI调用Flux文生图模型生成动漫风格图像      | [链接](https://www.lab4ai.cn/project/detail?id=f82ca14acda040ba8a3412feb541ba29&type=project)          | [链接](https://mp.weixin.qq.com/s/OEDQO-IkT4uo_HMjBXGuCA)     |
 | 告别传统客服：三步骤，LLaMA-Factory零代码打造会订票的专属大模型      | [链接](https://www.lab4ai.cn/project/detail?id=a78043adcef84cd998516e1bcd39562f&type=project)          | [[链接](https://mp.weixin.qq.com/s/N_CQEBEjN0E31x4Vg31rEQ)    |
