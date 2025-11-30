@@ -77,9 +77,11 @@
 
 **GPU算力优惠活动**
 
--
 
-**算力福利（免费领取50元算力）**
+待更新...
+
+
+**算力福利**
 
 - 大模型实验室lab4ai：[免费领取50元GPU算力](https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO)
 - 大模型实验室群：[点击进入](https://github.com/liguodongiot/liguodongiot/tree/main/images/大模型实验室群二维码.png)
