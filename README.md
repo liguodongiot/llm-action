@@ -71,7 +71,7 @@
 | LightLLM轻量化部署新范式，打造高性能法律智能体      | [链接](https://www.lab4ai.cn/project/detail?id=b417085ae8cd4dd0bef7161c3d583b15&type=project)          | [链接](https://mp.weixin.qq.com/s/j8rJyoBA02ypPEkxb9XSVg)     |
 | RoboMIND——机器人多形态通用智能评测基准      | [链接](https://www.lab4ai.cn/project/detail?id=492a471cd6054a179660c760f0026704&type=project)          | [链接](https://mp.weixin.qq.com/s/i_QPGuqaXfql6cPELxlUVg)     |
 | 经典论文复现：《Attention Is All You Need》      | [链接](https://www.lab4ai.cn/paper/detail?id=e90aa38fdff9420e8902bc71909fa005&type=paper)          | [链接](https://www.bilibili.com/video/BV1Fvp3zBEAN/?spm_id_from=333.1387.homepage.video_card.click)     |
-| 经典论文复现：《SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions》| [链接](https://www.lab4ai.cn/paper/detail?id=2bbf2f4971f74c6e8def26879233f2fe&type=paper)          | -     |
+| 经典论文复现：《SELF-INSTRUCT: Aligning Language Models <br> with Self-Generated Instructions》| [链接](https://www.lab4ai.cn/paper/detail?id=2bbf2f4971f74c6e8def26879233f2fe&type=paper)          | -     |
 
 
 
