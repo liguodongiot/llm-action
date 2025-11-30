@@ -77,7 +77,7 @@
 
 **GPU算力优惠活动**
 
-- 资源不够用，来 Lab4AI 享 H800 GPU，用H800比4090还划算: [详情](https://mp.weixin.qq.com/s/61OtlvP3N4vl0D67eCzSWA)
+- 资源不够用，来 Lab4AI 享 H800 GPU，用 H800 比 4090 还划算: [详情](https://mp.weixin.qq.com/s/61OtlvP3N4vl0D67eCzSWA)
 
 
 **算力福利**
