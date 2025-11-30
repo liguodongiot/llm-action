@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v3.png" >
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v4.png" >
 </p>
 
 
