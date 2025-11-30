@@ -77,12 +77,12 @@
 
 **GPU算力优惠活动**
 
-- 资源不够用，来Lab4AI享H800GPU，用H800比4090还划算: [详情](https://mp.weixin.qq.com/s/61OtlvP3N4vl0D67eCzSWA)
+- 资源不够用，来 Lab4AI 享 H800 GPU，用H800比4090还划算: [详情](https://mp.weixin.qq.com/s/61OtlvP3N4vl0D67eCzSWA)
 
 
 **算力福利**
 
-- 大模型实验室lab4ai：[免费领取50元GPU算力](https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO)
+- 大模型实验室Lab4AI：[免费领取50元GPU算力](https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO)
 - 大模型实验室群：[点击进入](https://github.com/liguodongiot/liguodongiot/tree/main/images/大模型实验室群二维码.png)
 
 
