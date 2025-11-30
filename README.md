@@ -10,7 +10,7 @@
 <a href="https://www.zhihu.com/people/liguodong-iot"> <img src="https://img.shields.io/badge/吃果冻不吐果冻皮-0079FF.svg?style=plastic&logo=zhihu&logoColor=white"> </a>
 <a href="https://juejin.cn/user/3642056016410728"> <img src="https://img.shields.io/badge/掘金-吃果冻不吐果冻皮-000099.svg?style=plastic&logo=juejin"> </a>
 <a href="https://liguodong.blog.csdn.net/"> <img src="https://img.shields.io/badge/CSDN-吃果冻不吐果冻皮-6B238E.svg"> </a>
-<a href="https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO"> <img src="https://img.shields.io/badge/Lab4AI-大模型实验室-426F42.svg"> </a>
+<a href="https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO"> <img src="https://img.shields.io/badge/Lab4AI-大模型实验室-1E90FF.svg"> </a>
 </p> 
 
 
