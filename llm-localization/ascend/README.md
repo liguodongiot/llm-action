@@ -1,4 +1,10 @@
 
+## 镜像地址
+
+https://quay.io/repository/ascend/cann?tab=tags
+
+
+
 
 
 ## pytorch
@@ -80,9 +86,9 @@ export PATH=$LITE_HOME/tools/converter/converter:$LITE_HOME/tools/benchmark:$PAT
 
 
 
+## MindIE 日志
 
-
-
+https://www.hiascend.com/document/detail/zh/mindie/21RC2/ref/logreference/mindie_log_0210.html
 
 
 

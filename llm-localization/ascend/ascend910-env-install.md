@@ -1,4 +1,9 @@
+
+
+
 ## 查看操作系统
+
+
 ```
 >cat /etc/os-release
 PRETTY_NAME="Ubuntu 22.04.3 LTS"
@@ -19,6 +24,7 @@ Linux nodo-1 5.15.0-78-generic #85-Ubuntu SMP Fri Jul 7 15:29:30 UTC 2023 aarch6
 ```
 
 ## 查看服务器的型号信息
+
 ```
 
 # yum install dmidecode

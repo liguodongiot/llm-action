@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v3.png" >
+  <img src="https://github.com/liguodongiot/llm-action/blob/main/pic/llm-action-v4.jpg" >
 </p>
 
 
@@ -10,6 +10,7 @@
 <a href="https://www.zhihu.com/people/liguodong-iot"> <img src="https://img.shields.io/badge/吃果冻不吐果冻皮-0079FF.svg?style=plastic&logo=zhihu&logoColor=white"> </a>
 <a href="https://juejin.cn/user/3642056016410728"> <img src="https://img.shields.io/badge/掘金-吃果冻不吐果冻皮-000099.svg?style=plastic&logo=juejin"> </a>
 <a href="https://liguodong.blog.csdn.net/"> <img src="https://img.shields.io/badge/CSDN-吃果冻不吐果冻皮-6B238E.svg"> </a>
+<a href="https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO"> <img src="https://img.shields.io/badge/Lab4AI-大模型实验室-1E90FF.svg"> </a>
 </p> 
 
 
@@ -52,6 +53,37 @@
 - 👥 [微信公众号](#微信公众号)
 - ⭐️ [Star History](#star-history)
 - :link: [AI工程化课程推荐](#ai工程化课程推荐)
+
+
+## 大模型实验室Lab4AI普惠算力
+
+**基于大模型实验室的GPU算力实践**
+
+
+|  主题      | 实践          | 博客/视频     |
+|:------------ |:-----------------------------:|:--------:| 
+| 基于ComfyUI调用Flux文生图模型生成动漫风格图像      | [链接](https://www.lab4ai.cn/project/detail?id=f82ca14acda040ba8a3412feb541ba29&type=project)          | [链接](https://mp.weixin.qq.com/s/OEDQO-IkT4uo_HMjBXGuCA)     |
+| 告别传统客服：三步骤，LLaMA-Factory零代码打造会订票的专属大模型      | [链接](https://www.lab4ai.cn/project/detail?id=a78043adcef84cd998516e1bcd39562f&type=project)          | [链接](https://mp.weixin.qq.com/s/N_CQEBEjN0E31x4Vg31rEQ)    |
+| 打造基于多模态AI的苏东坡数字人      | [链接](https://www.lab4ai.cn/project/detail?id=1f1097f45ea64abca3359e4c0615720a&type=project)          | -     |
+| WeClone：从聊天记录创造数字分身的一站式解决方案      | [链接](https://www.lab4ai.cn/project/detail?id=ab83d14684fa45d197f67eddb3d8316c&type=project)          | [链接](https://mp.weixin.qq.com/s/2pOD8YexWtmuPhV4C7uKJA)     |
+| LightX2V 4步蒸馏模型：20倍速的高质量视频生成革命      | [链接](https://www.lab4ai.cn/project/detail?id=d5556b93078d4defbb58c9f722b674df&type=project)          | [链接](https://mp.weixin.qq.com/s/kVz1dwthn3nOLT0jTeiQgg)     |
+| 基于Qwen3-8B的沉浸式苏东坡角色扮演大模型      | [链接](https://www.lab4ai.cn/project/detail?id=315457fba1b3432c935865d1c5aa1ffe&type=project)          | [链接](https://mp.weixin.qq.com/s/bCCHa2RsKieJZizORU19dQ)     |
+| LightLLM轻量化部署新范式，打造高性能法律智能体      | [链接](https://www.lab4ai.cn/project/detail?id=b417085ae8cd4dd0bef7161c3d583b15&type=project)          | [链接](https://mp.weixin.qq.com/s/j8rJyoBA02ypPEkxb9XSVg)     |
+| RoboMIND——机器人多形态通用智能评测基准      | [链接](https://www.lab4ai.cn/project/detail?id=492a471cd6054a179660c760f0026704&type=project)          | [链接](https://mp.weixin.qq.com/s/i_QPGuqaXfql6cPELxlUVg)     |
+| 经典论文复现：《Attention Is All You Need》      | [链接](https://www.lab4ai.cn/paper/detail?id=e90aa38fdff9420e8902bc71909fa005&type=paper)          | [链接](https://www.bilibili.com/video/BV1Fvp3zBEAN/?spm_id_from=333.1387.homepage.video_card.click)     |
+| 经典论文复现：《SELF-INSTRUCT: Aligning Language Models <br> with Self-Generated Instructions》| [链接](https://www.lab4ai.cn/paper/detail?id=2bbf2f4971f74c6e8def26879233f2fe&type=paper)          | -     |
+
+
+
+**GPU算力优惠活动**
+
+- 资源不够用，来 Lab4AI 享 H800 GPU，用 H800 比 4090 还划算: [详情](https://mp.weixin.qq.com/s/61OtlvP3N4vl0D67eCzSWA)
+
+
+**算力福利**
+
+- 大模型实验室Lab4AI：[免费领取50元GPU算力](https://www.lab4ai.cn/register?agentID=user-PqCML6LJZO)
+- 大模型实验室群：[点击加入](https://github.com/liguodongiot/liguodongiot/tree/main/images/大模型实验室群二维码.png)
 
 
 ## LLM训练
@@ -185,10 +217,14 @@
 - [TensorRT-LLM保姆级教程（一）-快速入门](https://zhuanlan.zhihu.com/p/666849728)
 - [TensorRT-LLM保姆级教程（二）-离线环境搭建、模型量化及推理](https://zhuanlan.zhihu.com/p/667572720)
 - [TensorRT-LLM保姆级教程（三）-使用Triton推理服务框架部署模型](https://juejin.cn/post/7398122968200593419)
+- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
+- [谈谈LLM生成文本的惩罚参数](https://zhuanlan.zhihu.com/p/1965476299419132173)
+- [LLM 确定性推理](https://zhuanlan.zhihu.com/p/1961192621759242664)
 - vLLM
 - SGLang
 - [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
+
 
 
 ### 模型推理服务
@@ -422,6 +458,9 @@ LLM Data Engineering
 - ChatGLM / ChatGLM2 / ChatGLM3 大模型解析
 - Bloom 大模型解析
 - LLaMA / LLaMA2 大模型解析
+- [DeepSeek 视觉语言大模型技术演进（从DeepSeek VL/VL2到DeepSeek OCR）](https://zhuanlan.zhihu.com/p/1976731060562842519)
+
+
 
 ## LLM应用开发
 
@@ -525,7 +564,6 @@ AI编译器是指将机器学习算法从开发阶段，通过变换和优化算
 - [一文详解模型权重存储新格式 Safetensors](https://juejin.cn/post/7386360803039838235)
 - [一文搞懂大模型文件存储格式新宠GGUF](https://juejin.cn/post/7408858126042726435)
 - [DeepGEMM 技术剖析](https://juejin.cn/post/7520475965081813055)
-- [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
 
 
 ## LLM性能分析
