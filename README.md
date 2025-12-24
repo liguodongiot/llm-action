@@ -34,6 +34,8 @@
   - 💹 [LLM知识蒸馏](#llm知识蒸馏)
   - ♑️ [低秩分解](#低秩分解)
 - :herb: [LLM测评](#llm测评)
+  - 🔯 [LLM效果评测](#llm效果评测)
+  - 🔘 [LLM推理性能压测](#llm推理性能压测)
 - :palm_tree: [LLM数据工程](#llm数据工程)
   - :dolphin: [LLM微调高效数据筛选技术](#llm微调高效数据筛选技术)
 - :cyclone: [提示工程](#提示工程)
@@ -129,8 +131,8 @@
 
 下面给大家分享**大模型参数高效微调技术实战**，该系列主要针对 HuggingFace PEFT 框架支持的一些高效微调技术进行讲解。
 
-| 教程                                                                                                | 代码                                                                                                      | 框架             |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------- |
+| 教程          | 代码             | 框架             |
+| ------------- | --------------- | --------------- |
 | [大模型参数高效微调技术实战（一）-PEFT概述及环境搭建](https://zhuanlan.zhihu.com/p/651744834)          | N/A                                                                                                       | HuggingFace PEFT |
 | [大模型参数高效微调技术实战（二）-Prompt Tuning](https://zhuanlan.zhihu.com/p/646748939)               | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/llm-train/peft/clm/peft_prompt_tuning_clm.ipynb) | HuggingFace PEFT |
 | [大模型参数高效微调技术实战（三）-P-Tuning](https://zhuanlan.zhihu.com/p/646876256)                    | [配套代码](https://github.com/liguodongiot/llm-action/blob/main/llm-train/peft/clm/peft_p_tuning_clm.ipynb)      | HuggingFace PEFT |
@@ -210,7 +212,7 @@
 ## [LLM推理](https://github.com/liguodongiot/llm-action/tree/main/inference)
 
 
-### 模型推理引擎
+### 推理引擎
 
 - [大模型推理框架概述](https://www.zhihu.com/question/625415776/answer/3243562246)
 - [大模型的好伙伴，浅析推理加速引擎FasterTransformer](https://zhuanlan.zhihu.com/p/626008090)
@@ -220,14 +222,29 @@
 - [一文搞懂大模型生成文本的解码策略](https://zhuanlan.zhihu.com/p/1921914053485376792)
 - [谈谈LLM生成文本的惩罚参数](https://zhuanlan.zhihu.com/p/1965476299419132173)
 - [LLM 确定性推理](https://zhuanlan.zhihu.com/p/1961192621759242664)
-- vLLM
-- SGLang
-- [LightLLM](https://github.com/ModelTC/lightllm)：纯python开发的大语言模型推理和服务框架
+
+
+迷你LLM推理引擎（非常适合源码学习）：
+
+- [Nano-vLLM源码注释](https://github.com/liguodongiot/nano-vllm)：从头开始构建的轻量级 vLLM 实现。
+- [Mini-SGLang](https://github.com/liguodongiot/mini-sglang)：一个轻量但高性能的大型语言模型推理框架，SGLang 的紧凑实现。
+
+
+生产级LLM推理引擎：
+
+- [vLLM](https://github.com/vllm-project/vllm)
+- [SGLang](https://github.com/sgl-project/sglang)
+
+其他推理引擎：
+
+- [LMDeploy](https://github.com/InternLM/lmdeploy)
+- [LightLLM](https://github.com/ModelTC/lightllm)：纯Python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
+- [赤兔](https://github.com/thu-pacman/chitu)
 
 
 
-### 模型推理服务
+### 推理服务
 
 - [模型推理服务工具综述](https://zhuanlan.zhihu.com/p/721395381)
 - [模型推理服务化框架Triton保姆式教程（一）：快速入门](https://zhuanlan.zhihu.com/p/629336492)
@@ -368,9 +385,8 @@ Instruction Following：
 
 ## LLM测评
 
-- [大模型测评工具：EvalScope]()
 
-### LLM效果测评
+### LLM效果评测
 
 
 - [C-Eval](https://github.com/liguodongiot/ceval)：全面的中文基础模型评估套件，涵盖了52个不同学科的13948个多项选择题，分为四个难度级别。
@@ -385,10 +401,14 @@ Instruction Following：
 
 
 
-### LLM推理性能测评
+### LLM推理性能压测
 
-
-- [GenAI-Perf](https://github.com/liguodongiot/perf_analyzer/tree/main/genai-perf)：一个命令行工具，用于测量通过推理服务提供生成式AI模型的吞吐量和延迟。GenAI-Perf 收集一组不同的指标来捕获推理服务的性能。
+- [AIPerf](https://github.com/ai-dynamo/aiperf)：英伟达开源的性能测试工具
+- [GuideLLM](https://github.com/vllm-project/guidellm)：vLLM开源的性能测试工具
+- [EvalScope](https://github.com/modelscope/evalscope)：魔搭社区开源的性能测试工具
+- [Inference Perf](https://github.com/kubernetes-sigs/inference-perf)
+- [genai-bench](https://github.com/sgl-project/genai-bench)：SGLang开源的性能测试工具
+- [GenAI-Perf](https://github.com/liguodongiot/perf_analyzer/tree/main/genai-perf)：英伟达开源的一个命令行工具（**已逐渐被淘汰，建议使用AIPerf**），用于测量通过推理服务提供生成式AI模型的吞吐量和延迟。GenAI-Perf 收集一组不同的指标来捕获推理服务的性能。
 
 | 指标 | 描述 | Aggregations |
 | - | - | - |
