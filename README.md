@@ -241,6 +241,7 @@
 - [LightLLM](https://github.com/ModelTC/lightllm)：纯Python开发的大语言模型推理和服务框架
 - [MNN-LLM](https://github.com/alibaba/MNN)：基于MNN引擎开发的大型语言模型运行时解决方案
 - [赤兔](https://github.com/thu-pacman/chitu)
+- [mllm](https://github.com/UbiquitousLearning/mllm)：端侧多模态LLM推理引擎
 
 
 
