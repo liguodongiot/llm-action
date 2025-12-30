@@ -387,6 +387,7 @@ Instruction Following：
 ## LLM测评
 
 
+
 ### LLM效果评测
 
 
@@ -404,6 +405,8 @@ Instruction Following：
 
 ### LLM推理性能压测
 
+
+- [你真的搞懂了LLM性能压测的各项指标吗？](https://zhuanlan.zhihu.com/p/1989359577871954448)
 - [AIPerf](https://github.com/ai-dynamo/aiperf)：英伟达开源的性能测试工具
 - [GuideLLM](https://github.com/vllm-project/guidellm)：vLLM开源的性能测试工具
 - [EvalScope](https://github.com/modelscope/evalscope)：魔搭社区开源的性能测试工具
