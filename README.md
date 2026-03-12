@@ -92,8 +92,10 @@
 **AI训练营**
 
 - AI应用开发工程师技能 & 春招面试训练营：[点击加入](https://www.lab4ai.cn/course/detail?id=2b86361ed6a54611850c073defe04327&utm_source=guodong)
-- 斯坦福CS336 从零手搓大语言模型实战: [点击加入](https://www.lab4ai.cn/course/detail?id=49325466ca58436782b65a887883805f&utm_source=guodong)
-- 7天AI智能体全栈开发实战集训营: [点击加入](https://www.lab4ai.cn/course/detail?id=f3fba5d60b2542bf8783e59dcc24d836&utm_source=guodong)
+- 斯坦福CS336 从零手搓大语言模型实战：[点击加入](https://www.lab4ai.cn/course/detail?id=49325466ca58436782b65a887883805f&utm_source=guodong)
+- 7天AI智能体全栈开发实战集训营：[点击加入](https://www.lab4ai.cn/course/detail?id=f3fba5d60b2542bf8783e59dcc24d836&utm_source=guodong)
+
+
 
 ## LLM训练
 
