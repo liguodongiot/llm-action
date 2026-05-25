@@ -369,6 +369,9 @@ Instruction Following：
 - [OpenCompass](https://github.com/open-compass/opencompass/blob/main/README_zh-CN.md)：司南 2.0 大模型评测体系。
 - [LongBench](https://github.com/THUDM/LongBench)：一个双语（中英文）多任务基准数据集，旨在评估大语言模型的长上下文理解能力。它包含21个任务，涵盖单文档问答、多文档问答、摘要、小样本学习、合成任务和代码补全等。数据集平均任务长度范围为5k到15k，共包含4750个测试数据。LongBench 采用全自动评估方法，旨在以最低的成本衡量和评估模型理解长上下文的能力。
 - [EvalScope](https://github.com/modelscope/evalscope)：魔搭社区官方推出的模型评测与性能基准测试框架，专为多样化的模型评估需求而设计。它支持广泛的模型类型，包括但不限于大语言模型、多模态模型、Embedding 模型、Reranker 模型和 CLIP 模型。EvalScope还适用于多种评测场景，如端到端RAG评测、竞技场模式和模型推理性能压测等，其内置多个常用测试基准和评测指标，如MMLU、CMMLU、C-Eval、GSM8K等。
+- [Terminal-Bench v2](https://github.com/harbor-framework/terminal-bench-2)：一套命令行基准测试套件，用于评估 AI 代理在 89 个真实世界的多步骤终端任务中的表现。这些任务涵盖编译、调试到系统管理等多个方面，并在隔离的容器环境中运行，配有严格的验证机制。
+- [SWE-bench](https://github.com/swe-bench/SWE-bench)：一个用于评估大型语言模型在真实世界软件问题上表现的基准测试，这些问题收集自GitHub。 给定一个代码库和一个问题,语言模型的任务是生成一个补丁来解决描述的问题。
+- [Claw-Eval](https://github.com/claw-eval/claw-eval)：Claw-Eval 是一个用来评估大语言模型作为智能体的评估工具。所有任务均经过人工验证。
 
 
 
