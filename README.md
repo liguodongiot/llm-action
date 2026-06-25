@@ -133,6 +133,8 @@
 - [大模型分布式训练并行技术（七）-自动并行](https://zhuanlan.zhihu.com/p/662517647)
 - [大模型分布式训练并行技术（八）-MOE并行](https://zhuanlan.zhihu.com/p/662518387)
 - [大模型分布式训练并行技术（九）-总结](https://zhuanlan.zhihu.com/p/667051845)
+- [大模型分布式训练并行技术（十）-通信量计算及训练耗时估算](https://zhuanlan.zhihu.com/p/2053636776309305923)
+
 
 **[⬆ 一键返回目录](#目录)**
 
@@ -151,6 +153,8 @@
 - [Megatron-DeepSpeed](https://github.com/liguodongiot/llm-action/tree/main/train/megatron-deepspeed)
   - 基于 Megatron-DeepSpeed 从 0 到1 完成 LLaMA 预训练
   - 基于 Megatron-DeepSpeed 从 0 到1 完成 Bloom 预训练
+- [Nanotron](https://github.com/huggingface/nanotron)：一个用于预训练 Transformer 模型的库，其设计目标是易用、快速且可扩展。
+- [Pai-Megatron-Patch](https://github.com/alibaba/Pai-Megatron-Patch)：基于阿里云智算服务PAI-灵骏平台的大模型最佳实践解决方案配套工具。是各类开源大模型和Megatron训练加速引擎之间的“桥梁”，为用户提供用Megatron训练开源大模型的易用性以及LLM算法场景定制化的灵活性。 同时它可以帮助大模型开发者快速上手PAI灵骏产品，完成大模型的高效分布式训练，有监督指令微调，模型离线推理验证等完整大模型开发链路。 
 
 
 ### 分布式训练网络通信
@@ -360,18 +364,36 @@ Instruction Following：
 ### LLM效果评测
 
 
+#### 测评集
+
 - [C-Eval](https://github.com/liguodongiot/ceval)：全面的中文基础模型评估套件，涵盖了52个不同学科的13948个多项选择题，分为四个难度级别。
 - [CMMLU](https://github.com/liguodongiot/CMMLU)：一个综合性的中文评估基准，专门用于评估语言模型在中文语境下的知识和推理能力。CMMLU涵盖了从基础学科到高级专业水平的67个主题。它包括：需要计算和推理的自然科学，需要知识的人文科学和社会科学,以及需要生活常识的中国驾驶规则等。此外，CMMLU中的许多任务具有中国特定的答案，可能在其他地区或语言中并不普遍适用。因此是一个完全中国化的中文测试基准。
 - [LVEval](https://github.com/liguodongiot/LVEval)：一个具备5个长度等级（16k、32k、64k、128k和256k）、最大文本测试长度达到256k的长文本评测基准。LV-Eval的平均文本长度达到102,380字，最小/最大文本长度为11,896/387,406字。LV-Eval主要有两类评测任务——单跳QA和多跳QA，共包含11个涵盖中英文的评测数据子集。LV-Eval设计时引入3个关键技术：干扰事实插入（Confusiong Facts Insertion，CFI）提高挑战性，关键词和短语替换（Keyword and Phrase Replacement，KPR）减少信息泄漏，以及基于关键词召回的评测指标（Answer Keywords，AK，指代结合答案关键词和字词黑名单的评价指标）提高评测数值客观性。
 - [IFEval: Instruction Following Eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)/[Paper](https://arxiv.org/abs/2311.07911)：专注评估大模型遵循指令的能力,包含关键词检测、标点控制、输出格式要求等25种任务。
 - [SuperCLUE](https://github.com/CLUEbenchmark/SuperCLUE)：一个综合性大模型评测基准，本次评测主要聚焦于大模型的四个能力象限，包括语言理解与生成、专业技能与知识、Agent智能体和安全性，进而细化为12项基础能力。
 - [AGIEval](https://github.com/ruixiangcui/AGIEval/)：用于评估基础模型在与人类认知和解决问题相关的任务中的能力。该基准源自 20 项面向普通考生的官方、公开、高标准的入学和资格考试，例如：普通大学入学考试（例如：中国高考（Gaokao）和美国 SAT）、法学院入学考试、数学竞赛、律师资格考试、国家公务员考试。
-- [OpenCompass](https://github.com/open-compass/opencompass/blob/main/README_zh-CN.md)：司南 2.0 大模型评测体系。
 - [LongBench](https://github.com/THUDM/LongBench)：一个双语（中英文）多任务基准数据集，旨在评估大语言模型的长上下文理解能力。它包含21个任务，涵盖单文档问答、多文档问答、摘要、小样本学习、合成任务和代码补全等。数据集平均任务长度范围为5k到15k，共包含4750个测试数据。LongBench 采用全自动评估方法，旨在以最低的成本衡量和评估模型理解长上下文的能力。
-- [EvalScope](https://github.com/modelscope/evalscope)：魔搭社区官方推出的模型评测与性能基准测试框架，专为多样化的模型评估需求而设计。它支持广泛的模型类型，包括但不限于大语言模型、多模态模型、Embedding 模型、Reranker 模型和 CLIP 模型。EvalScope还适用于多种评测场景，如端到端RAG评测、竞技场模式和模型推理性能压测等，其内置多个常用测试基准和评测指标，如MMLU、CMMLU、C-Eval、GSM8K等。
+
+
+
+Coding：
+
 - [Terminal-Bench v2](https://github.com/harbor-framework/terminal-bench-2)：一套命令行基准测试套件，用于评估 AI 代理在 89 个真实世界的多步骤终端任务中的表现。这些任务涵盖编译、调试到系统管理等多个方面，并在隔离的容器环境中运行，配有严格的验证机制。
 - [SWE-bench](https://github.com/swe-bench/SWE-bench)：一个用于评估大型语言模型在真实世界软件问题上表现的基准测试，这些问题收集自GitHub。 给定一个代码库和一个问题,语言模型的任务是生成一个补丁来解决描述的问题。
+
+Agent：
+
 - [Claw-Eval](https://github.com/claw-eval/claw-eval)：Claw-Eval 是一个用来评估大语言模型作为智能体的评估工具。所有任务均经过人工验证。
+
+Storage：
+
+- [MLPerf Storage Benchmark](https://github.com/mlcommons/storage)：用于评估机器学习训练场景下存储系统性能的开源基准测试套件。核心目标是衡量存储系统能否以足够快的速度向计算GPU提供训练数据，从而避免昂贵的GPU算力闲置。
+
+
+#### 测评工具
+
+- [OpenCompass](https://github.com/open-compass/opencompass/blob/main/README_zh-CN.md)：司南 2.0 大模型评测体系。
+- [EvalScope](https://github.com/modelscope/evalscope)：魔搭社区官方推出的模型评测与性能基准测试框架，专为多样化的模型评估需求而设计。它支持广泛的模型类型，包括但不限于大语言模型、多模态模型、Embedding 模型、Reranker 模型和 CLIP 模型。EvalScope还适用于多种评测场景，如端到端RAG评测、竞技场模式和模型推理性能压测等，其内置多个常用测试基准和评测指标，如MMLU、CMMLU、C-Eval、GSM8K等。
 
 
 
@@ -471,12 +493,13 @@ LLM Data Engineering
 
 ### Agent应用
 
+Harness:
 
+- [Harness 工程及设计模式](https://zhuanlan.zhihu.com/p/2042374186061058849)
 
 AI Assistant:
 
 - [OpenClaw](https://github.com/openclaw/openclaw)：一款个人 AI 助手
-
 
 Code Agent:
 

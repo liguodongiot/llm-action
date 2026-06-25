@@ -113,20 +113,47 @@ docker pull volcengine/sandbox-fusion:server-20250609
 
 ```
 modelscope download --dataset cais/hle --local_dir ./data/hle
-
 ```
 
 
 ```
 modelscope download --dataset evalscope/aime26 --local_dir ./data/aime26
-
 ```
 
 ```
 modelscope download --dataset allenai/ai2_arc --local_dir ./data/arc
 
-
 modelscope download --dataset AI-ModelScope/gsm8k --local_dir ./data/gsm8k
 ```
+
+
+
+
+## agent
+
+https://www.modelscope.cn/datasets/evalscope/tau3-bench-data
+
+```
+git clone https://github.com/sierra-research/tau2-bench
+
+pip install "tau2[knowledge] @ git+https://github.com/sierra-research/tau2-bench@v1.0.0"
+
+# 上游 v1.0.0 的 text-only 路径也会急加载 voice 模块，需要补装以下轻量 voice 依赖
+# （macOS 上 pyaudio 需先 `brew install portaudio`）：
+pip install pyaudio elevenlabs deepgram-sdk websockets jiwer pydub aiohttp scipy
+
+```
+
+
+```
+modelscope download --dataset evalscope/tau2-bench-data --local_dir ./data/tau2-bench-data
+
+
+modelscope download --dataset evalscope/tau3-bench-data --local_dir ./data/tau3-bench-data
+```
+
+
+
+
 
 

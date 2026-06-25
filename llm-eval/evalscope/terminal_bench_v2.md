@@ -4,3 +4,10 @@
 
 
 
+```
+pip install harbor 
+
+
+harbor run -d terminal-bench/terminal-bench-2-1
+```
+
