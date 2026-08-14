@@ -671,7 +671,7 @@ PS：**成都有个本地大模型交流群，想进可以另外单独备注下�
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=liguodongiot/llm-action&type=Date)](https://star-history.com/#liguodongiot/llm-action&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=liguodongiot/llm-action&type=Date)](https://star-history.dera.page/#liguodongiot/llm-action&Date)
 
 
 ## AI工程化课程推荐
