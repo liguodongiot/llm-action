@@ -482,6 +482,29 @@ LLM Data Engineering
 
 
 
+MoE 模型：
+
+| 模型 | 总参数 | 每 Token 激活 | 激活率 | 专家配置 | 注意力方案 |
+|---|---|---|---| --- | --- |
+| Qwen3 (30B-A3B) | 30B | ~3B | ~10% | 128 选 8，无共享 | 全层 GQA |
+| Gemma 4 (26B-A4B) | 26B | ~4B | ~15% |  128 选 8 + 1 共享 | 滑窗(1024) + 少量全局，5:1 |
+| MiniMax M3 | 428B | ~23B | ~5.4% | 128 选 4 + 1 共享 | MSA（索引分支 + 主分支）|
+| GLM-5 | 744B | 40B | - | - | - |
+| GLM-5.2 | 744B | 40B | ~5.4% | 256 选 8 + 1 共享 | DSA + IndexShare（4 层复用索引）|
+| GLM-5.3-Flash | 320B | 18B | - | - | - |
+| Xiaomi MiMo-V2.5-Pro | 1.02T | ~40B | ~3.9% | 384 选 8  | 10 全局 + 60 滑窗(128)，1:6 |
+| DeepSeek-V4-Pro | 1.6T | 49B | ~3.1% | 384 选 6 + 1 共享 | CSA + HCA |
+| DeepSeek-V4-Flash | 284B | 13B | - | - | - |
+| Kimi K2.6 | 1T | 32B | - | - | - |
+| Kimi K3 | 2.8T | 104B | ~3.7% | 896 选 16 + 2 共享  | 69 KDA + 24 Gated MLA，3:1 |
+| Qwen3.8-2.4T-A95B | 2.4T | 95B | - |512 选 10 + 1 共享 | - |
+| Qwen3.8-Flash-Next | 125B | 6B | ~4.8% | 512 选 10 + 1 共享 | 3 GDN + 1 QSA，3:1 |
+
+- [大模型的稀疏化革命：MoE的推理优化原理](https://zhuanlan.zhihu.com/p/2084709728047972781)
+
+
+
+
 ## LLM应用开发
 
 大模型是基座，要想让其变成一款产品，我们还需要一些其他相关的技术，比如：向量数据库（Pinecone、Milvus、Vespa、Weaviate），LangChain等。

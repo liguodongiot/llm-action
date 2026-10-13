@@ -29,3 +29,20 @@ Megatron-LM 带有一个高效的 DataLoader，其中数据在训练前被 token
 虽然我们可以在 transformers 中自定义 Megatron-LM 中的 DataLoader 和 Apex 的融合优化器，但自定义融合 CUDA 内核对新手来说太不友好了。
 
 
+
+## 安装
+
+
+TransformerEngine
+
+
+
+```
+git clone --recursive https://github.com/NVIDIA/TransformerEngine.git
+
+git checkout v2.17
+git submodule update --init --recursive
+
+
+git clone --recursive --branch v2.17 --depth 1 https://github.com/NVIDIA/TransformerEngine.git
+```
