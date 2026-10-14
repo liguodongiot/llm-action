@@ -249,7 +249,7 @@
 MoE 模型：
 
 - [大模型的稀疏化革命：MoE 架构全景拆解](https://zhuanlan.zhihu.com/p/2084709728047972781)
-
+- [大模型的稀疏化革命：MoE推理技术原理](https://zhuanlan.zhihu.com/p/2093827158036763827)
 
 
 ## LLM压缩
